@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Xceed.Wpf.DataGrid"
+                    xmlns:markup="clr-namespace:Xceed.Wpf.DataGrid.Markup">
+
+   <ResourceDictionary.MergedDictionaries>
+
+      <!-- Include the standard graphics -->
+      <markup:DataGridThemeResourceDictionary Source="../../Common/Graphics.xaml" />
+
+   </ResourceDictionary.MergedDictionaries>
+
+   <!--# TODO: Complete the Windows8 theme for CardView & CompactCardView. -->
+
+</ResourceDictionary>

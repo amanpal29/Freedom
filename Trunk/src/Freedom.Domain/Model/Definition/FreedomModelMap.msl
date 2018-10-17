@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+	<EntityContainerMapping StorageEntityContainer="FreedomModelStoreContainer" CdmEntityContainer="FreedomModelContainer">
+		<EntitySetMapping Name="ApplicationSetting">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.ApplicationSetting">
+				<MappingFragment StoreEntitySet="ApplicationSetting">
+					<ScalarProperty Name="Id" ColumnName="Id" />
+					<ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+					<ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+					<ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+					<ScalarProperty Name="ModifiedById" ColumnName="ModifiedById" />
+					<ScalarProperty Name="Key" ColumnName="Key" />
+					<ScalarProperty Name="Value" ColumnName="Value" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
+		<EntitySetMapping Name="Notification">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.Notification">
+				<MappingFragment StoreEntitySet="Notification">
+					<ScalarProperty Name="Id" ColumnName="Id" />
+					<ScalarProperty Name="Class" ColumnName="Class" />
+					<ScalarProperty Name="Priority" ColumnName="Priority" />
+					<ScalarProperty Name="Title" ColumnName="Title" />
+					<ScalarProperty Name="Description" ColumnName="Description" />
+					<ScalarProperty Name="Payload" ColumnName="Payload" />
+					<ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+					<ScalarProperty Name="ReceivedDateTime" ColumnName="ReceivedDateTime" />
+					<ScalarProperty Name="ReadDateTime" ColumnName="ReadDateTime" />
+					<ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+					<ScalarProperty Name="RecipientId" ColumnName="RecipientId" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
+		<EntitySetMapping Name="User">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.User">
+				<MappingFragment StoreEntitySet="User">
+					<ScalarProperty Name="Id" ColumnName="Id" />
+					<ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+					<ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+					<ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+					<ScalarProperty Name="ModifiedById" ColumnName="ModifiedById" />
+					<ScalarProperty Name="Name" ColumnName="Name" />
+					<ScalarProperty Name="Username" ColumnName="Username" />
+					<ScalarProperty Name="IsActive" ColumnName="IsActive" />
+					<ScalarProperty Name="Domain" ColumnName="Domain" />
+					<ScalarProperty Name="FirstName" ColumnName="FirstName" />
+					<ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+					<ScalarProperty Name="LastName" ColumnName="LastName" />
+					<ScalarProperty Name="WorkEmailAddress" ColumnName="WorkEmailAddress" />
+					<ScalarProperty Name="HomeEmailAddress" ColumnName="HomeEmailAddress" />
+					<ComplexProperty Name="HomeAddress">
+						<ScalarProperty Name="Street" ColumnName="HomeAddress_Street" />
+						<ScalarProperty Name="PostalCode" ColumnName="HomeAddress_PostalCode" />
+						<ScalarProperty Name="City" ColumnName="HomeAddress_City" />
+						<ScalarProperty Name="Province" ColumnName="HomeAddress_Province" />
+						<ScalarProperty Name="Country" ColumnName="HomeAddress_Country" />
+					</ComplexProperty>
+					<ScalarProperty Name="ForcePasswordChange" ColumnName="ForcePasswordChange" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
+	</EntityContainerMapping>
+</Mapping>

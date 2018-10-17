@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleBatch xmlns="http://schemas.hedgerowsoftware.com/sampleimportdefinition/v1.0">
+  <LaboratoryCode>LC001</LaboratoryCode>
+  <LaboratoryName>BCCDC Laboratory Services</LaboratoryName>
+  <FileCreationDate>2012-06-13T00:00:00-07:00</FileCreationDate>
+  <TotalSampleRecords>5</TotalSampleRecords>
+  <SampleDetail>
+    <SampleNumber>B2WB000668</SampleNumber>
+    <SampleTestTypeCode>WaterTest</SampleTestTypeCode>
+    <SampleTestType></SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>04G4128-04G4128</FacilityNumber>
+    <FacilityName>GRIZ INN WEST TUB, WEST OUTDOOR HOT TUB</FacilityName>
+    <SampleSiteTypeCode>WHS</SampleSiteTypeCode>
+    <SampleSiteType>Whirlpool/Hot Tub/Spa</SampleSiteType>
+    <SampleSite>CONNECTED WATER SYSTEM</SampleSite>
+    <SampleCollectedDate>2012-06-12T00:00:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Cory</SampleCollectedBy>
+    <SampleSubmittedDate>2012-06-12T00:00:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Cory</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-06-13T00:00:00-07:00</SampleAnalyzedDate>
+    <Comments>Specimen was 24 hours in transit. Coliform test may NOT be valid if specimen was more than 30 hrs in transit.</Comments>
+    <SampleParameterDetail>
+      <ParameterCode>Coliform</ParameterCode>
+      <Parameter>Total Coliform</Parameter>
+      <UOMCode>TC Count/100ml</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>NS</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>B2WW031552</SampleNumber>
+    <SampleTestTypeCode>WaterTest</SampleTestTypeCode>
+    <SampleTestType></SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>04G4050-04G4050</FacilityNumber>
+    <FacilityName></FacilityName>
+    <SampleSiteTypeCode>COM.W.S.-3</SampleSiteTypeCode>
+    <SampleSiteType></SampleSiteType>
+    <SampleSite>Flowing Supply</SampleSite>
+    <SampleCollectedDate>2012-06-12T00:00:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Thibbs</SampleCollectedBy>
+    <SampleSubmittedBy></SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-06-13T00:00:00-07:00</SampleAnalyzedDate>
+    <Comments></Comments>
+    <SampleParameterDetail>
+      <ParameterCode>Coliform</ParameterCode>
+      <Parameter></Parameter>
+      <UOMCode>TC Count/100ml</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>1</FinalResult>
+    </SampleParameterDetail>
+    <SampleParameterDetail>
+      <ParameterCode>E.Coli</ParameterCode>
+      <Parameter>Escherichia coli</Parameter>
+      <UOMCode>EC Count/100ml</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>L1</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>B2WW031553</SampleNumber>
+    <SampleTestTypeCode>WaterTest</SampleTestTypeCode>
+    <SampleTestType></SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>04G4051-04G4051</FacilityNumber>
+    <FacilityName></FacilityName>
+    <SampleSiteTypeCode>COM.W.S.-3</SampleSiteTypeCode>
+    <SampleSiteType></SampleSiteType>
+    <SampleSite>GROUNDWATER-PROTECTED</SampleSite>
+    <SampleCollectedDate>2012-06-11T00:00:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Peter</SampleCollectedBy>
+    <SampleSubmittedDate>2012-06-12T00:00:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy></SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-06-13T00:00:00-07:00</SampleAnalyzedDate>
+    <Comments></Comments>
+    <SampleParameterDetail>
+      <ParameterCode>Coliform</ParameterCode>
+      <Parameter>Total Coliform</Parameter>
+      <UOMCode>TC Count/100ml</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>L1</FinalResult>
+    </SampleParameterDetail>
+    <SampleParameterDetail>
+      <ParameterCode>E.Coli</ParameterCode>
+      <Parameter>Escherichia coli</Parameter>
+      <UOMCode>EC Count/100ml</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>L1</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>B2WT000539</SampleNumber>
+    <SampleTestTypeCode>WaterTest</SampleTestTypeCode>
+    <SampleTestType></SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>04G4129-04G4129</FacilityNumber>
+    <FacilityName></FacilityName>
+    <SampleSiteTypeCode>COM.W.S.-2</SampleSiteTypeCode>
+    <SampleSiteType></SampleSiteType>
+    <SampleSite>GROUNDWATER-PROTECTED</SampleSite>
+    <SampleCollectedDate>2012-06-11T00:00:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Tim</SampleCollectedBy>
+    <SampleSubmittedDate>2012-06-12T00:00:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy></SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-06-13T00:00:00-07:00</SampleAnalyzedDate>
+    <Comments>Sample submitted unsatisfactory. Exceeded 30 hours holding time. Please Resample</Comments>
+    <SampleParameterDetail>
+      <ParameterCode>Coliform</ParameterCode>
+      <Parameter>Total Coliform</Parameter>
+      <UOMCode>TC Count/100ml</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>T</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>B2WW031550</SampleNumber>
+    <SampleTestTypeCode>WaterTest</SampleTestTypeCode>
+    <SampleTestType></SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>04G4048-04G404</FacilityNumber>
+    <FacilityName></FacilityName>
+    <SampleSiteTypeCode>COM.W.S.-3</SampleSiteTypeCode>
+    <SampleSiteType></SampleSiteType>
+    <SampleSite>GROUNDWATER-PROTECTED</SampleSite>
+    <SampleCollectedDate>2012-06-11T00:00:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Tim</SampleCollectedBy>
+    <SampleSubmittedDate>2012-06-12T00:00:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy></SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-06-13T00:00:00-07:00</SampleAnalyzedDate>
+    <Comments></Comments>
+    <SampleParameterDetail>
+      <ParameterCode>Coliform</ParameterCode>
+      <Parameter>Total Coliform</Parameter>
+      <UOMCode>TC Count/100ml</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>L1</FinalResult>
+    </SampleParameterDetail>
+    <SampleParameterDetail>
+      <ParameterCode>E.Coli</ParameterCode>
+      <Parameter>Escherichia coli</Parameter>
+      <UOMCode>TC Count/100ml</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>L1</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+</SampleBatch>

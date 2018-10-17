@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <PetitionerType>
+    <Id>80206ee4-c888-4f08-a643-0c9dc74ec9ee</Id>
+    <Description>Other Agency</Description>
+    <SortOrder>4</SortOrder>
+  </PetitionerType>
+  <PetitionerType>
+    <Id>d722480b-1781-4a39-9fcc-11a0b3faf132</Id>
+    <Description>Facility Contact</Description>
+    <SortOrder>1</SortOrder>
+  </PetitionerType>
+  <PetitionerType>
+    <Id>b34be8fa-4dd3-4b69-87fe-459774405eac</Id>
+    <Description>Internal Department</Description>
+    <SortOrder>2</SortOrder>
+  </PetitionerType>
+  <PetitionerType>
+    <Id>746f19eb-d641-44f1-9f86-7df8e50303d4</Id>
+    <Description>External Department</Description>
+    <SortOrder>3</SortOrder>
+  </PetitionerType>
+  <PetitionerType>
+    <Id>cf80788f-3afc-44cb-bbe2-9cff46833821</Id>
+    <Description>General Public</Description>
+    <SortOrder>0</SortOrder>
+  </PetitionerType>
+</Entities>

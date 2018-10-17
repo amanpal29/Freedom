@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleBatch xmlns="http://schemas.hedgerowsoftware.com/sampleimportdefinition/v1.0">
+  <LaboratoryCode>2596</LaboratoryCode>
+  <LaboratoryName>Interior Health</LaboratoryName>
+  <FileCreationDate>2012-06-13T00:00:00-07:00</FileCreationDate>
+  <TotalSampleRecords>1</TotalSampleRecords>
+  <SampleDetail>
+    <SampleNumber>2012020800554</SampleNumber>
+    <SampleTestTypeCode>WaterTest</SampleTestTypeCode>
+    <SampleTestType></SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>14-168-00655</FacilityNumber>
+    <FacilityName>St. Peter's Water System</FacilityName>
+    <SampleSiteTypeCode>WS14</SampleSiteTypeCode>
+    <SampleSiteType>Water System 14 or Less Connections</SampleSiteType>
+    <SampleSite>kitchen Tap</SampleSite>
+    <SampleCollectedDate>2012-06-11T00:00:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Verne Churchill</SampleCollectedBy>
+    <SampleSubmittedDate>2012-06-12T00:00:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Verne Churchill</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-06-13T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>Coliform</ParameterCode>
+      <Parameter>Total Coliform</Parameter>
+      <UOMCode>TC Count/100ml</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>&lt;1</FinalResult>
+    </SampleParameterDetail>
+    <SampleParameterDetail>
+      <ParameterCode>E.Coli</ParameterCode>
+      <Parameter>Escherichia coli</Parameter>
+      <UOMCode>EC Count/100ml</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>&lt;1</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+</SampleBatch>

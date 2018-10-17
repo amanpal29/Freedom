@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <BusinessType>
+    <Id>26c6fc82-ab35-41e5-ba6e-fd180ee44db9</Id>
+    <Description>Cooperative</Description>
+    <SortOrder>3</SortOrder>
+  </BusinessType>
+  <BusinessType>
+    <Id>26c6fc82-ab36-41e5-ba6e-fd180ee44db9</Id>
+    <Description>Partnership</Description>
+    <SortOrder>1</SortOrder>
+  </BusinessType>
+  <BusinessType>
+    <Id>26c6fc82-ab38-41e5-ba6e-fd180ee44db9</Id>
+    <Description>Sole Proprietorship</Description>
+    <SortOrder>2</SortOrder>
+  </BusinessType>
+  <BusinessType>
+    <Id>26c6fc82-ab39-41e5-ba6e-fd180ee44db9</Id>
+    <Description>Corporation</Description>
+    <SortOrder>0</SortOrder>
+  </BusinessType>
+</Entities>

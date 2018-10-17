@@ -1,0 +1,113 @@
+﻿<!-- =======================================================================
+  Xceed DataGrid for WPF - CUSTOMIZATION CODE - Default Styles and Templates
+  Copyright (c) 2007-2015 Xceed Software Inc.
+
+  [Aero2.NormalColor.Resources.xaml]
+
+  This file is part of the Xceed DataGrid for WPF product. The use and
+  distribution of this Customization Code is subject to the terms
+  and conditions refering to "Customization Code" that are specified in
+  the XCEED SOFTWARE LICENSE AGREEMENT accompanying this product.
+======================================================================= -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Xceed.Wpf.DataGrid"
+                    xmlns:markup="clr-namespace:Xceed.Wpf.DataGrid.Markup"
+                    xmlns:views="clr-namespace:Xceed.Wpf.DataGrid.Views">
+
+   <ResourceDictionary.MergedDictionaries>
+      <markup:DataGridThemeResourceDictionary Source="/themes/Common/Common.Resources.xaml" />
+   </ResourceDictionary.MergedDictionaries>
+   
+   <SolidColorBrush x:Key="defaultBackgroundBrush"
+                    Color="White" />
+   <SolidColorBrush x:Key="defaultForegroundBrush"
+                    Color="#FF151C55" />
+
+   <SolidColorBrush x:Key="warningBackgroundBrush"
+                    Color="#FFC400" />
+
+   <SolidColorBrush x:Key="warningForegroundBrush"
+                    Color="Black" />
+
+   <LinearGradientBrush x:Key="errorBackgroundBrush"
+                        EndPoint="0.5,1"
+                        StartPoint="0.5,0">
+      <GradientStop Color="#FFF69898"
+                    Offset="1" />
+      <GradientStop Color="Red" />
+   </LinearGradientBrush>
+
+   <SolidColorBrush x:Key="errorForegroundBrush"
+                    Color="White" />
+
+   <SolidColorBrush x:Key="dropMarkBrush"
+                    Color="#FFC4E5F6" />
+
+   <!-- Pen that is used to draw the drop mark when a ColumnHeader is dragged over another one. -->
+   <Pen x:Key="dropMarkPen"
+        Brush="{StaticResource dropMarkBrush}"
+        Thickness="7" />
+
+   <!--**************************
+    * TEMPLATE: ScrollTip
+    ************************** -->
+   <ControlTemplate x:Key="scrollTipTemplate"
+                    TargetType="local:ScrollTip">
+
+        <Grid VerticalAlignment="{TemplateBinding VerticalAlignment}"
+              HorizontalAlignment="{TemplateBinding HorizontalAlignment}">
+
+            <Border BorderThickness="1,1,1,1"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    Background="{TemplateBinding Background}">
+
+                <ContentPresenter VerticalAlignment="Center"
+                                  HorizontalAlignment="Right"
+                                  Margin="5"
+                                  TextElement.Foreground="{TemplateBinding TextElement.Foreground}"
+                                  Content="{TemplateBinding Content}"
+                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                  ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}" />
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+   <!--**************************
+    * STYLE: ColumnChooserControl 
+    ************************** -->
+   <Style x:Key="Aero2NormalColorColumnChooserControlStyle"
+          TargetType="local:ColumnChooserControl">
+
+      <Style.Resources>
+         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+               <markup:DataGridThemeResourceDictionary Source="Aero2.normalcolor.Controls.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="views:TableflowView">
+               <Setter Property="Theme">
+                  <Setter.Value>
+                     <views:Windows8Theme />
+                  </Setter.Value>
+               </Setter>
+            </Style>
+         </ResourceDictionary>
+
+      </Style.Resources>
+
+      <Setter Property="Background"
+              Value="{StaticResource defaultBackgroundBrush}" />
+
+      <Setter Property="Foreground"
+              Value="{StaticResource defaultForegroundBrush}" />
+
+      <Setter Property="Columns"
+              Value="{Binding}" />
+
+      <Setter Property="Template"
+              Value="{StaticResource columnChooserControlTemplate}" />
+
+   </Style>
+
+</ResourceDictionary>

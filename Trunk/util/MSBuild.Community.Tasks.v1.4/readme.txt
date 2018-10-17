@@ -1,0 +1,1 @@
+This is a development build of MSBuild Community Tasks downloaded on April 15th, 2016. As of now, there is no official release that allows this MSBuild Community Tasks tool to be used with NUnit 3.2.0. When such a build is released, the DLLs and Hedgehog.proj file should be updated appropriately. But for now, we will be using this dev build.

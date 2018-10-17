@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <Ledger>
+    <Id>c3a0ca4c-4517-4147-a2df-31b85768991e</Id>
+    <Description>NSF Revenue</Description>
+    <IsAccountsReceivable>false</IsAccountsReceivable>
+    <IsActive>true</IsActive>
+    <IsDebit>false</IsDebit>
+    <SortOrder>3</SortOrder>
+  </Ledger>
+  <Ledger>
+    <Id>c15ce5be-9fc5-4d64-9cec-344d3e7e0836</Id>
+    <Description>Bank Clearing</Description>
+    <IsAccountsReceivable>false</IsAccountsReceivable>
+    <IsActive>true</IsActive>
+    <IsDebit>true</IsDebit>
+    <SortOrder>1</SortOrder>
+  </Ledger>
+  <Ledger>
+    <Id>6a1fe9da-586c-420e-9561-4d2ab0e20504</Id>
+    <Description>Allowance for Doubtful Account</Description>
+    <IsAccountsReceivable>false</IsAccountsReceivable>
+    <IsActive>true</IsActive>
+    <IsDebit>true</IsDebit>
+    <SortOrder>5</SortOrder>
+  </Ledger>
+  <Ledger>
+    <Id>8d313327-2f88-4c74-9ec1-6e33970209c6</Id>
+    <Description>Bad Debts Recovery</Description>
+    <IsAccountsReceivable>false</IsAccountsReceivable>
+    <IsActive>true</IsActive>
+    <IsDebit>false</IsDebit>
+    <SortOrder>4</SortOrder>
+  </Ledger>
+  <Ledger>
+    <Id>7ef72e10-fd1e-40d6-ba7c-7298557a6857</Id>
+    <Description>Accounts Receivable</Description>
+    <IsAccountsReceivable>true</IsAccountsReceivable>
+    <IsActive>true</IsActive>
+    <IsDebit>true</IsDebit>
+    <SortOrder>0</SortOrder>
+  </Ledger>
+  <Ledger>
+    <Id>16dbc97a-55d9-4fe3-9654-c3dcd609fc87</Id>
+    <Description>Permit Fee Revenue</Description>
+    <IsAccountsReceivable>false</IsAccountsReceivable>
+    <IsActive>true</IsActive>
+    <IsDebit>false</IsDebit>
+    <SortOrder>2</SortOrder>
+  </Ledger>
+</Entities>

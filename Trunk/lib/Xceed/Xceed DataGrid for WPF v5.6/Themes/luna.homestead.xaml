@@ -1,0 +1,668 @@
+﻿<!-- =======================================================================
+  Xceed DataGrid for WPF - CUSTOMIZATION CODE - Default Styles and Templates
+  Copyright (c) 2007-2015 Xceed Software Inc.
+
+  [luna.homestead.xaml]
+
+  This file is part of the Xceed DataGrid for WPF product. The use and
+  distribution of this Customization Code is subject to the terms
+  and conditions refering to "Customization Code" that are specified in
+  the XCEED SOFTWARE LICENSE AGREEMENT accompanying this product.
+======================================================================= -->
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:xcdp="http://schemas.xceed.com/wpf/xaml/datagrid"
+                    xmlns:local="clr-namespace:Xceed.Wpf.DataGrid"
+                    xmlns:markup="clr-namespace:Xceed.Wpf.DataGrid.Markup"
+                    xmlns:views="clr-namespace:Xceed.Wpf.DataGrid.Views">
+
+   <ResourceDictionary.MergedDictionaries>
+      <!-- Style definitions for specific controls (things that are not grid elements) -->
+
+      <markup:DataGridThemeResourceDictionary Source="/themes/Controls/FixedColumnSplitter.generic.xaml" />
+      <markup:DataGridThemeResourceDictionary Source="/themes/Controls/TableViewScrollViewer.generic.xaml" />
+      <markup:DataGridThemeResourceDictionary Source="/themes/Controls/CardViewScrollViewer.generic.xaml" />
+
+      <!-- For each specific systeme theme ResourceDictionary, we only need to include 
+           the xaml associated to the theme (to make the "BasedOn" work). However, here 
+           we have include all xaml theme files of the product to make the forcing of a 
+           theme work. And it works because, when the DefaultStyleKey is not found in the 
+           specific ResourceDictionary, WPF looks in the generic.xaml ResourceDictionary. 
+           That way, we don't have to maintain this list in all the xaml files. -->
+
+      <markup:DataGridThemeResourceDictionary Source="/themes/Luna/TableflowView.Luna.homestead.xaml" />
+      <markup:DataGridThemeResourceDictionary Source="/themes/Luna/TableView.Luna.homestead.xaml" />
+      <markup:DataGridThemeResourceDictionary Source="/themes/Luna/TreeGridflowView.Luna.homestead.xaml" />
+      <markup:DataGridThemeResourceDictionary Source="/themes/Luna/CardView.Luna.homestead.xaml" />
+      <markup:DataGridThemeResourceDictionary Source="/themes/Luna/CompactCardView.Luna.homestead.xaml" />
+
+   </ResourceDictionary.MergedDictionaries>
+
+   <!-- Generic theme for TableView -->
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView}"
+          TargetType="views:TableView"
+          BasedOn="{StaticResource tableViewLunaHomesteadDefaultValues}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:DataGridControl}"
+          TargetType="local:DataGridControl"
+          BasedOn="{StaticResource tableViewLunaHomesteadGridControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:RowSelectorPane}"
+          TargetType="local:RowSelectorPane"
+          BasedOn="{StaticResource tableViewLunaHomesteadRowSelectorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:RowSelector}"
+          TargetType="local:RowSelector"
+          BasedOn="{StaticResource tableViewLunaHomesteadRowSelectorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:Row}"
+          TargetType="local:Row"
+          BasedOn="{StaticResource tableViewLunaHomesteadRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:DataRow}"
+          TargetType="local:DataRow"
+          BasedOn="{StaticResource tableViewLunaHomesteadDataRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:InsertionRow}"
+          TargetType="local:InsertionRow"
+          BasedOn="{StaticResource tableViewLunaHomesteadInsertionRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:ColumnManagerRow}"
+          TargetType="local:ColumnManagerRow"
+          BasedOn="{StaticResource tableViewLunaHomesteadColumnManagerRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:StatRow}"
+          TargetType="local:StatRow"
+          BasedOn="{StaticResource tableViewLunaHomesteadStatRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:FilterRow}"
+          TargetType="local:FilterRow"
+          BasedOn="{StaticResource tableViewLunaHomesteadFilterRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:FlexibleRow}"
+          TargetType="local:FlexibleRow"
+          BasedOn="{StaticResource tableViewLunaHomesteadFlexibleRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:Cell}"
+          TargetType="local:Cell"
+          BasedOn="{StaticResource tableViewLunaHomesteadCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:DataCell}"
+          TargetType="local:DataCell"
+          BasedOn="{StaticResource tableViewLunaHomesteadDataCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:InsertionCell}"
+          TargetType="local:InsertionCell"
+          BasedOn="{StaticResource tableViewLunaHomesteadInsertionCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:ColumnManagerCell}"
+          TargetType="local:ColumnManagerCell"
+          BasedOn="{StaticResource tableViewLunaHomesteadColumnManagerCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:StatCell}"
+          TargetType="local:StatCell"
+          BasedOn="{StaticResource tableViewLunaHomesteadStatCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:FilterCell}"
+          TargetType="local:FilterCell"
+          BasedOn="{StaticResource tableViewLunaHomesteadFilterCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:FlexibleCell}"
+          TargetType="local:FlexibleCell"
+          BasedOn="{StaticResource tableViewLunaHomesteadFlexibleCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:GroupByControl}"
+          TargetType="local:GroupByControl"
+          BasedOn="{StaticResource tableViewLunaHomesteadGroupByControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:GroupByItem}"
+          TargetType="local:GroupByItem"
+          BasedOn="{StaticResource tableViewLunaHomesteadGroupByItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:GroupHeaderControl}"
+          TargetType="local:GroupHeaderControl"
+          BasedOn="{StaticResource tableViewLunaHomesteadGroupHeaderControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:GroupLevelIndicator}"
+          TargetType="local:GroupLevelIndicator"
+          BasedOn="{StaticResource tableViewLunaHomesteadGroupLevelIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:DetailIndicator}"
+          TargetType="local:DetailIndicator"
+          BasedOn="{StaticResource tableViewLunaHomesteadDetailIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:GroupLevelIndicatorPane}"
+          TargetType="local:GroupLevelIndicatorPane"
+          BasedOn="{StaticResource tableViewLunaHomesteadGroupLevelIndicatorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:AutoFilterControl}"
+          TargetType="local:AutoFilterControl"
+          BasedOn="{StaticResource tableViewLunaHomesteadAutoFilterControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:ScrollTip}"
+          TargetType="local:ScrollTip"
+          BasedOn="{StaticResource tableViewLunaHomesteadScrollTipStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:HierarchicalGroupByControlNode}"
+          TargetType="local:HierarchicalGroupByControlNode"
+          BasedOn="{StaticResource tableViewLunaHomesteadHierarchicalGroupByControlNodeStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:HierarchicalGroupByControl}"
+          TargetType="local:HierarchicalGroupByControl"
+          BasedOn="{StaticResource tableViewLunaHomesteadHierarchicalGroupByControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:HierarchicalGroupByItem}"
+          TargetType="local:HierarchicalGroupByItem"
+          BasedOn="{StaticResource tableViewLunaHomesteadHierarchicalGroupByItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:ColumnChooserContextMenu}"
+          TargetType="local:ColumnChooserContextMenu"
+          BasedOn="{StaticResource tableViewLunaHomesteadColumnChooserContextMenuStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, TargetElementType=local:ColumnChooserControl}"
+          TargetType="local:ColumnChooserControl"
+          BasedOn="{StaticResource tableViewLunaHomesteadColumnChooserControlStyle}" />
+
+   <!-- Generic theme for TableflowView -->
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView}"
+          TargetType="views:TableflowView"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadDefaultValues}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:DataGridControl}"
+          TargetType="local:DataGridControl"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadGridControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:RowSelectorPane}"
+          TargetType="local:RowSelectorPane"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadRowSelectorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:RowSelector}"
+          TargetType="local:RowSelector"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadRowSelectorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:Row}"
+          TargetType="local:Row"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:DataRow}"
+          TargetType="local:DataRow"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadDataRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:InsertionRow}"
+          TargetType="local:InsertionRow"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadInsertionRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:ColumnManagerRow}"
+          TargetType="local:ColumnManagerRow"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadColumnManagerRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:StatRow}"
+          TargetType="local:StatRow"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadStatRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:FilterRow}"
+          TargetType="local:FilterRow"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadFilterRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:FlexibleRow}"
+          TargetType="local:FlexibleRow"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadFlexibleRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:Cell}"
+          TargetType="local:Cell"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:DataCell}"
+          TargetType="local:DataCell"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadDataCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:InsertionCell}"
+          TargetType="local:InsertionCell"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadInsertionCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:ColumnManagerCell}"
+          TargetType="local:ColumnManagerCell"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadColumnManagerCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:StatCell}"
+          TargetType="local:StatCell"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadStatCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:FilterCell}"
+          TargetType="local:FilterCell"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadFilterCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:FlexibleCell}"
+          TargetType="local:FlexibleCell"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadFlexibleCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:GroupByControl}"
+          TargetType="local:GroupByControl"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadGroupByControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:GroupByItem}"
+          TargetType="local:GroupByItem"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadGroupByItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:GroupHeaderControl}"
+          TargetType="local:GroupHeaderControl"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadGroupHeaderControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:GroupLevelIndicator}"
+          TargetType="local:GroupLevelIndicator"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadGroupLevelIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:DetailIndicator}"
+          TargetType="local:DetailIndicator"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadDetailIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:GroupLevelIndicatorPane}"
+          TargetType="local:GroupLevelIndicatorPane"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadGroupLevelIndicatorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:AutoFilterControl}"
+          TargetType="local:AutoFilterControl"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadAutoFilterControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:ScrollTip}"
+          TargetType="local:ScrollTip"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadScrollTipStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:HierarchicalGroupByControlNode}"
+          TargetType="local:HierarchicalGroupByControlNode"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadHierarchicalGroupByControlNodeStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:HierarchicalGroupByControl}"
+          TargetType="local:HierarchicalGroupByControl"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadHierarchicalGroupByControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:HierarchicalGroupByItem}"
+          TargetType="local:HierarchicalGroupByItem"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadHierarchicalGroupByItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:ColumnChooserContextMenu}"
+          TargetType="local:ColumnChooserContextMenu"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadColumnChooserContextMenuStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:GroupNavigationButton}"
+          TargetType="local:GroupNavigationButton"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadGroupNavigationButtonStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:GroupNavigationControl}"
+          TargetType="local:GroupNavigationControl"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadGroupNavigationControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:GroupNavigationControlItem}"
+          TargetType="local:GroupNavigationControlItem"
+          BasedOn="{StaticResource tableflowViewLunaHomesteadGroupNavigationControlItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableflowView, TargetElementType=local:ColumnChooserControl}"
+          TargetType="local:ColumnChooserControl"
+          BasedOn="{StaticResource tableflowViewLuneHomesteadColumnChooserControlStyle}" />
+
+   <!-- Generic theme for TreeGridflowView -->
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView}"
+          TargetType="views:TreeGridflowView"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadDefaultValues}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:DataGridControl}"
+          TargetType="local:DataGridControl"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadGridControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:RowSelectorPane}"
+          TargetType="local:RowSelectorPane"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadRowSelectorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:RowSelector}"
+          TargetType="local:RowSelector"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadRowSelectorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:Row}"
+          TargetType="local:Row"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:DataRow}"
+          TargetType="local:DataRow"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadDataRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:InsertionRow}"
+          TargetType="local:InsertionRow"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadInsertionRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:ColumnManagerRow}"
+          TargetType="local:ColumnManagerRow"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadColumnManagerRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:StatRow}"
+          TargetType="local:StatRow"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadStatRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:FilterRow}"
+          TargetType="local:FilterRow"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadFilterRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:FlexibleRow}"
+          TargetType="local:FlexibleRow"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadFlexibleRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:Cell}"
+          TargetType="local:Cell"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:DataCell}"
+          TargetType="local:DataCell"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadDataCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:InsertionCell}"
+          TargetType="local:InsertionCell"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadInsertionCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:ColumnManagerCell}"
+          TargetType="local:ColumnManagerCell"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadColumnManagerCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:StatCell}"
+          TargetType="local:StatCell"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadStatCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:FilterCell}"
+          TargetType="local:FilterCell"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadFilterCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:FlexibleCell}"
+          TargetType="local:FlexibleCell"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadFlexibleCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:GroupByControl}"
+          TargetType="local:GroupByControl"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadGroupByControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:GroupByItem}"
+          TargetType="local:GroupByItem"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadGroupByItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:GroupHeaderControl}"
+          TargetType="local:GroupHeaderControl"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadGroupHeaderControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:GroupLevelIndicator}"
+          TargetType="local:GroupLevelIndicator"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadGroupLevelIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:DetailIndicator}"
+          TargetType="local:DetailIndicator"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadDetailIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:GroupLevelIndicatorPane}"
+          TargetType="local:GroupLevelIndicatorPane"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadGroupLevelIndicatorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:AutoFilterControl}"
+          TargetType="local:AutoFilterControl"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadAutoFilterControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:ScrollTip}"
+          TargetType="local:ScrollTip"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadScrollTipStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:HierarchicalGroupByControlNode}"
+          TargetType="local:HierarchicalGroupByControlNode"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadHierarchicalGroupByControlNodeStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:HierarchicalGroupByControl}"
+          TargetType="local:HierarchicalGroupByControl"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadHierarchicalGroupByControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:HierarchicalGroupByItem}"
+          TargetType="local:HierarchicalGroupByItem"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadHierarchicalGroupByItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:ColumnChooserContextMenu}"
+          TargetType="local:ColumnChooserContextMenu"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadColumnChooserContextMenuStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:GroupNavigationButton}"
+          TargetType="local:GroupNavigationButton"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadGroupNavigationButtonStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:GroupNavigationControl}"
+          TargetType="local:GroupNavigationControl"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadGroupNavigationControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:GroupNavigationControlItem}"
+          TargetType="local:GroupNavigationControlItem"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadGroupNavigationControlItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TreeGridflowView, TargetElementType=local:ColumnChooserControl}"
+          TargetType="local:ColumnChooserControl"
+          BasedOn="{StaticResource treeGridflowViewLunaHomesteadColumnChooserControlStyle}" />
+
+   <!-- Generic theme for CardView -->
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView}"
+          TargetType="views:CardView"
+          BasedOn="{StaticResource cardViewLunaHomesteadDefaultValues}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:DataGridControl}"
+          TargetType="local:DataGridControl"
+          BasedOn="{StaticResource cardViewLunaHomesteadGridControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:Row}"
+          TargetType="local:Row"
+          BasedOn="{StaticResource cardViewLunaHomesteadRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:DataRow}"
+          TargetType="local:DataRow"
+          BasedOn="{StaticResource cardViewLunaHomesteadDataRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:InsertionRow}"
+          TargetType="local:InsertionRow"
+          BasedOn="{StaticResource cardViewLunaHomesteadInsertionRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:ColumnManagerRow}"
+          TargetType="local:ColumnManagerRow"
+          BasedOn="{StaticResource cardViewLunaHomesteadColumnManagerRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:StatRow}"
+          TargetType="local:StatRow"
+          BasedOn="{StaticResource cardViewLunaHomesteadStatRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:FilterRow}"
+          TargetType="local:FilterRow"
+          BasedOn="{StaticResource cardViewLunaHomesteadFilterRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:FlexibleRow}"
+          TargetType="local:FlexibleRow"
+          BasedOn="{StaticResource cardViewLunaHomesteadFlexibleRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:Cell}"
+          TargetType="local:Cell"
+          BasedOn="{StaticResource cardViewLunaHomesteadCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:DataCell}"
+          TargetType="local:DataCell"
+          BasedOn="{StaticResource cardViewLunaHomesteadDataCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:InsertionCell}"
+          TargetType="local:InsertionCell"
+          BasedOn="{StaticResource cardViewLunaHomesteadInsertionCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:ColumnManagerCell}"
+          TargetType="local:ColumnManagerCell"
+          BasedOn="{StaticResource cardViewLunaHomesteadColumnManagerCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:StatCell}"
+          TargetType="local:StatCell"
+          BasedOn="{StaticResource cardViewLunaHomesteadStatCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:FilterCell}"
+          TargetType="local:FilterCell"
+          BasedOn="{StaticResource cardViewLunaHomesteadFilterCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:FlexibleCell}"
+          TargetType="local:FlexibleCell"
+          BasedOn="{StaticResource cardViewLunaHomesteadFlexibleCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:GroupByControl}"
+          TargetType="local:GroupByControl"
+          BasedOn="{StaticResource cardViewLunaHomesteadGroupByControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:GroupByItem}"
+          TargetType="local:GroupByItem"
+          BasedOn="{StaticResource cardViewLunaHomesteadGroupByItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:GroupHeaderControl}"
+          TargetType="local:GroupHeaderControl"
+          BasedOn="{StaticResource cardViewLunaHomesteadGroupHeaderControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:GroupLevelIndicator}"
+          TargetType="local:GroupLevelIndicator"
+          BasedOn="{StaticResource cardViewLunaHomesteadGroupLevelIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:DetailIndicator}"
+          TargetType="local:DetailIndicator"
+          BasedOn="{StaticResource cardViewLunaHomesteadDetailIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:GroupLevelIndicatorPane}"
+          TargetType="local:GroupLevelIndicatorPane"
+          BasedOn="{StaticResource cardViewLunaHomesteadGroupLevelIndicatorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:HierarchicalGroupLevelIndicatorPane}"
+          TargetType="local:HierarchicalGroupLevelIndicatorPane"
+          BasedOn="{StaticResource cardViewLunaHomesteadHierarchicalGroupLevelIndicatorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:AutoFilterControl}"
+          TargetType="local:AutoFilterControl"
+          BasedOn="{StaticResource cardViewLunaHomesteadAutoFilterControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:ScrollTip}"
+          TargetType="local:ScrollTip"
+          BasedOn="{StaticResource cardViewLunaHomesteadScrollTipStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:ColumnChooserContextMenu}"
+          TargetType="local:ColumnChooserContextMenu"
+          BasedOn="{StaticResource cardViewLunaHomesteadColumnChooserContextMenuStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CardView, TargetElementType=local:ColumnChooserControl}"
+          TargetType="local:ColumnChooserControl"
+          BasedOn="{StaticResource cardViewLunaHomesteadColumnChooserControlStyle}" />
+
+   <!-- Generic theme for CompactCardView -->
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView}"
+          TargetType="views:CompactCardView"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadDefaultValues}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:DataGridControl}"
+          TargetType="local:DataGridControl"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadGridControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:Row}"
+          TargetType="local:Row"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:DataRow}"
+          TargetType="local:DataRow"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadDataRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:InsertionRow}"
+          TargetType="local:InsertionRow"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadInsertionRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:ColumnManagerRow}"
+          TargetType="local:ColumnManagerRow"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadColumnManagerRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:StatRow}"
+          TargetType="local:StatRow"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadStatRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:FilterRow}"
+          TargetType="local:FilterRow"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadFilterRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:FlexibleRow}"
+          TargetType="local:FlexibleRow"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadFlexibleRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:Cell}"
+          TargetType="local:Cell"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:DataCell}"
+          TargetType="local:DataCell"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadDataCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:InsertionCell}"
+          TargetType="local:InsertionCell"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadInsertionCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:ColumnManagerCell}"
+          TargetType="local:ColumnManagerCell"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadColumnManagerCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:StatCell}"
+          TargetType="local:StatCell"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadStatCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:FilterCell}"
+          TargetType="local:FilterCell"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadFilterCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:FlexibleCell}"
+          TargetType="local:FlexibleCell"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadFlexibleCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:GroupByControl}"
+          TargetType="local:GroupByControl"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadGroupByControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:GroupByItem}"
+          TargetType="local:GroupByItem"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadGroupByItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:GroupHeaderControl}"
+          TargetType="local:GroupHeaderControl"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadGroupHeaderControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:GroupLevelIndicator}"
+          TargetType="local:GroupLevelIndicator"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadGroupLevelIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:DetailIndicator}"
+          TargetType="local:DetailIndicator"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadDetailIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:GroupLevelIndicatorPane}"
+          TargetType="local:GroupLevelIndicatorPane"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadGroupLevelIndicatorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:HierarchicalGroupLevelIndicatorPane}"
+          TargetType="local:HierarchicalGroupLevelIndicatorPane"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadHierarchicalGroupLevelIndicatorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:AutoFilterControl}"
+          TargetType="local:AutoFilterControl"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadAutoFilterControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:ScrollTip}"
+          TargetType="local:ScrollTip"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadScrollTipStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:ColumnChooserContextMenu}"
+          TargetType="local:ColumnChooserContextMenu"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadColumnChooserContextMenuStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:CompactCardView, TargetElementType=local:ColumnChooserControl}"
+          TargetType="local:ColumnChooserControl"
+          BasedOn="{StaticResource compactCardViewLunaHomesteadColumnChooserControlStyle}" />
+
+   <!-- Implicit Style for AutoFilterControl in case it is used outside the DataGridControl -->
+   <Style TargetType="local:AutoFilterControl"
+          BasedOn="{StaticResource tableViewLunaHomesteadAutoFilterControlStyle}" />
+
+</ResourceDictionary>

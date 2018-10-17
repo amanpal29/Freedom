@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <RiskAssessmentModelRepository>
+    <Id>511c6e3b-f98a-4be0-ab2b-bea9a1c7dd4f</Id>
+    <Comment>Use this model when you wish the inspection to arbitrarily choose the risk rating of the facility.</Comment>
+    <Description>Arbitrary Risk Rating</Description>
+    <SortOrder>0</SortOrder>
+  </RiskAssessmentModelRepository>
+  <RiskAssessmentModel>
+    <Id>a6290f08-a237-4e37-bd31-06cb4f13560a</Id>
+    <EffectiveDate>2012-01-01T00:00:00</EffectiveDate>
+    <FriendlyName>Version 1</FriendlyName>
+    <RiskAssessmentModelRepository>511c6e3b-f98a-4be0-ab2b-bea9a1c7dd4f</RiskAssessmentModelRepository>
+  </RiskAssessmentModel>
+  <RiskAssessmentModelCategory>
+    <Id>ce8d0560-175b-4f2e-bce1-bb54c69277ad</Id>
+    <Description>Risk Rating</Description>
+    <RiskAssessmentModel>a6290f08-a237-4e37-bd31-06cb4f13560a</RiskAssessmentModel>
+    <SortOrder>0</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelQuestion>
+    <Id>1eae253c-8966-4a24-aee1-9d7c79c375ca</Id>
+    <Category>ce8d0560-175b-4f2e-bce1-bb54c69277ad</Category>
+    <IsMandatory>false</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>0</SortOrder>
+    <Description>>Risk Rating</Description>>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelAnswer>
+    <Id>361fc74c-f963-4931-8310-74e47c555907</Id>
+    <Question>1eae253c-8966-4a24-aee1-9d7c79c375ca</Question>
+    <SortOrder>0</SortOrder>
+    <Description>>Low Risk</Description>>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>a5d95920-bffb-4023-952c-d39748948aff</Id>
+    <Question>1eae253c-8966-4a24-aee1-9d7c79c375ca</Question>
+    <RiskWeight>25</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>>Moderate Risk</Description>>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>607cb509-3d7a-44c0-8e29-e60c48818cda</Id>
+    <Question>1eae253c-8966-4a24-aee1-9d7c79c375ca</Question>
+    <RiskWeight>9999</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>>High Risk</Description>>
+  </RiskAssessmentModelAnswer>
+</Entities>

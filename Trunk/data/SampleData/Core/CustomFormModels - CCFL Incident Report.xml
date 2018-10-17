@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <CustomFormModelRepository>
+    <Id>86a52a59-7740-491c-aece-16d3355390c4</Id>
+    <Description>CCFL Incident Report</Description>
+    <SortOrder>0</SortOrder>
+  </CustomFormModelRepository>
+  <CustomFormModel>
+    <Id>f46f50ea-1b7a-4f80-ac67-236e80b114a8</Id>
+    <EffectiveDate>2010-01-01T00:00:00</EffectiveDate>
+    <FriendlyName>Version 1</FriendlyName>
+    <CustomFormModelRepository>86a52a59-7740-491c-aece-16d3355390c4</CustomFormModelRepository>
+  </CustomFormModel>
+  <CustomFormModelCategory>
+    <Id>f3928175-c625-4b37-be82-122173e0c3b5</Id>
+    <Description>General</Description>
+    <Model>f46f50ea-1b7a-4f80-ac67-236e80b114a8</Model>
+    <SortOrder>0</SortOrder>
+  </CustomFormModelCategory>
+  <CustomFormModelCategory>
+    <Id>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Id>
+    <Description>Notifications</Description>
+    <Model>f46f50ea-1b7a-4f80-ac67-236e80b114a8</Model>
+    <SortOrder>1</SortOrder>
+  </CustomFormModelCategory>
+  <CustomFormModelCategory>
+    <Id>8f58be13-5d37-4e4b-b6af-715e723cb7d1</Id>
+    <Description>Other</Description>
+    <Model>f46f50ea-1b7a-4f80-ac67-236e80b114a8</Model>
+    <SortOrder>3</SortOrder>
+  </CustomFormModelCategory>
+  <CustomFormModelCategory>
+    <Id>3ff0f349-e98f-48fa-a080-a41337d4df3a</Id>
+    <Description>Medical</Description>
+    <Model>f46f50ea-1b7a-4f80-ac67-236e80b114a8</Model>
+    <SortOrder>2</SortOrder>
+  </CustomFormModelCategory>
+  <CustomFormModelQuestion>
+    <Id>f3680c78-fde5-46c8-a171-128dc7618dbf</Id>
+    <Category>f3928175-c625-4b37-be82-122173e0c3b5</Category>
+    <Description>Sequence of events</Description>
+    <HelpText>Describe the sequence of events preceding and following the incident; the cause and contributing factors.</HelpText>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Memo</QuestionType>
+    <SortOrder>0</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>c02ea0c4-959f-4343-bb93-5884b992e44b</Id>
+    <Category>f3928175-c625-4b37-be82-122173e0c3b5</Category>
+    <Description>Preventative measures taken to prevent reoccurrence</Description>
+    <HelpText>List any measures or precautions that have been taken (if any) to prevent a similar incident in the future.</HelpText>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Memo</QuestionType>
+    <SortOrder>3</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>3aa73bf7-b6e1-4e0a-908e-7e3a6b6d0d95</Id>
+    <Category>f3928175-c625-4b37-be82-122173e0c3b5</Category>
+    <Description>Action(s) Taken</Description>
+    <HelpText>Describe what actions were taken as a direct result of the incident</HelpText>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Memo</QuestionType>
+    <SortOrder>1</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>e384631a-f51b-43bb-8755-db43472e9d2e</Id>
+    <Category>f3928175-c625-4b37-be82-122173e0c3b5</Category>
+    <Description>Current conditions/status of the resident/child.</Description>
+    <HelpText>Summarize the current condition or status of the affected person(s).</HelpText>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Memo</QuestionType>
+    <SortOrder>2</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>e1072172-2a7e-4855-a946-0fa7e33ae1c6</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>Physician's Name?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>605c4fba-e482-4f44-9eb9-b743aeaa3a53</ParentQuestion>
+    <QuestionType>Text</QuestionType>
+    <SortOrder>1</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>9432be4b-fee1-425d-a28a-633fc02681ea</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>Contact's Name?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>da89a8a4-3e42-4661-b643-e6d4652b1bec</ParentQuestion>
+    <QuestionType>Text</QuestionType>
+    <SortOrder>1</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>d80e9165-2a37-4bfd-9e57-7e8e3b3cc1fe</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>Manager's Name?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>8cab8459-f82b-4824-ad3a-8423cbf1cbc4</ParentQuestion>
+    <QuestionType>Text</QuestionType>
+    <SortOrder>1</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>8e9fa48d-8a25-41ec-93b4-80d74233a052</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>Officer's Name?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>9f9c04d2-2fbd-46b4-8033-9982e151e215</ParentQuestion>
+    <QuestionType>Text</QuestionType>
+    <SortOrder>1</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>8cab8459-f82b-4824-ad3a-8423cbf1cbc4</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>Was the manager notified?</Description>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Boolean</QuestionType>
+    <SortOrder>0</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>eb0cab07-895a-46d5-af91-89f41b6a899b</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>When?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>605c4fba-e482-4f44-9eb9-b743aeaa3a53</ParentQuestion>
+    <QuestionType>DateTime</QuestionType>
+    <SortOrder>0</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>1e306ffc-a443-4137-b436-8ce0ffeef707</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>When?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>9f9c04d2-2fbd-46b4-8033-9982e151e215</ParentQuestion>
+    <QuestionType>DateTime</QuestionType>
+    <SortOrder>0</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>9f9c04d2-2fbd-46b4-8033-9982e151e215</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>Was the licensing officer notified?</Description>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Boolean</QuestionType>
+    <SortOrder>3</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>605c4fba-e482-4f44-9eb9-b743aeaa3a53</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>Was a physician notified?</Description>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Boolean</QuestionType>
+    <SortOrder>1</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>c6c66795-5685-4bac-8e2b-c7141ae60132</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>When?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>da89a8a4-3e42-4661-b643-e6d4652b1bec</ParentQuestion>
+    <QuestionType>DateTime</QuestionType>
+    <SortOrder>0</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>952098e5-9ed5-4307-8318-e2332b2232ad</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>When?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>8cab8459-f82b-4824-ad3a-8423cbf1cbc4</ParentQuestion>
+    <QuestionType>DateTime</QuestionType>
+    <SortOrder>0</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>da89a8a4-3e42-4661-b643-e6d4652b1bec</Id>
+    <Category>e9f2cd6a-0ff1-468c-b8a0-54290940e5e7</Category>
+    <Description>What the family/emergency contact notified?</Description>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Boolean</QuestionType>
+    <SortOrder>2</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>8b278fb1-f442-4704-90ad-5923a03f95d9</Id>
+    <Category>8f58be13-5d37-4e4b-b6af-715e723cb7d1</Category>
+    <Description>Additional Comments</Description>
+    <HelpText>Please include any additional information you feel may be relevant to this incident.</HelpText>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Text</QuestionType>
+    <SortOrder>0</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>267f63bb-1cba-4269-a1a1-20dc97a46ff1</Id>
+    <Category>3ff0f349-e98f-48fa-a080-a41337d4df3a</Category>
+    <Description>When?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>835a737e-1109-4e57-815b-b7bbe2fbd6c1</ParentQuestion>
+    <QuestionType>DateTime</QuestionType>
+    <SortOrder>0</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>63206d1a-d1e3-4dad-8ae3-3fa62f0482a9</Id>
+    <Category>3ff0f349-e98f-48fa-a080-a41337d4df3a</Category>
+    <Description>Physician's Name?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>f30b0bcb-cc5c-401a-843d-bc8b79685d8c</ParentQuestion>
+    <QuestionType>Text</QuestionType>
+    <SortOrder>1</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>959804d7-c8b3-4d2e-9807-49c36d737344</Id>
+    <Category>3ff0f349-e98f-48fa-a080-a41337d4df3a</Category>
+    <Description>Which hospital?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>835a737e-1109-4e57-815b-b7bbe2fbd6c1</ParentQuestion>
+    <QuestionType>Text</QuestionType>
+    <SortOrder>1</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>7d2734fa-3c49-4f45-8c17-8e3445813102</Id>
+    <Category>3ff0f349-e98f-48fa-a080-a41337d4df3a</Category>
+    <Description>What was the diagnosis?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>f30b0bcb-cc5c-401a-843d-bc8b79685d8c</ParentQuestion>
+    <QuestionType>Memo</QuestionType>
+    <SortOrder>2</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>835a737e-1109-4e57-815b-b7bbe2fbd6c1</Id>
+    <Category>3ff0f349-e98f-48fa-a080-a41337d4df3a</Category>
+    <Description>Was the affected person transferred to hospital?</Description>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Boolean</QuestionType>
+    <SortOrder>4</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>f30b0bcb-cc5c-401a-843d-bc8b79685d8c</Id>
+    <Category>3ff0f349-e98f-48fa-a080-a41337d4df3a</Category>
+    <Description>Was the affected person examined by a physician?</Description>
+    <IsMandatory>false</IsMandatory>
+    <QuestionType>Boolean</QuestionType>
+    <SortOrder>0</SortOrder>
+    <VisibilityCondition>Always</VisibilityCondition>
+  </CustomFormModelQuestion>
+  <CustomFormModelQuestion>
+    <Id>fc438e55-0f92-403c-a19f-c0b1d0ac3927</Id>
+    <Category>3ff0f349-e98f-48fa-a080-a41337d4df3a</Category>
+    <Description>When?</Description>
+    <IsMandatory>false</IsMandatory>
+    <ParentQuestion>f30b0bcb-cc5c-401a-843d-bc8b79685d8c</ParentQuestion>
+    <QuestionType>DateTime</QuestionType>
+    <SortOrder>0</SortOrder>
+    <VisibilityCondition>IfYes</VisibilityCondition>
+  </CustomFormModelQuestion>
+</Entities>

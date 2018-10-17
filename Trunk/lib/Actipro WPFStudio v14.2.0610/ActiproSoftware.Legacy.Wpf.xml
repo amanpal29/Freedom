@@ -1,0 +1,810 @@
+<?xml version="1.0"?><doc><assembly><name>ActiproSoftware.Legacy.Wpf</name></assembly><members><member name="T:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper"><summary>
+            Provides helpful methods for working with <see cref="T:System.DateTime" /> objects.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.ConvertDateTimeToString(System.DateTime,ActiproSoftware.Windows.DateTimeFormatPattern)"><summary>
+            Converts a <see cref="T:System.DateTime" /> to a string using the specified culture-defined pattern.
+            </summary><param name="dateTime">The <see cref="T:System.DateTime" /> to convert.</param><param name="pattern">A <see cref="T:ActiproSoftware.Windows.DateTimeFormatPattern" /> specifying the conversion pattern to use.</param><returns>The string representation of the <see cref="T:System.DateTime" />.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.ConvertDateTimeToString(System.DateTime,System.String)"><summary>
+            Converts a <see cref="T:System.DateTime" /> to a string using the specified culture-defined pattern.
+            </summary><param name="dateTime">The <see cref="T:System.DateTime" /> to convert.</param><param name="pattern">A string specifying the conversion pattern to use.</param><returns>The string representation of the <see cref="T:System.DateTime" />.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.ConvertDateTimeToString(System.DateTime,ActiproSoftware.Windows.DateTimeFormatPattern,System.IFormatProvider)"><summary>
+            Converts a <see cref="T:System.DateTime" /> to a string using the specified culture-defined pattern.
+            </summary><param name="dateTime">The <see cref="T:System.DateTime" /> to convert.</param><param name="pattern">A <see cref="T:ActiproSoftware.Windows.DateTimeFormatPattern" /> specifying the conversion pattern to use.</param><param name="provider">An <see cref="T:System.IFormatProvider" /> that provides culture-specific formatting information.</param><returns>The string representation of the <see cref="T:System.DateTime" />.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.ConvertDateTimeToString(System.DateTime,System.String,System.IFormatProvider)"><summary>
+            Converts a <see cref="T:System.DateTime" /> to a string using the specified culture-defined pattern.
+            </summary><param name="dateTime">The <see cref="T:System.DateTime" /> to convert.</param><param name="pattern">A string specifying the conversion pattern to use.</param><param name="provider">An <see cref="T:System.IFormatProvider" /> that provides culture-specific formatting information.</param><returns>The string representation of the <see cref="T:System.DateTime" />.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.ConvertDayOfWeekToString(System.DayOfWeek,ActiproSoftware.Windows.DayOfWeekFormatPattern,System.IFormatProvider)"><summary>
+            Converts a <see cref="T:System.DayOfWeek" /> to a string using the specified culture-defined pattern.
+            </summary><param name="dayOfWeek">The <see cref="T:System.DayOfWeek" /> to convert.</param><param name="pattern">A <see cref="T:ActiproSoftware.Windows.DayOfWeekFormatPattern" /> specifying the conversion pattern to use.</param><param name="provider">An <see cref="T:System.IFormatProvider" /> that provides culture-specific formatting information.</param><returns>The string representation of the <see cref="T:System.DayOfWeek" />.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.GetDayDelta(System.DateTime,System.DateTime)"><summary>
+            Returns the number of days between two <see cref="T:System.DateTime" /> objects.
+            </summary><param name="dateTime1">The <see cref="T:System.DateTime" /> used as the origin.</param><param name="dateTime2">The <see cref="T:System.DateTime" /> that is subtracted from the origin <see cref="T:System.DateTime" /> to find the result.</param><returns>The number of days between two <see cref="T:System.DateTime" /> objects.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.GetDayOfWeekSlotIndex(System.DateTime,System.DayOfWeek)"><summary>
+            Returns the slot index that the specified date occupies within a calendar week.
+            </summary><param name="dateTime">The <see cref="T:System.DateTime" /> to examine.</param><param name="firstDayOfWeek">A <see cref="T:System.DayOfWeek" /> indicating which day is considered the start of the week.</param><returns>The slot index that the specified date occupies within a calendar week.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.GetFirstDateTimeInMonth(System.DateTime)"><summary>
+            Returns a <see cref="T:System.DateTime" /> that represents the first date/time in the month of the specified <see cref="T:System.DateTime" />.
+            </summary><param name="dateTime">The <see cref="T:System.DateTime" /> to examine.</param><returns>A <see cref="T:System.DateTime" /> that represents the first date/time in the month of the specified <see cref="T:System.DateTime" />.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.GetLastDateTimeInMonth(System.DateTime)"><summary>
+            Returns a <see cref="T:System.DateTime" /> that represents the last date/time in the month of the specified <see cref="T:System.DateTime" />.
+            </summary><param name="dateTime">The <see cref="T:System.DateTime" /> to examine.</param><returns>A <see cref="T:System.DateTime" /> that represents the last date/time in the month of the specified <see cref="T:System.DateTime" />.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.GetMonthDelta(System.DateTime,System.DateTime)"><summary>
+            Returns the number of months between two <see cref="T:System.DateTime" /> objects.
+            </summary><param name="dateTime1">The <see cref="T:System.DateTime" /> used as the origin.</param><param name="dateTime2">The <see cref="T:System.DateTime" /> that is subtracted from the origin <see cref="T:System.DateTime" /> to find the result.</param><returns>The number of months between two <see cref="T:System.DateTime" /> objects.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.IsToday(System.DateTime)"><summary>
+            Returns whether the specified <see cref="T:System.DateTime" /> is today.
+            </summary><param name="dateTime">The <see cref="T:System.DateTime" /> to examine.</param><returns><c>true</c> if the specified <see cref="T:System.DateTime" /> is today; otherwise, <c>false</c>.
+            </returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.IsWeekend(System.DateTime)"><summary>
+            Returns whether the specified <see cref="T:System.DateTime" /> is on a weekend.
+            </summary><param name="dateTime">The <see cref="T:System.DateTime" /> to examine.</param><returns><c>true</c> if the specified <see cref="T:System.DateTime" /> is on a weekend; otherwise, <c>false</c>.
+            </returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.IsWeekend(System.DayOfWeek)"><summary>
+            Returns whether the specified <see cref="T:System.DayOfWeek" /> is on a weekend.
+            </summary><param name="dayOfWeek">The <see cref="T:System.DayOfWeek" /> to examine.</param><returns><c>true</c> if the specified <see cref="T:System.DayOfWeek" /> is on a weekend; otherwise, <c>false</c>.
+            </returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.Max(System.DateTime,System.DateTime)"><summary>
+            Returns the larger of two dates.
+            </summary><param name="left">The first of two dates to compare.</param><param name="right">The second of two dates to compare.</param><returns>Parameter <paramref name="left" /> or <paramref name="right" />, whichever is larger.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.Min(System.DateTime,System.DateTime)"><summary>
+            Returns the smaller of two dates.
+            </summary><param name="left">The first of two dates to compare.</param><param name="right">The second of two dates to compare.</param><returns>Parameter <paramref name="left" /> or <paramref name="right" />, whichever is smaller.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeHelper.TruncateTime(System.DateTime)"><summary>
+            Truncates the time component of the specified <see cref="T:System.DateTime" /> and returns the result.
+            </summary><param name="dateTime">The <see cref="T:System.DateTime" /> to examine.</param><returns>The variation of the <see cref="T:System.DateTime" /> with its time component truncated.</returns></member><member name="T:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome"><summary>
+            Creates the Aero theme-specific look for <see cref="T:System.Windows.Controls.Button" /> elements.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.ArrangeOverride(System.Windows.Size)"><summary>
+            When overridden in a derived class, positions child elements and determines a size for a
+            <see cref="T:System.Windows.FrameworkElement" /> derived class.
+            </summary><param name="finalSize">
+            The final area within the parent that this element should use to arrange itself and its children.
+            </param><returns>The actual size used.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.MeasureOverride(System.Windows.Size)"><summary>
+            When overridden in a derived class, measures the size in layout required for child elements and determines a size for
+            the <see cref="T:System.Windows.FrameworkElement" />-derived class.
+            </summary><param name="availableSize">
+            The available size that this element can give to child elements. Infinity can be specified as a value to indicate that
+            the element will size to whatever content is available.
+            </param><returns>
+            The size that this element determines it needs during layout, based on its calculations of child element sizes.
+            </returns></member><member name="M:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.OnRender(System.Windows.Media.DrawingContext)"><summary>
+            When overridden in a derived class, participates in rendering operations that are directed by the layout system. The
+            rendering instructions for this element are not used directly when this method is invoked, and are instead preserved
+            for later asynchronous use by layout and drawing.
+            </summary><param name="drawingContext">
+            The drawing instructions for a specific element. This context is provided to the layout system.
+            </param></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.Background"><summary>
+            Gets or sets the brush used to fill the background. This is a dependency property.
+            </summary><value>The brush used to fill the background.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.BorderBrush"><summary>
+            Gets or sets the brush used to draw the outer border. This is a dependency property.
+            </summary><value>The brush used to draw the outer border.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.Padding"><summary>
+            Gets or sets a <see cref="T:System.Windows.Thickness" /> value that describes the amount of space between an AeroButtonChrome and its child element. This is a dependency property.
+            </summary><value>The <see cref="T:System.Windows.Thickness" /> that describes the amount of space between a AeroButtonChrome and its single child element. The default value is <c>2</c> for all sides.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderDefaulted"><summary>
+            Gets or sets a value indicating whether to render the appearance of the default button. This is a dependency property.
+            </summary><value><c>true</c> if the default button appearance should be rendered; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderMouseOver"><summary>
+            Gets or sets a value indicating whether to render the appearance as if the mouse is over it. This is a dependency
+            property.
+            </summary><value><c>true</c> if the mouse over appearance should be rendered; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderPressed"><summary>
+            Gets or sets a value indicating whether to render the appearance of a pressed button. This is a dependency property.
+            </summary><value><c>true</c> if the pressed appearance should be rendered; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderTransparentBackground"><summary>
+            Gets or sets a value indicating whether the background and border items should be rendered transparent until
+            <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderDefaulted" />, <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderMouseOver" />, or <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderPressed" /> are set to
+            <c>true</c>.
+            </summary><value><c>true</c> if the background and border items should be rendered transparent; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RoundCorners"><summary>
+            Gets or sets which corners of should be rounded.
+            </summary><value>The rounded corners.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.BackgroundProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.Background" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.Background" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.BorderBrushProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.BorderBrush" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.BorderBrush" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.PaddingProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.Padding" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.Padding" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderDefaultedProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderDefaulted" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderDefaulted" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderMouseOverProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderMouseOver" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderMouseOver" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderPressedProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderPressed" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderPressed" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderTransparentBackgroundProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderTransparentBackground" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RenderTransparentBackground" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RoundCornersProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RoundCorners" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.AeroButtonChrome.RoundCorners" /> dependency property.</value></member><member name="T:ActiproSoftware.Windows.Controls.Primitives.LunaThemeColor"><summary>
+            Represents possible color variants for the Luna themes.
+            </summary></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaThemeColor.NormalColor"><summary>
+            Indicates that the Luna NormalColor (Blue) theme should be used.
+            </summary></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaThemeColor.Homestead"><summary>
+            Indicates that the Luna Homestead (Olive) theme should be used.
+            </summary></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaThemeColor.Metallic"><summary>
+            Indicates that the Luna Metallic (Silver) theme should be used.
+            </summary></member><member name="T:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome"><summary>
+            Creates the Luna theme-specific look for <see cref="T:System.Windows.Controls.Button" /> elements.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.ArrangeOverride(System.Windows.Size)"><summary>
+            When overridden in a derived class, positions child elements and determines a size for a
+            <see cref="T:System.Windows.FrameworkElement" /> derived class.
+            </summary><param name="finalSize">
+            The final area within the parent that this element should use to arrange itself and its children.
+            </param><returns>The actual size used.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.MeasureOverride(System.Windows.Size)"><summary>
+            When overridden in a derived class, measures the size in layout required for child elements and determines a size for
+            the <see cref="T:System.Windows.FrameworkElement" />-derived class.
+            </summary><param name="availableSize">
+            The available size that this element can give to child elements. Infinity can be specified as a value to indicate that
+            the element will size to whatever content is available.
+            </param><returns>
+            The size that this element determines it needs during layout, based on its calculations of child element sizes.
+            </returns></member><member name="M:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.OnRender(System.Windows.Media.DrawingContext)"><summary>
+            When overridden in a derived class, participates in rendering operations that are directed by the layout system. The
+            rendering instructions for this element are not used directly when this method is invoked, and are instead preserved
+            for later asynchronous use by layout and drawing.
+            </summary><param name="drawingContext">
+            The drawing instructions for a specific element. This context is provided to the layout system.
+            </param></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.BorderBrush"><summary>
+            Gets or sets the brush used to draw the outer border. This is a dependency property.
+            </summary><value>The brush used to draw the outer border.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.Fill"><summary>
+            Gets or sets the brush used to draw the color inside the button. This is a dependency property.
+            </summary><value>The fill brush.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.MatingSides"><summary>
+            Gets or sets the sides that will have adjoining buttons. This is a dependency property.
+            </summary><value>The mating sides.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.Padding"><summary>
+            Gets or sets a <see cref="T:System.Windows.Thickness" /> value that describes the amount of space between an LunaButtonChrome and its child element. This is a dependency property.
+            </summary><value>The <see cref="T:System.Windows.Thickness" /> that describes the amount of space between a LunaButtonChrome and its single child element. The default value is <c>4</c> for all sides.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderDefaulted"><summary>
+            Gets or sets a value indicating whether to render the appearance of the default button. This is a dependency property.
+            </summary><value><c>true</c> if the default button appearance should be rendered; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderMouseOver"><summary>
+            Gets or sets a value indicating whether to render the appearance as if the mouse is over it. This is a dependency
+            property.
+            </summary><value><c>true</c> if the mouse over appearance should be rendered; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderPressed"><summary>
+            Gets or sets a value indicating whether to render the appearance of a pressed button. This is a dependency property.
+            </summary><value><c>true</c> if the pressed appearance should be rendered; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderTransparentBackground"><summary>
+            Gets or sets a value indicating whether the background and border items should be rendered transparent until
+            <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderDefaulted" />, <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderMouseOver" />, or <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderPressed" /> are set to
+            <c>true</c>.
+            </summary><value><c>true</c> if the background and border items should be rendered transparent; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RoundCorners"><summary>
+            Gets or sets which corners of should be rounded.
+            </summary><value>The rounded corners.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.ThemeColor"><summary>
+            Gets or sets the theme color. This is a dependency property.
+            </summary><value>The theme color.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.BorderBrushProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.BorderBrush" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.BorderBrush" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.FillProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.Fill" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.Fill" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.MatingSidesProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.MatingSides" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.MatingSides" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.PaddingProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.Padding" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.Padding" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderDefaultedProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderDefaulted" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderDefaulted" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderMouseOverProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderMouseOver" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderMouseOver" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderPressedProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderPressed" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderPressed" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderTransparentBackgroundProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderTransparentBackground" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RenderTransparentBackground" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RoundCornersProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RoundCorners" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.RoundCorners" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.ThemeColorProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.ThemeColor" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.LunaButtonChrome.ThemeColor" /> dependency property.</value></member><member name="T:ActiproSoftware.Windows.Controls.Primitives.MonthCalendarDayGrid"><summary>
+            Represents a day grid.
+            </summary></member><member name="T:ActiproSoftware.Windows.Controls.Primitives.MonthCalendarDayOfWeekGrid"><summary>
+            Represents a day of week grid.
+            </summary></member><member name="T:ActiproSoftware.Windows.Controls.Primitives.MonthCalendarWeekNumberGrid"><summary>
+            Represents a day of week grid.
+            </summary></member><member name="T:ActiproSoftware.Windows.Controls.ValueEditBox`1"><summary>
+            Represents the base class for a control that allows for extended editing, generally via a drop-down.
+            </summary><typeparam name="T">The type of value to edit.</typeparam></member><member name="M:ActiproSoftware.Windows.Controls.ValueEditBox`1.CoerceValuePropertyValue(`0)"><summary>
+            Coerces a new <see cref="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueProperty" /> value.
+            </summary><param name="value">The new value being set.</param><returns>The coerced value to set.</returns></member><member name="M:ActiproSoftware.Windows.Controls.ValueEditBox`1.OnDropDownClosed(System.Windows.RoutedEventArgs)"><summary>
+            Invoked when an unhandled <see cref="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.DropDownClosed" /> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <c>RoutedEventArgs</c> that contains the event data.</param><remarks>
+            This method has no default implementation. 
+            Because an intermediate class in the inheritance might implement this method, 
+            we recommend that you call the base implementation in your implementation.
+            </remarks></member><member name="M:ActiproSoftware.Windows.Controls.ValueEditBox`1.OnDropDownOpened(System.Windows.RoutedEventArgs)"><summary>
+            Invoked when an unhandled <see cref="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.DropDownOpened" /> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <c>RoutedEventArgs</c> that contains the event data.</param><remarks>
+            This method has no default implementation. 
+            Because an intermediate class in the inheritance might implement this method, 
+            we recommend that you call the base implementation in your implementation.
+            </remarks></member><member name="M:ActiproSoftware.Windows.Controls.ValueEditBox`1.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)"><summary>
+            Reports that the <c>IsKeyboardFocusWithin</c> property changed. 
+            </summary><param name="e">A <c>DependencyPropertyChangedEventArgs</c> that contains the event data.</param></member><member name="M:ActiproSoftware.Windows.Controls.ValueEditBox`1.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)"><summary>
+            Invoked when an unhandled <see cref="T:System.Windows.Input.Mouse" />.<see cref="F:System.Windows.Input.Mouse.PreviewMouseDownEvent" /> attached event is raised on this element. 
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <see cref="T:System.Windows.Input.MouseButtonEventArgs" /> that contains the event data.</param></member><member name="M:ActiproSoftware.Windows.Controls.ValueEditBox`1.OnValueChanged(ActiproSoftware.Windows.PropertyChangedRoutedEventArgs{`0})"><summary>
+            Invoked when an unhandled <see cref="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueChanged" /> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <see cref="T:ActiproSoftware.Windows.PropertyChangedRoutedEventArgs`1" /> that contains the event data.</param><remarks>
+            This method has no default implementation. 
+            Because an intermediate class in the inheritance might implement this method, 
+            we recommend that you call the base implementation in your implementation.
+            </remarks></member><member name="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsDropDownOpen"><summary>
+            Gets or sets whether the drop-down is currently open.
+            </summary><value><c>true</c> if the drop-down is currently open; otherwise, <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsEditable"><summary>
+            Gets or sets whether the text in the editor can be edited.
+            </summary><value><c>true</c> if the text in the editor can be edited; otherwise, <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsReadOnly"><summary>
+            Gets or sets whether the embedded <c>TextBox</c> is in selection-only mode, 
+            in which the contents of the editor are selectable but not editable.
+            </summary><value><c>true</c> if the editor is read-only; otherwise, <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsSelectionBoxHighlighted"><summary>
+            Gets whether the selection box is highlighted.
+            </summary><value><c>true</c> if the selection box is highlighted; otherwise, <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.Value"><summary>
+            Gets or sets the value that is currently in the control.
+            </summary><value>The value that is currently in the control.</value></member><member name="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueConverter"><summary>
+            Gets or sets the <see cref="T:System.Windows.Data.IValueConverter" /> to use for converting the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.Value" /> to a string.
+            </summary><value>The <see cref="T:System.Windows.Data.IValueConverter" /> to use for the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.Value" />.</value></member><member name="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueConverterParameter"><summary>
+            Gets or sets the parameter to use for the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueConverter" />.
+            </summary><value>The parameter to use for the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueConverter" />.</value></member><member name="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.DropDownClosed"><summary>
+            Occurs after the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsDropDownOpen" /> property is set to <c>false</c>.
+            </summary></member><member name="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.DropDownOpened"><summary>
+            Occurs after the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsDropDownOpen" /> property is set to <c>true</c>.
+            </summary></member><member name="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueChanged"><summary>
+            Occurs after the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.Value" /> property has changed.
+            </summary></member><member name="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.DropDownClosedEvent"><summary>
+            Identifies the <see cref="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.DropDownClosed" /> routed event.  This field is read-only.
+            </summary><value>The identifier for the <see cref="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.DropDownClosed" /> routed event.</value></member><member name="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.DropDownOpenedEvent"><summary>
+            Identifies the <see cref="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.DropDownOpened" /> routed event.  This field is read-only.
+            </summary><value>The identifier for the <see cref="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.DropDownOpened" /> routed event.</value></member><member name="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueChangedEvent"><summary>
+            Identifies the <see cref="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueChanged" /> routed event.  This field is read-only.
+            </summary><value>The identifier for the <see cref="E:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueChanged" /> routed event.</value></member><member name="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsDropDownOpenProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsDropDownOpen" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsDropDownOpen" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsEditableProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsEditable" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsEditable" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsReadOnlyProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsReadOnly" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsReadOnly" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsSelectionBoxHighlightedProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsSelectionBoxHighlighted" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.IsSelectionBoxHighlighted" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.Value" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.Value" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueConverterProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueConverter" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueConverter" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueConverterParameterProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueConverterParameter" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.ValueEditBox`1.ValueConverterParameter" /> dependency property.</value></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker"><summary>
+            Represents a control that allows for the selection of a <see cref="T:System.DateTime" />.
+            </summary><remarks>
+            For detailed documentation on this control's features and how to use them, please see the 
+            <a href="../Topics/Shared/WindowsControlsCalendar.html">Shared Calendar</a> documentation topic. 
+            </remarks></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.CoerceValuePropertyValue(System.Nullable{System.DateTime})"><summary>
+            Coerces a new <c>ValueProperty</c> value.
+            </summary><param name="value">The new value being set.</param><returns>The coerced value to set.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.OnApplyTemplate"><summary>
+            Invoked whenever application code or internal processes call <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" />.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.OnDropDownClosed(System.Windows.RoutedEventArgs)"><summary>
+            Invoked when an unhandled <c>DropDownClosed</c> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <c>RoutedEventArgs</c> that contains the event data.</param></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.OnDropDownOpened(System.Windows.RoutedEventArgs)"><summary>
+            Invoked when an unhandled <c>DropDownOpened</c> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <c>RoutedEventArgs</c> that contains the event data.</param></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)"><summary>
+            Occurs after the control gains keyboard focus.
+            </summary><param name="e">A <see cref="T:System.Windows.Input.KeyboardFocusChangedEventArgs" /> that contains the event data.</param></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.OnInvalidText(System.Windows.RoutedEventArgs)"><summary>
+            Invoked when an unhandled <see cref="E:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.InvalidText" /> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <c>RoutedEventArgs</c> that contains the event data.</param><remarks>
+            This method has no default implementation. 
+            Because an intermediate class in the inheritance might implement this method, 
+            we recommend that you call the base implementation in your implementation.
+            </remarks></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)"><summary>
+            Reports that the <c>IsKeyboardFocusWithin</c> property changed. 
+            </summary><param name="e">A <c>DependencyPropertyChangedEventArgs</c> that contains the event data.</param></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.OnValueChanged(ActiproSoftware.Windows.PropertyChangedRoutedEventArgs{System.Nullable{System.DateTime}})"><summary>
+            Invoked when an unhandled <c>ValueChanged</c> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <c>PropertyChangedRoutedEventArgs</c> that contains the event data.</param><remarks>
+            This method has no default implementation. 
+            Because an intermediate class in the inheritance might implement this method, 
+            we recommend that you call the base implementation in your implementation.
+            </remarks></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.RefreshMonthCalendar"><summary>
+            Refreshes the day of week headers and the visible days on the drop-down <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.MonthCalendar" />.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.#ctor"><summary>
+            Initializes an instance of the <c>DateTimePicker</c> class.
+            </summary></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonContent"><summary>
+            Gets or sets the content for the <c>Clear</c> button within the calendar.
+            </summary><value>The content for the <c>Clear</c> button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the <c>Clear</c> button within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the <c>Clear</c> button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonVisible"><summary>
+            Gets or sets whether the <c>Clear</c> button is visible.
+            </summary><value><c>true</c> if the <c>Clear</c> button is visible; otherwise, <c>false</c>.
+            The default value is <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemPresenterStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for day items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for day items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemPresenterStyleSelector"><summary>
+            Gets or sets the <see cref="T:System.Windows.Controls.StyleSelector" /> to use for day items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Controls.StyleSelector" /> to use for day items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemsPresenterStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the day items presenter within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the day items presenter within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemTemplate"><summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate" /> to use for day items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.DataTemplate" /> to use for day items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekHeadersVisible"><summary>
+            Gets or sets whether the day of week headers are visible.
+            </summary><value><c>true</c> if the day of week headers are visible; otherwise, <c>false</c>.
+            The default value is <c>true</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemPresenterStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for day of week items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for day of week items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemPresenterStyleSelector"><summary>
+            Gets or sets the <see cref="T:System.Windows.Controls.StyleSelector" /> to use for day of week items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Controls.StyleSelector" /> to use for day of week items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemTemplate"><summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate" /> to use for day of week items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.DataTemplate" /> to use for day of week items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.FirstDayOfWeek"><summary>
+            Gets or sets a <see cref="T:System.DayOfWeek" /> indicating the first day of the week to display in the control.
+            </summary><value>
+            A <see cref="T:System.DayOfWeek" /> indicating the first day of the week to display in the control.
+            The default value is <c>DayOfWeek.Sunday</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.IsValueToday"><summary>
+            Gets whether the <c>Value</c> corresponds to the current date.
+            </summary><value><c>true</c> if the <c>Value</c> corresponds to the current date; otherwise, <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.Maximum"><summary>
+            Gets or sets the <see cref="T:System.DateTime" /> that specifies the maximum value.
+            </summary><value>The <see cref="T:System.DateTime" /> that specifies the maximum value.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.Minimum"><summary>
+            Gets or sets the <see cref="T:System.DateTime" /> that specifies the minimum value.
+            </summary><value>The <see cref="T:System.DateTime" /> that specifies the minimum value.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.MonthCalendarStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> applied to the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.MonthCalendar" /> displayed in the drop-down.
+            </summary><value>The <see cref="T:System.Windows.Style" /> applied to the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.MonthCalendar" /> displayed in the drop-down.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.NextMonthButtonStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the next month button within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the next month button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.PreviousMonthButtonStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the previous month button within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the previous month button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.Text"><summary>
+            Gets the text that is currently in the editable textbox portion of the control.
+            </summary><value>The text that is currently in the editable textbox portion of the control.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TitleStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the title within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the title within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TitleVisible"><summary>
+            Gets or sets whether the title is visible.
+            </summary><value><c>true</c> if the title is visible; otherwise, <c>false</c>.
+            The default value is <c>true</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonContent"><summary>
+            Gets or sets the content for the <c>Today</c> button within the calendar.
+            </summary><value>The content for the <c>Today</c> button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the <c>Today</c> button within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the <c>Today</c> button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonVisible"><summary>
+            Gets or sets whether the <c>Today</c> button is visible.
+            </summary><value><c>true</c> if the <c>Today</c> button is visible; otherwise, <c>false</c>.
+            The default value is <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberPresenterStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for week numbers within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for week numbers within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberPresenterStyleSelector"><summary>
+            Gets or sets the <see cref="T:System.Windows.Controls.StyleSelector" /> to use for week numbers within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Controls.StyleSelector" /> to use for week numbers within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumbersVisible"><summary>
+            Gets or sets whether the week numbers are visible.
+            </summary><value><c>true</c> if the week numbers are visible; otherwise, <c>false</c>.
+            The default value is <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberTemplate"><summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate" /> to use for week numbers within the calendar.
+            </summary><value>The <see cref="T:System.Windows.DataTemplate" /> to use for week numbers within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.YearSelectionEnabled"><summary>
+            Gets or sets whether year selection is enabled, allowing for year-selection up/down arrows in the calendar.
+            </summary><value><c>true</c> if year selection is enabled; otherwise, <c>false</c>.
+            The default value is <c>false</c>.
+            </value></member><member name="E:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.InvalidText"><summary>
+            Occurs after an invalid date/time string is entered into an editable <see cref="T:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker" />.
+            </summary><remarks>
+            The <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.Text" /> property returns the invalid date/time text.
+            </remarks></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.InvalidTextEvent"><summary>
+            Identifies the <see cref="E:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.InvalidText" /> routed event.  This field is read-only.
+            </summary><value>The identifier for the <see cref="E:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.InvalidText" /> routed event.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonContentProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonContent" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonContent" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.ClearButtonVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemPresenterStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemPresenterStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemPresenterStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemPresenterStyleSelectorProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemPresenterStyleSelector" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemPresenterStyleSelector" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemsPresenterStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemsPresenterStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemsPresenterStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemTemplateProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemTemplate" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayItemTemplate" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekHeadersVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekHeadersVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekHeadersVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemPresenterStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemPresenterStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemPresenterStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemPresenterStyleSelectorProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemPresenterStyleSelector" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemPresenterStyleSelector" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemTemplateProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemTemplate" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.DayOfWeekItemTemplate" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.FirstDayOfWeekProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.FirstDayOfWeek" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.FirstDayOfWeek" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.MaximumProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.Maximum" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.Maximum" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.MinimumProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.Minimum" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.Minimum" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.MonthCalendarStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.MonthCalendarStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.MonthCalendarStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.NextMonthButtonStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.NextMonthButtonStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.NextMonthButtonStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.PreviousMonthButtonStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.PreviousMonthButtonStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.PreviousMonthButtonStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TextProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.Text" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.Text" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TitleStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TitleStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TitleStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TitleVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TitleVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TitleVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonContentProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonContent" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonContent" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.TodayButtonVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberPresenterStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberPresenterStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberPresenterStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberPresenterStyleSelectorProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberPresenterStyleSelector" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberPresenterStyleSelector" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumbersVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumbersVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumbersVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberTemplateProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberTemplate" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.WeekNumberTemplate" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.YearSelectionEnabledProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.YearSelectionEnabled" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimePicker.YearSelectionEnabled" /> dependency property.</value></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.PreviousMonthButton"><summary>
+            Represents a <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> for navigating to the previous month.
+            </summary></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.NextMonthButton"><summary>
+            Represents a <see cref="T:System.Windows.Controls.Primitives.RepeatButton" /> for navigating to the next month.
+            </summary></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarWeekNumbersPresenter"><summary>
+            Represents a presenter for the week numbers in a <see cref="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar" />.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarWeekNumbersPresenter.GetContainerForItemOverride"><summary>
+            Creates or identifies the element used to display the specified item.
+            </summary><returns>The element that is used to display the given item. </returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarWeekNumbersPresenter.IsItemItsOwnContainerOverride(System.Object)"><summary>
+            Determines if the specified item is (or is eligible to be) its own item container.
+            </summary><param name="item">Specified item.</param><returns><c>true</c> if the item is its own item container; otherwise, <c>false</c>.
+            </returns></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.WeekNumberPresenter"><summary>
+            Represents a presenter for a week number.
+            </summary></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarDayOfWeekItemsPresenter"><summary>
+            Represents a presenter for the day of week items in a <see cref="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar" />.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarDayOfWeekItemsPresenter.GetContainerForItemOverride"><summary>
+            Creates or identifies the element used to display the specified item.
+            </summary><returns>The element that is used to display the given item. </returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarDayOfWeekItemsPresenter.IsItemItsOwnContainerOverride(System.Object)"><summary>
+            Determines if the specified item is (or is eligible to be) its own item container.
+            </summary><param name="item">Specified item.</param><returns><c>true</c> if the item is its own item container; otherwise, <c>false</c>.
+            </returns></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekToDayOfWeekItemConverter"><summary>
+            Represents a value converter that converts between a <see cref="T:System.DayOfWeek" /> and a <see cref="T:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItem" />.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekToDayOfWeekItemConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)"><summary>
+            Converts a value. The data binding engine calls this method when it propagates a value from the binding source to the binding target.
+            </summary><param name="value">The value produced by the binding source.</param><param name="targetType">The type of the binding target property.</param><param name="parameter">The converter parameter to use.</param><param name="culture">The culture to use in the converter.</param><returns>A converted value.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekToDayOfWeekItemConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)"><summary>
+            Converts a value. The data binding engine calls this method when it propagates a value from the binding target to the binding source.
+            </summary><param name="value">The value produced by the binding source.</param><param name="targetType">The type of the binding target property.</param><param name="parameter">The converter parameter to use.</param><param name="culture">The culture to use in the converter.</param><returns>A converted value.</returns></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItemPresenter"><summary>
+            Represents a presenter for a <see cref="T:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItem" />.
+            </summary></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItem"><summary>
+            Represents a day of the week item for use within a calendar.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItem.#ctor(System.DayOfWeek)"><summary>
+            Initializes an instance of the <c>DayOfWeekItem</c> class.
+            </summary><param name="dayOfWeek">The <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItem.DayOfWeek" /> that is represented by this object.</param></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItem.DayOfWeek"><summary>
+            Gets the date that is represented by this object.
+            </summary><value>The date that is represented by this object.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItem.IsWeekend"><summary>
+            Gets whether the date falls on a weekend.
+            </summary><value><c>true</c> if the date falls on a weekend; otherwise, <c>false</c>.
+            </value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItem.DayOfWeekProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItem.DayOfWeek" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DayOfWeekItem.DayOfWeek" /> dependency property.</value></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.DayItemPresenter"><summary>
+            Represents a presenter for a <see cref="T:ActiproSoftware.Windows.Controls.Calendar.DayItem" />.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DayItemPresenter.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)"><summary>
+            Invoked when an unhandled <see cref="E:System.Windows.UIElement.MouseRightButtonDown" /> routed event is raised on this element. 
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">The event data for the <see cref="E:System.Windows.UIElement.MouseRightButtonDown"></see> event.</param></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.DayItem"><summary>
+            Represents a day item for use within a calendar.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DayItem.#ctor(System.DateTime,System.Boolean)"><summary>
+            Initializes an instance of the <c>DayItem</c> class.
+            </summary><param name="date">The date that is represented by this object.</param><param name="isOtherMonth">Whether the date is in another month.</param></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.Date"><summary>
+            Gets the date that is represented by this object.
+            </summary><value>The date that is represented by this object.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.IsOtherMonth"><summary>
+            Gets whether the date is in another month.
+            </summary><value><c>true</c> if the date is in another month; otherwise, <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.IsSelectable"><summary>
+            Gets whether the date is selectable (in min/max date range).
+            </summary><value><c>true</c> if the date is selectable (in min/max date range); otherwise, <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.IsToday"><summary>
+            Gets whether the date is today.
+            </summary><value><c>true</c> if the date is today; otherwise, <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.IsWeekend"><summary>
+            Gets whether the date falls on a weekend.
+            </summary><value><c>true</c> if the date falls on a weekend; otherwise, <c>false</c>.
+            </value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DayItem.DateProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.Date" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.Date" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DayItem.IsOtherMonthProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.IsOtherMonth" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.IsOtherMonth" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DayItem.IsSelectableProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.IsSelectable" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DayItem.IsSelectable" /> dependency property.</value></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarDayItemsPresenter"><summary>
+            Represents a presenter for the day items in a <see cref="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar" />.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarDayItemsPresenter.GetContainerForItemOverride"><summary>
+            Creates or identifies the element used to display the specified item.
+            </summary><returns>The element that is used to display the given item. </returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarDayItemsPresenter.IsItemItsOwnContainerOverride(System.Object)"><summary>
+            Determines if the specified item is (or is eligible to be) its own item container.
+            </summary><param name="item">Specified item.</param><returns><c>true</c> if the item is its own item container; otherwise, <c>false</c>.
+            </returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarDayItemsPresenter.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)"><summary>
+            Responds to a list box selection change by raising a <c>SelectionChanged</c> event. 
+            </summary><param name="e">A <see cref="T:System.Windows.Controls.SelectionChangedEventArgs" /> that contains the event data.</param></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands"><summary>
+            Contains the built-in commands used for calendar controls.
+            </summary></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.GoToMonth"><summary>
+            Gets the <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to navigate to a specified month.
+            </summary><value>The <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to navigate to a specified month.</value><remarks>
+            A <see langword="null" /> parameter will navigate to the current month.
+            An integer parameter will navigate forward (if positive) or backward (if negative) the specified number of months.
+            A <see cref="T:System.DateTime" /> parameter will navigate to the specified month.
+            </remarks></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.GoToNextMonth"><summary>
+            Gets the <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to navigate to the next month.
+            </summary><value>The <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to navigate to the next month.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.GoToNextYear"><summary>
+            Gets the <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to navigate to the next year.
+            </summary><value>The <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to navigate to the next year.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.GoToPreviousMonth"><summary>
+            Gets the <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to navigate to the previous month.
+            </summary><value>The <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to navigate to the previous month.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.GoToPreviousYear"><summary>
+            Gets the <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to navigate to the previous year.
+            </summary><value>The <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to navigate to the previous year.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.SelectDateTime"><summary>
+            Gets the <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to select a specified <see cref="T:System.DateTime" />.
+            </summary><value>The <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to select a specified <see cref="T:System.DateTime" />.</value><remarks>
+            A <see langword="null" /> parameter will select a <see langword="null" /><see cref="T:System.DateTime" />.
+            A <see cref="T:System.DateTime" /> parameter will select the specified <see cref="T:System.DateTime" />.
+            </remarks></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.SelectToday"><summary>
+            Gets the <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to select today.
+            </summary><value>The <see cref="T:System.Windows.Input.RoutedCommand" /> that is used to select today.</value></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendarTitle"><summary>
+            Represents a title for a <see cref="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar" />.
+            </summary></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase"><summary>
+            Represents the base class for a <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTime" />-based control.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.CoerceDateTimePropertyValue(System.DateTime)"><summary>
+            Coerces a new <see cref="F:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTimeProperty" /> value.
+            </summary><param name="value">The new value being set.</param><returns>The coerced value to set.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.OnDateTimeChanged(ActiproSoftware.Windows.DateTimePropertyChangedRoutedEventArgs)"><summary>
+            Invoked when an unhandled <see cref="E:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTimeChanged" /> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <see cref="T:ActiproSoftware.Windows.PropertyChangedRoutedEventArgs`1" /> that contains the event data.</param><remarks>
+            This method has no default implementation. 
+            Because an intermediate class in the inheritance might implement this method, 
+            we recommend that you call the base implementation in your implementation.
+            </remarks></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTime"><summary>
+            Gets or sets the <see cref="T:System.DateTime" /> that specifies the date/time visually represented in the control.
+            </summary><value>The <see cref="T:System.DateTime" /> that specifies the date/time visually represented in the control.</value></member><member name="E:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTimeChanged"><summary>
+            Occurs after the <see cref="T:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase" />'s <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTime" /> property has changed.
+            </summary></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTimeChangedEvent"><summary>
+            Identifies the <see cref="E:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTimeChanged" /> routed event.  This field is read-only.
+            </summary><value>The identifier for the <see cref="E:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTimeChanged" /> routed event.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTimeProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTime" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTime" /> dependency property.</value></member><member name="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar"><summary>
+            Represents a month-based calendar control.
+            </summary><remarks>
+            This control will process the following <see cref="T:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands" />:
+            <see cref="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.GoToMonth" />,
+            <see cref="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.GoToNextMonth" />,
+            <see cref="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.GoToNextYear" />,
+            <see cref="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.GoToPreviousMonth" />, 
+            <see cref="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.GoToPreviousYear" />,
+            <see cref="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.SelectDateTime" />, and
+            <see cref="P:ActiproSoftware.Windows.Controls.Calendar.CalendarCommands.SelectToday" />.
+            <para>
+            For detailed documentation on this control's features and how to use them, please see the 
+            <a href="../Topics/Shared/WindowsControlsCalendar.html">Shared Calendar</a> documentation topic. 
+            </para></remarks></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.CoerceDateTimePropertyValue(System.DateTime)"><summary>
+            Coerces a new <see cref="F:ActiproSoftware.Windows.Controls.Calendar.DateTimeControlBase.DateTimeProperty" /> value.
+            </summary><param name="value">The new value being set.</param><returns>The coerced value to set.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.EnsureSelectedDateVisible"><summary>
+            Ensures that the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDate" /> is visible in the calendar.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.OnApplyTemplate"><summary>
+            Invoked whenever application code or internal processes call <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" />.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.OnDateTimeChanged(ActiproSoftware.Windows.DateTimePropertyChangedRoutedEventArgs)"><summary>
+            Invoked when an unhandled <c>DateTimeChanged</c> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <see cref="T:ActiproSoftware.Windows.PropertyChangedRoutedEventArgs`1" /> that contains the event data.</param></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)"><summary>
+            Invoked when an unhandled <see cref="T:System.Windows.Input.Keyboard" />.<see cref="F:System.Windows.Input.Keyboard.PreviewKeyDownEvent" /> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <see cref="T:System.Windows.Input.KeyEventArgs" /> that contains the event data.</param></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)"><summary>
+            Invoked when an unhandled <see cref="T:System.Windows.Input.Mouse" />.<see cref="F:System.Windows.Input.Mouse.PreviewMouseWheelEvent" /> attached event is raised on this element. 
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <see cref="T:System.Windows.Input.MouseWheelEventArgs" /> that contains the event data.</param></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.OnSelectedDateChanged(ActiproSoftware.Windows.NullableDateTimePropertyChangedRoutedEventArgs)"><summary>
+            Invoked when an unhandled <see cref="E:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateChanged" /> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <c>PropertyChangedRoutedEventArgs</c> that contains the event data.</param><remarks>
+            This method has no default implementation. 
+            Because an intermediate class in the inheritance might implement this method, 
+            we recommend that you call the base implementation in your implementation.
+            </remarks></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.OnSelectedDateCommitted(System.Windows.RoutedEventArgs)"><summary>
+            Invoked when an unhandled <see cref="E:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateCommitted" /> attached event reaches an element in its route that is derived from this class.
+            Implement this method to add class handling for this event. 
+            </summary><param name="e">A <c>RoutedEventArgs</c> that contains the event data.</param><remarks>
+            This method has no default implementation. 
+            Because an intermediate class in the inheritance might implement this method, 
+            we recommend that you call the base implementation in your implementation.
+            </remarks></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.Refresh"><summary>
+            Refreshes the day of week headers and the visible days.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.#ctor"><summary>
+            Initializes an instance of the <c>MonthCalendar</c> class.
+            </summary></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonContent"><summary>
+            Gets or sets the content for the <c>Clear</c> button within the calendar.
+            </summary><value>The content for the <c>Clear</c> button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the <c>Clear</c> button within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the <c>Clear</c> button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonVisible"><summary>
+            Gets or sets whether the <c>Clear</c> button is visible.
+            </summary><value><c>true</c> if the <c>Clear</c> button is visible; otherwise, <c>false</c>.
+            The default value is <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemPresenterStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for day items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for day items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemPresenterStyleSelector"><summary>
+            Gets or sets the <see cref="T:System.Windows.Controls.StyleSelector" /> to use for day items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Controls.StyleSelector" /> to use for day items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemsPresenterStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the day items presenter within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the day items presenter within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemTemplate"><summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate" /> to use for day items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.DataTemplate" /> to use for day items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekHeaders"><summary>
+            Gets the collection of 7 day of week headers that are visible in the control.
+            </summary><value>The collection of 7 day of week headers that are visible in the control.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekHeadersVisible"><summary>
+            Gets or sets whether the day of week headers are visible.
+            </summary><value><c>true</c> if the day of week headers are visible; otherwise, <c>false</c>.
+            The default value is <c>true</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemPresenterStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for day of week items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for day of week items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemPresenterStyleSelector"><summary>
+            Gets or sets the <see cref="T:System.Windows.Controls.StyleSelector" /> to use for day of week items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Controls.StyleSelector" /> to use for day of week items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemTemplate"><summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate" /> to use for day of week items within the calendar.
+            </summary><value>The <see cref="T:System.Windows.DataTemplate" /> to use for day of week items within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.FirstDayOfWeek"><summary>
+            Gets or sets a <see cref="T:System.DayOfWeek" /> indicating the first day of the week to display in the control.
+            </summary><value>
+            A <see cref="T:System.DayOfWeek" /> indicating the first day of the week to display in the control.
+            The default value is <c>DayOfWeek.Sunday</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.IsSelectedDateToday"><summary>
+            Returns whether the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDate" /> corresponds to the current date.
+            </summary><value><c>true</c> if the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDate" /> corresponds to the current date; otherwise, <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.MaxDate"><summary>
+            Gets or sets the <see cref="T:System.DateTime" /> that specifies the maximum selectable date.
+            </summary><value>The <see cref="T:System.DateTime" /> that specifies the maximum selectable date.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.MinDate"><summary>
+            Gets or sets the <see cref="T:System.DateTime" /> that specifies the minimum selectable date.
+            </summary><value>The <see cref="T:System.DateTime" /> that specifies the minimum selectable date.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.NextMonthButtonStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the next month button within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the next month button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.NextMonthDaysVisible"><summary>
+            Gets or sets whether the next month's days are visible.
+            </summary><value><c>true</c> if the next month's days are visible; otherwise, <c>false</c>.
+            The default value is <c>true</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.PreviousMonthButtonStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the previous month button within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the previous month button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.PreviousMonthDaysVisible"><summary>
+            Gets or sets whether the previous month's days are visible.
+            </summary><value><c>true</c> if the previous month's days are visible; otherwise, <c>false</c>.
+            The default value is <c>true</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDate"><summary>
+            Gets or sets the <see cref="T:System.Nullable`1" /> that is currently selected in the control.
+            </summary><value>The <see cref="T:System.Nullable`1" /> that is currently selected in the control.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TitleStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the title within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the title within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TitleVisible"><summary>
+            Gets or sets whether the title is visible.
+            </summary><value><c>true</c> if the title is visible; otherwise, <c>false</c>.
+            The default value is <c>true</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonContent"><summary>
+            Gets or sets the content for the <c>Today</c> button within the calendar.
+            </summary><value>The content for the <c>Today</c> button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for the <c>Today</c> button within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for the <c>Today</c> button within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonVisible"><summary>
+            Gets or sets whether the <c>Today</c> button is visible.
+            </summary><value><c>true</c> if the <c>Today</c> button is visible; otherwise, <c>false</c>.
+            The default value is <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.VisibleDays"><summary>
+            Gets the collection of 42 days that are visible in the control.
+            </summary><value>The collection of 42 days that are visible in the control.</value><remarks>
+            6 rows of 7 days are visible in each control.
+            </remarks></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberPresenterStyle"><summary>
+            Gets or sets the <see cref="T:System.Windows.Style" /> to use for week numbers within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Style" /> to use for week numbers within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberPresenterStyleSelector"><summary>
+            Gets or sets the <see cref="T:System.Windows.Controls.StyleSelector" /> to use for week numbers within the calendar.
+            </summary><value>The <see cref="T:System.Windows.Controls.StyleSelector" /> to use for week numbers within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumbers"><summary>
+            Gets the collection of 6 week numbers that are visible in the control.
+            </summary><value>The collection of 6 week numbers that are visible in the control.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumbersVisible"><summary>
+            Gets or sets whether the week numbers are visible.
+            </summary><value><c>true</c> if the week numbers are visible; otherwise, <c>false</c>.
+            The default value is <c>false</c>.
+            </value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberTemplate"><summary>
+            Gets or sets the <see cref="T:System.Windows.DataTemplate" /> to use for week numbers within the calendar.
+            </summary><value>The <see cref="T:System.Windows.DataTemplate" /> to use for week numbers within the calendar.</value></member><member name="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.YearSelectionEnabled"><summary>
+            Gets or sets whether year selection is enabled, allowing for year-selection up/down arrows in the calendar.
+            </summary><value><c>true</c> if year selection is enabled; otherwise, <c>false</c>.
+            The default value is <c>false</c>.
+            </value></member><member name="E:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateChanged"><summary>
+            Occurs after the <see cref="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar" />'s <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDate" /> property has changed.
+            </summary></member><member name="E:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateCommitted"><summary>
+            Occurs after the <see cref="T:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar" />'s <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDate" /> property has been committed, via a click or <c>Enter</c> keypress, etc.
+            </summary></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateChangedEvent"><summary>
+            Identifies the <see cref="E:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateChanged" /> routed event.  This field is read-only.
+            </summary><value>The identifier for the <see cref="E:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateChanged" /> routed event.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateCommittedEvent"><summary>
+            Identifies the <see cref="E:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateCommitted" /> routed event.  This field is read-only.
+            </summary><value>The identifier for the <see cref="E:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateCommitted" /> routed event.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonContentProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonContent" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonContent" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.ClearButtonVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemPresenterStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemPresenterStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemPresenterStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemPresenterStyleSelectorProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemPresenterStyleSelector" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemPresenterStyleSelector" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemsPresenterStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemsPresenterStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemsPresenterStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemTemplateProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemTemplate" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayItemTemplate" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekHeadersVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekHeadersVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekHeadersVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemPresenterStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemPresenterStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemPresenterStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemPresenterStyleSelectorProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemPresenterStyleSelector" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemPresenterStyleSelector" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemTemplateProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemTemplate" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.DayOfWeekItemTemplate" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.FirstDayOfWeekProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.FirstDayOfWeek" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.FirstDayOfWeek" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.MaxDateProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.MaxDate" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.MaxDate" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.MinDateProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.MinDate" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.MinDate" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.NextMonthButtonStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.NextMonthButtonStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.NextMonthButtonStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.NextMonthDaysVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.NextMonthDaysVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.NextMonthDaysVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.PreviousMonthButtonStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.PreviousMonthButtonStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.PreviousMonthButtonStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.PreviousMonthDaysVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.PreviousMonthDaysVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.PreviousMonthDaysVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDateProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDate" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.SelectedDate" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TitleStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TitleStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TitleStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TitleVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TitleVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TitleVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonContentProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonContent" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonContent" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.TodayButtonVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberPresenterStyleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberPresenterStyle" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberPresenterStyle" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberPresenterStyleSelectorProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberPresenterStyleSelector" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberPresenterStyleSelector" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumbersVisibleProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumbersVisible" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumbersVisible" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberTemplateProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberTemplate" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.WeekNumberTemplate" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.YearSelectionEnabledProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.YearSelectionEnabled" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Calendar.MonthCalendar.YearSelectionEnabled" /> dependency property.</value></member><member name="T:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome"><summary>
+            Creates the Royale theme-specific look for <see cref="T:System.Windows.Controls.Button" /> elements.
+            </summary></member><member name="M:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.ArrangeOverride(System.Windows.Size)"><summary>
+            When overridden in a derived class, positions child elements and determines a size for a
+            <see cref="T:System.Windows.FrameworkElement" /> derived class.
+            </summary><param name="finalSize">
+            The final area within the parent that this element should use to arrange itself and its children.
+            </param><returns>The actual size used.</returns></member><member name="M:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.MeasureOverride(System.Windows.Size)"><summary>
+            When overridden in a derived class, measures the size in layout required for child elements and determines a size for
+            the <see cref="T:System.Windows.FrameworkElement" />-derived class.
+            </summary><param name="availableSize">
+            The available size that this element can give to child elements. Infinity can be specified as a value to indicate that
+            the element will size to whatever content is available.
+            </param><returns>
+            The size that this element determines it needs during layout, based on its calculations of child element sizes.
+            </returns></member><member name="M:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.OnRender(System.Windows.Media.DrawingContext)"><summary>
+            When overridden in a derived class, participates in rendering operations that are directed by the layout system. The
+            rendering instructions for this element are not used directly when this method is invoked, and are instead preserved
+            for later asynchronous use by layout and drawing.
+            </summary><param name="drawingContext">
+            The drawing instructions for a specific element. This context is provided to the layout system.
+            </param></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.BorderBrush"><summary>
+            Gets or sets the brush used to draw the outer border. This is a dependency property.
+            </summary><value>The brush used to draw the outer border.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.Fill"><summary>
+            Gets or sets the brush used to draw the color inside the button. This is a dependency property.
+            </summary><value>The fill brush.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.MatingSides"><summary>
+            Gets or sets the sides that will have adjoining buttons. This is a dependency property.
+            </summary><value>The mating sides.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.Padding"><summary>
+            Gets or sets a <see cref="T:System.Windows.Thickness" /> value that describes the amount of space between an RoyaleButtonChrome and its child element. This is a dependency property.
+            </summary><value>The <see cref="T:System.Windows.Thickness" /> that describes the amount of space between a RoyaleButtonChrome and its single child element. The default value is <c>4</c> for all sides.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderDefaulted"><summary>
+            Gets or sets a value indicating whether to render the appearance of the default button. This is a dependency property.
+            </summary><value><c>true</c> if the default button appearance should be rendered; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderMouseOver"><summary>
+            Gets or sets a value indicating whether to render the appearance as if the mouse is over it. This is a dependency
+            property.
+            </summary><value><c>true</c> if the mouse over appearance should be rendered; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderPressed"><summary>
+            Gets or sets a value indicating whether to render the appearance of a pressed button. This is a dependency property.
+            </summary><value><c>true</c> if the pressed appearance should be rendered; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderTransparentBackground"><summary>
+            Gets or sets a value indicating whether the background and border items should be rendered transparent until
+            <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderDefaulted" />, <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderMouseOver" />, or <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderPressed" /> are set to
+            <c>true</c>.
+            </summary><value><c>true</c> if the background and border items should be rendered transparent; otherwise, <c>false</c>.</value></member><member name="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RoundCorners"><summary>
+            Gets or sets which corners of should be rounded.
+            </summary><value>The rounded corners.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.BorderBrushProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.BorderBrush" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.BorderBrush" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.FillProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.Fill" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.Fill" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.MatingSidesProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.MatingSides" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.MatingSides" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.PaddingProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.Padding" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.Padding" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderDefaultedProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderDefaulted" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderDefaulted" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderMouseOverProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderMouseOver" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderMouseOver" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderPressedProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderPressed" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderPressed" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderTransparentBackgroundProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderTransparentBackground" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RenderTransparentBackground" /> dependency property.</value></member><member name="F:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RoundCornersProperty"><summary>
+            Identifies the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RoundCorners" /> dependency property.  This field is read-only.
+            </summary><value>The identifier for the <see cref="P:ActiproSoftware.Windows.Controls.Primitives.RoyaleButtonChrome.RoundCorners" /> dependency property.</value></member><member name="T:ActiproSoftware.Windows.Themes.LegacyThemeCatalog"><summary>
+            A theme catalog that describes the theme group name implementations and available themed resource dictionaries within this assembly.
+            </summary></member><member name="P:ActiproSoftware.Windows.Themes.LegacyThemeCatalog.DictionaryReferences"><summary>
+            Gets the collection of <see cref="T:ActiproSoftware.Windows.Themes.ThemedResourceDictionaryReference" /> objects for the assembly.
+            </summary><value>
+            The collection of <see cref="T:ActiproSoftware.Windows.Themes.ThemedResourceDictionaryReference" /> objects for the assembly.
+            </value></member><member name="T:ActiproSoftware.Windows.Themes.LegacyThemeCatalogRegistrar"><summary>
+            Represents a class that registers the <see cref="T:ActiproSoftware.Windows.Themes.LegacyThemeCatalog" /> with the theme manager.
+            </summary></member></members></doc>

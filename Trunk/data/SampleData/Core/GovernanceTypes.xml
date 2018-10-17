@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <GovernanceType>
+    <Id>7242552b-d5b4-4284-8251-32306d1c70b5</Id>
+    <Description>Provincial</Description>
+    <ExternalCode>EXT-02</ExternalCode>
+    <InternalCode>INT-02</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>1</SortOrder>
+    <State>Unchanged</State>
+  </GovernanceType>
+  <GovernanceType>
+    <Id>6a9e1aaa-3050-4696-a0d5-9c04e6563ae9</Id>
+    <Description>Municipal</Description>
+    <ExternalCode>EXT-01</ExternalCode>
+    <InternalCode>INT-01</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>0</SortOrder>
+    <State>Unchanged</State>
+  </GovernanceType>
+</Entities>

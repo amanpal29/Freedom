@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <ContactType>
+    <Id>36C6FC82-AB38-41a4-BA6E-FD180EE44DB9</Id>
+    <Description>Owner</Description>
+    <SortOrder>0</SortOrder>
+  </ContactType>
+  <ContactType>
+    <Id>36C6FC82-AB38-42a4-BA6E-FD180EE44DB9</Id>
+    <Description>Operator</Description>
+    <SortOrder>1</SortOrder>
+  </ContactType>
+  <ContactType>
+    <Id>36C6FC82-AB38-43a4-BA6E-FD180EE44DB9</Id>
+    <Description>Billing</Description>
+    <SortOrder>2</SortOrder>
+  </ContactType>
+  <ContactType>
+    <Id>36C6FC82-AB38-44a4-BA6E-FD180EE44DB9</Id>
+    <Description>Other</Description>
+    <SortOrder>3</SortOrder>
+  </ContactType>
+</Entities>

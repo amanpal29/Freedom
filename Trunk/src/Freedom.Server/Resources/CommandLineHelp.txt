@@ -1,0 +1,35 @@
+﻿Hedgehog 5 Application Server
+
+{0} [/F] [/?]
+
+{0} /I
+    [InstanceName=<instanceName>]
+    [/Account=<account>]|[/UserName=<userName> /Password=<password>]
+
+{0} /U
+
+{0} /S
+
+  /?    Displays this help text
+  /F    Runs the server in foreground mode
+  /I    Installs this executable as a service
+  /U    Uninstalls this executable if installed as a service
+  /S    Gets the current status of this service
+
+  /InstanceName=[instanceName]
+        Specifies a unique instance name for this instance. Required
+        when installing multiple Hedgehog servers on the same machine. 
+
+  /Account=[LocalService|LocalSystem|NetworkService]
+        Specifies a specific system account to install this service as.
+        Defaults to LocalSystem unless /UserName and /Password are used.
+
+  /UserName=[userName]
+        Specifies a specific user account to install this service as.
+        Must be used with /Password and can't be used with /Account.
+
+  /Password=[password]
+        Specifies a password to use with /UserName.
+
+  This executable should be called without parameters when running as a
+  service.

@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98293548-9098-4E26-B38B-7FA2D79E2AB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Freedom.Domain</RootNamespace>
+    <AssemblyName>Freedom.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandModel\CommandBase.cs" />
+    <Compile Include="CommandModel\CommandResult.cs" />
+    <Compile Include="CommandModel\Users\AddUserCommand.cs" />
+    <Compile Include="CommandModel\Users\ChangePasswordCommand.cs" />
+    <Compile Include="CommandModel\Users\ResetPasswordCommand.cs" />
+    <Compile Include="CommandModel\Users\UpdateUserCommand.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="DigestModel\CellViewModels\AsyncCellViewModel.cs" />
+    <Compile Include="Exceptions\CommunicationException.cs" />
+    <Compile Include="Exceptions\ConcurrencyException.cs" />
+    <Compile Include="Exceptions\ConfidentialAccessDeniedException.cs" />
+    <Compile Include="Exceptions\ConstraintViolatedException.cs" />
+    <Compile Include="Exceptions\EmailNotificationFailedException.cs" />
+    <Compile Include="Exceptions\EmptyLookupException.cs" />
+    <Compile Include="Exceptions\FileTransferException.cs" />
+    <Compile Include="Exceptions\FreedomDatabaseException.cs" />
+    <Compile Include="Exceptions\HttpStatusCommunicationException.cs" />
+    <Compile Include="Exceptions\InsufficientPermissionException.cs" />
+    <Compile Include="Exceptions\InvalidCommandException.cs" />
+    <Compile Include="Exceptions\NetworkCommunicationException.cs" />
+    <Compile Include="Exceptions\NoConfigurationLoadedException.cs" />
+    <Compile Include="Exceptions\PasswordComplexityException.cs" />
+    <Compile Include="Exceptions\PasswordExpiredException.cs" />
+    <Compile Include="Exceptions\ReportTooLargeException.cs" />
+    <Compile Include="Exceptions\SequenceEmptyException.cs" />
+    <Compile Include="Exceptions\SynchronizationException.cs" />
+    <Compile Include="Exceptions\UnsupportedCommandException.cs" />
+    <Compile Include="Infrastructure\ApplicationSettingsBase.cs" />
+    <Compile Include="Infrastructure\AutoNumberGenerator.cs" />
+    <Compile Include="Infrastructure\AutoNumberSettings.cs" />
+    <Compile Include="Infrastructure\CompositeCollection.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\CanceledException.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\ExceptionContext.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\ExceptionHandledStatus.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\ExceptionHandlerService.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\ExceptionHandlerServiceExtensions.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\ExceptionSliencer.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\IExceptionHandler.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\IExceptionHandlerService.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\LoggingExceptionHandler.cs" />
+    <Compile Include="Infrastructure\FreedomContextApplicationSettings.cs" />
+    <Compile Include="Infrastructure\FreedomDatabaseDataProvider.cs" />
+    <Compile Include="Infrastructure\IAutoNumberGenerator.cs" />
+    <Compile Include="Infrastructure\IHttpClientFactory.cs" />
+    <Compile Include="Infrastructure\IIndexer.cs" />
+    <Compile Include="Infrastructure\IndexingEngine.cs" />
+    <Compile Include="Infrastructure\INotificationFactory.cs" />
+    <Compile Include="Infrastructure\KeySetCollection.cs" />
+    <Compile Include="Infrastructure\LookupRegistry.cs" />
+    <Compile Include="Infrastructure\NullNotificationFactory.cs" />
+    <Compile Include="Infrastructure\Reports\ErrorCode.cs" />
+    <Compile Include="Infrastructure\Reports\ExceptionMessage.cs" />
+    <Compile Include="Infrastructure\Reports\ExportFormat.cs" />
+    <Compile Include="Infrastructure\Reports\GroupLevelPropertyDescriptor.cs" />
+    <Compile Include="Infrastructure\Reports\ModelDomain.cs" />
+    <Compile Include="Infrastructure\Reports\ProgressMessage.cs" />
+    <Compile Include="Infrastructure\Reports\ReportDocumentBuilder.cs" />
+    <Compile Include="Infrastructure\Reports\ReportEngineTask.cs" />
+    <Compile Include="Infrastructure\SqlServerSystemDataProvider.cs" />
+    <Compile Include="Interfaces\IActiveState.cs" />
+    <Compile Include="Interfaces\IEntityCollection.cs" />
+    <Compile Include="Interfaces\IIdentifiable.cs" />
+    <Compile Include="Interfaces\ILookup.cs" />
+    <Compile Include="Interfaces\ILookupRegistry.cs" />
+    <Compile Include="Interfaces\IMappable.cs" />
+    <Compile Include="Interfaces\IMapPopupAsyncInitializable.cs" />
+    <Compile Include="Interfaces\IOrderable.cs" />
+    <Compile Include="Interfaces\IRefreshable.cs" />
+    <Compile Include="Interfaces\IVersionedModelCache.cs" />
+    <Compile Include="Model\AggregateRoot.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ApplicationSetting.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AutoNumberMode.cs" />
+    <Compile Include="Model\Behaviors\IDbContextCommittingBehavior.cs" />
+    <Compile Include="Model\Behaviors\IEntityCommitBehavior.cs" />
+    <Compile Include="Model\ComplexTypeTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComplexTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DayOrdinal.cs" />
+    <Compile Include="Model\Definition\FreedomModelResources.cs" />
+    <Compile Include="Model\EntityBase.cs" />
+    <Compile Include="Model\EntityBase.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\EntityHelper.cs" />
+    <Compile Include="Model\EntityIdentifier.cs" />
+    <Compile Include="Model\EntityTypeTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\EnumTypeTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EnumTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FreedomLocalContext.cs" />
+    <Compile Include="Model\FreedomLocalContext.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreedomLocalContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FreedomRepository.generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreedomRepository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Lookup.cs" />
+    <Compile Include="Model\Lookup.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LookupBase.cs" />
+    <Compile Include="Model\LookupBase.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MailingAddress.cs" />
+    <Compile Include="Model\MailingAddress.generated.cs">
+      <DependentUpon>ComplexTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Notification.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NotificationBase.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NotificationClass.generated.cs">
+      <DependentUpon>EnumTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NotificationState.generated.cs">
+      <DependentUpon>EnumTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\NumberedRoot.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\OrderStatus.generated.cs">
+      <DependentUpon>EnumTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Paths.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Paths.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Priority.generated.cs">
+      <DependentUpon>EnumTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Role.cs" />
+    <Compile Include="Model\SystemPermission.cs" />
+    <Compile Include="Model\Tables.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tables.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\User.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BackgroundWorkQueue\IBackgroundWorkQueue.cs" />
+    <Compile Include="Services\BackgroundWorkQueue\IWorkItem.cs" />
+    <Compile Include="Services\BackgroundWorkQueue\TaskBackgroundWorkQueue.cs" />
+    <Compile Include="Services\Command\CommandExecutionContext.cs" />
+    <Compile Include="Services\Command\CommandExecutionContextExtensions.cs" />
+    <Compile Include="Services\Command\CommandHandlerCollection.cs" />
+    <Compile Include="Services\Command\CommandServiceExtensions.cs" />
+    <Compile Include="Services\Command\Handlers\CommandHandlerBase.cs" />
+    <Compile Include="Services\Command\Handlers\LocalContextCommandHandler.cs" />
+    <Compile Include="Services\Command\Handlers\RepositoryCommandHandler.cs" />
+    <Compile Include="Services\Command\ICommandHandler.cs" />
+    <Compile Include="Services\Command\ICommandHandlerCollection.cs" />
+    <Compile Include="Services\Command\ICommandService.cs" />
+    <Compile Include="Services\DatabaseBuilder\DatabaseBuilderService.cs" />
+    <Compile Include="Services\DatabaseBuilder\HedgehogDatabaseType.cs" />
+    <Compile Include="Services\DatabaseBuilder\IDatabaseBuilderService.cs" />
+    <Compile Include="Services\DataLoader\IEntityDataLoader.cs" />
+    <Compile Include="Services\Query\ConfidentialEntityHelper.cs" />
+    <Compile Include="Services\Query\DataProviderHelper.cs" />
+    <Compile Include="Services\Query\EntityCollection.cs" />
+    <Compile Include="Services\Query\IQueryDataProvider.cs" />
+    <Compile Include="Services\Query\IQueryDataProviderCollection.cs" />
+    <Compile Include="Services\Query\LastModifiedDateDictionary.cs" />
+    <Compile Include="Services\Query\ModelEntityDataProvider.cs" />
+    <Compile Include="Services\Query\QueryDataProviderCollection.cs" />
+    <Compile Include="Services\Query\QueryRequest.cs" />
+    <Compile Include="Services\Repository\AggregateFunction.cs" />
+    <Compile Include="Services\Repository\EntityRepositoryLinqExtensions.cs" />
+    <Compile Include="Services\Repository\EntityRepositoryLoggingDecorator.cs" />
+    <Compile Include="Services\Repository\EntityRepositoryManualRetryDecorator.cs" />
+    <Compile Include="Services\Repository\GroupCollection.cs" />
+    <Compile Include="Services\Repository\IDraftRepository.cs" />
+    <Compile Include="Services\Repository\IEntityRepository.cs" />
+    <Compile Include="Services\Repository\Linq\EntityRepositoryQuery.cs" />
+    <Compile Include="Services\Repository\Linq\EntityRepositoryQueryExecutor.cs" />
+    <Compile Include="Services\Repository\Linq\EntityRepositoryQueryProvider.cs" />
+    <Compile Include="Services\Repository\Linq\IAsyncQueryProvider.cs" />
+    <Compile Include="Services\Repository\PendingChanges\PendingChange.cs" />
+    <Compile Include="Services\Repository\PendingChanges\PendingChangesEnumerable.cs" />
+    <Compile Include="Services\Repository\PendingChanges\PendingChangesRepository.cs" />
+    <Compile Include="Services\Repository\PrincipalCache\PrincipalRepository.cs" />
+    <Compile Include="Services\Repository\PublishingHistory\PublishingStatusRepository.cs" />
+    <Compile Include="Services\Repository\QueryableAsyncExtensions.cs" />
+    <Compile Include="Services\Repository\QueryablePagingExtensions.cs" />
+    <Compile Include="Services\Repository\QueryableResolutionExtensions.cs" />
+    <Compile Include="Services\Repository\QueryDataProviderEntityRepository.cs" />
+    <Compile Include="Services\Repository\ResolutionGraph.cs" />
+    <Compile Include="Services\Repository\WorkflowMemento.cs" />
+    <Compile Include="Services\Security\FreedomCredentials.cs" />
+    <Compile Include="Services\Security\FreedomIdentity.cs" />
+    <Compile Include="Services\Security\FreedomPermissionSet.cs" />
+    <Compile Include="Services\Security\FreedomPrincipal.cs" />
+    <Compile Include="Services\Security\IClientContext.cs" />
+    <Compile Include="Services\Security\PasswordPolicy.cs" />
+    <Compile Include="Services\Sequence\ISequenceGenerator.cs" />
+    <Compile Include="Services\Sequence\SequenceBlock.cs" />
+    <Compile Include="Services\Sequence\SqlServerSequenceGenerator.cs" />
+    <Compile Include="Services\Status\IStatusService.cs" />
+    <Compile Include="Services\Status\VersionData.cs" />
+    <Compile Include="Services\Sync\IOfflineConnectionFactory.cs" />
+    <Compile Include="Services\Sync\LinkChangeList.cs" />
+    <Compile Include="Services\Sync\NumberBlock.cs" />
+    <Compile Include="Services\Sync\RecordChangeList.cs" />
+    <Compile Include="Services\Time\CachingTimeServiceDecorator.cs" />
+    <Compile Include="Services\Time\ITimeService.cs" />
+    <Compile Include="Services\Time\LocalTimeService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\ComplexTypeTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ComplexTypeTemplate.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Definition\CreateDatabase.sql">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateDatabase.tt</DependentUpon>
+    </Content>
+    <Content Include="Model\Definition\CreateDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CreateDatabase.sql</LastGenOutput>
+    </Content>
+    <Content Include="Model\Definition\FreedomConceptualModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FreedomConceptualModel.csdl</LastGenOutput>
+    </Content>
+    <Content Include="Model\Definition\FreedomDomain.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Model\Definition\FreedomModelMap.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FreedomModelMap.msl</LastGenOutput>
+    </Content>
+    <Content Include="Model\EntityTypeTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EntityTypeTemplate.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\EnumTypeTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EnumTypeTemplate.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\FreedomLocalContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FreedomLocalContext.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\FreedomRepository.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FreedomRepository.generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Paths.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Paths.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Tables.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Tables.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Model\Definition\FreedomConceptualModel.csdl">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreedomConceptualModel.tt</DependentUpon>
+    </None>
+    <None Include="Model\Definition\FreedomModelMap.msl">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreedomModelMap.tt</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Freedom.EntityFramework\Freedom.EntityFramework.csproj">
+      <Project>{9670a8bc-1c99-44f7-aee4-34a238053868}</Project>
+      <Name>Freedom.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freedom\Freedom.csproj">
+      <Project>{7580a08c-5c10-49e4-b990-0e2d8300035d}</Project>
+      <Name>Freedom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

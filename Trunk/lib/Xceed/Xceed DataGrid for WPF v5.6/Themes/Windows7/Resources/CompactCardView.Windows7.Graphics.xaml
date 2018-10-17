@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Xceed.Wpf.DataGrid"
+                    xmlns:markup="clr-namespace:Xceed.Wpf.DataGrid.Markup">
+
+   <ResourceDictionary.MergedDictionaries>
+
+      <!-- CompactCardView uses the same graphics as CardView -->
+      <markup:DataGridThemeResourceDictionary Source="CardView.Windows7.Graphics.xaml" />
+
+   </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

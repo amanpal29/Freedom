@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <EmailTemplate>
+    <Id>b0a78dc3-46b3-43ad-be76-b2f6a545645a</Id>
+    <Body>This is an automated notification email.  Please do not reply to this email, it is sent from an unmonitored email address.
+
+Sample Number: {SampleNumber}
+Sample Type: {SampleTestType.Description}
+Batch Number: {BatchNumber}
+The sample was {Interpretation}
+
+Sample Collected by {CollectedBy} on {CollectionDateTime:dd-MMM-yyyy hh:MM:ss}
+Sample Analyzed at {Lab.DisplayName} on {AnalysisDateTime:dd-MMM-yyyy hh:MM:ss}
+
+{Facility.Site.NameAndNumber}
+{Facility.MailingAddress}
+{SampleSite}
+
+Please see the attached report for more information.
+
+
+
+
+
+
+</Body>
+    <Description>Sample Notification</Description>
+    <IsActive>true</IsActive>
+    <Subject>{Interpretation} sample on {Facility.Site.NameAndNumber} [{SampleNumber}] </Subject>
+    <TemplateType>Sample</TemplateType>
+  </EmailTemplate>
+</Entities>

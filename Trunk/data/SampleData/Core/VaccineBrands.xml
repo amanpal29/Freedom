@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <VaccineBrand>
+    <Id>380B0B4E-1C71-4389-80CF-3B622D33580C</Id>
+    <Description>Imovax</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>0</SortOrder>
+    <Type>RabiesHumanDiploid</Type>
+  </VaccineBrand>
+  <VaccineBrand>
+    <Id>9CFFB923-6F3B-4BDB-A631-D68D9EF20F5A</Id>
+    <Description>RabAvert</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>1</SortOrder>
+    <Type>RabiesHumanDiploid</Type>
+  </VaccineBrand>
+  <VaccineBrand>
+    <Id>50A8295C-63DE-4686-8211-1F4C2393B1C8</Id>
+    <Description>Hyperab</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>2</SortOrder>
+    <Type>RabiesImmuneGlobulin</Type>
+  </VaccineBrand>
+  <VaccineBrand>
+    <Id>66B44B25-33F2-4539-A674-08FD2FD6A42E</Id>
+    <Description>Imogam Rabies-HT</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>3</SortOrder>
+    <Type>RabiesImmuneGlobulin</Type>
+  </VaccineBrand>
+  <VaccineBrand>
+    <Id>5E787217-B631-4391-ACBC-F43547F1E472</Id>
+    <Description>Bayrab</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>4</SortOrder>
+    <Type>RabiesImmuneGlobulin</Type>
+  </VaccineBrand>
+</Entities>

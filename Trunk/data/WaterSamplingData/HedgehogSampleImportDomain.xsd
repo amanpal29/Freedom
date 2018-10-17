@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://schemas.hedgerowsoftware.com/sampleimportdefinition" 
+           attributeFormDefault="unqualified" 
+           elementFormDefault="qualified" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://schemas.hedgerowsoftware.com/sampleimportdefinition/v1.0">
+  <xs:element name="SampleBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="LaboratoryCode" type="xs:string" />
+        <xs:element minOccurs="0" name="LaboratoryName" type="xs:string" />
+        <xs:element name="FileCreationDate" type="xs:dateTime" />
+        <xs:element name="TotalSampleRecords" type="xs:integer" />
+        <xs:element maxOccurs="unbounded" minOccurs="1" name="SampleDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SampleNumber" type="xs:string" />
+              <xs:element name="SampleTestTypeCode" type="xs:string" />
+              <xs:element minOccurs="0" name="SampleTestType" type="xs:string"/>
+              <xs:element name="SampleReason" type="xs:string" />
+              <xs:element name="FacilityNumber" type="xs:string" />
+              <xs:element minOccurs="0" name="FacilityName" type="xs:string" />
+              <xs:element name="SampleSiteTypeCode" type="xs:string" />
+              <xs:element minOccurs="0" name="SampleSiteType" type="xs:string" />
+              <xs:element name="SampleSite" type="xs:string" />
+              <xs:element minOccurs="0" name="SampleSiteLatitude" type="xs:double"/>
+              <xs:element minOccurs="0" name="SampleSiteLongitude" type="xs:double"/>
+              <xs:element minOccurs="0" name="SampleSiteElevation" type="xs:double"/>
+              <xs:element name="SampleCollectedDate" type="xs:dateTime" />
+              <xs:element name="SampleCollectedBy" type="xs:string" />
+              <xs:element minOccurs="0" name="SampleSubmittedDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="SampleSubmittedBy" type="xs:string" />
+              <xs:element name="SampleAnalyzedDate" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="Comments" type="xs:string" />
+              <xs:element minOccurs="0" name="AdvisoryTypeCode" type="xs:string" />
+              <xs:element maxOccurs="unbounded" minOccurs="1" name="SampleParameterDetail">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ParameterCode" type="xs:string" />
+                    <xs:element minOccurs="0" name="Parameter" type="xs:string" />
+                    <xs:element name="UOMCode" type="xs:string" />
+                    <xs:element name="FinalResult" type="xs:string" />
+                    <xs:element minOccurs="0" name="Technician" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleBatch xmlns="http://schemas.hedgerowsoftware.com/sampleimportdefinition/v1.0">
+  <LaboratoryCode>2645</LaboratoryCode>
+  <LaboratoryName>Interior Health</LaboratoryName>
+  <FileCreationDate>2012-06-12T00:00:00-07:00</FileCreationDate>
+  <TotalSampleRecords>1</TotalSampleRecords>
+  <SampleDetail>
+    <SampleNumber>2012032700011</SampleNumber>
+    <SampleTestTypeCode>WaterTest</SampleTestTypeCode>
+    <SampleTestType></SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>0661049</FacilityNumber>
+    <FacilityName>Pillar Lake Fishing Resort Water System</FacilityName>
+    <SampleSiteTypeCode>WS15-300</SampleSiteTypeCode>
+    <SampleSiteType>Water System 15-300 Connections</SampleSiteType>
+    <SampleSite>Kitchen Tap</SampleSite>
+    <SampleCollectedDate>2012-06-11T21:15:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Misty</SampleCollectedBy>
+    <SampleSubmittedDate>2012-06-12T00:00:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Misty</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-06-13T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>Coliform</ParameterCode>
+      <Parameter>Total Coliform</Parameter>
+      <UOMCode>TC Count/100ml</UOMCode>
+      <PreliminaryResult>overgrown</PreliminaryResult>
+      <FinalResult>overgrown</FinalResult>
+      <Technician>Tom</Technician>
+    </SampleParameterDetail>
+    <SampleParameterDetail>
+      <ParameterCode>E.Coli</ParameterCode>
+      <Parameter>Escherichia coli</Parameter>
+      <UOMCode>EC Count/100ml</UOMCode>
+      <PreliminaryResult>overgrown</PreliminaryResult>
+      <FinalResult>overgrown</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+</SampleBatch>

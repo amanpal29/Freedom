@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <TransactionType>
+    <Id>4a76cf4a-5eaa-4714-9c10-1175acf42c79</Id>
+    <AccountsReceivableSide>Credit</AccountsReceivableSide>
+    <Class>PermitFeeReversal</Class>
+    <CreditLedger>7ef72e10-fd1e-40d6-ba7c-7298557a6857</CreditLedger>
+    <DebitLedger>16dbc97a-55d9-4fe3-9654-c3dcd609fc87</DebitLedger>
+    <Description>Permit Fee Reversal</Description>
+    <IsActive>true</IsActive>
+    <IsInvoiceable>false</IsInvoiceable>
+    <SortOrder>2</SortOrder>
+  </TransactionType>
+  <TransactionType>
+    <Id>d6ea897a-c2b0-4485-8e6a-2e5c952a800a</Id>
+    <AccountsReceivableSide>Credit</AccountsReceivableSide>
+    <Class>UserDefined</Class>
+    <CreditLedger>7ef72e10-fd1e-40d6-ba7c-7298557a6857</CreditLedger>
+    <DebitLedger>6a1fe9da-586c-420e-9561-4d2ab0e20504</DebitLedger>
+    <Description>Write Off</Description>
+    <IsActive>true</IsActive>
+    <IsInvoiceable>false</IsInvoiceable>
+    <SortOrder>6</SortOrder>
+  </TransactionType>
+  <TransactionType>
+    <Id>28cf2232-0b8e-4789-82dc-939ecc8f1540</Id>
+    <AccountsReceivableSide>Debit</AccountsReceivableSide>
+    <Class>UserDefined</Class>
+    <CreditLedger>8d313327-2f88-4c74-9ec1-6e33970209c6</CreditLedger>
+    <DebitLedger>7ef72e10-fd1e-40d6-ba7c-7298557a6857</DebitLedger>
+    <Description>Write Off Recovery</Description>
+    <IsActive>true</IsActive>
+    <IsInvoiceable>false</IsInvoiceable>
+    <SortOrder>7</SortOrder>
+  </TransactionType>
+  <TransactionType>
+    <Id>3c4b9cd2-8b6a-4f59-a214-9e6fc0f9afd3</Id>
+    <AccountsReceivableSide>Credit</AccountsReceivableSide>
+    <Class>Payment</Class>
+    <CreditLedger>7ef72e10-fd1e-40d6-ba7c-7298557a6857</CreditLedger>
+    <DebitLedger>c15ce5be-9fc5-4d64-9cec-344d3e7e0836</DebitLedger>
+    <Description>Payment</Description>
+    <IsActive>true</IsActive>
+    <IsInvoiceable>false</IsInvoiceable>
+    <SortOrder>1</SortOrder>
+  </TransactionType>
+  <TransactionType>
+    <Id>6ab3992f-9e71-4083-b6a7-a1d1202c06a5</Id>
+    <AccountsReceivableSide>Debit</AccountsReceivableSide>
+    <Class>PaymentReversal</Class>
+    <CreditLedger>c15ce5be-9fc5-4d64-9cec-344d3e7e0836</CreditLedger>
+    <DebitLedger>7ef72e10-fd1e-40d6-ba7c-7298557a6857</DebitLedger>
+    <Description>Payment Reversal</Description>
+    <IsActive>true</IsActive>
+    <IsInvoiceable>false</IsInvoiceable>
+    <SortOrder>3</SortOrder>
+  </TransactionType>
+  <TransactionType>
+    <Id>dee4aa1b-be40-4d11-9689-a7588621e0b6</Id>
+    <AccountsReceivableSide>Debit</AccountsReceivableSide>
+    <Class>PermitFee</Class>
+    <CreditLedger>16dbc97a-55d9-4fe3-9654-c3dcd609fc87</CreditLedger>
+    <DebitLedger>7ef72e10-fd1e-40d6-ba7c-7298557a6857</DebitLedger>
+    <Description>Permit Fee</Description>
+    <IsActive>true</IsActive>
+    <IsInvoiceable>true</IsInvoiceable>
+    <SortOrder>0</SortOrder>
+  </TransactionType>
+  <TransactionType>
+    <Id>8b69560d-4684-45d4-97e4-f2728bc676ae</Id>
+    <AccountsReceivableSide>Debit</AccountsReceivableSide>
+    <Class>Refund</Class>
+    <CreditLedger>c15ce5be-9fc5-4d64-9cec-344d3e7e0836</CreditLedger>
+    <DebitLedger>7ef72e10-fd1e-40d6-ba7c-7298557a6857</DebitLedger>
+    <Description>Refund</Description>
+    <IsActive>true</IsActive>
+    <IsInvoiceable>false</IsInvoiceable>
+    <SortOrder>5</SortOrder>
+  </TransactionType>
+  <TransactionType>
+    <Id>9b21a810-c60d-4be7-adff-f50d22cccff1</Id>
+    <AccountsReceivableSide>Debit</AccountsReceivableSide>
+    <Class>NSFCharge</Class>
+    <CreditLedger>c3a0ca4c-4517-4147-a2df-31b85768991e</CreditLedger>
+    <DebitLedger>7ef72e10-fd1e-40d6-ba7c-7298557a6857</DebitLedger>
+    <Description>NSF Charge</Description>
+    <InvoiceDetailLineDescription>NSF Payment Fee</InvoiceDetailLineDescription>
+    <IsActive>true</IsActive>
+    <IsInvoiceable>true</IsInvoiceable>
+    <SortOrder>4</SortOrder>
+  </TransactionType>
+</Entities>

@@ -1,0 +1,176 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".csdl" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="$(SolutionDir)/Freedom.DomainGenerator/Freedom.DomainGenerator/bin/$(Configuration)/Freedom.DomainGenerator.Dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Serialization" #>
+<#@ import namespace="Freedom.DomainGenerator" #>
+<#@ import namespace="Freedom.DomainGenerator.DomainDefinitionModel" #>
+<#
+
+	Domain domain = DomainBuilder.Load(Host.ResolvePath("FreedomDomain.xml"));
+
+#>
+<?xml version="1.0" encoding="utf-8" ?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm"
+        xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation"
+        xmlns:codegeneration="http://schemas.microsoft.com/ado/2006/04/codegeneration"
+        Namespace="Freedom.Domain.Model" Alias="Self">
+<#
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ENTITY SETS
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#>
+	<EntityContainer Name="FreedomModelContainer">
+<#
+		foreach (EntityType entityType in domain.EntityTypes.Where(e => !e.Abstract))
+		{
+#>
+		<EntitySet Name="<#= entityType.Name #>" EntityType="Self.<#= entityType.Name #>" />
+<#
+		}
+#>
+<#
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ASSOCIATION SETS
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		foreach (Association association in domain.Associations)
+		{
+#>
+		<AssociationSet Name="<#= association.Name #>" Association="Self.<#= association.Name #>" />
+<#
+		}
+#>
+	</EntityContainer>
+<#
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ENTITY TYPES
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		foreach (EntityType entityType in domain.EntityTypes)
+		{
+#>
+	<EntityType Name="<#= entityType.Name #>"<#= entityType.GetBaseTypeAttribute() #><#= entityType.GetAbstractAttribute() #>>
+<#
+		if (entityType.Properties.Any(p => p.IsPrimaryKey))
+		{
+#>
+		<Key>
+<#
+		foreach (Property property in entityType.Properties.Where(p => p.IsPrimaryKey))
+		{
+#>
+			<PropertyRef Name="<#= property.Name #>" />
+<#
+		}
+#>
+		</Key>
+<#
+		}
+
+		foreach (Property property in entityType.Properties)
+		{
+			if (property.Flags.HasFlag(PropertyFlags.StorageOnly)) continue;
+
+			if (property.IsComplexType || property.IsEnumType)
+			{
+#>
+		<Property Name="<#= property.Name #>" Type="Self.<#= property.Type #>" Nullable="false" />
+<#
+			}
+			else
+			{
+#>
+		<Property Name="<#= property.Name #>" Type="<#= property.ConceptualType #>"<#= property.Nullable ? "" : " Nullable=\"false\"" #> />
+<#
+			}
+		}
+#>
+<#
+		if (!entityType.Abstract)
+		{
+            for (EntityType subType = entityType; subType != null; subType = subType.BaseEntityType)
+			{
+				foreach (Relationship relationship in subType.Relationships)
+				{
+					if (relationship.RelationshipType == RelationshipType.ManyToMany) continue;
+
+					string associationName = Association.GenerateName(entityType, relationship);
+#>
+		<NavigationProperty Name="<#= relationship.Name #>" Relationship="Self.<#= associationName #>" FromRole="<#= entityType.Name #>" ToRole="<#= relationship.RelatedType #><#= entityType.Name == relationship.RelatedType ?  "1" : "" #>" />
+<#
+				}
+			}
+		}
+#>
+	</EntityType>
+<#
+		}
+#>
+<#
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// COMPLEX TYPES
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		foreach (ComplexType complexType in domain.ComplexTypes)
+		{
+#>
+	<ComplexType Name="<#= complexType.Name #>">
+<#
+		foreach (Property property in complexType.Properties)
+		{
+#>
+		<Property Name="<#= property.Name #>" Type="<#= property.ConceptualType #>"<#= property.Nullable ? "" : " Nullable=\"false\"" #> />
+<#
+		}
+#>
+	</ComplexType>
+<#
+		}
+#>
+<#
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ASSOCIATIONS
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		foreach (Association association in domain.Associations)
+		{
+#>
+	<Association Name="<#= association.Name #>">
+		<End Role="<#= association.PrincipalRole #>" Type="Self.<#= association.PrincipalType #>"<#= association.PrincipalMultiplicity.GetAttribute() #> />
+		<End Role="<#= association.DependentRole #>" Type="Self.<#= association.DependentType #>"<#= association.DependentMultiplicity.GetAttribute() #> />
+		<ReferentialConstraint>
+			<Principal Role="<#= association.PrincipalRole #>">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="<#= association.DependentRole #>">
+				<PropertyRef Name="<#= association.ToPrincipalName #>Id" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+<#
+		}
+#>
+<#
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Enum TYPES
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		foreach (EnumType enumType in domain.EnumTypes)
+		{
+#>
+	<EnumType Name="<#= enumType.Name #>"<#= enumType.IsFlags ? " IsFlags=\"true\"" : "" #>>
+<#
+		foreach (EnumMember member in enumType.Members)
+		{
+#>
+		<Member Name="<#= member.Name #>" Value="<#= member.Value #>" />
+<#
+		}
+#>
+	</EnumType>
+<#
+		}
+#>
+</Schema>

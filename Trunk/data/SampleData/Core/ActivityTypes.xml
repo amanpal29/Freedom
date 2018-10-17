@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <ActivityType>
+    <Id>49ebbd02-3f94-11e0-b59e-00e3ded72085</Id>
+    <Description>Peer Consultation</Description>
+    <SortOrder>2</SortOrder>
+  </ActivityType>
+  <ActivityType>
+    <Id>52372f8c-3f94-11e0-8c5b-01e3ded72085</Id>
+    <Description>Site Visit</Description>
+    <SortOrder>3</SortOrder>
+  </ActivityType>
+  <ActivityType>
+    <Id>5b3112ce-3f94-11e0-9d6d-18e3ded72085</Id>
+    <Description>Training Session</Description>
+    <SortOrder>4</SortOrder>
+  </ActivityType>
+  <ActivityType>
+    <Id>15d721e6-3f94-11e0-b948-e9e2ded72085</Id>
+    <Description>Communication</Description>
+    <SortOrder>1</SortOrder>
+  </ActivityType>
+</Entities>

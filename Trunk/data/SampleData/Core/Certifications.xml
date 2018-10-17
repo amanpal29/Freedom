@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <Certification>
+    <Id>8b9e2ebf-3e00-4690-8765-67f01585a6ea</Id>
+    <CertificationTermMonths>36</CertificationTermMonths>
+    <Description>Emergency First Aid &amp; CPR</Description>
+    <DurationHours>8</DurationHours>
+    <ExternalCode>ECPR</ExternalCode>
+    <Grading>Percentage</Grading>
+    <InternalCode>ECPR</InternalCode>
+    <IsActive>true</IsActive>
+    <MinimumPassScore>50</MinimumPassScore>
+    <Notes>Basic emergency CPR and first aid training.</Notes>
+    <ProfessionalDevelopmentCredits>2</ProfessionalDevelopmentCredits>
+    <ResolutionModel>14eeb7e3-27bd-4e80-8eac-8054aa562b77</ResolutionModel>
+    <SortOrder>0</SortOrder>
+  </Certification>
+  <Certification>
+    <Id>b0551913-6247-4728-8101-8f2cdf975f5a</Id>
+    <Description>Cisco CCNA Routing and Switching</Description>
+    <DurationHours>120</DurationHours>
+    <ExternalCode>CCNA</ExternalCode>
+    <Grading>PassFail</Grading>
+    <InternalCode>CCNA</InternalCode>
+    <IsActive>true</IsActive>
+    <Notes>Cisco Certified Network Associate (CCNA) Routing and Switching is a certification program for entry-level network engineers that helps maximize your investment in foundational networking knowledge and increase the value of your employer's network. CCNA Routing and Switching is for Network Specialists, Network Administrators, and Network Support Engineers with 1-3 years of experience. The CCNA Routing and Switching validates the ability to install, configure, operate, and troubleshoot medium-size routed and switched networks.</Notes>
+    <ProfessionalDevelopmentCredits>8</ProfessionalDevelopmentCredits>
+    <ResolutionModel>7bca885a-e8cd-46b7-b83a-01617acfe017</ResolutionModel>
+    <SortOrder>1</SortOrder>
+  </Certification>
+  <Course>
+    <Id>10d3c036-6e6d-47ba-8807-13700e62bad4</Id>
+    <Certification>8b9e2ebf-3e00-4690-8765-67f01585a6ea</Certification>
+    <CourseDescription>Course spans Saturday and Sunday, with four hour courses on each day.</CourseDescription>
+    <CourseLanguage>English</CourseLanguage>
+    <Description>Weekend Course</Description>
+    <ExternalCode>WC</ExternalCode>
+    <InternalCode>WC</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>0</SortOrder>
+  </Course>
+  <Course>
+    <Id>e4c2a24a-d9d4-48b1-9c52-523e5467bae3</Id>
+    <Certification>8b9e2ebf-3e00-4690-8765-67f01585a6ea</Certification>
+    <CourseDescription>One, eight hour class.</CourseDescription>
+    <CourseLanguage>English (United States)</CourseLanguage>
+    <Description>Full Day</Description>
+    <ExternalCode>FD</ExternalCode>
+    <InternalCode>FD</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>1</SortOrder>
+  </Course>
+  <Course>
+    <Id>039fb08b-6f34-41ee-bd15-2acef3a29b5e</Id>
+    <Certification>b0551913-6247-4728-8101-8f2cdf975f5a</Certification>
+    <CourseDescription>CCNA Routing and Switching taken in the spring semester.</CourseDescription>
+    <CourseLanguage>English (United States)</CourseLanguage>
+    <Description>CCNA Spring Semester</Description>
+    <ExternalCode>CCNASP</ExternalCode>
+    <InternalCode>CCNASP</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>1</SortOrder>
+  </Course>
+  <Course>
+    <Id>f105cd48-40d8-426a-84b2-cd98dbff5311</Id>
+    <Certification>b0551913-6247-4728-8101-8f2cdf975f5a</Certification>
+    <CourseDescription>CCNA Routing and Switching taken in the fall semester.</CourseDescription>
+    <CourseLanguage>English (United States)</CourseLanguage>
+    <Description>CCNA Fall Semester</Description>
+    <ExternalCode>CCNAF</ExternalCode>
+    <InternalCode>CCNAF</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>0</SortOrder>
+  </Course>
+</Entities>

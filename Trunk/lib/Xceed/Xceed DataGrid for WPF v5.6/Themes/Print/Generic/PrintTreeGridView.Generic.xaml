@@ -1,0 +1,1287 @@
+﻿<!-- =======================================================================
+  Xceed DataGrid for WPF - CUSTOMIZATION CODE - Default Styles and Templates
+  Copyright (c) 2007-2015 Xceed Software Inc.
+
+  [PrintTreeGridView.Generic.xaml]
+
+  This file is part of the Xceed DataGrid for WPF product. The use and
+  distribution of this Customization Code is subject to the terms
+  and conditions refering to "Customization Code" that are specified in
+  the XCEED SOFTWARE LICENSE AGREEMENT accompanying this product.
+======================================================================= -->
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Xceed.Wpf.DataGrid"
+                    xmlns:markup="clr-namespace:Xceed.Wpf.DataGrid.Markup"
+                    xmlns:views="clr-namespace:Xceed.Wpf.DataGrid.Views"
+                    xmlns:print="clr-namespace:Xceed.Wpf.DataGrid.Print"
+                    xmlns:conv="clr-namespace:Xceed.Wpf.DataGrid.Converters">
+
+   <ResourceDictionary.MergedDictionaries>
+
+      <!-- Include the view independant and color-scheme independant theme graphics -->
+      <markup:DataGridThemeResourceDictionary Source="../../Common/Graphics.xaml" />
+
+      <!-- Include the standard grid element templates -->
+      <markup:DataGridThemeResourceDictionary Source="../../Common/TreeGridView.GridElementTemplates.xaml" />
+
+      <!--# case 154443: For unknown reason, the style will not be applied otherwise. -->
+      <markup:DataGridThemeResourceDictionary Source="../Controls/TableViewScrollViewer.xaml" />
+
+   </ResourceDictionary.MergedDictionaries>
+
+   <conv:ThicknessConverter x:Key="thicknessConverter" />
+   <conv:ThicknessConverter x:Key="inverseThicknessConverter"
+                            InverseValue="True" />
+   <conv:GreaterThanZeroConverter x:Key="greaterThanZeroConverter" />
+   <conv:StringFormatConverter x:Key="progressWindowTitleConverter" />
+   <conv:IntAdditionConverter x:Key="groupHeaderControlGroupLevelConverter" />
+
+   <!-- =================================================================== -->
+   <!-- Resources specific to this View/Theme/ColorScheme                   -->
+   <!-- =================================================================== -->
+
+   <SolidColorBrush x:Key="groupByItemBorderBrush"
+                    Color="Black" />
+
+   <SolidColorBrush x:Key="fixedColumnSplitterBackgroundBrush"
+                    Color="Black" />
+
+   <SolidColorBrush x:Key="dataGridControlForegroundBrush"
+                    Color="Black" />
+
+   <SolidColorBrush x:Key="defaultHorizontalGridLineBrush"
+                    Color="Black" />
+
+   <!-- =================================================================== -->
+   <!-- Templates specific to this View/Theme/ColorScheme                   -->
+   <!-- =================================================================== -->
+
+   <!--**************************
+    * TEMPLATE: ProgressWindowContentTemplate
+    ************************** -->
+   <DataTemplate x:Key="progressWindowContentTemplate">
+      <StackPanel Margin="4">
+         <ContentPresenter Margin="4"
+                           Content="{Binding Description}" />
+         <ProgressBar Height="24"
+                      Margin="4"
+                      Minimum="0"
+                      Maximum="100"
+                      Value="{Binding PercentCompleted, Mode=OneWay}" />
+         <Button Margin="4"
+                 Content="_Cancel"
+                 IsCancel="True" />
+      </StackPanel>
+   </DataTemplate>
+
+   <!--**************************
+    * TEMPLATE: DataGridPageControl
+    ************************** -->
+   <ControlTemplate x:Key="dataGridPageControlTemplate"
+                    TargetType="print:DataGridPageControl">
+      <DockPanel>
+         <StackPanel print:DataGridPageControl.IsPageHeadersHost="True"
+                     DockPanel.Dock="Top" />
+         <StackPanel print:DataGridPageControl.IsPageFootersHost="True"
+                     DockPanel.Dock="Bottom" />
+         <Border print:DataGridPageControl.IsDataGridHost="True" />
+      </DockPanel>
+   </ControlTemplate>
+
+   <!--**************************
+    * TEMPLATE: DataGridControl
+    ************************** -->
+   <ControlTemplate x:Key="printTreeGridViewDataGridControlTemplate"
+                    TargetType="local:DataGridControl">
+
+      <DockPanel>
+
+         <views:TableViewScrollViewer x:Name="PART_ScrollViewer"
+                                      HorizontalScrollBarVisibility="Disabled"
+                                      VerticalScrollBarVisibility="Disabled"
+                                      Style="{StaticResource {x:Type views:TableViewScrollViewer}}">
+            <print:PrintVirtualizingStackPanel IsItemsHost="True" />
+         </views:TableViewScrollViewer>
+
+      </DockPanel>
+
+   </ControlTemplate>
+
+   <!--**************************
+    * TEMPLATE: Row 
+    ************************** -->
+   <ControlTemplate x:Key="printTreeGridViewRowTemplate"
+                    TargetType="local:Row">
+
+      <!-- A basic Row Template requires at least a Panel named "PART_CellsHost" to which the Row's cells will be added.
+           This Panel is usually placed inside a Border who is responsible for painting the gridlines. -->
+
+      <!-- This Grid is used to layout the GroupLevelIndicatorPane placeholder and the CellsHost panel. -->
+      <Grid x:Name="rootGrid">
+         <!-- The border responsible for the visual outline of the row (gridlines and background). -->
+         <Border Background="{TemplateBinding Background}"
+                 BorderBrush="{TemplateBinding BorderBrush}"
+                 BorderThickness="{TemplateBinding BorderThickness}"
+                 Padding="{TemplateBinding Padding}" />
+
+         <Decorator x:Name="fixedColumnSplitterIndent">
+            <!-- The PART_CellsHost part designates the Panel to which this Row's Cells should be added.-->
+            <views:FixedCellPanel x:Name="PART_CellsHost"
+                                  FixedCellCount="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).FixedColumnCount, Mode=TwoWay}"
+                                  SplitterStyle="{TemplateBinding views:TableView.FixedColumnSplitterStyle}"
+                                  SplitterWidth="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).FixedColumnSplitterWidth}"
+                                  ShowSplitter="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).ShowFixedColumnSplitter}"
+                                  Margin="{TemplateBinding BorderThickness}" />
+         </Decorator>
+      </Grid>
+
+      <ControlTemplate.Triggers>
+
+         <!-- When the FixedColumnCount is 0, do not display the FixedColumn splitter in the Row Template, it will be displayed
+              in the margin of the ColumnManagerRow instead -->
+         <MultiDataTrigger>
+            <MultiDataTrigger.Conditions>
+
+               <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).(views:TableView.FixedColumnCount)}"
+                          Value="0" />
+
+               <Condition Binding="{Binding RelativeSource={RelativeSource Self},Path=(local:DataGridControl.DataGridContext).ShowFixedColumnSplitter}"
+                          Value="True" />
+
+            </MultiDataTrigger.Conditions>
+
+            <Setter TargetName="fixedColumnSplitterIndent"
+                    Property="Margin"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).FixedColumnSplitterWidth, Converter={StaticResource thicknessConverter}, ConverterParameter='Left'}" />
+
+            <Setter TargetName="PART_CellsHost"
+                    Property="ShowSplitter"
+                    Value="False" />
+
+         </MultiDataTrigger>
+
+      </ControlTemplate.Triggers>
+
+   </ControlTemplate>
+
+   <!--**************************
+    * TEMPLATE: ColumnManagerRow 
+    ************************** -->
+   <ControlTemplate x:Key="printTreeGridViewColumnManagerRowTemplate"
+                    TargetType="local:ColumnManagerRow">
+
+      <!-- A basic Row Template requires at least a Panel named "PART_CellsHost" to which the Row's cells will be added.
+           This Panel is usually placed inside a Border who is responsible for painting the gridlines. -->
+
+      <Grid x:Name="rootGrid">
+         <!-- The border responsible for the visual outline of the row (gridlines and background). -->
+         <Border x:Name="rootBorder"
+                 Background="{TemplateBinding Background}"
+                 BorderBrush="{TemplateBinding BorderBrush}"
+                 BorderThickness="{TemplateBinding BorderThickness}"
+                 Padding="{TemplateBinding Padding}" />
+
+         <!-- The PART_CellsHost part designates the Panel to which this Row's Cells should be added.-->
+         <views:FixedCellPanel x:Name="PART_CellsHost"
+                               FixedCellCount="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).FixedColumnCount, Mode=TwoWay}"
+                               SplitterStyle="{TemplateBinding views:TableView.FixedColumnSplitterStyle}"
+                               SplitterWidth="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).FixedColumnSplitterWidth}"
+                               ShowSplitter="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).ShowFixedColumnSplitter}"
+                               Margin="{TemplateBinding BorderThickness}" />
+      </Grid>
+
+   </ControlTemplate>
+
+   <!--**************************
+    * TEMPLATE: Cell 
+    ************************** -->
+   <ControlTemplate x:Key="printTreeGridViewCellTemplate"
+                    TargetType="local:Cell">
+
+      <!-- A basic Cell Template requires at least a ContentPresenter that is used to display the Cell's Content.
+           This ContentPresenter is usually placed inside a Border who is responsible for painting the gridlines. -->
+
+      <Grid>
+         <Border x:Name="rootBorder"
+                 Background="{TemplateBinding Background}"
+                 BorderBrush="{TemplateBinding BorderBrush}"
+                 BorderThickness="{TemplateBinding BorderThickness}"
+                 Padding="{TemplateBinding Padding}">
+
+            <Grid>
+               <Grid.ColumnDefinitions>
+                  <!-- HierarchicalGroupLevelIndicatorPane -->
+                  <ColumnDefinition Width="Auto" />
+
+                  <!-- CellContentPresenter -->
+                  <ColumnDefinition Width="*" />
+               </Grid.ColumnDefinitions>
+
+               <local:HierarchicalGroupLevelIndicatorPane x:Name="hierarchicalGroupLevelIndicatorPane"
+                                                          Grid.Column="0"
+                                                          views:TableView.CanScrollHorizontally="False"
+                                                          Visibility="Collapsed" />
+
+               <local:CellContentPresenter x:Name="PART_CellContentPresenter"
+                                           Grid.Column="1"
+                                           HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+            </Grid>
+
+         </Border>
+      </Grid>
+
+      <ControlTemplate.Triggers>
+
+         <!-- When the Cell's content is Null, we want to ensure that the row/cell
+              will preserve a minimum height based on the current font size for the row/cell. To do this, we override
+              the ContentPresenter's content binding and replace it with an empty string (""), the textbox generated 
+              this way will then size to the default text's height. When trigger is not active anymore, default binding
+              is restored automatically. -->
+
+         <Trigger Property="Content"
+                  Value="{x:Null}">
+            <Setter Property="Content"
+                    TargetName="PART_CellContentPresenter"
+                    Value="" />
+         </Trigger>
+
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=ParentColumn.Visible}"
+                      Value="False">
+            <Setter Property="Visibility"
+                    Value="Collapsed" />
+         </DataTrigger>
+
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=ParentColumn.IsMainColumn}"
+                      Value="True">
+            <Setter TargetName="hierarchicalGroupLevelIndicatorPane"
+                    Property="Visibility"
+                    Value="Visible" />
+         </DataTrigger>
+
+      </ControlTemplate.Triggers>
+
+   </ControlTemplate>
+
+   <!--**************************
+     * TEMPLATE: FilterToggleButton
+      **************************-->
+   <ControlTemplate TargetType="{x:Type ToggleButton}"
+                    x:Key="filterToggleButton">
+
+      <Grid Background="Transparent"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch">
+
+         <Grid Width="16"
+               Background="Transparent"
+               HorizontalAlignment="Center">
+
+            <ContentPresenter x:Name="filterActivatedGlyphPresenter"
+                              ContentTemplate="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).AutoFilterGlyph}"
+                              Content="{TemplateBinding Content}"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Margin="0,0,2,0">
+
+            </ContentPresenter>
+         </Grid>
+
+      </Grid>
+
+   </ControlTemplate>
+
+   <!--**************************
+    * TEMPLATE: ColumnManagerCell 
+    ************************** -->
+   <ControlTemplate x:Key="printTreeGridViewColumnManagerCellTemplate"
+                    TargetType="local:ColumnManagerCell">
+
+      <Border Background="{TemplateBinding Background}"
+              BorderBrush="{TemplateBinding BorderBrush}"
+              BorderThickness="{TemplateBinding BorderThickness}"
+              Padding="{TemplateBinding Padding}">
+
+         <Grid>
+
+            <!-- This Grid is used to layout the delimiter lines on top of the ContentPresenter -->
+            <Grid>
+
+               <Border Padding="{TemplateBinding Padding}">
+
+                  <Grid x:Name="contentPanel"
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                     </Grid.ColumnDefinitions>
+
+                     <!-- Same ContentPresenter as in the base Cell Template. -->
+                     <local:CellContentPresenter Grid.Column="0" />
+
+                     <!-- ContentPresenter that is used to display the sort glyph.
+                                      We explicitely set its Content property to Null to prevent the XAML parser
+                                      from implicitely setting it to its TemplatedParent's Content. -->
+                     <ContentPresenter x:Name="sortGlyphPresenter"
+                                      Content="{x:Null}"
+                                      ContentTemplate="{x:Null}"
+                                      Grid.Column="1" />
+                  </Grid>
+
+               </Border>
+
+            </Grid>
+
+            <ToggleButton x:Name="toggleButton"
+                          Template="{StaticResource filterToggleButton}"
+                          VerticalAlignment="Stretch"
+                          HorizontalAlignment="Right"
+                          Focusable="False"
+                          Visibility="Collapsed"
+                          Margin="2,0,0,0"
+                          Opacity="1">
+
+               <local:AutoFilterControl x:Name="autoFilterControl"
+                                        Background="White"
+                                        BorderBrush="Black"
+                                        BorderThickness="1"
+                                        AutoFilterColumn="{Binding RelativeSource={RelativeSource self}, Path=(local:Cell.ParentCell).ParentColumn}"
+                                        Style="{Binding RelativeSource={RelativeSource self}, Path=(local:Cell.ParentCell).ParentColumn.AutoFilterControlStyle}"
+                                        TextElement.Foreground="{TemplateBinding TextElement.Foreground}" />
+            </ToggleButton>
+
+         </Grid>
+
+      </Border>
+
+      <ControlTemplate.Triggers>
+
+         <!-- Display FilterToggleButton Trigger to display AutoFilterGlyph -->
+         <MultiDataTrigger>
+            <MultiDataTrigger.Conditions>
+
+               <!--<Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=ParentRow.AllowAutoFilter}"
+                        Value="True"/>-->
+
+               <!--<Condition Value="True"
+                        Binding="{Binding ElementName=autoFilterControl, Path=HasDistinctValues}"/>-->
+
+               <Condition Value="True"
+                          Binding="{Binding ElementName=autoFilterControl, Path=HasAutoFilterValues}" />
+
+            </MultiDataTrigger.Conditions>
+
+            <Setter TargetName="toggleButton"
+                    Property="Visibility"
+                    Value="Visible" />
+
+         </MultiDataTrigger>
+
+         <!-- The following 2 triggers allow the appropriate Sort Glyph to be displayed
+              depending on the ParentColumn's SortDirection. -->
+
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=ParentColumn.SortDirection}"
+                      Value="Ascending">
+
+            <Setter TargetName="sortGlyphPresenter"
+                    Property="ContentPresenter.ContentTemplate"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).AscendingSortGlyph}" />
+
+            <Setter TargetName="sortGlyphPresenter"
+                    Property="Margin"
+                    Value="6,0,0,0" />
+
+         </DataTrigger>
+
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=ParentColumn.SortDirection}"
+                      Value="Descending">
+
+            <Setter TargetName="sortGlyphPresenter"
+                    Property="ContentPresenter.ContentTemplate"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).DescendingSortGlyph}" />
+
+            <Setter TargetName="sortGlyphPresenter"
+                    Property="Margin"
+                    Value="6,0,0,0" />
+
+         </DataTrigger>
+
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=ParentColumn.Visible}"
+                      Value="False">
+
+            <Setter Property="Visibility"
+                    Value="Collapsed" />
+
+         </DataTrigger>
+
+      </ControlTemplate.Triggers>
+
+   </ControlTemplate>
+
+   <!--**************************
+    * TEMPLATE: FilterCell 
+    ************************** -->
+   <ControlTemplate x:Key="printTreeGridViewFilterCellTemplate"
+                    TargetType="local:FilterCell">
+      <Border Background="{TemplateBinding Background}"
+              BorderBrush="{TemplateBinding BorderBrush}"
+              BorderThickness="{TemplateBinding BorderThickness}"
+              Padding="{TemplateBinding Padding}">
+         <Grid>
+            <Grid.ColumnDefinitions>
+               <ColumnDefinition Width="Auto" />
+               <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <ContentPresenter Name="filterGlyph"
+                              Content="{x:Null}"
+                              ContentTemplate="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).FilterRowGlyph}"
+                              Grid.Column="0" />
+
+            <local:CellContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                        Grid.Column="1" />
+         </Grid>
+      </Border>
+
+      <ControlTemplate.Triggers>
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=ParentColumn.Visible}"
+                      Value="False">
+            <Setter Property="Visibility"
+                    Value="Collapsed" />
+         </DataTrigger>
+
+         <Trigger Property="HasFilter"
+                  Value="False">
+            <Setter TargetName="filterGlyph"
+                    Property="Visibility"
+                    Value="Hidden" />
+         </Trigger>
+      </ControlTemplate.Triggers>
+   </ControlTemplate>
+
+   <!--**************************
+    * TEMPLATE: GroupByControl
+    ************************** -->
+   <ControlTemplate x:Key="printTreeGridViewGroupByControlTemplate"
+                    TargetType="local:GroupByControl">
+
+      <Border Background="{TemplateBinding Background}"
+              BorderBrush="{TemplateBinding BorderBrush}"
+              BorderThickness="{TemplateBinding BorderThickness}"
+              Padding="{TemplateBinding Padding}">
+
+         <!-- The GroupByControl is an ItemsControl, so it must have an ItemsPresenter in its
+              Template in order to layout and show its child items. The default ItemsPanel
+              of the GroupByControl is a "StaircasePanel", which layout its items in a
+              staircase-like pattern and draws connecting lines between the items. -->
+         <ItemsPresenter />
+
+      </Border>
+
+   </ControlTemplate>
+
+   <!--**************************
+    * TEMPLATE: GroupByItem
+    ************************** -->
+   <ControlTemplate x:Key="printTreeGridViewGroupByItemTemplate"
+                    TargetType="local:GroupByItem">
+
+      <Border BorderBrush="{StaticResource groupByItemBorderBrush}"
+              BorderThickness="1,1,1,1"
+              Background="{TemplateBinding Background}"
+              Padding="{TemplateBinding Padding}">
+
+         <!-- This StackPanel is used to layout the ContentPresenter and the Sort Glyph (when present). -->
+         <StackPanel Orientation="Horizontal">
+
+            <!-- Same ContentPresenter as in the base Cell Template. -->
+            <ContentPresenter Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+
+            <!-- ContentPresenter that is used to display the sort glyph.
+                    We explicitly set its Content property to Null to prevent the XAML parser
+                    from implicitly setting it to its TemplatedParent's Content. -->
+            <ContentPresenter x:Name="sortGlyphPresenter"
+                              Content="{x:Null}"
+                              ContentTemplate="{x:Null}"
+                              Margin="6,0,0,0" />
+
+         </StackPanel>
+
+      </Border>
+
+      <ControlTemplate.Triggers>
+
+         <!-- The following 2 triggers allow the appropriate Sort Glyph to be displayed
+              depending on the ParentColumn's SortDirection. -->
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=SortDirection}"
+                      Value="Ascending">
+
+            <Setter TargetName="sortGlyphPresenter"
+                    Property="ContentPresenter.ContentTemplate"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).AscendingSortGlyph}" />
+
+         </DataTrigger>
+
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=SortDirection}"
+                      Value="Descending">
+
+            <Setter TargetName="sortGlyphPresenter"
+                    Property="ContentPresenter.ContentTemplate"
+                    Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).DescendingSortGlyph}" />
+
+         </DataTrigger>
+
+      </ControlTemplate.Triggers>
+
+   </ControlTemplate>
+
+   <!--**************************
+    * TEMPLATE: GroupHeaderControl
+    ************************** -->
+   <ControlTemplate x:Key="printTreeGridViewGroupHeaderControlTemplate"
+                    TargetType="local:GroupHeaderControl">
+
+      <!-- Using this decorator will prevent the GroupHeaderControl of exceeding the width 
+           defined by the grid's column. -->
+      <views:PassiveLayoutDecorator Axis="Horizontal">
+         <!-- This DockPanel is used to layout the GroupLevelIndicatorPane placeholder and the GroupHeaderControl Content. -->
+         <DockPanel>
+
+            <!-- GroupLevelIndicatorPane is a placeholder for individual GroupLevelIndicator elements that are added
+              whenever this GroupHeaderControl is part of a group. -->
+            <local:HierarchicalGroupLevelIndicatorPane DockPanel.Dock="Left" />
+            <local:GroupLevelIndicatorPane DockPanel.Dock="Left"
+                                           Indented="False"
+                                           local:GroupLevelIndicatorPane.GroupLevel="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(local:GroupLevelIndicatorPane.GroupLevel), Converter={StaticResource groupHeaderControlGroupLevelConverter}, ConverterParameter=-1}" />
+
+            <!-- Main Border for the GroupHeaderControl. It is Focusable to make the InputBindings work. -->
+            <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Padding="{TemplateBinding Padding}">
+
+               <!-- This StackPanel is used to layout the ToggleButton and the GroupHeaderControl. -->
+               <StackPanel Orientation="Horizontal">
+
+                  <!-- ToggleButton that is used to expand/collapse the group. -->
+                  <ToggleButton Template="{StaticResource groupExpanderToggleButtonTemplate}"
+                                OverridesDefaultStyle="True"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent},Path=Group.IsExpanded}" />
+
+                  <!-- ContentPresenter in charge of displaying this GroupHeaderControl's Content, which is
+                             a Group by default. -->
+                  <ContentPresenter Margin="3,0,0,0"
+                                    Content="{TemplateBinding Content}"
+                                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                                    ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+
+               </StackPanel>
+
+            </Border>
+
+         </DockPanel>
+      </views:PassiveLayoutDecorator>
+
+   </ControlTemplate>
+
+   <!-- =================================================================== -->
+   <!-- Styles required by some grid elements                               -->
+   <!-- =================================================================== -->
+
+   <!--**************************
+    * STYLE: baseSplitterStyle
+    ************************** -->
+   <Style x:Key="fixedColumnSplitterStyle"
+          TargetType="views:FixedColumnSplitter">
+
+      <Setter Property="Background"
+              Value="{StaticResource fixedColumnSplitterBackgroundBrush}" />
+
+      <Setter Property="BorderThickness"
+              Value="0" />
+
+   </Style>
+
+   <!--**************************
+    * STYLE: ProgressWindowStyle
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericProgressWindowStyle"
+          TargetType="Window">
+
+      <Setter Property="Title"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=Content.PercentCompleted, 
+              Converter={StaticResource progressWindowTitleConverter}, ConverterParameter='Preparing document [0]%'}" />
+
+      <Setter Property="MinWidth"
+              Value="288" />
+
+      <Setter Property="SizeToContent"
+              Value="WidthAndHeight" />
+
+      <Setter Property="WindowStyle"
+              Value="ToolWindow" />
+
+      <Setter Property="ShowInTaskbar"
+              Value="False" />
+   </Style>
+
+   <!-- =================================================================== -->
+   <!-- Keyed Styles of grid elements                                       -->
+   <!-- =================================================================== -->
+
+   <!--**************************
+    * STYLE: DataGridPageControl
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericDataGridPageControlStyle"
+          TargetType="print:DataGridPageControl">
+      <Setter Property="Template"
+              Value="{StaticResource dataGridPageControlTemplate}" />
+   </Style>
+
+   <!--**************************
+    * STYLE: DataGridControl 
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericGridControlStyle"
+          TargetType="local:DataGridControl">
+
+      <Style.Resources>
+         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+               <markup:DataGridThemeResourceDictionary Source="../Controls/CheckBox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+         </ResourceDictionary>
+      </Style.Resources>
+
+      <Setter Property="BorderThickness"
+              Value="0" />
+
+      <Setter Property="Foreground"
+              Value="{StaticResource dataGridControlForegroundBrush}" />
+
+      <!-- This is required to display gridlines of uniform thickness -->
+      <Setter Property="SnapsToDevicePixels"
+              Value="True" />
+
+      <Setter Property="Template"
+              Value="{StaticResource printTreeGridViewDataGridControlTemplate}" />
+
+   </Style>
+
+   <!--**************************
+    * STYLE: Row Style
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericRowStyle"
+          TargetType="local:Row">
+
+      <!-- The Row is responsible for drawing the horizontal gridlines. It draws only its bottom gridline. -->
+
+      <Setter Property="BorderThickness"
+              Value="{Binding RelativeSource={RelativeSource Self},Path=(local:DataGridControl.DataGridContext).HorizontalGridLineThickness,Converter={StaticResource thicknessConverter},ConverterParameter='Bottom'}" />
+
+      <Setter Property="BorderBrush"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).HorizontalGridLineBrush}" />
+
+      <Setter Property="views:PrintTreeGridView.FixedColumnSplitterStyle"
+              Value="{StaticResource fixedColumnSplitterStyle}" />
+
+      <Setter Property="Template"
+              Value="{StaticResource printTreeGridViewRowTemplate}" />
+
+      <Setter Property="Background"
+              Value="Transparent" />
+
+      <Style.Triggers>
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(views:ViewBase.IsLastItem)}"
+                      Value="True">
+            <Setter Property="BorderThickness"
+                    Value="{Binding RelativeSource={RelativeSource Self},Path=(local:DataGridControl.DataGridContext).HorizontalGridLineThickness,Converter={StaticResource thicknessConverter},ConverterParameter='Top, Bottom'}" />
+            <Setter Property="Margin"
+                    Value="0,0,0,5" />
+         </DataTrigger>
+
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.HasExpandedDetails)}"
+                      Value="True">
+            <Setter Property="BorderThickness"
+                    Value="{Binding RelativeSource={RelativeSource Self},Path=(local:DataGridControl.DataGridContext).HorizontalGridLineThickness,Converter={StaticResource thicknessConverter},ConverterParameter='Top, Bottom'}" />
+
+         </DataTrigger>
+
+         <!-- Enabled/Disabled Odd datarow style alternation -->
+         <MultiDataTrigger>
+            <MultiDataTrigger.Conditions>
+               <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).IsAlternatingRowStyleEnabled}"
+                          Value="True" />
+               <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridVirtualizingPanel.ItemIndex), Converter={x:Static conv:IndexToOddConverter.Singleton}}"
+                          Value="True" />
+            </MultiDataTrigger.Conditions>
+
+            <Setter Property="Background"
+                    Value="LightGray" />
+         </MultiDataTrigger>
+      </Style.Triggers>
+
+   </Style>
+
+   <!--**************************
+    * STYLE: DataRow 
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericDataRowStyle"
+          TargetType="local:DataRow"
+          BasedOn="{StaticResource printTreeGridViewGenericRowStyle}">
+   </Style>
+
+   <!--**************************
+    * STYLE: InsertionRow 
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericInsertionRowStyle"
+          TargetType="local:InsertionRow"
+          BasedOn="{StaticResource printTreeGridViewGenericDataRowStyle}">
+
+      <Style.Triggers>
+         <Trigger Property="local:GroupLevelIndicatorPane.GroupLevel"
+                  Value="-1">
+            <!-- We don't want to display the Group Margins for the ColumnManagerRow. -->
+            <Setter Property="local:GroupLevelIndicatorPane.ShowIndicators"
+                    Value="False" />
+         </Trigger>
+      </Style.Triggers>
+
+   </Style>
+
+   <!--**************************
+    * STYLE: ColumnManagerRow 
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericColumnManagerRowStyle"
+          TargetType="local:ColumnManagerRow"
+          BasedOn="{StaticResource printTreeGridViewGenericRowStyle}">
+
+      <Setter Property="TextElement.FontWeight"
+              Value="Bold" />
+
+      <Setter Property="BorderThickness"
+              Value="0,0,0,4" />
+
+      <Setter Property="BorderBrush"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).HorizontalGridLineBrush}" />
+
+      <Setter Property="Template"
+              Value="{StaticResource printTreeGridViewRowTemplate}" />
+
+      <Style.Triggers>
+         <Trigger Property="local:GroupLevelIndicatorPane.GroupLevel"
+                  Value="-1">
+            <!-- We don't want to display the Group Margins for the InsertionRow. -->
+            <Setter Property="local:GroupLevelIndicatorPane.ShowIndicators"
+                    Value="False" />
+         </Trigger>
+
+      </Style.Triggers>
+
+   </Style>
+
+   <!--**************************
+    * STYLE: StatRow 
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericStatRowStyle"
+          TargetType="local:StatRow"
+          BasedOn="{StaticResource printTreeGridViewGenericRowStyle}" />
+
+   <!--**************************
+    * STYLE: FilterRow
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericFilterRowStyle"
+          TargetType="local:FilterRow"
+          BasedOn="{StaticResource printTreeGridViewGenericRowStyle}" />
+
+   <!--**************************
+    * STYLE: DataRow 
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericFlexibleRowStyle"
+          TargetType="local:FlexibleRow"
+          BasedOn="{StaticResource printTreeGridViewGenericRowStyle}" />
+
+   <!--**************************
+    * STYLE: Cell Style
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericCellStyle"
+          TargetType="local:Cell">
+
+      <!-- In TableView, each Cell has the same width as its ParentColum's ActualWidth -->
+      <Setter Property="Width"
+              Value="{Binding RelativeSource={RelativeSource Self},Path=ParentColumn.ActualWidth}" />
+
+      <Setter Property="Padding"
+              Value="{StaticResource cellPadding}" />
+
+      <Setter Property="HorizontalContentAlignment"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=ParentColumn.CellHorizontalContentAlignment, FallbackValue=Stretch}" />
+
+      <Setter Property="VerticalContentAlignment"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=ParentColumn.CellVerticalContentAlignment, FallbackValue=Stretch}" />
+
+      <!-- The Cell is responsible for drawing the vertical gridlines. It draws only its right gridline, 
+           assuming that the left gridline will have been drawn by its preceding cell -->
+
+      <Setter Property="BorderThickness"
+              Value="{Binding RelativeSource={RelativeSource Self},Path=(local:DataGridControl.DataGridContext).VerticalGridLineThickness,Converter={StaticResource thicknessConverter},ConverterParameter='Right'}" />
+
+      <Setter Property="BorderBrush"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).VerticalGridLineBrush}" />
+
+      <Setter Property="Template"
+              Value="{StaticResource printTreeGridViewCellTemplate}" />
+   </Style>
+
+   <!--**************************
+    * STYLE: DataCell
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericDataCellStyle"
+          TargetType="local:DataCell"
+          BasedOn="{StaticResource printTreeGridViewGenericCellStyle}" />
+
+   <!--**************************
+    * STYLE: InsertionCell
+   ************************** -->
+   <Style x:Key="printTreeGridViewGenericInsertionCellStyle"
+          TargetType="local:InsertionCell"
+          BasedOn="{StaticResource printTreeGridViewGenericDataCellStyle}" />
+
+   <!--**************************
+    * STYLE: ColumnManagerCell 
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericColumnManagerCellStyle"
+          TargetType="local:ColumnManagerCell"
+          BasedOn="{StaticResource printTreeGridViewGenericCellStyle}">
+
+      <Setter Property="Template"
+              Value="{StaticResource printTreeGridViewColumnManagerCellTemplate}" />
+
+   </Style>
+
+   <!--**************************
+    * STYLE: StatCell
+   ************************** -->
+   <Style x:Key="printTreeGridViewGenericStatCellStyle"
+          TargetType="local:StatCell">
+
+      <!-- In TableView, each Cell has the same width as its ParentColum's ActualWidth -->
+      <Setter Property="Width"
+              Value="{Binding RelativeSource={RelativeSource Self},Path=ParentColumn.ActualWidth}" />
+
+      <Setter Property="Padding"
+              Value="{StaticResource cellPadding}" />
+
+      <Setter Property="HorizontalContentAlignment"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=ParentColumn.CellHorizontalContentAlignment, FallbackValue=Stretch}" />
+
+      <Setter Property="VerticalContentAlignment"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=ParentColumn.CellVerticalContentAlignment, FallbackValue=Stretch}" />
+
+      <Setter Property="Template"
+              Value="{StaticResource printTreeGridViewCellTemplate}" />
+
+      <!-- Only StatCells having content will be displayed. -->
+      <Style.Triggers>
+         <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=HasContent}"
+                      Value="False">
+            <Setter Property="Visibility"
+                    Value="Hidden" />
+         </DataTrigger>
+      </Style.Triggers>
+
+   </Style>
+
+   <!--**************************
+    * STYLE: FilterCell
+   ************************** -->
+   <Style x:Key="printTreeGridViewGenericFilterCellStyle"
+          TargetType="local:FilterCell"
+          BasedOn="{StaticResource printTreeGridViewGenericCellStyle}">
+      <Setter Property="Template"
+              Value="{StaticResource printTreeGridViewFilterCellTemplate}" />
+   </Style>
+
+   <!--**************************
+    * STYLE: FlexibleCell
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericFlexibleCellStyle"
+          TargetType="local:FlexibleCell"
+          BasedOn="{StaticResource printTreeGridViewGenericCellStyle}" >
+
+      <Setter Property="Content"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=DefaultContent}" />
+
+   </Style>
+
+   <!--**************************
+    * STYLE: GroupByControl 
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericGroupByControlStyle"
+          TargetType="local:GroupByControl">
+
+      <Setter Property="Padding"
+              Value="8" />
+
+      <Setter Property="views:PrintTreeGridView.CanSpanHorizontally"
+              Value="False" />
+
+      <Setter Property="Template"
+              Value="{StaticResource printTreeGridViewGroupByControlTemplate}" />
+
+   </Style>
+
+   <!--**************************
+    * STYLE: GroupByItem
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericGroupByItemStyle"
+          TargetType="local:GroupByItem">
+
+      <Setter Property="Padding"
+              Value="{StaticResource cellPadding}" />
+
+      <Setter Property="Template"
+              Value="{StaticResource printTreeGridViewGroupByItemTemplate}" />
+
+   </Style>
+
+   <!--**************************
+    * STYLE: GroupHeaderControl 
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericGroupHeaderControlStyle"
+          TargetType="local:GroupHeaderControl">
+
+      <Setter Property="BorderThickness"
+              Value="0,0,0,2" />
+
+      <Setter Property="BorderBrush"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).HorizontalGridLineBrush}" />
+
+      <Setter Property="TextElement.FontWeight"
+              Value="Bold" />
+
+      <Setter Property="views:PrintTreeGridView.CanSpanHorizontally"
+              Value="False" />
+
+      <Setter Property="Padding"
+              Value="{StaticResource cellPadding}" />
+
+      <Setter Property="VerticalContentAlignment"
+              Value="Center" />
+
+      <Setter Property="Template"
+              Value="{StaticResource printTreeGridViewGroupHeaderControlTemplate}" />
+
+   </Style>
+
+   <!--**************************
+    * STYLE: GroupLevelIndicator
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericGroupLevelIndicatorStyle"
+          TargetType="local:GroupLevelIndicator">
+
+      <Setter Property="Width"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).GroupLevelIndicatorWidth}" />
+
+      <Setter Property="Template"
+              Value="{StaticResource treeGridViewGroupLevelIndicatorTemplate}" />
+
+   </Style>
+
+   <!--**************************
+    * STYLE: DetailIndicator
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericDetailIndicatorStyle"
+          TargetType="local:DetailIndicator">
+
+      <Setter Property="Background"
+              Value="{x:Null}" />
+
+      <Setter Property="Width"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).DetailIndicatorWidth}" />
+
+      <Setter Property="Template"
+              Value="{StaticResource treeGridViewDetailIndicatorTemplate}" />
+
+   </Style>
+
+   <!--**************************
+    * STYLE: GroupLevelIndicatorPane
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericGroupLevelIndicatorPaneStyle"
+          TargetType="local:GroupLevelIndicatorPane">
+
+      <Setter Property="Template"
+              Value="{StaticResource treeGridViewGroupLevelIndicatorPaneTemplate}" />
+
+      <Style.Triggers>
+         <MultiTrigger>
+            <MultiTrigger.Conditions>
+               <Condition Property="IsLeaf"
+                          Value="False" />
+               <Condition Property="views:ViewBase.IsLastItem"
+                          Value="True" />
+            </MultiTrigger.Conditions>
+
+            <Setter Property="Margin"
+                    Value="0,0,0,-5" />
+         </MultiTrigger>
+
+      </Style.Triggers>
+   </Style>
+
+   <!--**************************
+    * STYLE: HierarchicalGroupLevelIndicatorPane
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericHierarchicalGroupLevelIndicatorPaneStyle"
+          TargetType="local:HierarchicalGroupLevelIndicatorPane">
+
+      <Setter Property="Template"
+              Value="{StaticResource treeGridViewHierarchicalGroupLevelIndicatorPaneTemplate}" />
+
+      <Setter Property="local:GroupLevelIndicatorPane.ShowIndicators"
+              Value="True" />
+
+      <Setter Property="local:GroupLevelIndicatorPane.ShowVerticalBorder"
+              Value="True" />
+
+      <Style.Triggers>
+         <Trigger Property="local:GroupLevelIndicatorPane.GroupLevel"
+                  Value="-1">
+
+            <!-- Stop the propagation of the value set by the default style trigger of
+                 the ColumnManagerRow and InsertionRow. -->
+            <Setter Property="local:GroupLevelIndicatorPane.ShowIndicators"
+                    Value="True" />
+
+         </Trigger>
+      </Style.Triggers>
+   </Style>
+
+   <!--**************************
+    * STYLE: AutoFilterControl
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericAutoFilterControlStyle"
+          TargetType="local:AutoFilterControl">
+
+      <Setter Property="Width"
+              Value="200"/>
+      <Setter Property="Template"
+              Value="{StaticResource treeGridViewAutoFilterControlTemplate}" />
+      <Setter Property="DistinctValueItemContainerStyle"
+              Value="{StaticResource defaultAutoFilteringCheckBoxItemStyle}" />
+   </Style>
+
+   <!--**************************
+    * STYLE: MenuItem (for the ColumnChooserContextMenu)
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericColumnChooserContextMenuMenuItemStyle"
+          TargetType="{x:Type MenuItem}">
+      <Setter Property="IsCheckable"
+              Value="True" />
+      <Setter Property="IsChecked"
+              Value="{Binding Path=Visible}" />
+      <Setter Property="StaysOpenOnClick"
+              Value="True" />
+   </Style>
+
+   <!--**************************
+    * STYLE: ColumnChooserContextMenu
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericColumnChooserContextMenuStyle"
+          TargetType="{x:Type local:ColumnChooserContextMenu}"
+          BasedOn="{StaticResource {x:Type ContextMenu}}">
+      <Setter Property="ItemContainerStyle"
+              Value="{StaticResource printTreeGridViewGenericColumnChooserContextMenuMenuItemStyle}" />
+      <Setter Property="DisplayMemberPath"
+              Value="Title" />
+      <Setter Property="SortOrder"
+              Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridControl.DataGridContext).ColumnChooserSortOrder}" />
+   </Style>
+
+   <!--**************************
+    * STYLE: ScrollTip
+    ************************** -->
+   <Style x:Key="printTreeGridViewGenericScrollTipStyle"
+          TargetType="local:ScrollTip">
+
+      <Setter Property="Template"
+              Value="{StaticResource treeGridViewScrollTipTemplate}" />
+   </Style>
+
+   <!-- =================================================================== -->
+   <!-- Default values for the View                                         -->
+   <!-- =================================================================== -->
+
+   <Style x:Key="printTreeGridViewGenericDefaultValues"
+          TargetType="views:PrintTreeGridView">
+
+      <Setter Property="GroupLevelIndicatorWidth"
+              Value="17" />
+
+      <Setter Property="DetailIndicatorWidth"
+              Value="34" />
+
+      <Setter Property="ShowFixedColumnSplitter"
+              Value="{Binding RelativeSource={RelativeSource Self},Path=FixedColumnCount,Converter={StaticResource greaterThanZeroConverter}}" />
+
+      <Setter Property="FixedColumnSplitterWidth"
+              Value="2" />
+
+      <Setter Property="ProgressWindowStyle"
+              Value="{StaticResource printTreeGridViewGenericProgressWindowStyle}" />
+
+      <Setter Property="ProgressWindowDescription"
+              Value="Processing..." />
+
+      <Setter Property="ProgressWindowContentTemplate"
+              Value="{StaticResource progressWindowContentTemplate}" />
+
+      <Setter Property="HorizontalGridLineBrush"
+              Value="{StaticResource defaultHorizontalGridLineBrush}" />
+
+      <!-- Those glyphs are null by default on ViewBase, so every Theme should define
+           and set their own custom glyphs. -->
+
+      <Setter Property="AscendingSortGlyph"
+              Value="{StaticResource ascendingSortGlyph}" />
+
+      <Setter Property="DescendingSortGlyph"
+              Value="{StaticResource descendingSortGlyph}" />
+
+      <Setter Property="AutoFilterGlyph"
+              Value="{StaticResource autoFilterGlyph}" />
+
+      <Setter Property="FilterRowGlyph"
+              Value="{StaticResource filterRowGlyph}" />
+   </Style>
+
+   <!-- =================================================================== -->
+   <!-- DefaultStyleKey declarations                                        -->
+   <!-- =================================================================== -->
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme}"
+          TargetType="views:PrintTreeGridView"
+          BasedOn="{StaticResource printTreeGridViewGenericDefaultValues}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=print:DataGridPageControl}"
+          TargetType="print:DataGridPageControl"
+          BasedOn="{StaticResource printTreeGridViewGenericDataGridPageControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:DataGridControl}"
+          TargetType="local:DataGridControl"
+          BasedOn="{StaticResource printTreeGridViewGenericGridControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:Row}"
+          TargetType="local:Row"
+          BasedOn="{StaticResource printTreeGridViewGenericRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:DataRow}"
+          TargetType="local:DataRow"
+          BasedOn="{StaticResource printTreeGridViewGenericDataRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:InsertionRow}"
+          TargetType="local:InsertionRow"
+          BasedOn="{StaticResource printTreeGridViewGenericInsertionRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:ColumnManagerRow}"
+          TargetType="local:ColumnManagerRow"
+          BasedOn="{StaticResource printTreeGridViewGenericColumnManagerRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:StatRow}"
+          TargetType="local:StatRow"
+          BasedOn="{StaticResource printTreeGridViewGenericStatRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:FilterRow}"
+          TargetType="local:FilterRow"
+          BasedOn="{StaticResource printTreeGridViewGenericFilterRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:FlexibleRow}"
+          TargetType="local:FlexibleRow"
+          BasedOn="{StaticResource printTreeGridViewGenericFlexibleRowStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:Cell}"
+          TargetType="local:Cell"
+          BasedOn="{StaticResource printTreeGridViewGenericCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:DataCell}"
+          TargetType="local:DataCell"
+          BasedOn="{StaticResource printTreeGridViewGenericDataCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:InsertionCell}"
+          TargetType="local:InsertionCell"
+          BasedOn="{StaticResource printTreeGridViewGenericInsertionCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:ColumnManagerCell}"
+          TargetType="local:ColumnManagerCell"
+          BasedOn="{StaticResource printTreeGridViewGenericColumnManagerCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:StatCell}"
+          TargetType="local:StatCell"
+          BasedOn="{StaticResource printTreeGridViewGenericStatCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:FilterCell}"
+          TargetType="local:FilterCell"
+          BasedOn="{StaticResource printTreeGridViewGenericFilterCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:FlexibleCell}"
+          TargetType="local:FlexibleCell"
+          BasedOn="{StaticResource printTreeGridViewGenericFlexibleCellStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:GroupByControl}"
+          TargetType="local:GroupByControl"
+          BasedOn="{StaticResource printTreeGridViewGenericGroupByControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:GroupByItem}"
+          TargetType="local:GroupByItem"
+          BasedOn="{StaticResource printTreeGridViewGenericGroupByItemStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:GroupHeaderControl}"
+          TargetType="local:GroupHeaderControl"
+          BasedOn="{StaticResource printTreeGridViewGenericGroupHeaderControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:GroupLevelIndicator}"
+          TargetType="local:GroupLevelIndicator"
+          BasedOn="{StaticResource printTreeGridViewGenericGroupLevelIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:DetailIndicator}"
+          TargetType="local:DetailIndicator"
+          BasedOn="{StaticResource printTreeGridViewGenericDetailIndicatorStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:GroupLevelIndicatorPane}"
+          TargetType="local:GroupLevelIndicatorPane"
+          BasedOn="{StaticResource printTreeGridViewGenericGroupLevelIndicatorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:HierarchicalGroupLevelIndicatorPane}"
+          TargetType="local:HierarchicalGroupLevelIndicatorPane"
+          BasedOn="{StaticResource printTreeGridViewGenericHierarchicalGroupLevelIndicatorPaneStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:AutoFilterControl}"
+          TargetType="local:AutoFilterControl"
+          BasedOn="{StaticResource printTreeGridViewGenericAutoFilterControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:PrintTreeGridView, ThemeType=views:GenericPrintTheme, TargetElementType=local:ScrollTip}"
+          TargetType="local:ScrollTip"
+          BasedOn="{StaticResource printTreeGridViewGenericScrollTipStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, ThemeType=views:GenericPrintTheme, TargetElementType=local:HierarchicalGroupByControlNode}"
+          TargetType="local:HierarchicalGroupByControlNode"
+          BasedOn="{StaticResource tableViewGenericHierarchicalGroupByControlNodeStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, ThemeType=views:GenericPrintTheme, TargetElementType=local:HierarchicalGroupByControl}"
+          TargetType="local:HierarchicalGroupByControl"
+          BasedOn="{StaticResource tableViewGenericHierarchicalGroupByControlStyle}" />
+
+   <Style x:Key="{markup:ThemeKey TargetViewType=views:TableView, ThemeType=views:GenericPrintTheme, TargetElementType=local:HierarchicalGroupByItem}"
+          TargetType="local:HierarchicalGroupByItem"
+          BasedOn="{StaticResource tableViewGenericHierarchicalGroupByItemStyle}" />
+</ResourceDictionary>

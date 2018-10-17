@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <ResolutionModel>
+    <Id>7bca885a-e8cd-46b7-b83a-01617acfe017</Id>
+    <Description>CCFL License Exemption Resolution Model</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>1</SortOrder>
+  </ResolutionModel>
+  <ResolutionModel>
+    <Id>14eeb7e3-27bd-4e80-8eac-8054aa562b77</Id>
+    <Description>Generic Resolution Model</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>0</SortOrder>
+  </ResolutionModel>
+  <Resolution>
+    <Id>04a2053a-e273-4c9e-8180-6f97e082abfd</Id>
+    <Description>Granted with Conditions</Description>
+    <IsActive>true</IsActive>
+    <IsCommentRequired>true</IsCommentRequired>
+    <ResolutionModel>7bca885a-e8cd-46b7-b83a-01617acfe017</ResolutionModel>
+    <SortOrder>1</SortOrder>
+  </Resolution>
+  <Resolution>
+    <Id>8ad4b4de-8ea9-4140-8829-9f57f875b535</Id>
+    <Description>Granted</Description>
+    <IsActive>true</IsActive>
+    <IsCommentRequired>false</IsCommentRequired>
+    <ResolutionModel>7bca885a-e8cd-46b7-b83a-01617acfe017</ResolutionModel>
+    <SortOrder>0</SortOrder>
+  </Resolution>
+  <Resolution>
+    <Id>a2cc0acd-d113-4d99-a487-b20fe929797f</Id>
+    <Description>Refused</Description>
+    <IsActive>true</IsActive>
+    <IsCommentRequired>true</IsCommentRequired>
+    <ResolutionModel>7bca885a-e8cd-46b7-b83a-01617acfe017</ResolutionModel>
+    <SortOrder>2</SortOrder>
+  </Resolution>
+  <Resolution>
+    <Id>b7169ad4-3600-4e69-8d4c-369c3ad6c76d</Id>
+    <Description>Completed</Description>
+    <IsActive>true</IsActive>
+    <IsCommentRequired>false</IsCommentRequired>
+    <ResolutionModel>14eeb7e3-27bd-4e80-8eac-8054aa562b77</ResolutionModel>
+    <SortOrder>0</SortOrder>
+  </Resolution>
+  <Resolution>
+    <Id>70ee7fdf-d65d-41d0-b366-507f6121a9af</Id>
+    <Description>Referred to Other Agency</Description>
+    <IsActive>true</IsActive>
+    <IsCommentRequired>false</IsCommentRequired>
+    <ResolutionModel>14eeb7e3-27bd-4e80-8eac-8054aa562b77</ResolutionModel>
+    <SortOrder>2</SortOrder>
+  </Resolution>
+  <Resolution>
+    <Id>3c9c7a62-f160-45d8-ac6d-77909faa03c8</Id>
+    <Description>Referred to Other Department</Description>
+    <IsActive>true</IsActive>
+    <IsCommentRequired>false</IsCommentRequired>
+    <ResolutionModel>14eeb7e3-27bd-4e80-8eac-8054aa562b77</ResolutionModel>
+    <SortOrder>1</SortOrder>
+  </Resolution>
+  <Resolution>
+    <Id>a52ff921-407a-43a3-84f2-c3aac12835ac</Id>
+    <Description>Rejected</Description>
+    <IsActive>true</IsActive>
+    <IsCommentRequired>true</IsCommentRequired>
+    <ResolutionModel>14eeb7e3-27bd-4e80-8eac-8054aa562b77</ResolutionModel>
+    <SortOrder>3</SortOrder>
+  </Resolution>
+</Entities>

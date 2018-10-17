@@ -1,0 +1,111 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".sql" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="$(SolutionDir)/Freedom.DomainGenerator/Freedom.DomainGenerator/bin/$(Configuration)/Freedom.DomainGenerator.Dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Serialization" #>
+<#@ import namespace="Freedom.DomainGenerator" #>
+<#@ import namespace="Freedom.DomainGenerator.DomainDefinitionModel" #>
+<#
+
+	Domain domain = DomainBuilder.Load(Host.ResolvePath("FreedomDomain.xml"));
+
+/******************************************************************************/
+/* STEP 1: CREATE TABLES                                                      */
+/******************************************************************************/
+
+	foreach (EntityType entityType in domain.EntityTypes.Where(e => !e.Abstract))
+	{
+		List<string> primaryKeyColumns = new List<string>();
+#>
+CREATE TABLE [<#= entityType.Name #>] (
+<#
+		
+		foreach (Property property in entityType.GetFlattenedProperties())
+		{
+			if (property.IsPrimaryKey) primaryKeyColumns.Add(property.Name);
+#>
+	[<#= property.DatabaseColumnName #>] <#= property.SqlDataType #> <#= property.Nullable  ? "NULL" : "NOT NULL" #><#= property.GetDatabaseDefault() #>,
+<#
+		}
+
+		foreach (ComputedColumn computedColumn in entityType.ComputedColumns)
+		{
+#>
+	[<#= computedColumn.Name #>] AS (<#= computedColumn.Definition.Trim("\t\r\n ".ToCharArray()) #>)<#= computedColumn.IsPersisted ? " PERSISTED" : "" #>,
+<#
+		}
+#>
+	CONSTRAINT [PK_<#= entityType.Name #>] PRIMARY KEY NONCLUSTERED ( <#= "[" + string.Join("], [", primaryKeyColumns) + "]" #> )
+);
+
+GO
+
+<#
+	}
+
+/******************************************************************************/
+/* STEP 2: FOREIGN KEY INDEXES AND CONSTRAINTS                                */
+/******************************************************************************/
+
+	foreach (Association association in domain.Associations)
+	{
+#>
+CREATE INDEX [IDX_<#= association.DependentColumnName #>]
+ON [<#= association.DependentType #>] ( [<#= association.DependentColumnName #>] );
+
+<#
+		// FK's aren't enforced on Self-Joins because it breaks syncing...
+		if (association.IsSelfJoin) continue;		
+#>
+ALTER TABLE [<#= association.DependentType #>]
+ADD CONSTRAINT [<#= association.Name #>]
+FOREIGN KEY ( [<#= association.DependentColumnName #>] ) REFERENCES [<#= association.PrincipalType #>] ( [<#= association.PrincipalColumnName #>] )<#= association.OnDelete == OnDeleteAction.Cascade ? " ON DELETE CASCADE" : "" #>;
+
+GO
+
+<#
+	}
+
+	
+/******************************************************************************/
+/* STEP 3: INDEXES                                                            */
+/******************************************************************************/
+
+	foreach (EntityType entityType in domain.EntityTypes.Where(e => !e.Abstract))
+	{
+		// Create an index for all enum properties
+
+		foreach (Property property in entityType.GetFlattenedProperties().Where(p => p.IsEnumType))
+		{
+			string indexName = "IDX_" + property.DatabaseColumnName;
+
+			if (entityType.Indexes.Any(i => i.Name.Equals(indexName, StringComparison.InvariantCultureIgnoreCase))) continue;
+#>
+CREATE INDEX <#= indexName #>
+ON [<#= entityType.Name #>] ( <#= property.DatabaseColumnName #> );
+
+GO
+
+<#
+		}
+	
+		// Defined indexes
+
+		foreach (Index index in entityType.Indexes)
+		{
+#>
+CREATE <#= index.IsUnique ? "UNIQUE " : "" #>INDEX <#= index.Name #>
+ON [<#= entityType.Name #>] ( <#= index.DatabaseColumns #> )<#= index.Includes.Count > 0 ? string.Format(" INCLUDE ({0})", index.IncludeColumns) : "" #>;
+
+GO
+
+<#
+		}
+	}
+
+#>

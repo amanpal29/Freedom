@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FreedomDomain"
+    targetNamespace="http://schemas.automatedstocktrader.com/domaindefinition"
+    attributeFormDefault="unqualified" elementFormDefault="qualified"
+    xmlns="http://schemas.automatedstocktrader.com/domaindefinition"
+    xmlns:mstns="http://schemas.automatedstocktrader.com/domaindefinition"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="RelationshipTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Parent" />
+      <xs:enumeration value="Children" />
+      <xs:enumeration value="Required" />
+      <xs:enumeration value="Optional" />
+      <xs:enumeration value="Collection" />
+      <xs:enumeration value="ManyToMany" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PropertyFlagsEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="StorageOnly" />
+      <xs:enumeration value="Independant" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Domain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element maxOccurs="unbounded" name="EntityType">
+            <xs:complexType mixed="true">
+              <xs:sequence minOccurs="0">
+                <xs:choice maxOccurs="unbounded">
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="Property">
+                    <xs:complexType>
+                      <xs:attribute name="Name" type="xs:string" use="required" />
+                      <xs:attribute name="Type" type="xs:string" use="required" />
+                      <xs:attribute name="Nullable" type="xs:boolean" use="optional" />
+                      <xs:attribute name="IsPrimaryKey" type="xs:boolean" use="optional" />
+                      <xs:attribute name="DefaultValue" type="xs:string" use="optional" />
+                      <xs:attribute name="Flags" type="PropertyFlagsEnum" use="optional" />
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="Relationship">
+                    <xs:complexType>
+                      <xs:attribute name="Name" type="xs:string" use="required" />
+                      <xs:attribute name="RelatedType" type="xs:string" use="required" />
+                      <xs:attribute name="RelationshipType" type="RelationshipTypeEnum" use="required" />
+                      <xs:attribute name="Purpose" type="xs:string" use="optional" />
+                      <xs:attribute name="Intermediate" type="xs:string" use="optional" />
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" maxOccurs="unbounded" name="ComputedColumn" >
+                    <xs:complexType>
+                      <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                          <xs:attribute name="Name" type="xs:string" use="required" />
+                          <xs:attribute name="IsPersisted" type="xs:boolean" use="optional" />
+                        </xs:extension>
+                      </xs:simpleContent>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Index">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="PropertyRef" minOccurs="1" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:attribute name="Name" type="xs:string" use="required" />
+                            <xs:attribute name="Descending" type="xs:boolean" use="optional" />
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="IncludeRef" minOccurs="0" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:attribute name="Name" type="xs:string" use="required" />
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                      <xs:attribute name="Name" type="xs:string" use="required" />
+                      <xs:attribute name="IsUnique" type="xs:boolean" use="optional" />
+                    </xs:complexType>
+                  </xs:element>
+                </xs:choice>
+              </xs:sequence>
+              <xs:attribute name="Name" type="xs:string" use="required" />
+              <xs:attribute name="Abstract" type="xs:boolean" use="optional" />
+              <xs:attribute name="Audit" type="xs:boolean" use="optional" />
+              <xs:attribute name="BaseType" type="xs:string" use="optional" />
+              <xs:attribute name="Reportable" type="xs:boolean" use="optional" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" name="ComplexType">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="Property">
+                  <xs:complexType>
+                    <xs:attribute name="Name" type="xs:string" use="required" />
+                    <xs:attribute name="Type" type="xs:string" use="required" />
+                    <xs:attribute name="Nullable" type="xs:boolean" use="optional" />
+                    <xs:attribute name="EnumType" type="xs:string" use="optional" />
+                    <xs:attribute name="DefaultValue" type="xs:string" use="optional" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute name="Name" type="xs:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element maxOccurs="unbounded" name="EnumType">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="Member">
+                  <xs:complexType>
+                    <xs:attribute name="Name" type="xs:string" use="required" />
+                    <xs:attribute name="Value" type="xs:string" use="required" />
+                    <xs:attribute name="Browsable" type="xs:boolean" use="optional" />
+                    <xs:attribute name="Description" type="xs:string" use="optional" />
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+              <xs:attribute name="Name" type="xs:string" use="required" />
+              <xs:attribute name="IsFlags" type="xs:boolean" use="optional" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="Namespace" type="xs:string" use="optional" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

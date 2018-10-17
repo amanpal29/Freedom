@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7580A08C-5C10-49E4-B990-0E2D8300035D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Freedom</RootNamespace>
+    <AssemblyName>Freedom</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\hedgerow.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net-1.2.11-net-4.0-release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackgroundWorker\Job.cs" />
+    <Compile Include="BackgroundWorker\JobQueue.cs" />
+    <Compile Include="BackgroundWorker\JobQueueException.cs" />
+    <Compile Include="BackgroundWorker\JobState.cs" />
+    <Compile Include="BackgroundWorker\PeriodicWorker.cs" />
+    <Compile Include="BackgroundWorker\Worker.cs" />
+    <Compile Include="ComponentModel\ReportableAttribute.cs" />
+    <Compile Include="Extensions\BinaryExtensions.cs" />
+    <Compile Include="Collections\BreadthFirstTreeEnumerator.cs" />
+    <Compile Include="Collections\CommaDelimitedString.cs" />
+    <Compile Include="Collections\ConcurrentHashSet.cs" />
+    <Compile Include="Collections\FilteredCollection.cs" />
+    <Compile Include="Collections\KeyValueList.cs" />
+    <Compile Include="Collections\ObservableHashSet.cs" />
+    <Compile Include="Collections\OrderedPairCollection.cs" />
+    <Compile Include="Collections\TrackedCollection.cs" />
+    <Compile Include="ComponentModel\ConfidentialAttribute.cs" />
+    <Compile Include="ComponentModel\DefaultColumnIndexAttribute.cs" />
+    <Compile Include="ComponentModel\FilterStyleAttribute.cs" />
+    <Compile Include="ComponentModel\GroupableAttribute.cs" />
+    <Compile Include="ComponentModel\SearchWeightAttribute.cs" />
+    <Compile Include="Constants\AddressDatabase.cs" />
+    <Compile Include="Constants\AddressEntry.cs" />
+    <Compile Include="Constraints\AndConstraint.cs" />
+    <Compile Include="Constraints\BinaryConstraint.cs" />
+    <Compile Include="Constraints\CompositeConstraint.cs" />
+    <Compile Include="Constraints\Constraint.cs" />
+    <Compile Include="Constraints\ConstraintHelper.cs" />
+    <Compile Include="Constraints\ConstraintType.cs" />
+    <Compile Include="Cryptography\IPasswordHash.cs" />
+    <Compile Include="Cryptography\Md5PasswordHash.cs" />
+    <Compile Include="Cryptography\PasswordHash.cs" />
+    <Compile Include="Cryptography\PlainTextPasswordHash.cs" />
+    <Compile Include="Cryptography\Md5SaltedMd5PasswordHash.cs" />
+    <Compile Include="Cryptography\SaltedSha256Pbkdf2PasswordHash.cs" />
+    <Compile Include="Diagnostics\DiagnosticTestStream.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\TaskExtensions.cs" />
+    <Compile Include="FileUtility.cs" />
+    <Compile Include="FullTextSearch\IndexHintAttribute.cs" />
+    <Compile Include="FullTextSearch\IndexHints.cs" />
+    <Compile Include="FullTextSearch\FullTextIndexTransactSqlConstraintVisitor.cs" />
+    <Compile Include="Constraints\FullTextSearchConstraint.cs" />
+    <Compile Include="Constraints\InKeySetConstraint.cs" />
+    <Compile Include="Constraints\LinqPredicateConstraintVisitor.cs" />
+    <Compile Include="Constraints\SqlConstraintVisitor.cs" />
+    <Compile Include="Constraints\StartsWithConstraint.cs" />
+    <Compile Include="Constraints\TransactSqlConstraintVisitor.cs" />
+    <Compile Include="Constraints\EqualConstraint.cs" />
+    <Compile Include="Constraints\StringContainsConstraint.cs" />
+    <Compile Include="Constraints\GreaterThanConstraint.cs" />
+    <Compile Include="Constraints\GreaterThanOrEqualToConstraint.cs" />
+    <Compile Include="Constraints\LessThanConstraint.cs" />
+    <Compile Include="Constraints\LessThanOrEqualToConstraint.cs" />
+    <Compile Include="Constraints\NotEqualConstraint.cs" />
+    <Compile Include="Constraints\OrConstraint.cs" />
+    <Compile Include="Constraints\OrderByExpression.cs" />
+    <Compile Include="Constraints\PageConstraint.cs" />
+    <Compile Include="Constraints\SubqueryConstraint.cs" />
+    <Compile Include="DelegateFactory.cs" />
+    <Compile Include="FullTextSearch\ClassMetadata.cs" />
+    <Compile Include="FullTextSearch\Configuration\FullTextSearchConfigurationSection.cs" />
+    <Compile Include="FullTextSearch\Configuration\SubstitutionElement.cs" />
+    <Compile Include="FullTextSearch\Configuration\SubstitutionElementCollection.cs" />
+    <Compile Include="FullTextSearch\IndexBuilder.cs" />
+    <Compile Include="FullTextSearch\IndexKeySet.cs" />
+    <Compile Include="FullTextSearch\IndexKeySetCollection.cs" />
+    <Compile Include="FullTextSearch\PropertyMetadata.cs" />
+    <Compile Include="FullTextSearch\IndexRepository.cs" />
+    <Compile Include="FullTextSearch\PropertyMetadataDictionary.cs" />
+    <Compile Include="FullTextSearch\QueryableFullTextSearchExtensions.cs" />
+    <Compile Include="IAsyncCommand.cs" />
+    <Compile Include="IO\HashingStreamDecorator.cs" />
+    <Compile Include="IO\ProgressReport.cs" />
+    <Compile Include="ComponentModel\OrderByAttribute.cs" />
+    <Compile Include="Parsers\RequiredParameterAttribute.cs" />
+    <Compile Include="Cryptography\PasswordUtility.cs" />
+    <Compile Include="SerializableDateTimeOffset.cs" />
+    <Compile Include="ShortTimeSpan.cs" />
+    <Compile Include="Linq\ConstraintBuilder.cs" />
+    <Compile Include="Linq\ExpressionHelper.cs" />
+    <Compile Include="Extensions\NotifyCollectionChangedEventArgsExtensions.cs" />
+    <Compile Include="Extensions\ViewModelBaseExtensions.cs" />
+    <Compile Include="IAsyncInitializable.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="FullTextSearch\IWordBreaker.cs" />
+    <Compile Include="FullTextSearch\StandardEnglishWordBreaker.cs" />
+    <Compile Include="FullTextSearch\TextSubstitution.cs" />
+    <Compile Include="SystemDataUtility.cs" />
+    <Compile Include="SystemData\SystemDataConstants.cs" />
+    <Compile Include="SystemData\SystemDataItemDictionary.cs" />
+    <Compile Include="TaskHelper.cs" />
+    <Compile Include="TextBuilder\TextBuilder.cs" />
+    <Compile Include="TextBuilder\TextBuilderError.cs" />
+    <Compile Include="TextBuilder\TextBuilderErrorCode.cs" />
+    <Compile Include="TextBuilder\TextBuilderException.cs" />
+    <Compile Include="TimeOfDayRange.cs" />
+    <Compile Include="ViewModels\ContentViewModel.cs" />
+    <Compile Include="DateRange.cs" />
+    <Compile Include="DependancyInversion\ConstructionFailedException.cs" />
+    <Compile Include="DependancyInversion\Container.cs" />
+    <Compile Include="DependancyInversion\DependancyInjectionExtensions.cs" />
+    <Compile Include="DependancyInversion\IRegister.cs" />
+    <Compile Include="DependancyInversion\TypeNotRegisteredException.cs" />
+    <Compile Include="Diagnostics\DebugLoggingStreamDecorator.cs" />
+    <Compile Include="EnumTypeConverter.cs" />
+    <Compile Include="Exceptions\AmbiguousValueException.cs" />
+    <Compile Include="Exceptions\ServerException.cs" />
+    <Compile Include="Exceptions\UnsupportedQueryException.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EnumEx.cs" />
+    <Compile Include="Extensions\HashAlgorithmExtensions.cs" />
+    <Compile Include="Extensions\MemberInfoExtensions.cs" />
+    <Compile Include="Extensions\SystemDataExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="DependancyInversion\IContainer.cs" />
+    <Compile Include="IWaitCursor.cs" />
+    <Compile Include="IoC.cs" />
+    <Compile Include="Linq\SourceFieldAttribute.cs" />
+    <Compile Include="Parsers\AddressData.cs" />
+    <Compile Include="Parsers\AlternateNameAttribute.cs" />
+    <Compile Include="Parsers\CommandLineParser.cs" />
+    <Compile Include="Parsers\EmailAddress.cs" />
+    <Compile Include="Parsers\PersonName.cs" />
+    <Compile Include="Parsers\PhoneNumber.cs" />
+    <Compile Include="Parsers\WebsiteAddress.cs" />
+    <Compile Include="IO\ProgressReportingStreamDecorator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefelectionHelper.cs" />
+    <Compile Include="ViewModels\Filters\FilterMementoPair.cs" />
+    <Compile Include="ViewModels\Filters\FilterOptionViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterViewModelCollection.cs" />
+    <Compile Include="ViewModels\Filters\IFilterViewModel.cs" />
+    <Compile Include="ViewModels\Filters\MutuallyExclusiveFilterViewModel.cs" />
+    <Compile Include="ViewModels\Filters\SeparatorFilterOptionViewModel.cs" />
+    <Compile Include="ViewModels\IAwaitingIndicatorFactory.cs" />
+    <Compile Include="SystemData\EnvironmentDataProvider.cs" />
+    <Compile Include="SystemData\ISystemDataProvider.cs" />
+    <Compile Include="SystemData\OperatingSystemDataProvider.cs" />
+    <Compile Include="SystemData\SystemDataCollection.cs" />
+    <Compile Include="SystemData\SystemDataSection.cs" />
+    <Compile Include="XmlSerializationHelper.cs" />
+    <Compile Include="TypeHelper.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\WindowViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,99 @@
+﻿<#@ template language="C#" debug="false" hostspecific="true"#>
+<#@ output extension=".cs"#>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="$(SolutionDir)/Freedom.DomainGenerator/Freedom.DomainGenerator/bin/$(Configuration)/Freedom.DomainGenerator.Dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Serialization" #>
+<#@ import namespace="Freedom.DomainGenerator" #>
+<#@ import namespace="Freedom.DomainGenerator.DomainDefinitionModel" #>
+<#@ import namespace="Freedom.DomainGenerator.TextTemplate" #>
+<#
+
+	Domain domain = DomainBuilder.Load(Host.ResolvePath(@"Definition\FreedomDomain.xml"));
+
+#>
+namespace Freedom.Domain.Model
+{
+    public class EntityPaths
+    {
+        internal EntityPaths()
+        {
+            Host = null;
+        }
+
+        internal EntityPaths(string host)
+        {
+            Host = string.IsNullOrEmpty(host) ? null : host;
+        }
+
+        protected string Host { get; }
+
+        protected string PathPrefix => string.IsNullOrEmpty(Host) ? string.Empty : Host + '.';
+
+        public override string ToString()
+        {
+            return Host;
+        }
+
+        public static implicit operator string(EntityPaths entityNames)
+        {
+            return entityNames.ToString();
+        }
+    }
+<#
+	foreach (EntityType entity in domain.EntityTypes)
+	{
+#>
+
+	public class <#= entity.Name #>Paths : EntityPaths
+	{
+		public <#= entity.Name #>Paths()
+		{
+		}
+		
+		public <#= entity.Name #>Paths(string hostName)
+			: base(hostName)
+		{
+		}
+<#
+		foreach (Relationship relationship in entity.Relationships)
+		{
+#>
+
+		public <#= relationship.RelatedType #>Paths <#= relationship.Name #>
+			=> new <#= relationship.RelatedType #>Paths(PathPrefix + "<#= relationship.Name #>");
+<#
+		}
+#>
+<#
+		foreach (Property property in entity.GetFlattenedProperties())
+		{
+			if (property.Name.Contains("_")) continue;
+#>
+
+		public string <#= property.Name #> => PathPrefix + "<#= property.Name #>";
+<#
+		}
+#>
+	}
+<#
+	}
+#>
+
+	public static class Paths
+	{
+<#
+	foreach (EntityType entity in domain.EntityTypes)
+	{
+#>
+		public static <#= entity.Name #>Paths <#= entity.Name #> => new <#= entity.Name #>Paths();
+
+<#
+	}
+#>
+	}
+}

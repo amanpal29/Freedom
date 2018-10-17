@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C17C7F4-8A24-4FBD-86F7-8F079BC3A7D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Freedom.DomainGenerator</RootNamespace>
+    <AssemblyName>Freedom.DomainGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\EnvDTE.8.0.2\lib\net10\EnvDTE.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\stdole.7.0.3302\lib\net10\stdole.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeGenerationTools.cs" />
+    <Compile Include="CommonDefinitionModel\NamedItem.cs" />
+    <Compile Include="CommonDefinitionModel\NamedItemCollection.cs" />
+    <Compile Include="DigestDefinitionModel\CommonTable.cs" />
+    <Compile Include="DigestDefinitionModel\Domain.cs" />
+    <Compile Include="DigestDefinitionModel\Entity.cs" />
+    <Compile Include="DigestDefinitionModel\Property.cs" />
+    <Compile Include="DomainBuilder.cs" />
+    <Compile Include="DomainDefinitionModel\Association.cs" />
+    <Compile Include="DomainDefinitionModel\ComplexType.cs" />
+    <Compile Include="DomainDefinitionModel\ComputedColumn.cs" />
+    <Compile Include="DomainDefinitionModel\Domain.cs" />
+    <Compile Include="DomainDefinitionModel\EntityType.cs" />
+    <Compile Include="DomainDefinitionModel\EnumMember.cs" />
+    <Compile Include="DomainDefinitionModel\EnumType.cs" />
+    <Compile Include="DomainDefinitionModel\Index.cs" />
+    <Compile Include="DomainDefinitionModel\Multiplicity.cs" />
+    <Compile Include="DomainDefinitionModel\OnDeleteAction.cs" />
+    <Compile Include="DomainDefinitionModel\PrimitiveType.cs" />
+    <Compile Include="DomainDefinitionModel\PrimitiveTypes.cs" />
+    <Compile Include="DomainDefinitionModel\Property.cs" />
+    <Compile Include="DomainDefinitionModel\PropertyFlags.cs" />
+    <Compile Include="DomainDefinitionModel\PropertyRef.cs" />
+    <Compile Include="DomainDefinitionModel\Relationship.cs" />
+    <Compile Include="DomainDefinitionModel\RelationshipType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextTemplate\DynamicHost.cs" />
+    <Compile Include="TextTemplate\DynamicTextTransformation.cs" />
+    <Compile Include="TextTemplate\IDynamicHost.cs" />
+    <Compile Include="TextTemplate\NullHost.cs" />
+    <Compile Include="TextTemplate\TemplateFileManager.cs" />
+    <Compile Include="TextTemplate\VisualStudioTemplateFileManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FreedomDigestDomain.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FreedomDomain.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

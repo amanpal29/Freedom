@@ -1,0 +1,1344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <RiskAssessmentModel>
+    <Id>cbe1a5f3-4377-470c-aa2a-5e4eb14736a5</Id>
+    <EffectiveDate>2012-12-27T00:00:00</EffectiveDate>
+    <FriendlyName>Version 2</FriendlyName>
+    <RiskAssessmentModelRepository>f0c0cff9-1d83-4837-8c24-c1774915189f</RiskAssessmentModelRepository>
+  </RiskAssessmentModel>
+  <RiskAssessmentModel>
+    <Id>5ba164b8-2f05-4e18-8db4-7577480c348d</Id>
+    <EffectiveDate>2012-12-27T00:00:00</EffectiveDate>
+    <FriendlyName>Version 1</FriendlyName>
+    <RiskAssessmentModelRepository>717778b4-3338-41ec-b96f-dbefa0a8b400</RiskAssessmentModelRepository>
+  </RiskAssessmentModel>
+  <RiskAssessmentModel>
+    <Id>2e75fec0-2a7b-40b6-b678-948047ef0046</Id>
+    <EffectiveDate>2012-12-27T00:00:00</EffectiveDate>
+    <FriendlyName>Version 1</FriendlyName>
+    <RiskAssessmentModelRepository>40b1fcac-69cb-41c0-80b5-34d13c5736ea</RiskAssessmentModelRepository>
+  </RiskAssessmentModel>
+  <RiskAssessmentModel>
+    <Id>652eae52-01a5-4c4c-9bd9-d1548b19afb9</Id>
+    <EffectiveDate>2012-12-27T00:00:00</EffectiveDate>
+    <FriendlyName>Version 1</FriendlyName>
+    <RiskAssessmentModelRepository>9c79bdf9-e98c-489a-a39f-6a535fdbff5c</RiskAssessmentModelRepository>
+  </RiskAssessmentModel>
+  <RiskAssessmentModelRepository>
+    <Id>f0c0cff9-1d83-4837-8c24-c1774915189f</Id>
+    <Description>FS Food Safety - General Food</Description>
+    <SortOrder>0</SortOrder>
+  </RiskAssessmentModelRepository>
+  <RiskAssessmentModelCategory>
+    <Id>a92af3a2-2923-4a7a-a835-1a3438ba1336</Id>
+    <Description>Client Base</Description>
+    <RiskAssessmentModel>cbe1a5f3-4377-470c-aa2a-5e4eb14736a5</RiskAssessmentModel>
+    <SortOrder>2</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>d4fe4203-3233-4eab-9b83-4c4883bc1737</Id>
+    <Description>Nature of Food</Description>
+    <RiskAssessmentModel>cbe1a5f3-4377-470c-aa2a-5e4eb14736a5</RiskAssessmentModel>
+    <SortOrder>1</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>4026aba3-04b9-4b54-9eae-a219deaac7ad</Id>
+    <Description>Quality Control</Description>
+    <RiskAssessmentModel>cbe1a5f3-4377-470c-aa2a-5e4eb14736a5</RiskAssessmentModel>
+    <SortOrder>3</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>6464bd18-5c1d-4f74-bbd8-c74093e2b9c1</Id>
+    <Description>Historical Factors</Description>
+    <RiskAssessmentModel>cbe1a5f3-4377-470c-aa2a-5e4eb14736a5</RiskAssessmentModel>
+    <SortOrder>0</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelRepository>
+    <Id>717778b4-3338-41ec-b96f-dbefa0a8b400</Id>
+    <Description>FS Food Safety - Child Care Nourishment</Description>
+    <SortOrder>0</SortOrder>
+  </RiskAssessmentModelRepository>
+  <RiskAssessmentModelCategory>
+    <Id>5da2963f-4c9b-4bec-8567-1c4c2a8ba10b</Id>
+    <Description>Client Base</Description>
+    <RiskAssessmentModel>5ba164b8-2f05-4e18-8db4-7577480c348d</RiskAssessmentModel>
+    <SortOrder>3</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>667b1c60-4a4d-4922-b157-6420630e6680</Id>
+    <Description>Historical Factors</Description>
+    <RiskAssessmentModel>5ba164b8-2f05-4e18-8db4-7577480c348d</RiskAssessmentModel>
+    <SortOrder>1</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>66a6810a-36a1-432e-8fd2-8033e0547b64</Id>
+    <Description>Nature of Food</Description>
+    <RiskAssessmentModel>5ba164b8-2f05-4e18-8db4-7577480c348d</RiskAssessmentModel>
+    <SortOrder>2</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>092e951a-c875-49e5-b8ad-992143198122</Id>
+    <Description>Quality Control</Description>
+    <RiskAssessmentModel>5ba164b8-2f05-4e18-8db4-7577480c348d</RiskAssessmentModel>
+    <SortOrder>4</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelRepository>
+    <Id>40b1fcac-69cb-41c0-80b5-34d13c5736ea</Id>
+    <Description>FS Food Safety - Mobile Vendor</Description>
+    <SortOrder>0</SortOrder>
+  </RiskAssessmentModelRepository>
+  <RiskAssessmentModelCategory>
+    <Id>769363af-6374-415a-99b8-5a38290a43b3</Id>
+    <Description>Quality Control</Description>
+    <RiskAssessmentModel>2e75fec0-2a7b-40b6-b678-948047ef0046</RiskAssessmentModel>
+    <SortOrder>4</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>187927b1-c51a-4d5d-a305-5c94ae08df4f</Id>
+    <Description>Historical Factors</Description>
+    <RiskAssessmentModel>2e75fec0-2a7b-40b6-b678-948047ef0046</RiskAssessmentModel>
+    <SortOrder>1</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>8fb029e7-0c82-4f5f-bcff-b0ac55f000e0</Id>
+    <Description>Nature of Food</Description>
+    <RiskAssessmentModel>2e75fec0-2a7b-40b6-b678-948047ef0046</RiskAssessmentModel>
+    <SortOrder>2</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelRepository>
+    <Id>9c79bdf9-e98c-489a-a39f-6a535fdbff5c</Id>
+    <Description>FS Food Safety - Institutional Food</Description>
+    <SortOrder>0</SortOrder>
+  </RiskAssessmentModelRepository>
+  <RiskAssessmentModelCategory>
+    <Id>4e2ac67f-dfd2-4d58-958b-59ed9fe71885</Id>
+    <Description>Nature of Food</Description>
+    <RiskAssessmentModel>652eae52-01a5-4c4c-9bd9-d1548b19afb9</RiskAssessmentModel>
+    <SortOrder>2</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>ea80150e-e9d1-4f93-84ca-aa87d1553992</Id>
+    <Description>Historical Factors</Description>
+    <RiskAssessmentModel>652eae52-01a5-4c4c-9bd9-d1548b19afb9</RiskAssessmentModel>
+    <SortOrder>1</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>e638e70d-4a99-4442-8a9c-d6c95807dfaf</Id>
+    <Description>Quality Control</Description>
+    <RiskAssessmentModel>652eae52-01a5-4c4c-9bd9-d1548b19afb9</RiskAssessmentModel>
+    <SortOrder>4</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelCategory>
+    <Id>54633ed5-9029-4564-a271-eb8e20c0242f</Id>
+    <Description>Client Base</Description>
+    <RiskAssessmentModel>652eae52-01a5-4c4c-9bd9-d1548b19afb9</RiskAssessmentModel>
+    <SortOrder>3</SortOrder>
+  </RiskAssessmentModelCategory>
+  <RiskAssessmentModelQuestion>
+    <Id>aad61dbb-af58-4fd0-893a-3a002f1402f6</Id>
+    <Category>a92af3a2-2923-4a7a-a835-1a3438ba1336</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Licensed Capacity</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>70619dba-61d2-4e5e-aae6-c8299d37cbd1</Id>
+    <Category>a92af3a2-2923-4a7a-a835-1a3438ba1336</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>Population Served</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>0bf7a31c-6c8f-4def-b55a-4fb46831e664</Id>
+    <Category>d4fe4203-3233-4eab-9b83-4c4883bc1737</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>Type of Food and Intended Uses</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>f78f6d01-0c40-4218-8291-74552705a59c</Id>
+    <Category>d4fe4203-3233-4eab-9b83-4c4883bc1737</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Nature of Food Preparation</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>f6fcae93-8820-4a0b-9eb9-368e4d658daf</Id>
+    <Category>4026aba3-04b9-4b54-9eae-a219deaac7ad</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>0</SortOrder>
+    <Description>Food Safety Program (HACCP, QC/Assurance)</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>2fbeae37-d0b1-44d4-a59e-846dc8ed3c5e</Id>
+    <Category>4026aba3-04b9-4b54-9eae-a219deaac7ad</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>Food Handler Certification</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>0c630bd9-1ad0-4f95-8c20-326932677814</Id>
+    <Category>6464bd18-5c1d-4f74-bbd8-c74093e2b9c1</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Compliance History</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>e3550651-a992-4062-9a42-470155f9ab85</Id>
+    <Category>6464bd18-5c1d-4f74-bbd8-c74093e2b9c1</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>History of Confirmed Food Poisoning</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>fee99e03-81d0-4367-8d36-67a7580d463a</Id>
+    <Category>6464bd18-5c1d-4f74-bbd8-c74093e2b9c1</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>0</SortOrder>
+    <Description>History of Food Poisoning Complaints</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>346b977c-85f8-45a4-88f6-89d2882a35c9</Id>
+    <Category>6464bd18-5c1d-4f74-bbd8-c74093e2b9c1</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>3</SortOrder>
+    <Description>Compliance Consistency</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>f948e68c-5de9-4164-b41e-080f6501da4e</Id>
+    <Category>5da2963f-4c9b-4bec-8567-1c4c2a8ba10b</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Licensed Capacity</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>29ffff1c-15db-4864-9425-670c28251c3d</Id>
+    <Category>667b1c60-4a4d-4922-b157-6420630e6680</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>History of Confirmed Food Poisoning</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>ab61885e-d3a5-413e-990c-8dc0619b9552</Id>
+    <Category>667b1c60-4a4d-4922-b157-6420630e6680</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>4</SortOrder>
+    <Description>Compliance Consistency</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>b676afb5-40c1-453f-9eef-a1d2186f0db2</Id>
+    <Category>667b1c60-4a4d-4922-b157-6420630e6680</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>3</SortOrder>
+    <Description>Compliance History</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>4e5c15eb-ee0e-44e4-a990-b59eaccb24c6</Id>
+    <Category>667b1c60-4a4d-4922-b157-6420630e6680</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>History of Food Poisoning Complaints</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>8593ae3f-b5e6-4f49-9beb-286605100fe6</Id>
+    <Category>66a6810a-36a1-432e-8fd2-8033e0547b64</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Average Number of Meals Served / Day</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>2116b347-0143-4fa2-8009-5906581dc94b</Id>
+    <Category>66a6810a-36a1-432e-8fd2-8033e0547b64</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>Nature of Food Preparation</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>6115c6cb-15ab-4b1f-ab54-8bd5ebec6081</Id>
+    <Category>66a6810a-36a1-432e-8fd2-8033e0547b64</Category>
+    <IsMandatory>false</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>3</SortOrder>
+    <Description>Primary Place of Food Preparation</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>5b1626d5-d5ab-4d1e-adaa-e637c56f0419</Id>
+    <Category>66a6810a-36a1-432e-8fd2-8033e0547b64</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>0</SortOrder>
+    <Description>Type of Food and Intended Uses</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>3626bbe6-fc93-484c-9a54-2556f824776b</Id>
+    <Category>092e951a-c875-49e5-b8ad-992143198122</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>Food Safety Program (HACCP, QC/Assurance)</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>a722a4c4-5dbc-44bb-9c80-94d428cd1720</Id>
+    <Category>092e951a-c875-49e5-b8ad-992143198122</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Food Handler Certification</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>94e7f954-b232-4a88-9c55-9d6db348e393</Id>
+    <Category>769363af-6374-415a-99b8-5a38290a43b3</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>Food Safety Program (HACCP, QC/Assurance)</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>71c11918-cfa2-45cf-b67d-f61da0d4666e</Id>
+    <Category>769363af-6374-415a-99b8-5a38290a43b3</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Food Handler Certification</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>bf7f00b7-5ea0-490a-97da-117fe8dba008</Id>
+    <Category>187927b1-c51a-4d5d-a305-5c94ae08df4f</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>History of Confirmed Food Poisoning</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>e2f52967-7abf-4fc4-99a7-479bfb12b9c8</Id>
+    <Category>187927b1-c51a-4d5d-a305-5c94ae08df4f</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>3</SortOrder>
+    <Description>Compliance History</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>0ac97071-d218-44b2-8db1-f29ea422bfb1</Id>
+    <Category>187927b1-c51a-4d5d-a305-5c94ae08df4f</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>4</SortOrder>
+    <Description>Compliance Consistency</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>17fb0253-8fbd-47e2-993d-f3e1509d2c68</Id>
+    <Category>187927b1-c51a-4d5d-a305-5c94ae08df4f</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>History of Food Poisoning Complaints</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>6e78a080-e9f3-43cb-af9e-2cd5c927f9cc</Id>
+    <Category>8fb029e7-0c82-4f5f-bcff-b0ac55f000e0</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>Nature of Food Preparation</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>c9428934-14ea-43c6-8c70-4b143617ed06</Id>
+    <Category>8fb029e7-0c82-4f5f-bcff-b0ac55f000e0</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>0</SortOrder>
+    <Description>Type of Food and Intended Uses</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>531ebb6d-91c2-4af1-b6b5-978852fe008f</Id>
+    <Category>8fb029e7-0c82-4f5f-bcff-b0ac55f000e0</Category>
+    <IsMandatory>false</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Primary Place of Food Preparation</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>73433f8a-d193-4c36-b749-171de1f02431</Id>
+    <Category>4e2ac67f-dfd2-4d58-958b-59ed9fe71885</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>0</SortOrder>
+    <Description>Type of Food and Intended Uses</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>f03110ca-2c0f-432a-9f82-21c1424eac0b</Id>
+    <Category>4e2ac67f-dfd2-4d58-958b-59ed9fe71885</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Average Number of Meals Prepared / Day</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>a982ecc6-41c6-4198-a138-6bc11314ac73</Id>
+    <Category>4e2ac67f-dfd2-4d58-958b-59ed9fe71885</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>Nature of Food Preparation</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>8d26e13d-b275-4009-a43d-3fce0f1158f1</Id>
+    <Category>ea80150e-e9d1-4f93-84ca-aa87d1553992</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>3</SortOrder>
+    <Description>Compliance History</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>7d310679-1484-4b07-aa3a-a0d8264d7cc5</Id>
+    <Category>ea80150e-e9d1-4f93-84ca-aa87d1553992</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>History of Confirmed Food Poisoning</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>0422853a-bd3d-43e9-a221-ef6fc693db77</Id>
+    <Category>ea80150e-e9d1-4f93-84ca-aa87d1553992</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>History of Food Poisoning Complaints</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>26efb1f0-220b-4dcd-b225-ffdc1a557f5b</Id>
+    <Category>ea80150e-e9d1-4f93-84ca-aa87d1553992</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>4</SortOrder>
+    <Description>Compliance Consistency</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>f5f93e3e-21a2-4dba-9d5e-6eda79fa07ec</Id>
+    <Category>e638e70d-4a99-4442-8a9c-d6c95807dfaf</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>Food Safety Program (HACCP, QC/Assurance)</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>d016a844-2c6c-4328-b124-c1955daf18b2</Id>
+    <Category>e638e70d-4a99-4442-8a9c-d6c95807dfaf</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Food Handler Certification</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>0b1c4ef2-6b18-4139-b47e-c7c0b5e92067</Id>
+    <Category>54633ed5-9029-4564-a271-eb8e20c0242f</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>1</SortOrder>
+    <Description>Population Served</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelQuestion>
+    <Id>06a61328-9ad2-4aef-88b3-e02d24ff1962</Id>
+    <Category>54633ed5-9029-4564-a271-eb8e20c0242f</Category>
+    <IsMandatory>true</IsMandatory>
+    <IsMutuallyExclusive>true</IsMutuallyExclusive>
+    <SortOrder>2</SortOrder>
+    <Description>Licensed Capacity</Description>
+  </RiskAssessmentModelQuestion>
+  <RiskAssessmentModelAnswer>
+    <Id>29922894-905f-4bc9-b85e-1d7dd795e794</Id>
+    <Question>aad61dbb-af58-4fd0-893a-3a002f1402f6</Question>
+    <RiskWeight>5</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>50 person or less capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>46d5d5ef-8ecd-4cc5-85b4-2a966737508e</Id>
+    <Question>aad61dbb-af58-4fd0-893a-3a002f1402f6</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>51 - 100 person capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>3862e649-d1a6-4a50-bfd5-c91271f27944</Id>
+    <Question>aad61dbb-af58-4fd0-893a-3a002f1402f6</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>101 - 250 person capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>aebdfa05-5da1-4627-b732-f5971eeef7f4</Id>
+    <Question>aad61dbb-af58-4fd0-893a-3a002f1402f6</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>More than 250 person capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>2a05f8ae-8f67-48c0-ae8a-0403bc02483a</Id>
+    <Question>70619dba-61d2-4e5e-aae6-c8299d37cbd1</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Vulnerable population (e.g. infants and elderly)</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>6977fdd8-032c-44cd-ab6c-2627d3d5a847</Id>
+    <Question>70619dba-61d2-4e5e-aae6-c8299d37cbd1</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>General public</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>f08b40f9-6c5e-4e27-bb17-b081d8479115</Id>
+    <Question>0bf7a31c-6c8f-4def-b55a-4fb46831e664</Question>
+    <RiskWeight>5</RiskWeight>
+    <SortOrder>0</SortOrder>
+    <Description>Non-hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>c3b64bb9-e983-43fb-ac74-c3adf1ca1ce7</Id>
+    <Question>0bf7a31c-6c8f-4def-b55a-4fb46831e664</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Hazardous food not ready to eat when served / sold</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>ee60d1f0-f80a-4618-a227-e95705811317</Id>
+    <Question>0bf7a31c-6c8f-4def-b55a-4fb46831e664</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Hazardous food ready to eat when served or sold</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>b8542798-c7cb-4f08-b598-06228ba1c082</Id>
+    <Question>f78f6d01-0c40-4218-8291-74552705a59c</Question>
+    <RiskWeight>40</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>3 or more Preparation steps for hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>4f3c78ed-98fa-4626-8e85-2bd0ee88dc35</Id>
+    <Question>f78f6d01-0c40-4218-8291-74552705a59c</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Pre-packaged hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>1c8082d8-440f-4e92-9586-c2d708b1330b</Id>
+    <Question>f78f6d01-0c40-4218-8291-74552705a59c</Question>
+    <RiskWeight>25</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>2 or less Preparation steps for hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>4cda8213-1b0b-4c1a-996d-d7e294c45003</Id>
+    <Question>f78f6d01-0c40-4218-8291-74552705a59c</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Pre-packaged non-hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>b42e9dab-226d-44dd-9374-bd1b24ad3b35</Id>
+    <Question>f6fcae93-8820-4a0b-9eb9-368e4d658daf</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No effective food safety program practiced</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>18740bc3-21b7-4e62-ad17-e0c3c4d48cf0</Id>
+    <Question>f6fcae93-8820-4a0b-9eb9-368e4d658daf</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Effective food safety program practiced</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>93eda243-8192-4808-9511-23207db4c2d3</Id>
+    <Question>2fbeae37-d0b1-44d4-a59e-846dc8ed3c5e</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>0</SortOrder>
+    <Description>No Certified Food Handler Required</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>b2a7882b-4551-41d8-8cea-6b1b6407a4e6</Id>
+    <Question>2fbeae37-d0b1-44d4-a59e-846dc8ed3c5e</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Certified Food Handler on Staff</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>59f428e2-392a-4382-b5b7-b12e62a64308</Id>
+    <Question>2fbeae37-d0b1-44d4-a59e-846dc8ed3c5e</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Certified Food Handler present when food prepared</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>15fdf606-0db1-4e08-a6c9-eff02873c79a</Id>
+    <Question>2fbeae37-d0b1-44d4-a59e-846dc8ed3c5e</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>No Certified Food Handler</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>3dc4e42f-3e1a-4765-b282-1cfd7186ea90</Id>
+    <Question>0c630bd9-1ad0-4f95-8c20-326932677814</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>1 critical item in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>305d458d-d5df-4ccf-a12b-250173133208</Id>
+    <Question>0c630bd9-1ad0-4f95-8c20-326932677814</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>2 critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>afd1e6ef-9ff2-4499-852e-36c411067029</Id>
+    <Question>0c630bd9-1ad0-4f95-8c20-326932677814</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>3 or more critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>8fb8e3e3-8947-4d02-a1fd-a69027d2b211</Id>
+    <Question>0c630bd9-1ad0-4f95-8c20-326932677814</Question>
+    <SortOrder>0</SortOrder>
+    <Description>No critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>d63bc4e9-dc5b-45df-9bc8-1f009e512ff6</Id>
+    <Question>e3550651-a992-4062-9a42-470155f9ab85</Question>
+    <RiskWeight>40</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Food-borne illness confirmed in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>b9805623-3f88-43b3-9686-55569ee0a7fb</Id>
+    <Question>e3550651-a992-4062-9a42-470155f9ab85</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No Food-borne illness confirmed in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>a7202b9f-1ec7-4076-9203-6528a480621f</Id>
+    <Question>fee99e03-81d0-4367-8d36-67a7580d463a</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Implicated in more than 3 food-borne illnesses in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>0776a86d-3b47-42eb-a538-d6ec03145089</Id>
+    <Question>fee99e03-81d0-4367-8d36-67a7580d463a</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Implicated in 1-3 food-borne illnesses in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>115f30a9-afe3-4ef9-a20a-f87fac4fe401</Id>
+    <Question>fee99e03-81d0-4367-8d36-67a7580d463a</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Not implicated in a food-borne illness in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>8ba94a2c-2faf-4441-9578-8390ac58a3c7</Id>
+    <Question>346b977c-85f8-45a4-88f6-89d2882a35c9</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Continual non-compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>8dd8299b-c353-488c-b2ea-86c80e91e932</Id>
+    <Question>346b977c-85f8-45a4-88f6-89d2882a35c9</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Infrequent non-compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>06ff4704-b9b7-4124-a0e5-8ef27ade1de6</Id>
+    <Question>346b977c-85f8-45a4-88f6-89d2882a35c9</Question>
+    <SortOrder>0</SortOrder>
+    <Description>In compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>21f76cc1-fbff-46a9-a818-257efc6d20b4</Id>
+    <Question>f948e68c-5de9-4164-b41e-080f6501da4e</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>51 - 74 person capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>600cdd71-55dc-471c-b5c5-5601da770ef0</Id>
+    <Question>f948e68c-5de9-4164-b41e-080f6501da4e</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>75 - 99 person capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>c66627df-05d8-4d85-9103-6a7709973d7c</Id>
+    <Question>f948e68c-5de9-4164-b41e-080f6501da4e</Question>
+    <RiskWeight>5</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>50 person or less capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>1fe89d26-20a6-4118-bd4e-f02eb23eea84</Id>
+    <Question>f948e68c-5de9-4164-b41e-080f6501da4e</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>100 or greater person capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>25567efa-ba71-49f2-8994-0443cec2fb85</Id>
+    <Question>29ffff1c-15db-4864-9425-670c28251c3d</Question>
+    <RiskWeight>40</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Food-borne illness confirmed in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>00e12382-804c-4664-b762-c0e6843e45b6</Id>
+    <Question>29ffff1c-15db-4864-9425-670c28251c3d</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No Food-borne illness confirmed in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>fdc32df0-7ef1-4874-baa7-148b96cc9877</Id>
+    <Question>ab61885e-d3a5-413e-990c-8dc0619b9552</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Infrequent non-compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>e025baf2-d87d-4b32-b624-3d2e424691e9</Id>
+    <Question>ab61885e-d3a5-413e-990c-8dc0619b9552</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>In compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>2a2b9088-2e36-4c2b-ad97-dd43fdc497c7</Id>
+    <Question>ab61885e-d3a5-413e-990c-8dc0619b9552</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Continual non-compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>0888196d-b582-4d1a-975b-1f0bb134c36f</Id>
+    <Question>b676afb5-40c1-453f-9eef-a1d2186f0db2</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>2 critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>307bf1fc-73d0-4558-9e68-3832439ca0ac</Id>
+    <Question>b676afb5-40c1-453f-9eef-a1d2186f0db2</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>549db6ad-7855-4e3a-9f89-4b1c4261d5ed</Id>
+    <Question>b676afb5-40c1-453f-9eef-a1d2186f0db2</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>3 or more critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>b59df615-0cf8-4427-ba04-728b3a4a05e3</Id>
+    <Question>b676afb5-40c1-453f-9eef-a1d2186f0db2</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>1 critical item in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>ea9b952e-049b-4fcf-999f-939ecab49b05</Id>
+    <Question>4e5c15eb-ee0e-44e4-a990-b59eaccb24c6</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Not implicated in a food-borne illness in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>1c59547f-88a0-4ae1-aa84-b62de96292ba</Id>
+    <Question>4e5c15eb-ee0e-44e4-a990-b59eaccb24c6</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Implicated in more than 3 food-borne illnesses in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>1a3364c4-45ca-407a-ba6f-b983a602d27d</Id>
+    <Question>4e5c15eb-ee0e-44e4-a990-b59eaccb24c6</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Implicated in 1-3 food-borne illnesses in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>18e76d22-a7c0-4d9c-8364-b7abd60ccf6e</Id>
+    <Question>8593ae3f-b5e6-4f49-9beb-286605100fe6</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>0</SortOrder>
+    <Description>61 or more meals served / day</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>e025bf0f-9854-4752-854e-d7f22d4312ae</Id>
+    <Question>8593ae3f-b5e6-4f49-9beb-286605100fe6</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>31 - 60 meals served  / day</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>96cdf82e-0b42-42b9-82df-ffa5e8c804ee</Id>
+    <Question>8593ae3f-b5e6-4f49-9beb-286605100fe6</Question>
+    <RiskWeight>5</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>1 - 30 meals served  / day</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>eef0d943-1aea-4045-b447-0042f687617b</Id>
+    <Question>2116b347-0143-4fa2-8009-5906581dc94b</Question>
+    <RiskWeight>25</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>2 or less Preparation steps for hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>0aef6e55-6747-48f3-be61-24b3d1aac09c</Id>
+    <Question>2116b347-0143-4fa2-8009-5906581dc94b</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Pre-packaged non-hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>185e8392-649f-4bc1-8e96-27c27762ab4b</Id>
+    <Question>2116b347-0143-4fa2-8009-5906581dc94b</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Pre-packaged hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>47b43656-3d9e-40ff-a292-7964c00440cb</Id>
+    <Question>2116b347-0143-4fa2-8009-5906581dc94b</Question>
+    <RiskWeight>40</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>3 or more Preparation steps for hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>6620880c-a98e-4737-816e-405df4ae40ec</Id>
+    <Question>6115c6cb-15ab-4b1f-ab54-8bd5ebec6081</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>On-Site Preparation</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>9cf9b680-38c5-4eb7-bed0-9288faf43c14</Id>
+    <Question>6115c6cb-15ab-4b1f-ab54-8bd5ebec6081</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Off-Site Preparation</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>68685453-d9a3-4c68-910a-2622fa181398</Id>
+    <Question>5b1626d5-d5ab-4d1e-adaa-e637c56f0419</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Hazardous food not ready to eat when served / sold</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>77e7bebd-06f6-498a-863f-3659853c9959</Id>
+    <Question>5b1626d5-d5ab-4d1e-adaa-e637c56f0419</Question>
+    <RiskWeight>5</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Non-hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>b9755e24-e4ab-426a-aec4-53022c8285b4</Id>
+    <Question>5b1626d5-d5ab-4d1e-adaa-e637c56f0419</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Hazardous food ready to eat when served or sold</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>d1ebc9f9-3c3b-49d5-966a-8fa6f07dca5b</Id>
+    <Question>3626bbe6-fc93-484c-9a54-2556f824776b</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Effective food safety program practiced</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>0026e634-668c-460a-b7a9-b157e73a03dd</Id>
+    <Question>3626bbe6-fc93-484c-9a54-2556f824776b</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>No effective food safety program practiced</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>0a0e3faf-0240-487b-893f-0469129d47dc</Id>
+    <Question>a722a4c4-5dbc-44bb-9c80-94d428cd1720</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Certified Food Handler present when food prepared</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>eeb37de3-4821-406d-a2fc-6857fd4d8cfe</Id>
+    <Question>a722a4c4-5dbc-44bb-9c80-94d428cd1720</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Certified Food Handler on Staff</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>29ce0abc-8675-4a08-a808-8bacc3b6eb22</Id>
+    <Question>a722a4c4-5dbc-44bb-9c80-94d428cd1720</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No Certified Food Handler Required</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>e6eb5fca-dcf8-4ff9-baff-ebd1052b51a8</Id>
+    <Question>a722a4c4-5dbc-44bb-9c80-94d428cd1720</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>No Certified Food Handler</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>0ec9dc1b-bae4-44cb-b952-12e6db08d8b2</Id>
+    <Question>94e7f954-b232-4a88-9c55-9d6db348e393</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>No effective food safety program practiced</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>05976ca9-c99f-4e1f-b231-f0996d56f474</Id>
+    <Question>94e7f954-b232-4a88-9c55-9d6db348e393</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Effective food safety program practiced</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>77c7ce08-da47-4881-8823-03474a74e174</Id>
+    <Question>71c11918-cfa2-45cf-b67d-f61da0d4666e</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Certified Food Handler on Staff</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>6a2ea683-0c61-49d6-ae64-2649c12c2ab7</Id>
+    <Question>71c11918-cfa2-45cf-b67d-f61da0d4666e</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>No Certified Food Handler</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>ad819c07-9fff-4e31-b802-3a00d2438da8</Id>
+    <Question>71c11918-cfa2-45cf-b67d-f61da0d4666e</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Certified Food Handler present when food prepared</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>07c4e6cd-0c9d-4f4b-8c4e-95bc67f90a7a</Id>
+    <Question>71c11918-cfa2-45cf-b67d-f61da0d4666e</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No Certified Food Handler Required</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>b55d0e4f-ffc9-49aa-a319-1bb82c3f1a20</Id>
+    <Question>bf7f00b7-5ea0-490a-97da-117fe8dba008</Question>
+    <RiskWeight>40</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Food-borne illness confirmed in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>4d697594-bb6b-4ab4-92b9-f415502f0a8e</Id>
+    <Question>bf7f00b7-5ea0-490a-97da-117fe8dba008</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No Food-borne illness confirmed in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>410aaa8f-1d7b-460d-8e59-0e030deb81bc</Id>
+    <Question>e2f52967-7abf-4fc4-99a7-479bfb12b9c8</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>1 critical item in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>c97b76d1-bde7-42a6-a26a-617babfaadd9</Id>
+    <Question>e2f52967-7abf-4fc4-99a7-479bfb12b9c8</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>fe4b001f-0f5f-4039-9363-6a843db68fba</Id>
+    <Question>e2f52967-7abf-4fc4-99a7-479bfb12b9c8</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>2 critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>7f170ceb-c163-42bd-bf95-7170476ce89b</Id>
+    <Question>e2f52967-7abf-4fc4-99a7-479bfb12b9c8</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>3 or more critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>419dac2b-4db9-484d-92cf-3483d587cf3e</Id>
+    <Question>0ac97071-d218-44b2-8db1-f29ea422bfb1</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Continual non-compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>84fe772a-c226-4029-bc8b-968569ba2fbc</Id>
+    <Question>0ac97071-d218-44b2-8db1-f29ea422bfb1</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>In compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>21f531da-4baf-450a-ba56-c0d124bf2a74</Id>
+    <Question>0ac97071-d218-44b2-8db1-f29ea422bfb1</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Infrequent non-compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>729f7400-413a-468d-8853-6a33741765e9</Id>
+    <Question>17fb0253-8fbd-47e2-993d-f3e1509d2c68</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Not implicated in a food-borne illness in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>a67e261f-0c27-47b5-b4b9-88a8b2bc1034</Id>
+    <Question>17fb0253-8fbd-47e2-993d-f3e1509d2c68</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Implicated in more than 3 food-borne illnesses in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>a38a9110-39cf-4665-841d-9cc3c6329576</Id>
+    <Question>17fb0253-8fbd-47e2-993d-f3e1509d2c68</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Implicated in 1-3 food-borne illnesses in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>4ae69ad3-873a-4f23-8635-4838ae6f3ac6</Id>
+    <Question>6e78a080-e9f3-43cb-af9e-2cd5c927f9cc</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Non-hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>cfa8684e-1e78-4bac-8578-515a47d48875</Id>
+    <Question>6e78a080-e9f3-43cb-af9e-2cd5c927f9cc</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Pre-packaged hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>f797fe1f-1535-4b1a-b3f8-700c7f8c6e18</Id>
+    <Question>6e78a080-e9f3-43cb-af9e-2cd5c927f9cc</Question>
+    <RiskWeight>25</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>2 or less Preparation steps for hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>ad2cbf1d-3031-487a-9f7f-b2c902a666cb</Id>
+    <Question>6e78a080-e9f3-43cb-af9e-2cd5c927f9cc</Question>
+    <RiskWeight>40</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>3 or more Preparation steps for hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>c2fbde68-ed05-4fb3-b5b5-5a79a4e12ab2</Id>
+    <Question>c9428934-14ea-43c6-8c70-4b143617ed06</Question>
+    <RiskWeight>25</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Hazardous food frequently associated with outbreaks</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>81bd12f8-e0c1-4c6d-b03a-83794797bfd8</Id>
+    <Question>c9428934-14ea-43c6-8c70-4b143617ed06</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Hazardous food not frequently associated with outbreaks</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>75df1002-7928-4b9c-93d7-9ecadff8f57d</Id>
+    <Question>c9428934-14ea-43c6-8c70-4b143617ed06</Question>
+    <RiskWeight>5</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Non-hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>c5a72183-69f0-4b50-a044-7e90f5149bd0</Id>
+    <Question>531ebb6d-91c2-4af1-b6b5-978852fe008f</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>At a non-inspected facility</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>9f9d77a4-6d3e-433e-8f10-9e611c5d85b7</Id>
+    <Question>531ebb6d-91c2-4af1-b6b5-978852fe008f</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>0</SortOrder>
+    <Description>On-Site Preparation</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>098efd73-ed69-4748-82a6-fae7fbeca50a</Id>
+    <Question>531ebb6d-91c2-4af1-b6b5-978852fe008f</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>At an inspected facility</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>9aff0928-3a40-4a3c-9e39-06830281948b</Id>
+    <Question>73433f8a-d193-4c36-b749-171de1f02431</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Hazardous food ready to eat when served or sold</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>a17912b9-62e8-41ec-8128-1cecf587c6ff</Id>
+    <Question>73433f8a-d193-4c36-b749-171de1f02431</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Hazardous food not ready to eat when served / sold</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>f6b27a97-437b-4cc6-af0d-820168ca3f1d</Id>
+    <Question>73433f8a-d193-4c36-b749-171de1f02431</Question>
+    <RiskWeight>5</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Non-hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>63051753-dfc7-4fb4-9a7c-716ac919e797</Id>
+    <Question>f03110ca-2c0f-432a-9f82-21c1424eac0b</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>0</SortOrder>
+    <Description>Foodservice serving 250 or more meals / day</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>586d6f6f-a436-40bb-bb52-cb35aa45ecc8</Id>
+    <Question>f03110ca-2c0f-432a-9f82-21c1424eac0b</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Foodservice serving less than 250 meals / day</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>2a9e6527-5638-43e5-9313-013717de2e8f</Id>
+    <Question>a982ecc6-41c6-4198-a138-6bc11314ac73</Question>
+    <RiskWeight>25</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>2 or less Preparation steps for hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>c9fa13db-684e-4568-ba9b-080b0b4e283b</Id>
+    <Question>a982ecc6-41c6-4198-a138-6bc11314ac73</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Pre-packaged hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>1a4b9775-c689-4a17-b408-7244e360a524</Id>
+    <Question>a982ecc6-41c6-4198-a138-6bc11314ac73</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Pre-packaged non-hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>8e5f4828-6586-4f28-82cc-f99fc76e59b2</Id>
+    <Question>a982ecc6-41c6-4198-a138-6bc11314ac73</Question>
+    <RiskWeight>40</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>3 or more Preparation steps for hazardous food</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>c28fe46e-8772-4fc4-b62b-4434abc396d6</Id>
+    <Question>8d26e13d-b275-4009-a43d-3fce0f1158f1</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>2 critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>171d0060-980e-4539-b38a-58391c7a51e4</Id>
+    <Question>8d26e13d-b275-4009-a43d-3fce0f1158f1</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>3 or more critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>2da7ea45-c287-40a9-a024-8b320fffa334</Id>
+    <Question>8d26e13d-b275-4009-a43d-3fce0f1158f1</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>1 critical item in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>aedea289-2ec0-4dba-84c2-b407ba3b91a8</Id>
+    <Question>8d26e13d-b275-4009-a43d-3fce0f1158f1</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>eac94538-96d9-4da5-9b9e-d46d61392e31</Id>
+    <Question>7d310679-1484-4b07-aa3a-a0d8264d7cc5</Question>
+    <RiskWeight>40</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Food-borne illness confirmed in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>23fc78d8-e103-4f0d-8b12-f91be2e0715c</Id>
+    <Question>7d310679-1484-4b07-aa3a-a0d8264d7cc5</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No Food-borne illness confirmed in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>d033df41-77a8-4dbb-88f0-a309d6acdfb6</Id>
+    <Question>0422853a-bd3d-43e9-a221-ef6fc693db77</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Implicated in more than 3 food-borne illnesses in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>c98480dc-0672-4058-9ec7-cdc9fe39dd53</Id>
+    <Question>0422853a-bd3d-43e9-a221-ef6fc693db77</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Implicated in 1-3 food-borne illnesses in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>15f10d16-edb2-492e-bc55-fd2d2ae75226</Id>
+    <Question>0422853a-bd3d-43e9-a221-ef6fc693db77</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Not implicated in a food-borne illness in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>22408812-b58b-42ba-ab69-30415d66512e</Id>
+    <Question>26efb1f0-220b-4dcd-b225-ffdc1a557f5b</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>In compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>010167e4-6a4b-443d-b46a-3a3a54a20912</Id>
+    <Question>26efb1f0-220b-4dcd-b225-ffdc1a557f5b</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Infrequent non-compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>36a35d72-f89d-42d2-a380-400d0cf719de</Id>
+    <Question>26efb1f0-220b-4dcd-b225-ffdc1a557f5b</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Continual non-compliance with critical items in the last year</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>beda2076-0ad0-4280-a6c2-42ddff8c161d</Id>
+    <Question>f5f93e3e-21a2-4dba-9d5e-6eda79fa07ec</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>Effective food safety program practiced</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>65a9df1e-1cae-4fe6-89fc-e73cdd658f56</Id>
+    <Question>f5f93e3e-21a2-4dba-9d5e-6eda79fa07ec</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>No effective food safety program practiced</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>743f8869-17cc-462b-a25b-4644912cf623</Id>
+    <Question>d016a844-2c6c-4328-b124-c1955daf18b2</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>No Certified Food Handler Required</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>198a5802-5048-48bb-9457-9b660d103463</Id>
+    <Question>d016a844-2c6c-4328-b124-c1955daf18b2</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>Certified Food Handler on Staff</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>18e9d532-ab9a-467a-bcac-da6ca1d1fda0</Id>
+    <Question>d016a844-2c6c-4328-b124-c1955daf18b2</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Certified Food Handler present when food prepared</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>d23aade2-2434-4cbc-9445-ec3bcd30dd8a</Id>
+    <Question>d016a844-2c6c-4328-b124-c1955daf18b2</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>No Certified Food Handler</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>dee89feb-fffb-467a-ac71-70dd81a0bc9e</Id>
+    <Question>0b1c4ef2-6b18-4139-b47e-c7c0b5e92067</Question>
+    <RiskWeight>0</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>General public</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>95931b10-6cf9-402f-973f-bd1b355af9bf</Id>
+    <Question>0b1c4ef2-6b18-4139-b47e-c7c0b5e92067</Question>
+    <RiskWeight>30</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>Vulnerable population (e.g. infants and elderly)</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>5220f7c9-6595-4b95-bb79-4737e695eac6</Id>
+    <Question>06a61328-9ad2-4aef-88b3-e02d24ff1962</Question>
+    <RiskWeight>10</RiskWeight>
+    <SortOrder>2</SortOrder>
+    <Description>51 - 74 person capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>722a9833-a9f2-4fd2-85f0-4b8a61b85fe4</Id>
+    <Question>06a61328-9ad2-4aef-88b3-e02d24ff1962</Question>
+    <RiskWeight>20</RiskWeight>
+    <SortOrder>4</SortOrder>
+    <Description>100 or greater person capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>1bf651e0-8c34-41a9-a937-7e47d3c1b785</Id>
+    <Question>06a61328-9ad2-4aef-88b3-e02d24ff1962</Question>
+    <RiskWeight>15</RiskWeight>
+    <SortOrder>3</SortOrder>
+    <Description>75 - 99 person capacity</Description>
+  </RiskAssessmentModelAnswer>
+  <RiskAssessmentModelAnswer>
+    <Id>a2ee65d9-556c-4fcb-ba9e-89026ecdf287</Id>
+    <Question>06a61328-9ad2-4aef-88b3-e02d24ff1962</Question>
+    <RiskWeight>5</RiskWeight>
+    <SortOrder>1</SortOrder>
+    <Description>50 person or less capacity</Description>
+  </RiskAssessmentModelAnswer>
+</Entities>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <PermitType>
+    <Id>C9BC5D3E-0581-46E6-8A51-C8622200FF6C</Id>
+    <IsActive>true</IsActive>
+    <Description>Permit to Operate</Description>
+    <ExternalCode></ExternalCode>
+    <InternalCode></InternalCode>
+    <SortOrder>1</SortOrder>
+  </PermitType>
+</Entities>
+
+

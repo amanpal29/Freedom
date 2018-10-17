@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <SampleReason>
+    <Id>02f83ba3-fa4f-4759-be67-239e6fa68991</Id>
+    <Description>Monitoring</Description>
+    <ExternalCode>EXT-03</ExternalCode>
+    <InternalCode>INT-03</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>2</SortOrder>
+    <State>Unchanged</State>
+  </SampleReason>
+  <SampleReason>
+    <Id>e97789a9-a4db-4745-9f93-a8eab735c920</Id>
+    <Description>Emergency</Description>
+    <ExternalCode>EXT-02</ExternalCode>
+    <InternalCode>INT-02</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>1</SortOrder>
+    <State>Unchanged</State>
+  </SampleReason>
+  <SampleReason>
+    <Id>755ad095-959e-4680-ab9a-d38b4f5e3b40</Id>
+    <Description>Audit only</Description>
+    <ExternalCode>EXT-01</ExternalCode>
+    <InternalCode>INT-01</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>0</SortOrder>
+    <State>Unchanged</State>
+  </SampleReason>
+</Entities>

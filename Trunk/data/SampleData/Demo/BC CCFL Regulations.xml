@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <Regulation>
+    <Id>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Id>
+    <Description>Child Care Licensing Regulation</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>0</SortOrder>
+  </Regulation>
+  <Regulation>
+    <Id>e571aefb-0833-4e39-ba1f-3e77d47ff8ff</Id>
+    <Description>Community Care and Assisted Living Act</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>1</SortOrder>
+  </Regulation>
+  <Regulation>
+    <Id>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Id>
+    <Description>Residential Care Regulation</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>2</SortOrder>
+  </Regulation>
+  <ExemptionType>
+    <Id>b6aadf46-b0fe-457f-aab3-0862aa8830a2</Id>
+    <Description>Outdoor play areas must be enclosed</Description>
+    <HelpText>A licensee must ensure that the entire outdoor play area is enclosed in a manner that is suitable for the age and development of children, and will ensure that children are free of harm.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>9</SortOrder>
+    <Source>16 (3) (a)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>b904762d-7584-497e-827f-0ef2485d6627</Id>
+    <Description>Exemption to allow spanking</Description>
+    <HelpText>A licensee must ensure that a child, while under the care or supervision of the licensee, is not subjected to any of the following: spanking or any other form of corporal punishment;</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>21</SortOrder>
+    <Source>52 (1) (d)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>5ff0fd1a-1e0a-4fdd-9374-2305d5ab3d55</Id>
+    <Description>Modifications for special needs children</Description>
+    <HelpText>If a child who requires extra support is attending the community care facility, the licensee must ensure that the physical structure of the community care facility is modified to meet the needs of the child while the child is in attendance.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>1</SortOrder>
+    <Source>13 (4)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>5ad3c9f6-0847-44ca-90b2-2ad32f610063</Id>
+    <Description>Absent licensees</Description>
+    <HelpText>(1)  This section applies to a licensee who provides a care program described as Family Child Care or In-Home Multi-Age Child Care.
+(2)  If a licensee is absent because of illness, emergency, vacation or other temporary leave, the licensee must notify each child's parent or emergency contact of the absence and identify the person who will be acting as the licensee's temporary replacement.
+(3)  If a licensee is absent for more than 30 consecutive days, the licensee's temporary replacement must be approved by a medical health officer and
+	(a) in the case of a care program described as Family Child Care, hold the same qualifications as a manager, and
+	(b) in the case of a care program described as In-Home Multi-Age Child Care, be an educator.
+(4)  A licensee may be absent for the purposes of attending an educational program relevant to the care of children if the licensee gives notice of the intended absence to the medical health officer.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>15</SortOrder>
+    <Source>36</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>0d254972-78f0-4fd3-87a2-3211eac9c040</Id>
+    <Description>Changing station required</Description>
+    <HelpText>A licensee, other than a licensee who provides a care program described as either Preschool (30 Months to School Age) or Group Child Care (School Age), must have in a community care facility a sturdy surface for changing diapers, located outside the food preparation area, next to both
+(a) a covered container for soiled clothing, and
+(b) a wash basin.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>5</SortOrder>
+    <Source>14 (4)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>1068d7c9-55de-408a-a2bd-432ff8e548d6</Id>
+    <Description>Posting and advertising of license and certificates</Description>
+    <HelpText>(1)  A licensee must display in a prominent place in the community care facility both the licence, including any terms or conditions of the licence, and the name of the manager.
+(2)  Subsection (1) does not apply to a licensee who provides a care program described as Family Child Care or In-Home Multi-Age Child Care, unless a medical health officer directs otherwise.
+(3)  When advertising or otherwise offering services to the public, a licensee must identify the care program being offered.
+(4)  A licensee must display in a prominent place in the community care facility the certificate of any educator or assistant employed to work in the community care facility.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>0</SortOrder>
+    <Source>11</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>441e1580-839c-4fe1-872c-456a81593ada</Id>
+    <Description>Background checks on employees</Description>
+    <HelpText>A licensee must not employ a person in a community care facility unless the licensee or, in the case of a person who is not the manager, the manager has first met with the person and obtained all of the following:
+(a) a criminal record check for the person;
+(b) character references in respect of the person;
+(c) a record of the person's work history;
+(d) copies of any diplomas, certificates or other evidence of the person's training and skills;
+(e) a statement signed by a medical practitioner indicating that the person is physically and psychologically capable of working with children and carrying out assigned duties in a community care facility;
+(f) evidence that the person has complied with the Province's immunization and tuberculosis control programs.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>11</SortOrder>
+    <Source>19 (1)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>ad917e7e-9ba6-4045-85be-652a4afdb07c</Id>
+    <Description>Minimum indoor area</Description>
+    <HelpText>A licensee, other than a licensee who provides a care program described as Family Child Care or Child-minding, must have for each child at least 3.7 m² of usable floor area in the community care facility, excluding
+(a) hallways,
+(b) built in storage areas,
+(c) bathrooms, and
+(d) fixed appliances, or, if not fixed, large appliances that are not normally moved from one area to another.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>2</SortOrder>
+    <Source>14 (1)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>9ae6326f-e306-4518-894f-6c042c0183c7</Id>
+    <Description>Maximum hours of care</Description>
+    <HelpText>(1)  Subject to subsections (2) to (4), a licensee must not provide care for more than 13 hours each day to each child.
+(2)  A licensee providing a care program described as Preschool (30 Months to School Age) must not provide care for more than 4 hours each day to each child.
+(3)  A licensee providing a care program described as Occasional Child Care must not provide care for more than
+	(a) 8 hours each day to each child, and
+	(b) 40 hours within each 30 day period to each child.
+(4)  A licensee providing a care program described as Child-minding must not provide care for more than 5 hours each day to each child.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>17</SortOrder>
+    <Source>40</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>9f7e8ab9-051e-4c4e-a9a4-847873e5645c</Id>
+    <Description>Toilets on different floors</Description>
+    <HelpText>A licensee, other than a licensee who provides a care program described as Family Child Care or In-Home Multi-Age Child Care, must ensure that the toilets and wash basins referred to in subsection (2) are on the same floor as the community care facility.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>4</SortOrder>
+    <Source>14 (3)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>c18cd3d6-e91a-4166-9186-85d1e846dd37</Id>
+    <Description>Manager of more than one facility</Description>
+    <HelpText>A licensee must not employ as a manager a person who, at the time that the person is managing the licensee's community care facility, is also managing another community care facility.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>10</SortOrder>
+    <Source>18</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>4ac4d91f-ef84-4a04-90a5-8e8d2cb55cc2</Id>
+    <Description>First aid</Description>
+    <HelpText>(1)  A licensee must ensure that children have at all times immediate access to an employee who
+	(a) holds a valid first aid and CPR certificate, provided on completion of a course that meets the requirements of Schedule C,
+	(b) is knowledgeable respecting each child's medical condition, if any, and
+	(c) is capable of effectively communicating with emergency personnel.
+(2)  A licensee must have first aid kits that are readily accessible to all employees, including while care is provided off the community care facility premises.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>13</SortOrder>
+    <Source>23</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>917b6c83-1291-4572-a842-93386d48e0c8</Id>
+    <Description>Minimum number of toilets</Description>
+    <HelpText>A licensee must have one toilet and wash basin for every 10 children or fewer.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>3</SortOrder>
+    <Source>14 (2)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>a6ecdaa7-9a04-43e5-8994-952b9f86dfbe</Id>
+    <Description>Conducting other business prohibited</Description>
+    <HelpText>(1)  This section applies to a licensee who provides a care program described as Family Child Care or In-Home Multi-Age Child Care.
+(2)  A licensee must not, while providing a care program, conduct any business or other activity within or from the licensee's personal residence that may
+	(a) interfere with the supervision of children or the space used for the care of children, or
+	(b) threaten the health or safety of children.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>14</SortOrder>
+    <Source>35</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>64b53d31-65c3-4081-aba1-a1faf048b90b</Id>
+    <Description>Separate sleeping area</Description>
+    <HelpText>A licensee providing a care program to any child younger than 36 months of age must provide a separate sleeping area located away from any activity area.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>7</SortOrder>
+    <Source>15 (3)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>636503f7-3aef-4c65-ba5d-b105e85ba0ac</Id>
+    <Description>Overnight sleeping arrangements</Description>
+    <HelpText>(1)  Subject to subsection (3), a licensee may provide overnight care only if the licensee first gives written notification to a medical health officer.
+(2)  A licensee who provides overnight care must
+	(a) ensure that each floor of premises where sleeping rooms are located is equipped with fire detection devices and a second means of exit to the ground level, and
+	(b) comply with the requirements of care set out in Schedule F.
+(3)  A licensee providing a care program described as Preschool (30 Months to School Age), Occasional Child Care or Child-minding must not provide overnight care.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>18</SortOrder>
+    <Source>41</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>4721f6ce-d98e-4411-97ac-b229fc99e4d5</Id>
+    <Description>Age of transportation drivers</Description>
+    <HelpText>If children are to be transported by vehicle by a licensee or a licensee's employees, the licensee must ensure that the driver of the vehicle is 19 years old or older</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>19</SortOrder>
+    <Source>45 (1) (a)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>dc34a9eb-7eda-4276-a4b9-c45ea05469fd</Id>
+    <Description>Absent employees</Description>
+    <HelpText>In this section, "absent employee" means an employee described in Column 1 who is
+
+(a) absent because of illness, emergency, vacation or other temporary leave, and
+(b) expected to return to regular duties.
+(2)  A licensee must replace an absent employee.
+(3)  Despite the employee qualifications required by Column 4 of the table in section 1 of Schedule E [group sizes and employee to children ratios], a licensee must replace an absent employee described in Column 1 of the following table who is absent
+(a) for fewer than 30 consecutive days with a person described in Column 3 opposite that employee and the row in Column 2 labelled as "&lt; 30 days", and
+(b) for 30 consecutive days or more with a person described in Column 3 opposite that employee and the row in Column 2 labelled as "≥ 30 days":
+Column 1
+
+Employee Column 2
+
+Period of absence Column 3
+
+Replacement
+educator &lt; 30 days educator or assistant
+  ≥ 30 days educator holding at least the same certificate
+assistant &lt; 30 days educator, assistant or responsible adult
+  ≥ 30 days educator or assistant
+responsible adult any period educator, assistant or responsible adult
+manager &lt; 30 days a person qualified to be a manager under this regulation
+≥ 30 days a person qualified to be a manager under this regulation,
+
+with notice of the appointment given to the medical health officer
+</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>16</SortOrder>
+    <Source>37</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>15c07854-c83d-48ac-93c8-d5f74e29bf6f</Id>
+    <Description>Minimum outdoor play area</Description>
+    <HelpText>A licensee, other than a licensee who provides a care program described as Occasional Child Care or Child-minding, must have for each child at least 7 m² of outdoor play area.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>8</SortOrder>
+    <Source>16 (1)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>ba87b08e-d8a0-47a1-b709-d724798d6dc4</Id>
+    <Description>Temporary Placement - Child &lt;36 mn (GCC)</Description>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>22</SortOrder>
+    <Source>Schedule E - 1</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>48dcaa05-e419-41ac-8b2a-dafbf4968d0c</Id>
+    <Description>Emergency training and equipment</Description>
+    <HelpText>(1)  A licensee must have all of the following:
+	(a) emergency exits and a fire drill system approved by a local assistant within the meaning of the Fire Services Act;
+	(b) an emergency plan that sets out procedures to prepare for, mitigate, respond to and recover from any emergency.
+(2)  A licensee must ensure that each employee
+	(a) is trained in the implementation of the fire drill system and emergency plan described in subsection (1), including the use of any equipment noted in the fire drill system and emergency plan,
+	(b) practices implementing the fire drill system at least once each month, and
+	(c) practices implementing the emergency plan at least once each year.
+(3)  A licensee must display a copy of the fire drill system in a prominent place in the community care facility.
+(4)  A licensee must ensure that all employees have access, in an emergency, to reliable communications equipment.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>12</SortOrder>
+    <Source>22</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>9a9af268-edc9-4edb-9558-dd33647a69a7</Id>
+    <Description>Non-driver adult required during transportation</Description>
+    <HelpText>If more than 7 children are transported in a single vehicle, a licensee must ensure that at least one responsible adult, not including the driver, is in the vehicle.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>20</SortOrder>
+    <Source>45 (2)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>dad2fd77-1adb-4982-a682-e24604b446cb</Id>
+    <Description>Appropriate furniture for sleeping</Description>
+    <HelpText>A licensee must ensure that each piece of furniture or equipment for sleeping
+(a) is used by only one child at a time,
+(b) is clean and comfortable, and
+(c) is appropriate for the size, age and development of the children intended to use it.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>7221fb46-4e80-4260-aad5-0dc4d56b6b3d</Regulation>
+    <SortOrder>6</SortOrder>
+    <Source>15 (2)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>f69f675c-96e6-4bb4-919c-73caad2e87f9</Id>
+    <Description>Not Operating</Description>
+    <HelpText>If a licensee does not operate a premises as a community care facility at any time during a 12 consecutive month period,
+	(a) the license expires automatically on the last day of the 12th month, and
+	(b) the person in possession of the license must immediately surrender that license to a medical health officer.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>e571aefb-0833-4e39-ba1f-3e77d47ff8ff</Regulation>
+    <SortOrder>1</SortOrder>
+    <Source>10</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>20f465c9-9684-41b2-b595-a941f4a1ba58</Id>
+    <Description>Display the license in the prescribed manner</Description>
+    <HelpText>A licensee must do all of the following:
+(c) display the license in the prescribed manner;
+(c.1) display the rights of adult persons in care
+	(i)  in a prominent place in the community care facility, and
+	(ii)  in a form and in the manner acceptable to the minister;
+(c.2) make the rights of adult persons in care known, orally and in writing, to persons in care and their families and representatives;</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>e571aefb-0833-4e39-ba1f-3e77d47ff8ff</Regulation>
+    <SortOrder>0</SortOrder>
+    <Source>7(1)(c)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>ed8f2946-c57d-4ceb-9460-052880b94833</Id>
+    <Description>Bedroom without windows</Description>
+    <HelpText>A licensee must ensure that each bedroom has a window that provides natural light to the bedroom, with coverings that block out light and protect the privacy of the occupant.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>8</SortOrder>
+    <Source>28 (1)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>d40874c1-8d78-42c5-9da2-08c640c9a96d</Id>
+    <Description>Monitoring requirement</Description>
+    <HelpText>(1)  If a person in care requires monitoring, or a signalling device, to ensure that person's health and safety, a licensee must provide a monitoring system or signalling device that
+	(a) is appropriate to the needs of the person in care,
+	(b) will identify to employees the location of the person in care, and
+	(c) will signal to employees that the person in care needs immediate assistance.
+(2)  A licensee must provide communication devices and other means of communication that
+	(a) are appropriate to the needs of the persons in care,
+	(b) enable persons in care to communicate their needs to employees, and
+	(c) enable employees to communicate with each other in respect of the needs of persons in care.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>3</SortOrder>
+    <Source>19</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>73edf5ff-57cd-4427-becf-0c6c859c5d78</Id>
+    <Description>Outside activity area</Description>
+    <HelpText>A licensee must provide outside activity areas that have
+(a) in total, at least 1.5 m² of space for each person in care,
+(b) a surfaced patio area, and
+(c) comfortable seating including a reasonable amount of shelter from sun and inclement weather.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>19</SortOrder>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>5e72d52b-db82-4038-bc7d-1c80fda2ee27</Id>
+    <Description>Meal Times</Description>
+    <HelpText>A licensee, other than a licensee who provides a type of care described as Child and Youth Residential, must ensure that
+(a) a morning meal is available between 7:00 a.m. and 9:00 a.m.,
+(b) a noon meal is available between 11:45 a.m. and 1:00 p.m.,
+(c) an evening meal is served after 5:00 p.m., and
+(d) snacks are provided at times that meet the needs of the persons in care.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>26</SortOrder>
+    <Source>64 (1)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>f13c28d1-3414-4f86-baea-28c0502ae6a5</Id>
+    <Description>Employee trained in first aid</Description>
+    <HelpText>(1)  A licensee must ensure that persons in care have at all times immediate access to an employee who
+	(a) holds a valid first aid and CPR certificate, provided on completion of a course that meets the requirements of Schedule C,
+	(b) is knowledgeable respecting each person in care's medical condition, if any, and
+	(c) is capable of effectively communicating with emergency personnel.
+(2)  A licensee must have first aid supplies that are readily accessible to all employees, including while care is provided off the community care facility premises.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>21</SortOrder>
+    <Source>43</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>3ca6cd7e-add3-4f24-8b1b-2f6020ab5a08</Id>
+    <Description>Laundry facilities</Description>
+    <HelpText>A licensee must ensure that laundry facilities
+(a) if used by persons in care, have a slip resistant floor surface, and
+(b) if not used by persons in care, cannot be accessed by persons in care.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>18</SortOrder>
+    <Source>(2)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>2531ccc2-2eca-43f6-8e9f-4a3ee8579840</Id>
+    <Description>Bathrooms in long term care facilities</Description>
+    <HelpText>A licensee who provides a type of care described as Long Term Care must provide
+(a) for the number of persons in care on a floor and in the same wing indicated in column 1 of the following table, the number of bathing facilities indicated in column 2 opposite the number of persons in care:
+Item Column 1 persons in care on floor and in wing Column 2 bathing facilities on floor and in wing
+1 3-6 1
+2 7-25 2
+3 26-40 3
+4 41-60 4
+5 61-75 5
+(b) washbasin and toilet facilities appropriate to the needs of the persons in care next to each dining, lounge and recreational area, and
+(c) for each bedroom, a washbasin and toilet for the exclusive use of the occupants of the bedroom.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>14</SortOrder>
+    <Source>32</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>9679cc4c-cf91-4937-8590-6af0190a3401</Id>
+    <Description>Smoking</Description>
+    <HelpText>A licensee must ensure that
+(a) no one other than a person in care smokes while on the premises of a community care facility,
+(b) employees do not smoke while supervising persons in care, and
+(c) if necessary for the safety of the person in care, a person in care who is smoking is supervised.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>5</SortOrder>
+    <Source>23</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>41b39adb-5fc3-4985-a6a2-6f973e8ea584</Id>
+    <Description>Accessibility</Description>
+    <HelpText>(1)  A licensee must ensure that a person in care who requires a mobility aid may access, in a manner appropriate to the needs of the person in care, all areas intended for use by persons in care.
+(2)  A licensee who provides a type of care described as Long Term Care must ensure that each hallway intended for use by persons in care is at least 1.83 m wide.
+(3)  A licensee must ensure that all controls for signalling devices, lights and elevators can be accessed and used without difficulty by all persons in care.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>1</SortOrder>
+    <Source>14</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>58001572-3935-4b4c-b282-7364eba04da4</Id>
+    <Description>Bedrooms without a closet or wardrobe</Description>
+    <HelpText>A licensee must provide, at no cost to the person in care, each person in care with bedroom furnishings, including a closet or wardrobe cabinet measuring at least 0.50 m².</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>11</SortOrder>
+    <Source>29 (1) (b)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>4fdf48c1-2f3a-46c1-a44e-74f05a23987f</Id>
+    <Description>Posting and advertising of licence and posting of inspection record</Description>
+    <HelpText>(1)  A licensee, other than a licensee who provides a type of care described as Child and Youth Residential or Community Living, must display in a prominent place in the community care facility
+	(a) both the licence, including any terms or conditions of the licence, and the name of the manager, and
+	(b) the most recent routine inspection record made under section 9 (1) (d) of the Act.
+(2)  Subsection (1) does not apply if the community care facility is located in a structure that is the personal residence of
+	(a) the owner or occupier, or
+	(b) an employee or agent of the owner or occupier.
+(3)  When advertising or otherwise offering services to the public, a licensee must identify the type of care being offered.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>0</SortOrder>
+    <Source>11</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>42bd628d-d8ab-4ca9-8570-92dff67de1b8</Id>
+    <Description>Bedrooms must have secure storage</Description>
+    <HelpText>A licensee must provide, at no cost to the person in care, each person in care with bedroom furnishings, including a safe, secure place in which the person in care may store valuable property, and</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>10</SortOrder>
+    <Source>29 (1) (a)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>e77e8407-68c3-4a22-b200-976209e992cc</Id>
+    <Description>Bathrooms must have grab bars</Description>
+    <HelpText>A licensee must ensure that all bathrooms have conveniently located and securely attached grab bars beside each toilet, bathtub and shower, as required to meet the needs and preferences of the persons in care</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>12</SortOrder>
+    <Source>30 (c)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>6f2177f5-600a-401a-a04e-a34956523ae5</Id>
+    <Description>Pharmacist not required</Description>
+    <HelpText>A licensee must ensure that a pharmacist
+(a) packages all medications, and
+(b) records all medications on the person in care's medication administration record.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>27</SortOrder>
+    <Source>69 (1)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>d8fddc9f-348a-4911-9b9b-b16d6205bcc3</Id>
+    <Description>Food services employees</Description>
+    <HelpText>(1)  A licensee must ensure that employees responsible for the preparation and delivery of food
+	(a) have the experience, competence and training necessary to ensure that food is safely prepared and handled and meets the nutrition needs of the persons in care, and
+	(b) receive ongoing education respecting the preparation and delivery of food, nutrition and, if required, assisted eating techniques.
+(2)  A licensee who accommodates 50 or more persons in care in a community care facility must have, to supervise the preparation and delivery of food, a food services manager who is
+	(a) a nutrition manager with membership in the Canadian Society of Nutrition Management,
+	(b) a person who is eligible to be a member of the Canadian Society of Nutrition Management, or
+	(c) a dietitian.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>22</SortOrder>
+    <Source>44</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>11863db0-10be-4744-a811-b2781f717be2</Id>
+    <Description>Minimum size of bedroom</Description>
+    <HelpText>(1)  A licensee must ensure that each bedroom has at least the following amount of usable floor space:
+	(a) in the case of a bedroom occupied by one person in care who does not require a mobility aid, 8 m²;
+	(b) in the case of a bedroom occupied by one person in care who requires a mobility aid, 11 m²;
+	(c) in the case of a bedroom occupied by 2 persons in care, neither of whom requires a mobility aid, 14 m²;
+	(d) in the case of a bedroom occupied by 2 persons in care, at least one of whom requires a mobility aid, 18 m².
+(2)  For the purposes of subsection (1), usable floor space does not include floor space occupied by the entrance and the swing of the entrance door, closets, wardrobe cabinets, fixed furniture or bathrooms.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>7</SortOrder>
+    <Source>27</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>7cc2f064-374b-40b0-9f7a-b32d46df9623</Id>
+    <Description>Placement of Minor in Adult Residential Care</Description>
+    <HelpText>A licensee must not do any of the following: accommodate persons less than 19 years of age if persons aged 19 or older are also accommodated in the community care facility.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>24</SortOrder>
+    <Source>46 (2) (c)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>1f80613d-de8c-4a56-9ba3-b5f90180e858</Id>
+    <Description>Bedroom windows must easily open</Description>
+    <HelpText>A licensee must ensure that the window of each bedroom can be opened easily for ventilation, unless
+(a) it would be unsuitable to the health, safety or dignity of the occupant, or
+(b) the community care facility is equipped with an air conditioning system or mechanical ventilating system.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>9</SortOrder>
+    <Source>28 (2)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>bc4d0bd8-e333-4f50-8ceb-b6a0c27a4535</Id>
+    <Description>Dining Area</Description>
+    <HelpText>A licensee must provide dining areas with
+(a) seating for each person in care,
+(b) at least 2 m² of usable floor space for each person in care, and
+(c) sufficient tables designed to accommodate persons in care in wheelchairs.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>15</SortOrder>
+    <Source>33</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>74b16351-4307-4de7-b614-b8f6101d7e50</Id>
+    <Description>Care plan needed if more than 30 day stay</Description>
+    <HelpText>(1)  If a person in care is admitted to the community care facility for a period of more than 30 days, a licensee must ensure that a care plan for the person in care is made in accordance with this section within 30 days of admission.
+(2)  A care plan must be developed, to the extent reasonably practical,
+(a) with the participation of
+(i)  the person in care, or
+(ii)  if the person in care is not capable of participating, the person in care's parent or representative, and
+(b) in a manner that takes into account the unique abilities, physical, social and emotional needs, and cultural and spiritual preferences of the person in care.
+(3)  A care plan must include all of the following:
+(a) a plan to address
+(i)  medication, including self-administered medication if approved under section 70 (4) [administration of medication],
+(ii)  behavioural intervention, if applicable, and
+(iii)  if there is agreement to the use of restraints under section 74 (1) (b) [when restraints may be used], the type or nature of restraint and the frequency of reassessment;
+(b) an oral health care plan;
+(c) a nutrition plan that
+(i)  assesses a person in care's nutrition status, and
+(ii)  specifies the nutrition to be provided to the person in care, including the requirements of any therapeutic diets;
+(d) a recreation and leisure plan;
+(e) in the case of a person in care who receives a type of care described as Long Term Care or who may be prone to falling, a fall prevention plan, which must address
+(i)  an assessment of the nature of the risk of falling presented by the person in care,
+(ii)  a plan for preventing the person in care from falling, and
+(iii)  a plan for following up on any falls suffered by a person in care;
+(f) if a person in care has been determined to be at risk of leaving a community care facility without notification of an employee, a plan
+(i)  to prevent the person in care from leaving, and
+(ii)  if the person in care leaves without notification, to locate the person in care;
+(g) if a person in care is a child or youth, any special instruction given in writing by a parent of the child or youth to the licensee;
+(h) if a person in care is released on leave under the Mental Health Act or is admitted to the community care facility under an enactment or court order, any condition or requirement under the Mental Health Act, the enactment or the order associated with the admission of the person in care to the community care facility.
+(4)  A licensee must ensure that
+(a) the implementation of each care plan is monitored on a regular basis to ensure proper implementation,
+(b) each care plan is reviewed and, if necessary, modified
+(i)  if there is a substantial change in the circumstances of the person in care, or
+(ii)  if there is no substantial change in the circumstances of the person in care, at least once each year
+to ensure it continues to meet the needs and preferences, and is compatible with the abilities, of the person in care who is the subject of the care plan, and
+(c) to the extent reasonably practical, persons in care participate in the review and modification of their own care plans.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>28</SortOrder>
+    <Source>81</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>5641795f-afd6-45a1-909e-c471f6187585</Id>
+    <Description>Sprinklers required</Description>
+    <HelpText>A licensee must ensure that a community care facility having fewer than 7 persons in care has the following emergency equipment: sprinklers that conform to the British Columbia Building Code;</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>4</SortOrder>
+    <Source>20 (b)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>a9be7272-0654-4174-830f-c8a17d127596</Id>
+    <Description>Designated work areas</Description>
+    <HelpText>A licensee must provide the following appropriately furnished and equipped areas:
+(a) work areas for administrative work and other staff use;
+(b) safe and secure locations for medications and the records of persons in care;
+(c) secure, safe and adequate storage areas for cleaning agents, chemical products and other hazardous materials;
+(d) separate utility areas for clean and soiled clothes, bedding and other articles.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>17</SortOrder>
+    <Source>35 (1)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>8c7f6105-2628-4bad-b99a-dc96f34052cd</Id>
+    <Description>Lounges and recreation facilities</Description>
+    <HelpText>(1)  A licensee, other than a licensee who provides a type of care described as Long Term Care, must provide comfortably furnished lounge facilities that have, in total, at least 2 m² of floor space for each person in care.
+(2)  A licensee who provides a type of care described as Long Term Care must provide
+	(a) comfortably furnished lounge facilities that have, in total, at least 1.5 m² of floor space for each person in care, and
+	(b) suitably equipped and comfortably furnished areas designated for recreational activities, that have, in total, at least 1 m² of floor space for each person in care.
+(3)  Except as necessary for cleaning and maintenance, a licensee must ensure that the rooms referred to in subsections (1) and (2) are accessible to persons in care at all times.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>16</SortOrder>
+    <Source>34</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>a939b348-e5c1-4f78-8d15-e07a260dbb0f</Id>
+    <Description>Outside activity area must be enclosed</Description>
+    <HelpText>If necessary to protect the health or safety of persons in care, a licensee must ensure that the outside activity area is secured by a fence or other means.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>20</SortOrder>
+    <Source>36 (2)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>f1e3d35f-4014-47c2-a85c-e63ed83ac753</Id>
+    <Description>Bathrooms in facilities other than long term care facilities</Description>
+    <HelpText>A licensee, other than a licensee who provides a type of care described as Long Term Care, must provide
+(a) one washbasin and one toilet for every 3 persons in care, and
+(b) one bathtub or shower for every 4 persons in care.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>13</SortOrder>
+    <Source>31</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>052ce87a-41c3-4d9c-8d66-e65a62af2e33</Id>
+    <Description>Nutrition plan</Description>
+    <HelpText>(1)  A licensee of a community care facility with 24 or fewer persons in care must
+(a) develop a nutrition plan for each person in care, and
+(b) if a nutrition plan is developed without the assistance of a dietitian, ensure that reasonable steps are taken to assess the specific nutritional needs of the person in care who is the subject of the nutrition plan, including considering whether the person in care is at risk of being inadequately nourished because of
+(i)  a physical or mental condition,
+(ii)  a history of issues that affect eating by the person in care, or
+(iii)  any other relevant factor.
+(2)  A licensee of a community care facility with more than 24 persons in care must develop, with the assistance of a dietitian, a nutrition plan for each person in care.
+(3)  A licensee must review the nutrition plan of a person in care as follows:
+(a) in the case of a nutrition plan developed under subsection (1), on a regular basis,
+(b) in the case of a nutrition plan developed under subsection (2), with a dietitian on a regular basis, and
+(c) in any case, with a dietitian if requested or required by
+(i)  a health care provider who provides care to the person in care,
+(ii)  a medical health officer, or
+(iii)  a funding program.
+(4)  Subject to subsection (5), a licensee, other than a licensee who provides a type of care described as Hospice, must
+(a) ensure that each person in care is weighed at least once each month,
+(b) immediately seek the advice of a health care provider if the person in care has experienced, unintentionally, a significant change in weight, and
+(c) record the weight in the nutrition plan of the person in care.
+(5)  If a person in care refuses or is unable to be weighed, the licensee must
+(a) record in the nutrition plan of the person in care the reason why the person in care was not weighed, and
+(b) if it appears to the licensee that the person in care may have experienced a significant change in weight, immediately seek the advice of a health care provider.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>29</SortOrder>
+    <Source>83</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>2db5008e-4da1-43e2-8b86-f1bb7aa6fabe</Id>
+    <Description>Person in care compliance with immunization</Description>
+    <HelpText>A licensee must require all persons admitted to a community care facility to comply with the Province's immunization and tuberculosis control programs.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>25</SortOrder>
+    <Source>49 (1) </Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>457af3bc-bddb-4627-a5c7-f89ab5d02d78</Id>
+    <Description>Sharing bedrooms</Description>
+    <HelpText>(1)  A licensee must ensure that each person in care has a separate bedroom.
+(2)  Despite subsection (1), a licensee may accommodate 2 persons in care in a bedroom if
+	(a) fewer than 5% of the maximum number of persons in care that the community care facility is licensed to accommodate share a bedroom,
+	(b) the bedroom is screened in a manner that is sufficient to ensure the privacy and dignity of each occupant,
+	(c) measures are in place to protect the health, safety, personal comfort and dignity of each occupant, and
+	(d) a plan has been made for the transfer of one or both occupants, at the request of either of the occupants, to a separate bedroom.
+(3)  A licensee who provides a type of care described as Child and Youth Residential must ensure that no person in care who is over 6 years old is accommodated in a bedroom that is shared with a person of the opposite gender.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>6</SortOrder>
+    <Source>25 (1)</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>93cdd6a6-3cec-463f-8673-f9093228bb7e</Id>
+    <Description>Telephone requirement</Description>
+    <HelpText>A licensee must provide at least one conveniently located telephone, for use only by persons in care, that:
+(a) has a private line,
+(b) has adaptations, as necessary, to meet the needs of persons in care, and
+(c) is accessible to persons in care at all times.</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>2</SortOrder>
+    <Source>18</Source>
+  </ExemptionType>
+  <ExemptionType>
+    <Id>07f38250-4d31-4748-b877-fb4ac09322f8</Id>
+    <Description>Temporary Over Capacity</Description>
+    <HelpText>A licensee must not do any of the following: accommodate more persons in care than the maximum number of persons in care specified on the licensee's license;</HelpText>
+    <IsActive>true</IsActive>
+    <Regulation>a1dd91a4-7eec-4731-9dfb-b98a19dd3b25</Regulation>
+    <SortOrder>23</SortOrder>
+    <Source>46 (2) (b)</Source>
+  </ExemptionType>
+</Entities>

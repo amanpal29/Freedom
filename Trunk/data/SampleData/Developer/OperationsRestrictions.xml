@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <OperationsRestriction>
+    <Id>ee278069-0c61-4ae8-9744-00a216fa32e1</Id>
+    <Description>Perform Giardia Performance Monitoring</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>1</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>429e89ff-efcd-4d5b-9ef7-114bce15874f</Id>
+    <Description>Provide continuous disinfection of water supply</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>5</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>6aa8a191-f6fa-455d-80fa-3618888f86a5</Id>
+    <Description>Valid for a maximum of 14 operational days</Description>
+    <ExternalCode>&lt;14</ExternalCode>
+    <InternalCode>&lt;14</InternalCode>
+    <IsActive>true</IsActive>
+    <ProgramArea>729567d8-4844-46c0-ad74-4de7a0ad7245</ProgramArea>
+    <SortOrder>2</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>1439088a-b91a-4b45-a2c8-49d04522c7a8</Id>
+    <Description>No cooking resulting in grease-laden vapour</Description>
+    <ExternalCode>GLV</ExternalCode>
+    <InternalCode>GLV</InternalCode>
+    <IsActive>true</IsActive>
+    <ProgramArea>729567d8-4844-46c0-ad74-4de7a0ad7245</ProgramArea>
+    <SortOrder>1</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>97b69568-5942-4ca4-bbc4-571efca78753</Id>
+    <Description>Provide a Drinking Water Quality Sampling Program</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>4</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>31300d58-6fb5-4f99-826c-5c6083637296</Id>
+    <Description>Provide a Cross-Connection Control Program</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>3</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>96618227-d9df-4387-ad8d-5cb01880ca5a</Id>
+    <Description>Report the monitoring results to the public</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>9</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>9f063b99-3e30-403d-92b1-5d6153d4aa37</Id>
+    <Description>Children must not have access to the pool</Description>
+    <ExternalCode>18+</ExternalCode>
+    <InternalCode>18+</InternalCode>
+    <IsActive>true</IsActive>
+    <ProgramArea>05b6e78a-d8ea-4a84-a614-49ab8076960e</ProgramArea>
+    <SortOrder>0</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>06a75481-2ec0-4986-862d-87d5b5226a39</Id>
+    <Description>Provide continuous on-line turbidity sampling of water supply</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>7</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>c5c8b1de-2b17-4921-a9ed-893cebfc0495</Id>
+    <Description>Participation in the Drinking Water Quality program</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>0</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>3ca05bc4-0e18-41d8-b055-89aa70d9d93d</Id>
+    <Description>Perform Giardia Performance Monitoring</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>05b6e78a-d8ea-4a84-a614-49ab8076960e</ProgramArea>
+    <SortOrder>2</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>444cf0c7-710d-48b1-bd80-8f4aa1c301e7</Id>
+    <Description>Provide continuous on-line monitoring of water supply</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>6</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>2708f785-8ae9-406a-a8d6-956ba4ba1693</Id>
+    <Description>Submit daily chlorine residuals on monthly basis</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>05b6e78a-d8ea-4a84-a614-49ab8076960e</ProgramArea>
+    <SortOrder>4</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>d13a0990-6f8a-4952-9664-9b5f9920b4be</Id>
+    <Description>Provide long-term plans for source, treatment and waste</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>8</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>b0d64da2-ca0d-4f2b-adbf-a27f012c3a21</Id>
+    <Description>Review and update the Emergency Response System</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>10</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>5d0b0026-e2c7-4851-8c26-a5c036ccb86e</Id>
+    <Description>Maintain daily records of pool chemicals</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>05b6e78a-d8ea-4a84-a614-49ab8076960e</ProgramArea>
+    <SortOrder>1</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>e7308a12-f952-44fc-92f6-c1dbf3c8aaf3</Id>
+    <Description>Provide a certified operator to operate the system</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>49472bbb-12f2-4733-998a-f2f8109c0b4f</ProgramArea>
+    <SortOrder>2</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>81a02449-f164-4cc7-ad1e-e3b9df66b3d6</Id>
+    <Description>Single service utensils only</Description>
+    <ExternalCode>SSU</ExternalCode>
+    <InternalCode>SSU</InternalCode>
+    <IsActive>true</IsActive>
+    <ProgramArea>729567d8-4844-46c0-ad74-4de7a0ad7245</ProgramArea>
+    <SortOrder>0</SortOrder>
+  </OperationsRestriction>
+  <OperationsRestriction>
+    <Id>2fa28c4e-0205-4fea-b4d3-fa4995335b83</Id>
+    <Description>Provide a certified operator to operate the system</Description>
+    <IsActive>true</IsActive>
+    <ProgramArea>05b6e78a-d8ea-4a84-a614-49ab8076960e</ProgramArea>
+    <SortOrder>3</SortOrder>
+  </OperationsRestriction>
+</Entities>

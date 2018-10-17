@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <ApplicationSetting>
+    <Key>AgencyName</Key>
+    <Value>Hedgehog Demonstration Health Agency</Value>
+  </ApplicationSetting>
+  <ApplicationSetting>
+    <Key>AgencyNumber</Key>
+    <Value>&#8730;-1</Value>
+  </ApplicationSetting>
+  <ApplicationSetting>
+    <Key>FiscalYearStartMonth</Key>
+    <Value>4</Value>
+  </ApplicationSetting>
+  <ApplicationSetting>
+    <Key>NexusPrivacyCheckBoxText</Key>
+    <Value>The above statement was read to the client.</Value>
+  </ApplicationSetting>
+  <ApplicationSetting>
+    <Key>IsNexusPrivacyNarrativeMandatory</Key>
+    <Value>true</Value>
+  </ApplicationSetting>
+  <ApplicationSetting>
+    <Key>NexusPrivacyNarrative</Key>
+    <Value>Any personal information you give to the Hedgehog Demonstration Health Agency including your name, address, phone number, blood type, criminal history, sexual orientation, credit card numbers, political affiliations, and boy scout rank, may be used for the purposes of contacting you when this matter is resolved, collecting anonymous statistics about health complaints, determining who likes to complain a lot, and gossiping about you at your place of worship.</Value>
+  </ApplicationSetting>
+  <ApplicationSetting>
+    <Key>BingMapsKey</Key>
+    <Value>Av9AqCrkOm5N0iTuO8EHmvVNm7XCiQ5AqYeUtQS0hhpreuLyyIlftQLrM60TWYUA</Value>
+  </ApplicationSetting>
+  <ApplicationSetting>
+    <Key>PrimaryOwnerLabel</Key>
+    <Value>Primary owner</Value>
+  </ApplicationSetting>
+  <ApplicationSetting>
+    <Key>PrimaryOperatorLabel</Key>
+    <Value>Primary operator</Value>
+  </ApplicationSetting>
+</Entities>

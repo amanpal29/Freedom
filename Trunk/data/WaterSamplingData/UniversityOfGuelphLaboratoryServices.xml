@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleBatch xmlns="http://schemas.hedgerowsoftware.com/sampleimportdefinition/v1.0">
+  <LaboratoryCode>L002</LaboratoryCode>
+  <LaboratoryName>University of Guelph Laboratory Services</LaboratoryName>
+  <FileCreationDate>2012-05-19T00:00:00-07:00</FileCreationDate>
+  <TotalSampleRecords>12</TotalSampleRecords>
+  <SampleDetail>
+    <SampleNumber>0006</SampleNumber>
+    <SampleTestTypeCode>ACP</SampleTestTypeCode>
+    <SampleTestType>Aerobic count petrifilm</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>SRB</SampleSiteTypeCode>
+    <SampleSiteType>Sliced Roast Beef</SampleSiteType>
+    <SampleSite>Day 28 Sliced Roast Beef</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>ACP</ParameterCode>
+      <Parameter>Aerobic Count Petrifilm solid</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>1.30E+03</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0007</SampleNumber>
+    <SampleTestTypeCode>ACP</SampleTestTypeCode>
+    <SampleTestType>Aerobic count petrifilm</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>EMS</SampleSiteTypeCode>
+    <SampleSiteType>European Meats Seasoned</SampleSiteType>
+    <SampleSite>European Meats Seasoned</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>ACP</ParameterCode>
+      <Parameter>Aerobic Count Petrifilm solid</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>9.20E+02</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0006</SampleNumber>
+    <SampleTestTypeCode>CECP</SampleTestTypeCode>
+    <SampleTestType>Coliform EC petrifilm solid</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>SRB</SampleSiteTypeCode>
+    <SampleSiteType>Sliced Roast Beef</SampleSiteType>
+    <SampleSite>Day 28 Sliced Roast Beef</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>CP</ParameterCode>
+      <Parameter>Coliform Petrifilm</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>&lt;1.00E+01</FinalResult>
+    </SampleParameterDetail>
+    <SampleParameterDetail>
+      <ParameterCode>ECP</ParameterCode>
+      <Parameter>E. coli Petrifilm</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>&lt;1.00E+01</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0007</SampleNumber>
+    <SampleTestTypeCode>CECP</SampleTestTypeCode>
+    <SampleTestType>Coliform EC petrifilm solid</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>EMS</SampleSiteTypeCode>
+    <SampleSiteType>European Meats Seasoned</SampleSiteType>
+    <SampleSite>European Meats Seasoned</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>CP</ParameterCode>
+      <Parameter>Coliform Petrifilm</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>&lt;1.00E+01</FinalResult>
+    </SampleParameterDetail>
+    <SampleParameterDetail>
+      <ParameterCode>ECP</ParameterCode>
+      <Parameter>E. coli Petrifilm</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>&lt;1.00E+01</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0006</SampleNumber>
+    <SampleTestTypeCode>LAPP</SampleTestTypeCode>
+    <SampleTestType>Lactic acid pour plate</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>SRB</SampleSiteTypeCode>
+    <SampleSiteType>Sliced Roast Beef</SampleSiteType>
+    <SampleSite>Day 28 Sliced Roast Beef</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>LAPP</ParameterCode>
+      <Parameter>Lactic acid pour plate solid</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>4.00E+02</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0007</SampleNumber>
+    <SampleTestTypeCode>LAPP</SampleTestTypeCode>
+    <SampleTestType>Lactic acid pour plate</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>EMS</SampleSiteTypeCode>
+    <SampleSiteType>European Meats Seasoned</SampleSiteType>
+    <SampleSite>European Meats Seasoned</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>LAPP</ParameterCode>
+      <Parameter>Lactic acid pour plate solid</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>9.10E+02</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0006</SampleNumber>
+    <SampleTestTypeCode>SBP</SampleTestTypeCode>
+    <SampleTestType>S. aureus Baird Parker</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>SRB</SampleSiteTypeCode>
+    <SampleSiteType>Sliced Roast Beef</SampleSiteType>
+    <SampleSite>Day 28 Sliced Roast Beef</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>SBP</ParameterCode>
+      <Parameter>S. aureus Baird Parker</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>&lt;2.50+01</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0007</SampleNumber>
+    <SampleTestTypeCode>SBP</SampleTestTypeCode>
+    <SampleTestType>S. aureus Baird Parker</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>EMS</SampleSiteTypeCode>
+    <SampleSiteType>European Meats Seasoned</SampleSiteType>
+    <SampleSite>European Meats Seasoned</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>SBP</ParameterCode>
+      <Parameter>S. aureus Baird Parker</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>&lt;2.50E+01</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0002</SampleNumber>
+    <SampleTestTypeCode>LMBAX</SampleTestTypeCode>
+    <SampleTestType>Listeria mono BAX</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>CGB</SampleSiteTypeCode>
+    <SampleSiteType>Cooked Ground Beef</SampleSiteType>
+    <SampleSite>Cooked Ground Beef BAG 1</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>LMBAX</ParameterCode>
+      <Parameter>Listeria mono BAX</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>Negative</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0003</SampleNumber>
+    <SampleTestTypeCode>LMBAX</SampleTestTypeCode>
+    <SampleTestType>Listeria mono BAX</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>CGB</SampleSiteTypeCode>
+    <SampleSiteType>Cooked Ground Beef</SampleSiteType>
+    <SampleSite>Cooked Ground Beef BAG 2</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>LMBAX</ParameterCode>
+      <Parameter>Listeria mono BAX</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>Negative</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0004</SampleNumber>
+    <SampleTestTypeCode>LMBAX</SampleTestTypeCode>
+    <SampleTestType>Listeria mono BAX</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>CGB</SampleSiteTypeCode>
+    <SampleSiteType>Cooked Ground Beef</SampleSiteType>
+    <SampleSite>Cooked Ground Beef BAG 3</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>LMBAX</ParameterCode>
+      <Parameter>Listeria mono BAX</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>Negative</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+  <SampleDetail>
+    <SampleNumber>0005</SampleNumber>
+    <SampleTestTypeCode>LMBAX</SampleTestTypeCode>
+    <SampleTestType>Listeria mono BAX</SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>CG001</FacilityNumber>
+    <FacilityName>Eurest Dining Services</FacilityName>
+    <SampleSiteTypeCode>CGB</SampleSiteTypeCode>
+    <SampleSiteType>Cooked Ground Beef</SampleSiteType>
+    <SampleSite>Cooked Ground Beef BAG 4</SampleSite>
+    <SampleCollectedDate>2012-05-16T17:30:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>Bryan</SampleCollectedBy>
+    <SampleSubmittedDate>2012-05-16T17:30:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>Bryan</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-05-19T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>LMBAX</ParameterCode>
+      <Parameter>Listeria mono BAX</Parameter>
+      <UOMCode>cfu/g</UOMCode>
+      <PreliminaryResult></PreliminaryResult>
+      <FinalResult>Negative</FinalResult>
+    </SampleParameterDetail>
+  </SampleDetail>
+</SampleBatch>

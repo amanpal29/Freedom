@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Domain xmlns="http://schemas.automatedstocktrader.com/domaindefinition"
+        Namespace="http://schemas.automatedstocktrader.com/domaindefinition">
+
+  <!-- Abstract Base Classes -->
+  <EntityType Name="EntityBase" Abstract="true">
+    <Property Name="Id" Type="Guid" Nullable="false" IsPrimaryKey="true" DefaultValue="Guid.NewGuid()" />
+  </EntityType>
+  <EntityType Name="AggregateRoot" BaseType="EntityBase" Abstract="true">
+    <Property Name="CreatedDateTime" Type="DateTimeStamp" Nullable="false" />
+    <Property Name="ModifiedDateTime" Type="DateTimeStamp" Nullable="false" />
+    <Relationship Name="CreatedBy" RelatedType="User" RelationshipType="Required" Purpose="CreatedBy" />
+    <Relationship Name="ModifiedBy" RelatedType="User" RelationshipType="Required" Purpose="ModifiedBy" />
+  </EntityType>
+  <EntityType Name="NumberedRoot" BaseType="AggregateRoot" Abstract="true">
+    <Property Name="Number" Type="String" />
+  </EntityType>
+  <EntityType Name="LookupBase" BaseType="AggregateRoot" Abstract="true">
+    <Property Name="Description" Type="String" />
+    <Property Name="SortOrder" Type="Int32" Nullable="false" DefaultValue="0" />
+  </EntityType>
+  <EntityType Name="Lookup" BaseType="LookupBase" Abstract="true">
+    <Property Name="IsActive" Nullable="false" Type="Boolean" DefaultValue="true" />
+  </EntityType>
+
+  <!-- Complex Types -->
+  <ComplexType Name="MailingAddress">
+    <Property Name="Street" Type="String" />
+    <Property Name="PostalCode" Type="String" />
+    <Property Name="City" Type="String" />
+    <Property Name="Province" Type="String" />
+    <Property Name="Country" Type="String" />
+  </ComplexType>
+
+  <!-- Enum Types -->
+  <EnumType Name="OrderStatus" IsFlags="true">
+    <Member Name="Open" Value="0x0" Description="Open" />
+    <Member Name="Filled" Value="0x1" Description="Filled" />
+    <Member Name="Expired" Value="0x2" Description="Expired" />
+    <Member Name="Cancelled" Value="0x4" Description="Cancelled" />
+  </EnumType>
+  <EnumType Name="NotificationClass">
+    <Member Name="Unknown" Value="0" />
+    <Member Name="CommandAccepted" Value="1" />
+    <Member Name="CommandRejected" Value="2" />
+    <Member Name="CommandFailed" Value="3" />
+    <Member Name="ChangeRequestAccepted" Value="4" />
+    <Member Name="ChangeRequestRejected" Value="5" />
+    <Member Name="Informational" Value="6" />
+    <Member Name="Warning" Value="7" />
+  </EnumType>
+  <EnumType Name="NotificationState">
+    <Member Name="None" Value="0" />
+    <Member Name="Successful" Value="1" />
+    <Member Name="Failed" Value="2" />
+  </EnumType>
+  <EnumType Name="Priority">
+    <Member Name="Normal" Value="0" />
+    <Member Name="High" Value="1" />
+    <Member Name="Low" Value="-1" />
+  </EnumType>
+
+  <!-- Notification -->
+  <EntityType Name="NotificationBase" BaseType="EntityBase" Abstract="true" Audit="false">
+    <Property Name="Class" Type="NotificationClass" Nullable="false" />
+    <Property Name="Priority" Type="Priority" Nullable="false" />
+    <Property Name="Title" Type="String" />
+    <Property Name="Description" Type="String" />
+    <Property Name="Payload" Type="Text" />
+    <Property Name="CreatedDateTime" Type="DateTimeStamp" Nullable="false" />
+    <Property Name="ReceivedDateTime" Type="DateTime" Nullable="true" />
+    <Property Name="ReadDateTime" Type="DateTime" Nullable="true" />
+    <Property Name="CreatedById" Type="Guid" Nullable="true" />
+    <Property Name="RecipientId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notification" BaseType="NotificationBase" Audit="false">
+  </EntityType>
+
+  <!-- ApplicationSetting -->
+  <EntityType Name="ApplicationSetting" BaseType="AggregateRoot" Reportable="false">
+    <Property Name="Key" Type="String" Nullable="false" />
+    <Property Name="Value" Type="String" />
+    <Index Name="UNQ_Key" IsUnique="true">
+      <PropertyRef Name="Key" />
+    </Index>
+  </EntityType>
+
+  <!-- User -->
+  <EntityType Name="User" BaseType="AggregateRoot" Reportable="true">
+    <Property Name="Name" Type="String" />
+    <Property Name="Username" Type="String" />
+    <Property Name="Password" Type="String" Flags="StorageOnly" />
+    <Property Name="SymmetricKey" Type="String" Flags="StorageOnly" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" DefaultValue="True" />
+    <Property Name="Domain" Type="String" />
+    <Property Name="FirstName" Type="String" />
+    <Property Name="MiddleName" Type="String" />
+    <Property Name="LastName" Type="String" />
+    <Property Name="WorkEmailAddress" Type="String" />
+    <Property Name="HomeEmailAddress" Type="String" />
+    <Property Name="HomeAddress" Type="MailingAddress" Nullable="false" />
+    <Property Name="ForcePasswordChange" Type="Boolean" Nullable="false" DefaultValue="true" />
+    <Index Name="IDX_Id">
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Username" />
+    </Index>
+    <Index Name="UNQ_DomainUsername" IsUnique="true">
+      <PropertyRef Name="Domain" />
+      <PropertyRef Name="Username" />
+    </Index>
+  </EntityType>
+</Domain>

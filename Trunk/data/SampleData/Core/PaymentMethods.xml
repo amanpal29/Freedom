@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <PaymentMethod>
+    <Id>595bf6ee-a48e-4f83-a705-3d8a31a0e834</Id>
+    <Description>Debit Card</Description>
+    <IsActive>true</IsActive>
+    <NumberOfDaysToHoldPayment>0</NumberOfDaysToHoldPayment>
+    <SortOrder>2</SortOrder>
+  </PaymentMethod>
+  <PaymentMethod>
+    <Id>b7e4eff0-e477-4095-9ff5-50592709ccc5</Id>
+    <Description>Credit Card</Description>
+    <IsActive>true</IsActive>
+    <NumberOfDaysToHoldPayment>0</NumberOfDaysToHoldPayment>
+    <SortOrder>1</SortOrder>
+  </PaymentMethod>
+  <PaymentMethod>
+    <Id>792bbf56-f4e2-42b2-9d6b-629aaaf49488</Id>
+    <Description>Cheque</Description>
+    <IsActive>true</IsActive>
+    <NumberOfDaysToHoldPayment>14</NumberOfDaysToHoldPayment>
+    <SortOrder>0</SortOrder>
+  </PaymentMethod>
+  <PaymentMethod>
+    <Id>a5e7a04f-98c2-478d-a2d4-656f80edfe37</Id>
+    <Description>Cash</Description>
+    <IsActive>true</IsActive>
+    <NumberOfDaysToHoldPayment>0</NumberOfDaysToHoldPayment>
+    <SortOrder>3</SortOrder>
+  </PaymentMethod>
+  <PaymentMethod>
+    <Id>4430a1eb-50a4-4575-92d5-67a097d5841a</Id>
+    <Description>Money Order</Description>
+    <IsActive>true</IsActive>
+    <NumberOfDaysToHoldPayment>0</NumberOfDaysToHoldPayment>
+    <SortOrder>5</SortOrder>
+  </PaymentMethod>
+  <PaymentMethod>
+    <Id>bdafff33-4a7e-493d-be63-e7af61e38e37</Id>
+    <Description>Certified Cheque</Description>
+    <IsActive>true</IsActive>
+    <NumberOfDaysToHoldPayment>7</NumberOfDaysToHoldPayment>
+    <SortOrder>4</SortOrder>
+  </PaymentMethod>
+</Entities>

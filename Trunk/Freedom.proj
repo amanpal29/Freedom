@@ -1,0 +1,143 @@
+<Project DefaultTargets="Rebuild;RunUnitTests" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="util\MSBuild.Community.Tasks.v1.4\Bin\MSBuild.Community.Tasks.Targets" />
+  <UsingTask TaskName="Freedom.MSBuild.CreateFreedomDatabase" AssemblyFile="build\Release\Freedom.MSBuild.dll" />
+  <UsingTask TaskName="Freedom.MSBuild.DeleteDatabase" AssemblyFile="build\Release\Freedom.MSBuild.dll" />
+  <UsingTask TaskName="Freedom.MSBuild.ImportFreedomData" AssemblyFile="build\Release\Freedom.MSBuild.dll" />
+  <UsingTask TaskName="Freedom.MSBuild.ExecuteSql" AssemblyFile="build\Release\Freedom.MSBuild.dll" />
+  <UsingTask TaskName="Freedom.MSBuild.CreateApplicationMetadata" AssemblyFile="build\Release\Freedom.MSBuild.dll" />
+  <UsingTask TaskName="Freedom.MSBuild.ReadXmlFile" AssemblyFile="build\Release\Freedom.MSBuild.dll" />
+  <UsingTask TaskName="RemoteMSBuildTasks.RemoteMSBuild" AssemblyFile="util\RemoteMSBuild\RemoteMSBuildTasks.dll" />
+
+  <PropertyGroup>
+    <Configuration>Release</Configuration>
+    <Platform>Any CPU</Platform>
+    <SolutionName>Freedom</SolutionName>
+    <Major>1</Major>
+    <Minor>0</Minor>
+    <Release>0</Release>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <BuildArchitecture>$(registry:HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment@PROCESSOR_ARCHITECTURE)</BuildArchitecture>    
+    <MSDeployPath>$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IIS Extensions\MSDeploy\3@InstallPath)</MSDeployPath>
+    <MSDeployPath Condition="'$(MSDeployPath)' == ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\IIS Extensions\MSDeploy\2@InstallPath)</MSDeployPath>
+    <NUnitPath>util\NUnit-3.9\</NUnitPath>
+    <FxCopPath>util\fxcop-1.36\</FxCopPath>
+    <SignToolPath>util\Microsoft\</SignToolPath>
+    <WixPath>util\wix-3.9\</WixPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DatabaseName>Freedom</DatabaseName>
+    <SampleDataPath>data/SampleData/**/*.xml</SampleDataPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <VersionInfoFiles Include="src/**/VersionInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SampleDataFiles Include="$(SampleDataPath)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SolutionFiles Include="src/$(SolutionName).sln" />
+    <SolutionFiles Include="src/$(SolutionName).*.sln" />    
+  </ItemGroup>
+
+  <ItemGroup>
+    <FxCopAssembly Include=".\Build\$(Configuration)\Freedom*.exe" />
+    <FxCopAssembly Include=".\Build\$(Configuration)\Freedom*.dll" Exclude="*.UnitTests.dll" />
+    <FxCopAssembly Include=".\Build\$(Configuration)\Freedom*.dll" Exclude="*.IntegrationTests.dll" />
+    <FxCopAssembly Include=".\Build\$(Configuration)\Freedom*.dll" Exclude="*.UnitTests.dll" />
+  </ItemGroup>
+
+  <Target Name="Setup">
+    <PropertyGroup Condition="'$(TargetServer)' == 'dev'">
+      <ConnectionString>Data Source=.;Initial Catalog=$(DatabaseName);Integrated Security=True;MultipleActiveResultSets=True</ConnectionString>
+      <ApplicationServer>hsldevapp1.ad.hedgerowsoftware.com</ApplicationServer>      
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(TargetServer)' == 'local'">
+      <ConnectionString>Data Source=.;Initial Catalog=$(DatabaseName);Integrated Security=True;MultipleActiveResultSets=True</ConnectionString>
+    </PropertyGroup>
+    
+    <Message Text="Building $(SolutionName) $(Version) ($(Configuration))"/>
+
+    <Message Text="Finished Setup" />
+    <Message Text="  ApplicationServer:   $(ApplicationServer)" />
+    <Message Text="  BuildArchitecture:   $(BuildArchitecture)" />
+    <Message Text="  Configuration:       $(Configuration)" />
+    <Message Text="  ConnectionString:    $(ConnectionString)" />
+    <Message Text="  DatabaseName:        $(DatabaseName)" />    
+    <Message Text="  ToolsVersion:        $(MSBuildToolsVersion) " />
+    <Message Text="  VisualStudioVersion: $(VisualStudioVersion) " />
+    <Message Text="  Version:             $(Version)" />    
+  </Target>
+
+  <Target Name="UpdateVersionProperties" DependsOnTargets="Setup">
+    <Message Text="Updating version numbers on assemblies to $(Version) $(Configuration)" />
+    <AssemblyInfo CodeLanguage="CS" OutputFile="%(VersionInfoFiles.FullPath)"
+                  AssemblyVersion="$(Version)" AssemblyFileVersion="$(Version)" AssemblyConfiguration="$(Configuration)" />
+  </Target>
+  
+  <Target Name="Clean">
+    <RemoveDir Directories="Build\$(Configuration)" />        
+    <MSBuild Projects="@(SolutionFiles)" Properties="Configuration=$(Configuration)" Targets="Clean" />
+  </Target>
+
+  <Target Name="Build" DependsOnTargets="Setup">
+    <MSBuild Projects="@(SolutionFiles)" Properties="Configuration=$(Configuration)" Targets="Build" />
+  </Target>
+
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build">
+  </Target>
+
+  <Target Name="RunUnitTests">
+    <CreateItem Include=".\Build\$(Configuration)\*.UnitTests.dll;.\Build\$(Configuration)\*.UnitTests.exe">
+      <Output TaskParameter="Include" ItemName="NUnitAssembly" />
+    </CreateItem>
+    <NUnit3 ToolPath="$(NUnitPath)" Assemblies="@(NUnitAssembly)" Where="cat != LocalOnly" OutputXmlFile="TestResult.xml"/>
+  </Target>
+
+  <Target Name="RunIntegrationTests">
+    <CreateItem Include=".\Build\$(Configuration)\*.IntegrationTests.dll;.\Build\$(Configuration)\*.IntegrationTests.exe">
+      <Output TaskParameter="Include" ItemName="NUnitAssembly" />
+    </CreateItem>
+    <NUnit3 ToolPath="$(NUnitPath)" Assemblies="@(NUnitAssembly)" OutputXmlFile="IntegrationTestResult.xml"/>
+  </Target> 
+
+  <Target Name="RunFxCop">
+    <FxCop
+      ToolPath="$(FxCopPath)"
+      TargetAssemblies="@(FxCopAssembly)"
+      ProjectFile="util\Freedom.FxCop"
+      AnalysisReportFileName="FxCopResults.xml"
+      DirectOutputToConsole="true" />
+  </Target>
+
+  <Target Name="BuildPlugins">
+    <MSBuild Projects="deploy\ClientCustomWork\Plugins.proj" Targets="FullBuild" Properties="Configuration=$(Configuration);Major=$(Major);Minor=$(Minor)" />
+  </Target>  
+
+  <Target Name="RebuildDatabase" DependsOnTargets="Setup">
+    <Error Text="You must specify either a ConnectionString, or a supported TargetServer" Condition="'$(ConnectionString)' == ''" />
+    <ExecuteSql ConnectionString="$(ConnectionString)" Files="deploy\BackupAllReports.sql" Condition="$(SupportsReportBackup) == true" />
+    <DeleteDatabase ConnectionString="$(ConnectionString)" />
+    <CreateFreedomDatabase ConnectionString="$(ConnectionString)" DatabaseType="Server" />
+    <ImportFreedomData ConnectionString="$(ConnectionString)" Files="@(SampleDataFiles)" />
+    <ExecuteSql ConnectionString="$(ConnectionString)" Files="deploy\SetupFreedomServerPermissions.sql" />
+    <ExecuteSql ConnectionString="$(ConnectionString)" Files="deploy\ResetAllPasswords.sql" />
+    <ExecuteSql ConnectionString="$(ConnectionString)" Files="$(CustomDatabaseScript)" Condition="'$(CustomDatabaseScript)' != '' AND Exists($(CustomDatabaseScript))" />    
+  </Target>
+
+  <Target Name="DeployAppServer">
+    <RemoteMSBuild EndpointAddress="http://hsldevapp1.ad.hedgerowsoftware.com:8000/BuildService"
+                   Projects="C:\Utils\Deployment\HedgehogDeploy.proj"
+                   Targets="Reinstall" Properties="Version=$(Version)" />
+  </Target>  
+
+  <Target Name="Deploy" DependsOnTargets="Setup">
+    <CallTarget Targets="DeployAppServer" />    
+  </Target>  
+</Project>

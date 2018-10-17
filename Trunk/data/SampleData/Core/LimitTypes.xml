@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <LimitType>
+    <Id>25b9ba0c-8b3b-40a4-816b-6647f674f047</Id>
+    <Description>Maximum Acceptable Concentration</Description>
+    <InternalCode>MAC</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>0</SortOrder>
+  </LimitType>
+  <LimitType>
+    <Id>4f3192f3-4dd5-4a4c-b528-7338dfa3bafd</Id>
+    <Description>Aesthetic Objective</Description>
+    <InternalCode>AO</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>1</SortOrder>
+  </LimitType>
+  <LimitType>
+    <Id>6f00a021-37a0-4a4f-a0af-742b4d5cd47b</Id>
+    <Description>Operational Guidance</Description>
+    <InternalCode>OG</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>2</SortOrder>
+  </LimitType>
+</Entities>

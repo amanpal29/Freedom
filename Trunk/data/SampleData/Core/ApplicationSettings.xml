@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <ApplicationSetting>
+    <Key>DateFormat</Key>
+    <Value>dd-MMM-yyyy</Value>
+  </ApplicationSetting>
+  <ApplicationSetting>
+    <Key>TimeFormat</Key>
+    <Value>HH:mm</Value>
+  </ApplicationSetting>
+</Entities>

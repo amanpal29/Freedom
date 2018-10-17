@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <ReportingMethod>
+    <Id>b6c0b907-7754-4356-9d07-454520b53405</Id>
+    <Description>Fax</Description>
+    <SortOrder>3</SortOrder>
+  </ReportingMethod>
+  <ReportingMethod>
+    <Id>82f973ec-e4c5-4c5c-8982-670e9c759323</Id>
+    <Description>Hedgehog Portal</Description>
+    <SortOrder>1</SortOrder>
+  </ReportingMethod>
+  <ReportingMethod>
+    <Id>1599729f-8b9d-4594-bed4-86b441ca5504</Id>
+    <Description>In Person</Description>
+    <SortOrder>4</SortOrder>
+  </ReportingMethod>
+  <ReportingMethod>
+    <Id>8d709a90-2c34-488d-b19f-88072bb1d671</Id>
+    <Description>Other</Description>
+    <SortOrder>6</SortOrder>
+  </ReportingMethod>
+  <ReportingMethod>
+    <Id>25f3d8d5-f922-4c39-a8f5-8dacdaea7a40</Id>
+    <Description>Mail</Description>
+    <SortOrder>5</SortOrder>
+  </ReportingMethod>
+  <ReportingMethod>
+    <Id>e66924e0-4056-11e0-8c33-f2c3dfd72085</Id>
+    <Description>Phone Call</Description>
+    <SortOrder>0</SortOrder>
+  </ReportingMethod>
+  <ReportingMethod>
+    <Id>ec1aa56c-4056-11e0-aed4-f3c3dfd72085</Id>
+    <Description>Email</Description>
+    <SortOrder>2</SortOrder>
+  </ReportingMethod>
+</Entities>

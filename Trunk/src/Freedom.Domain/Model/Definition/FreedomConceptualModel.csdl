@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm"
+        xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation"
+        xmlns:codegeneration="http://schemas.microsoft.com/ado/2006/04/codegeneration"
+        Namespace="Freedom.Domain.Model" Alias="Self">
+	<EntityContainer Name="FreedomModelContainer">
+		<EntitySet Name="ApplicationSetting" EntityType="Self.ApplicationSetting" />
+		<EntitySet Name="Notification" EntityType="Self.Notification" />
+		<EntitySet Name="User" EntityType="Self.User" />
+		<AssociationSet Name="FK_ApplicationSetting_User_CreatedBy" Association="Self.FK_ApplicationSetting_User_CreatedBy" />
+		<AssociationSet Name="FK_ApplicationSetting_User_ModifiedBy" Association="Self.FK_ApplicationSetting_User_ModifiedBy" />
+		<AssociationSet Name="FK_User_User_CreatedBy" Association="Self.FK_User_User_CreatedBy" />
+		<AssociationSet Name="FK_User_User_ModifiedBy" Association="Self.FK_User_User_ModifiedBy" />
+	</EntityContainer>
+	<EntityType Name="EntityBase" Abstract="true">
+		<Key>
+			<PropertyRef Name="Id" />
+		</Key>
+		<Property Name="Id" Type="Guid" Nullable="false" />
+	</EntityType>
+	<EntityType Name="AggregateRoot" BaseType="Self.EntityBase" Abstract="true">
+		<Property Name="CreatedDateTime" Type="DateTime" Nullable="false" />
+		<Property Name="ModifiedDateTime" Type="DateTime" Nullable="false" />
+		<Property Name="CreatedById" Type="Guid" Nullable="false" />
+		<Property Name="ModifiedById" Type="Guid" Nullable="false" />
+	</EntityType>
+	<EntityType Name="NumberedRoot" BaseType="Self.AggregateRoot" Abstract="true">
+		<Property Name="Number" Type="String" />
+	</EntityType>
+	<EntityType Name="LookupBase" BaseType="Self.AggregateRoot" Abstract="true">
+		<Property Name="Description" Type="String" />
+		<Property Name="SortOrder" Type="Int32" Nullable="false" />
+	</EntityType>
+	<EntityType Name="Lookup" BaseType="Self.LookupBase" Abstract="true">
+		<Property Name="IsActive" Type="Boolean" Nullable="false" />
+	</EntityType>
+	<EntityType Name="NotificationBase" BaseType="Self.EntityBase" Abstract="true">
+		<Property Name="Class" Type="Self.NotificationClass" Nullable="false" />
+		<Property Name="Priority" Type="Self.Priority" Nullable="false" />
+		<Property Name="Title" Type="String" />
+		<Property Name="Description" Type="String" />
+		<Property Name="Payload" Type="String" />
+		<Property Name="CreatedDateTime" Type="DateTime" Nullable="false" />
+		<Property Name="ReceivedDateTime" Type="DateTimeOffset" />
+		<Property Name="ReadDateTime" Type="DateTimeOffset" />
+		<Property Name="CreatedById" Type="Guid" />
+		<Property Name="RecipientId" Type="Guid" Nullable="false" />
+	</EntityType>
+	<EntityType Name="ApplicationSetting" BaseType="Self.AggregateRoot">
+		<Property Name="Key" Type="String" Nullable="false" />
+		<Property Name="Value" Type="String" />
+		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_ApplicationSetting_User_CreatedBy" FromRole="ApplicationSetting" ToRole="User" />
+		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_ApplicationSetting_User_ModifiedBy" FromRole="ApplicationSetting" ToRole="User" />
+	</EntityType>
+	<EntityType Name="Notification" BaseType="Self.NotificationBase">
+	</EntityType>
+	<EntityType Name="User" BaseType="Self.AggregateRoot">
+		<Property Name="Name" Type="String" />
+		<Property Name="Username" Type="String" />
+		<Property Name="IsActive" Type="Boolean" Nullable="false" />
+		<Property Name="Domain" Type="String" />
+		<Property Name="FirstName" Type="String" />
+		<Property Name="MiddleName" Type="String" />
+		<Property Name="LastName" Type="String" />
+		<Property Name="WorkEmailAddress" Type="String" />
+		<Property Name="HomeEmailAddress" Type="String" />
+		<Property Name="HomeAddress" Type="Self.MailingAddress" Nullable="false" />
+		<Property Name="ForcePasswordChange" Type="Boolean" Nullable="false" />
+		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_User_User_CreatedBy" FromRole="User" ToRole="User1" />
+		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_User_User_ModifiedBy" FromRole="User" ToRole="User1" />
+	</EntityType>
+	<ComplexType Name="MailingAddress">
+		<Property Name="Street" Type="String" />
+		<Property Name="PostalCode" Type="String" />
+		<Property Name="City" Type="String" />
+		<Property Name="Province" Type="String" />
+		<Property Name="Country" Type="String" />
+	</ComplexType>
+	<Association Name="FK_ApplicationSetting_User_CreatedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="ApplicationSetting" Type="Self.ApplicationSetting" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="ApplicationSetting">
+				<PropertyRef Name="CreatedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_ApplicationSetting_User_ModifiedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="ApplicationSetting" Type="Self.ApplicationSetting" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="ApplicationSetting">
+				<PropertyRef Name="ModifiedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_User_User_CreatedBy">
+		<End Role="User1" Type="Self.User" Multiplicity="1" />
+		<End Role="User" Type="Self.User" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User1">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="User">
+				<PropertyRef Name="CreatedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_User_User_ModifiedBy">
+		<End Role="User1" Type="Self.User" Multiplicity="1" />
+		<End Role="User" Type="Self.User" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User1">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="User">
+				<PropertyRef Name="ModifiedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<EnumType Name="NotificationClass">
+		<Member Name="Unknown" Value="0" />
+		<Member Name="CommandAccepted" Value="1" />
+		<Member Name="CommandRejected" Value="2" />
+		<Member Name="CommandFailed" Value="3" />
+		<Member Name="ChangeRequestAccepted" Value="4" />
+		<Member Name="ChangeRequestRejected" Value="5" />
+		<Member Name="Informational" Value="6" />
+		<Member Name="Warning" Value="7" />
+	</EnumType>
+	<EnumType Name="NotificationState">
+		<Member Name="None" Value="0" />
+		<Member Name="Successful" Value="1" />
+		<Member Name="Failed" Value="2" />
+	</EnumType>
+	<EnumType Name="OrderStatus" IsFlags="true">
+		<Member Name="Open" Value="0" />
+		<Member Name="Filled" Value="1" />
+		<Member Name="Expired" Value="2" />
+		<Member Name="Cancelled" Value="4" />
+	</EnumType>
+	<EnumType Name="Priority">
+		<Member Name="Normal" Value="0" />
+		<Member Name="High" Value="1" />
+		<Member Name="Low" Value="-1" />
+	</EnumType>
+</Schema>

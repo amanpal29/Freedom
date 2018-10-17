@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+<OfficeSite>
+<IsActive>true</IsActive>
+<Description>Hedgerow Software Ltd.</Description>
+<EmailAddress>Support@HedgerowSoftware.com</EmailAddress>
+<FaxPhoneNumber>(403) 226-9281</FaxPhoneNumber>
+<GpsCoordinate.Latitude>51.050071</GpsCoordinate.Latitude>
+<GpsCoordinate.Longitude>-114.000173</GpsCoordinate.Longitude>
+<OfficeMailingAddress.Street>C4 416 Meridian Rd SE</OfficeMailingAddress.Street>
+<OfficeMailingAddress.City>Calgary</OfficeMailingAddress.City>
+<OfficeMailingAddress.Province>AB</OfficeMailingAddress.Province>
+<OfficeMailingAddress.Country>Canada</OfficeMailingAddress.Country>
+<OfficeMailingAddress.PostalCode>T2A 1X2</OfficeMailingAddress.PostalCode>
+<OfficePhoneNumber>(403) 226-9699</OfficePhoneNumber>
+<OfficeSiteAddress.UnitNumber>C4</OfficeSiteAddress.UnitNumber>
+<OfficeSiteAddress.StreetNumber>416</OfficeSiteAddress.StreetNumber>
+<OfficeSiteAddress.StreetName>Meridian Rd SE</OfficeSiteAddress.StreetName>
+<OfficeSiteAddress.City>Calgary</OfficeSiteAddress.City>
+<OfficeSiteAddress.Province>AB</OfficeSiteAddress.Province>
+<OfficeSiteAddress.Country>Canada</OfficeSiteAddress.Country>
+<OfficeSiteAddress.PostalCode>T2A 1X2</OfficeSiteAddress.PostalCode>
+<OtherPhoneNumber>(877) 226-9699</OtherPhoneNumber>
+<WebsiteAddress>www.HedgerowSoftware.com</WebsiteAddress>
+</OfficeSite>
+
+<OfficeSite>
+<IsActive>true</IsActive>
+<Description>HH Satellite A</Description>
+<ExternalCode />
+<InternalCode />
+<GpsCoordinate.Elevation />
+<EmailAddress>Support@HedgerowSoftwareHawaii.com</EmailAddress>
+<FaxPhoneNumber>(808) 457-1238</FaxPhoneNumber>
+<GpsCoordinate.Latitude>21.3462919</GpsCoordinate.Latitude>
+<GpsCoordinate.Longitude>-157.930645</GpsCoordinate.Longitude>
+<OfficeMailingAddress.Street>35 Salt Lake Blvd</OfficeMailingAddress.Street>
+<OfficeMailingAddress.City>Honolulu</OfficeMailingAddress.City>
+<OfficeMailingAddress.Province>HI</OfficeMailingAddress.Province>
+<OfficeMailingAddress.Country>United States of America</OfficeMailingAddress.Country>
+<OfficeMailingAddress.PostalCode>96818</OfficeMailingAddress.PostalCode>
+<OfficePhoneNumber>(808) 456-1238</OfficePhoneNumber>
+<OfficeSiteAddress.StreetNumber>35</OfficeSiteAddress.StreetNumber>
+<OfficeSiteAddress.StreetName>Salt Lake Blvd</OfficeSiteAddress.StreetName>
+<OfficeSiteAddress.City>Honolulu</OfficeSiteAddress.City>
+<OfficeSiteAddress.Province>HI</OfficeSiteAddress.Province>
+<OfficeSiteAddress.Country>United States</OfficeSiteAddress.Country>
+<OfficeSiteAddress.PostalCode>96818</OfficeSiteAddress.PostalCode>
+<OtherPhoneNumber />
+<WebsiteAddress>www.HedgerowSoftwareHawaii.com</WebsiteAddress>
+</OfficeSite>
+
+<OfficeSite>
+<IsActive>true</IsActive>
+<Description>HH Satellite B</Description>
+<ExternalCode />
+<InternalCode />
+<GpsCoordinate.Elevation />
+<EmailAddress>Support@HedgerowSoftwareFrance.com</EmailAddress>
+<FaxPhoneNumber>+03 (85) 349968</FaxPhoneNumber>
+<GpsCoordinate.Latitude>49.1364797</GpsCoordinate.Latitude>
+<GpsCoordinate.Longitude>6.1371111</GpsCoordinate.Longitude>
+<OfficeMailingAddress />
+<OfficePhoneNumber>+03 (85) 349967</OfficePhoneNumber>
+<OfficeSiteAddress.StreetNumber>47</OfficeSiteAddress.StreetNumber>
+<OfficeSiteAddress.StreetName>Rue</OfficeSiteAddress.StreetName>
+<OfficeSiteAddress.City>Lorry-les-Metz</OfficeSiteAddress.City>
+<OfficeSiteAddress.Province>Lorraine</OfficeSiteAddress.Province>
+<OfficeSiteAddress.Country>France</OfficeSiteAddress.Country>
+<OfficeSiteAddress.PostalCode>57050</OfficeSiteAddress.PostalCode>
+<OtherPhoneNumber />
+<WebsiteAddress>www.HedgerowSoftwareFrance.com</WebsiteAddress>
+</OfficeSite>
+</Entities>

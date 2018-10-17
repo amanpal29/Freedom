@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <!-- Users -->
+  <User>
+    <Username>NeilGrinwis</Username>
+    <Name>Neil Grinwis</Name>
+    <IsActive>true</IsActive>
+    <Id>291A8448-0641-417e-8B59-5E7A5B44824D</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Username>DanGraham</Username>
+    <Name>Dan Graham</Name>
+    <IsActive>true</IsActive>
+    <Id>256A8448-0641-417e-8B59-5E7A5B44824D</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Username>AmanBhullar</Username>
+    <Name>Aman Bhullar</Name>
+    <IsActive>true</IsActive>
+    <Id>293A8448-0641-417e-8B60-5E7A5B44824D</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Username>JayMasuda</Username>
+    <Name>Jay Masuda</Name>
+    <IsActive>true</IsActive>
+    <Id>85F02199-C87C-4F07-9F50-6068FA8A72CF</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Username>GarrySwanson</Username>
+    <Name>Garry Swanson</Name>
+    <IsActive>true</IsActive>
+    <Id>241C12C5-C488-4542-9EF1-A71AC2CFE7F4</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Username>BenEllard</Username>
+    <Name>Ben Ellard</Name>
+    <IsActive>true</IsActive>
+    <Id>01f48c75-0bf2-405b-bfb7-a19b1ac9731d</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Username>PeterFurhovde</Username>
+    <Name>Peter Furhovde</Name>
+    <IsActive>true</IsActive>
+    <Id>6A2366AE-9A9B-40F2-96B5-349128D69644</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Username>NeilVanDuyne</Username>
+    <Name>Neil Van Duyne</Name>
+    <IsActive>true</IsActive>
+    <Id>7CDBC685-AF5F-488D-AE5A-23209C635623</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Username>TestUser</Username>
+    <Name>Test User</Name>
+    <IsActive>true</IsActive>
+    <Id>94BB8621-7660-47F6-A666-17A2DE28FBE9</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Username>LeisyMoliner</Username>
+    <Name>Leisy Moliner</Name>
+    <IsActive>true</IsActive>
+    <Id>20564BA3-8862-4893-BDB9-39FD9430B3F9</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Username>CharleneCastillo</Username>
+    <Name>Charlene Castillo</Name>
+    <IsActive>true</IsActive>
+    <Id>8507659a-3c53-4b30-9408-77d0340fd4ca</Id>
+    <ForcePasswordChange>false</ForcePasswordChange>
+  </User>
+  <User>
+    <Id>8ca776ea-0817-4cf2-8b07-553e6b684616</Id>
+    <BadgeNumber>104</BadgeNumber>
+    <BirthDate>1970-01-01T00:00:00</BirthDate>
+    <EmergencyContactName>Joe Momma</EmergencyContactName>
+    <EmergencyContactPhoneNumber>(250) 884-5745</EmergencyContactPhoneNumber>
+    <FirstName>Dagny</FirstName>
+    <ForcePasswordChange>false</ForcePasswordChange>
+    <HireDate>2011-06-20T00:00:00</HireDate>
+    <HomeAddress.City>Victoria</HomeAddress.City>
+    <HomeAddress.Country>Canada</HomeAddress.Country>
+    <HomeAddress.PostalCode>V8W 1L6</HomeAddress.PostalCode>
+    <HomeAddress.Province>BC</HomeAddress.Province>
+    <HomeAddress.Street>988 Burdett Avenue</HomeAddress.Street>
+    <HomeEmailAddress>DagnyJackson@homeemail.com</HomeEmailAddress>
+    <IsActive>true</IsActive>
+    <LastName>Jackson</LastName>
+    <MiddleName>K</MiddleName>
+    <Name>Dagny Jackson</Name>
+    <OfficialName>UX Designer Dagny Jackson</OfficialName>
+    <OfficialTitle>UX Designer</OfficialTitle>
+    <SystemAccessStartDate>2011-06-20T00:00:00</SystemAccessStartDate>
+    <Username>DagnyJackson</Username>
+    <WorkEmailAddress>DagnyJackson@HedgerowSoftware.com</WorkEmailAddress>
+    <WorkPhoneNumber>(403) 775-4502</WorkPhoneNumber>
+  </User>
+
+  <!-- Make Neil, Aman, Garry, Jay, Ben, Peter, Leisy, Charlene and Dagny an Administrator -->
+  <UserRole>
+    <RoleId>9A873FCD-DEEA-4289-91C4-69393392E685</RoleId>
+    <User>291A8448-0641-417e-8B59-5E7A5B44824D</User>
+  </UserRole>
+  <UserRole>
+    <RoleId>9A873FCD-DEEA-4289-91C4-69393392E685</RoleId>
+    <User>293A8448-0641-417e-8B60-5E7A5B44824D</User>
+  </UserRole>
+  <UserRole>
+    <RoleId>9a873fcd-deea-4289-91c4-69393392e685</RoleId>
+    <User>241C12C5-C488-4542-9EF1-A71AC2CFE7F4</User>
+  </UserRole>
+  <UserRole>
+    <RoleId>9a873fcd-deea-4289-91c4-69393392e685</RoleId>
+    <User>85F02199-C87C-4F07-9F50-6068FA8A72CF</User>
+  </UserRole>
+  <UserRole>
+    <RoleId>9a873fcd-deea-4289-91c4-69393392e685</RoleId>
+    <User>01f48c75-0bf2-405b-bfb7-a19b1ac9731d</User>
+  </UserRole>
+  <UserRole>
+    <RoleId>9A873FCD-DEEA-4289-91C4-69393392E685</RoleId>
+    <User>6A2366AE-9A9B-40F2-96B5-349128D69644</User>
+  </UserRole>
+  <UserRole>
+    <RoleId>9A873FCD-DEEA-4289-91C4-69393392E685</RoleId>
+    <User>8ca776ea-0817-4cf2-8b07-553e6b684616</User>
+  </UserRole>
+  <UserRole>
+  	<RoleId>9A873FCD-DEEA-4289-91C4-69393392E685</RoleId>
+    <User>20564BA3-8862-4893-BDB9-39FD9430B3F9</User>
+  </UserRole>
+  <UserRole>
+	<RoleId>9A873FCD-DEEA-4289-91C4-69393392E685</RoleId>
+	<User>8507659a-3c53-4b30-9408-77d0340fd4ca</User>
+  </UserRole>
+</Entities>

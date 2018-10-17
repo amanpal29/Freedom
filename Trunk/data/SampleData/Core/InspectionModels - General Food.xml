@@ -1,0 +1,2196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <InspectionModel>
+    <Id>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Id>
+    <EffectiveDate>2008-03-16T00:00:00</EffectiveDate>
+    <FriendlyName>Version 1</FriendlyName>
+    <InspectionModelRepository>76f57449-2ffc-4b8a-89d6-28949506aa8f</InspectionModelRepository>
+	<DisplayCriticalIndicator>true</DisplayCriticalIndicator>
+  </InspectionModel>
+  <InspectionModelRepository>
+    <Id>76f57449-2ffc-4b8a-89d6-28949506aa8f</Id>
+    <Comment>Form 101A: General Food Inspection</Comment>
+    <Description>General Food Inspection</Description>
+    <SortOrder>0</SortOrder>
+  </InspectionModelRepository>
+  <InspectionModelAnswer>
+    <Id>63955bac-943c-4ac8-99f4-24ff058ea18e</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>N/O</Text>
+    <ToolTip>Not Observed</ToolTip>
+  </InspectionModelAnswer>
+  <InspectionModelAnswer>
+    <Id>a2038e25-6447-4ba0-b6e6-27153e7237a1</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>4+</Text>
+  </InspectionModelAnswer>
+  <InspectionModelAnswer>
+    <Id>df704afe-9509-4ccb-8e7f-44aba858bb0f</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>1</Text>
+  </InspectionModelAnswer>
+  <InspectionModelAnswer>
+    <Id>5a73a68d-be67-4f7c-9dce-7ffcbf41d72d</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>2-3</Text>
+  </InspectionModelAnswer>
+  <InspectionModelAnswer>
+    <Id>b962c10b-adbe-413f-95d6-873982804086</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>0</Text>
+  </InspectionModelAnswer>
+  <InspectionModelAnswer>
+    <Id>e1b2ca7d-0e93-443a-b1e5-97c454816835</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>EX</Text>
+    <ToolTip>Exempt</ToolTip>
+  </InspectionModelAnswer>
+  <InspectionModelAnswer>
+    <Id>e114fbfd-6d5a-4cd3-9cf0-a0f9a9d87e89</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>2</Text>
+  </InspectionModelAnswer>
+  <InspectionModelAnswer>
+    <Id>4c92b06a-47d8-4538-b973-a2ee99f6df74</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>No</Text>
+  </InspectionModelAnswer>
+  <InspectionModelAnswer>
+    <Id>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>N/A</Text>
+    <ToolTip>Not Applicable</ToolTip>
+  </InspectionModelAnswer>
+  <InspectionModelAnswer>
+    <Id>4d7a3c71-ed77-4dc8-867f-c6de90208f3c</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>3</Text>
+  </InspectionModelAnswer>
+  <InspectionModelAnswer>
+    <Id>6ad2f130-5b91-445f-8b7b-d783e51e6d90</Id>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <Text>Yes</Text>
+  </InspectionModelAnswer>
+  <InspectionModelCategory>
+    <Id>d5b111e4-c311-4a1e-9f04-37ad9a6bd1c6</Id>
+    <Description>Cooking/Hot Holding/Re-heating of Hazardous Food</Description>
+    <InspectionModel>7364cd0e-f4c4-452e-9f44-1d3973c824d6</InspectionModel>
+    <SortOrder>2</SortOrder>
+  </InspectionModelCategory>
+  <InspectionModelCategory>
+    <Id>bf5053fe-53cf-4e64-8543-42dd24ac0075</Id>
+    <Description>Protection from Adulteration and Contamination</Description>
+    <InspectionModel>7364cd0e-f4c4-452e-9f44-1d3973c824d6</InspectionModel>
+    <SortOrder>4</SortOrder>
+  </InspectionModelCategory>
+  <InspectionModelCategory>
+    <Id>e7da2456-8065-4811-a6fe-434e7218ff5d</Id>
+    <Description>Protection from Contamination by Food Handlers</Description>
+    <InspectionModel>7364cd0e-f4c4-452e-9f44-1d3973c824d6</InspectionModel>
+    <SortOrder>3</SortOrder>
+  </InspectionModelCategory>
+  <InspectionModelCategory>
+    <Id>0f364e3e-e94a-4f9b-97fb-590a708775dc</Id>
+    <Description>Clothing and Attire</Description>
+    <InspectionModel>7364cd0e-f4c4-452e-9f44-1d3973c824d6</InspectionModel>
+    <SortOrder>6</SortOrder>
+  </InspectionModelCategory>
+  <InspectionModelCategory>
+    <Id>fb55e251-e6aa-4f9b-be80-9520836bc944</Id>
+    <Description>Protection from Live Animal Hazards</Description>
+    <InspectionModel>7364cd0e-f4c4-452e-9f44-1d3973c824d6</InspectionModel>
+    <SortOrder>7</SortOrder>
+  </InspectionModelCategory>
+  <InspectionModelCategory>
+    <Id>3ba68850-dd15-42c3-8ff1-d2f11b27aa4c</Id>
+    <Description>Refrigerated and Frozen Storage of Hazardous Food</Description>
+    <InspectionModel>7364cd0e-f4c4-452e-9f44-1d3973c824d6</InspectionModel>
+    <SortOrder>1</SortOrder>
+  </InspectionModelCategory>
+  <InspectionModelCategory>
+    <Id>dda60a1a-9f83-4e18-8841-f43d5dd2bde8</Id>
+    <Description>Food Safety Management</Description>
+    <InspectionModel>7364cd0e-f4c4-452e-9f44-1d3973c824d6</InspectionModel>
+    <SortOrder>5</SortOrder>
+  </InspectionModelCategory>
+  <InspectionModelQuestion>
+    <Id>a6ffb35d-0c1f-42d5-9519-0568a3f6e49d</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>d5b111e4-c311-4a1e-9f04-37ad9a6bd1c6</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>3</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>3</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>5</SortOrder>
+    <Text>Thermometers are used to verify food prep and storage temperatures</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>e7da2456-8065-4811-a6fe-434e7218ff5d</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>15</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>30</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>3</SortOrder>
+    <Text>Do food handlers ensure that food is protected from contamination?</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>dfdbf210-f1b2-4bd8-acf3-0a26f4d73f43</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>e7da2456-8065-4811-a6fe-434e7218ff5d</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>0</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>0</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>2</SortOrder>
+    <Source>Sec 52, AR 31/2006</Source>
+    <Text>Access to kitchen is limited to food handlers during public food preparation.  </Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>5a925bb6-fddf-4841-b58d-0a42096832ca</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>5</AnswerWeight1>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>fb55e251-e6aa-4f9b-be80-9520836bc944</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>3</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>3</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>24</SortOrder>
+    <Text>Exclusion of live animals on the premises</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>4abe829d-c6b2-47e2-84a8-15a1c929f95c</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>3ba68850-dd15-42c3-8ff1-d2f11b27aa4c</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>0</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>0</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>0</SortOrder>
+    <Text>Cold holding is 4°C or less</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>0713ab90-be14-41ce-8f75-2776e7ce4828</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>bf5053fe-53cf-4e64-8543-42dd24ac0075</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>2</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>2</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>3</SortOrder>
+    <Text>Food protected from potential contamination (sneeze guard etc.)</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>40946823-6131-45ec-8143-4ecd297a53c7</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>3ba68850-dd15-42c3-8ff1-d2f11b27aa4c</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>3</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>3</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>2</SortOrder>
+    <Text>Cooling, 60°C to 20°C within 2 hours</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>d1faf77f-33dd-41c3-aef5-5fc55f7c79b6</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>e7da2456-8065-4811-a6fe-434e7218ff5d</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>2</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>2</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>0</SortOrder>
+    <Text>Washing hands thoroughly before and after handling food</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>ae669ef2-9c3d-41ea-a7db-6069920434ea</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>dda60a1a-9f83-4e18-8841-f43d5dd2bde8</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>30</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>30</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>21</SortOrder>
+    <Text>Property installed fire suppression system</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>acce5530-e78d-4b0a-a104-69e25e1a0638</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>bf5053fe-53cf-4e64-8543-42dd24ac0075</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>1</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>1</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>0</SortOrder>
+    <Text>Separate raw foods from ready-to-eat foods during storage and handling</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>afd319a1-4a95-4e35-961b-7785964a562e</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>3ba68850-dd15-42c3-8ff1-d2f11b27aa4c</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>3</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>3</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>1</SortOrder>
+    <Text>Freezers are -18°C or less</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>74480559-6a95-4771-9e02-7801aae6494e</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>d5b111e4-c311-4a1e-9f04-37ad9a6bd1c6</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>3</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>3</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>6</SortOrder>
+    <Text>Thorough cooking to minimum internal temperature for at least 15 seconds</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>aabcc022-8e63-4d20-93c2-7b3085e20ee5</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>3ba68850-dd15-42c3-8ff1-d2f11b27aa4c</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>3</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>3</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>3</SortOrder>
+    <Text>Cooling 20°C to 4°C within 4 hours</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>0e93e283-daf6-4b31-b1f4-834ad66b64eb</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>e7da2456-8065-4811-a6fe-434e7218ff5d</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>2</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>2</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>1</SortOrder>
+    <Text>Food handlers user proper utensils to minimize direct hand contact with food</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>9c360ee3-74ec-4152-ba2e-8679dc8151f7</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>0f364e3e-e94a-4f9b-97fb-590a708775dc</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>3</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>3</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>23</SortOrder>
+    <Text>Hair is suitably confined</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>ed4f85b5-9fbe-4ca4-84f8-928713194ed5</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>bf5053fe-53cf-4e64-8543-42dd24ac0075</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>2</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>2</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>4</SortOrder>
+    <Text>Chemicals/pesticides to be stored separately from food</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>6c1de4e9-fab8-4a1f-8da0-980515a7958c</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>bf5053fe-53cf-4e64-8543-42dd24ac0075</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>2</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>2</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>5</SortOrder>
+    <Text>High acid food stored/prepared in corrosion resistant containers or equipment</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>469da5f0-5831-454b-8ffc-a387cca3389c</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>e1b2ca7d-0e93-443a-b1e5-97c454816835</AnswerId2>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>0f364e3e-e94a-4f9b-97fb-590a708775dc</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>0</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>0</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>22</SortOrder>
+    <Text>Kitchen staff wear appropriate clothing</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>ef8d7ee3-65e3-47d0-81c9-a413856a6727</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>dda60a1a-9f83-4e18-8841-f43d5dd2bde8</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>7</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>7</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>19</SortOrder>
+    <Text>Mechanical dishwashing has proper timing of cycles</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>817d15a7-5dd7-4990-839e-aae30f831a33</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>bf5053fe-53cf-4e64-8543-42dd24ac0075</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>1</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>1</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>2</SortOrder>
+    <Text>Constant supply of hot and cold potable running water</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>6e22d920-b5e4-4904-91e7-b1ceb927c2c4</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>bf5053fe-53cf-4e64-8543-42dd24ac0075</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>1</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>1</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>1</SortOrder>
+    <Text>Maintain separation of ready-to-eat foods from raw food preparation surface or utensils</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>9cda62cc-bf69-4392-b8ae-b8f67622f331</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>bf5053fe-53cf-4e64-8543-42dd24ac0075</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>15</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>30</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>6</SortOrder>
+    <Source>Sec 18 &amp; Sec 28, AR 31/2006</Source>
+    <Text>All direct food contact surfaces / equipment are food-grade, maintained in good condition to allow for easy cleaning and sanitation and utensils are not re-used if disposable</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>df6ecd47-9bc7-434c-9f99-c489a7819bc3</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>dda60a1a-9f83-4e18-8841-f43d5dd2bde8</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>14</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>28</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>20</SortOrder>
+    <Text>Adequate protection against the entrance of vermin, dust, and fumes</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>b1033f27-6e6a-4d73-a9e1-c9bd5ecc888d</Id>
+    <AnswerId0>a2038e25-6447-4ba0-b6e6-27153e7237a1</AnswerId0>
+    <AnswerId1>5a73a68d-be67-4f7c-9dce-7ffcbf41d72d</AnswerId1>
+    <AnswerWeight1>1</AnswerWeight1>
+    <AnswerId2>df704afe-9509-4ccb-8e7f-44aba858bb0f</AnswerId2>
+    <AnswerWeight2>2</AnswerWeight2>
+    <AnswerId3>b962c10b-adbe-413f-95d6-873982804086</AnswerId3>
+    <AnswerWeight3>5</AnswerWeight3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>dda60a1a-9f83-4e18-8841-f43d5dd2bde8</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>30</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>30</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>18</SortOrder>
+    <Text>Number of certified food handlers on duty</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>7cc5a4aa-b076-4a5a-a5ca-cd7af21458fc</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>d5b111e4-c311-4a1e-9f04-37ad9a6bd1c6</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>3</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>3</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>8</SortOrder>
+    <Text>Reheating: To at least minimum internal cooking temperature within 2 hours.</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>2de4796d-3d85-4f62-9348-dd816810004c</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>d5b111e4-c311-4a1e-9f04-37ad9a6bd1c6</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>0</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>0</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>7</SortOrder>
+    <Text>Hot holding: minimum of 60°C after cooking</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>a4c28707-c5b9-47d3-a4a0-e1c48a840785</Id>
+    <AnswerId0>4d7a3c71-ed77-4dc8-867f-c6de90208f3c</AnswerId0>
+    <AnswerId1>e114fbfd-6d5a-4cd3-9cf0-a0f9a9d87e89</AnswerId1>
+    <AnswerWeight1>1</AnswerWeight1>
+    <AnswerId2>df704afe-9509-4ccb-8e7f-44aba858bb0f</AnswerId2>
+    <AnswerWeight2>3</AnswerWeight2>
+    <AnswerId3>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>dda60a1a-9f83-4e18-8841-f43d5dd2bde8</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>5</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>10</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>17</SortOrder>
+    <Text>Number of compartments in sinks</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>2e52c2a0-0326-4979-9a09-f38da6358c28</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>4</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <AnswerId3>1cc325b8-3e4a-4a61-8a7d-ac149c6d6436</AnswerId3>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>3ba68850-dd15-42c3-8ff1-d2f11b27aa4c</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>15</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>30</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>4</SortOrder>
+    <Text>Are food temperatures during storage and processing being controlled to maximize food safety?</Text>
+  </InspectionModelQuestion>
+  <InspectionModelQuestion>
+    <Id>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Id>
+    <AnswerId0>6ad2f130-5b91-445f-8b7b-d783e51e6d90</AnswerId0>
+    <AnswerWeight0>0</AnswerWeight0>
+    <AnswerId1>4c92b06a-47d8-4538-b973-a2ee99f6df74</AnswerId1>
+    <AnswerWeight1>3</AnswerWeight1>
+    <AnswerId2>63955bac-943c-4ac8-99f4-24ff058ea18e</AnswerId2>
+    <CanCorrectDuringInspection>true</CanCorrectDuringInspection>
+    <Category>e7da2456-8065-4811-a6fe-434e7218ff5d</Category>
+    <CdiMultiplier>0.5</CdiMultiplier>
+    <DefaultDaysUntilFollowUp>15</DefaultDaysUntilFollowUp>
+    <IsCritical>false</IsCritical>
+    <IsFollowUpMandatory>false</IsFollowUpMandatory>
+    <IsSeverityApplicable>false</IsSeverityApplicable>
+    <MaximumDaysUntilFollowUp>30</MaximumDaysUntilFollowUp>
+    <MinimumDaysUntilFollowUp>0</MinimumDaysUntilFollowUp>
+    <Model>7364cd0e-f4c4-452e-9f44-1d3973c824d6</Model>
+    <SortOrder>4</SortOrder>
+    <Source>Sec 30, AR 31/2006</Source>
+    <Text>Food handlers do not engage in food handling while ill and have acceptable attire, food handling habits and hygiene.</Text>
+  </InspectionModelQuestion>
+  <InspectionModelCannedComment>
+    <Id>7341d4da-be0e-44a9-acd5-4c4f8bfa384b</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>a6ffb35d-0c1f-42d5-9519-0568a3f6e49d</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Thermometers must be designated food-grade.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>16e6d5f0-5b17-4fad-8c6d-eb398e8b257f</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>a6ffb35d-0c1f-42d5-9519-0568a3f6e49d</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Thermometers must be cleaned between each use.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>b1eba606-12ca-4657-abe6-007e522811f8</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>42</SortOrder>
+    <Description>PUBLIC HEALTH RATIONALE:  Food can become contaminated if the food handler does not provide proper food protection.  It is essential that food handlers are aware of contamination sources and take the necessary measures to break the cycle of transmission.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>52b3861d-73d8-4c94-ad1a-00ef3abf89e4</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>36</SortOrder>
+    <Description>Food and/or food products were stored on the floor at the time of the inspection</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>9eac7d11-f641-4bfd-9041-0204a2a51bf5</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>28</SortOrder>
+    <Description>The regulations require food handlers to use clean utensils for tasting foods; the utensils must be immediately cleaned and sanitized after tasting and prior to tasting another food or the same food</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>dd0ba1f1-a3df-43c4-857b-06b289082266</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>23</SortOrder>
+    <Description>The regulations require all food to be protected while in storage.  Food must have protective covers and stored off the floor at least 15 cm (6 inches).</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>6f33154b-6bdb-4205-b8e6-06f6d9bb42f6</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>40</SortOrder>
+    <Description>Lubricant is not food-grade. Operator must immediately switch to food-grade lubricant</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>23b437de-425c-4a40-b4de-09eed8f0a210</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>29</SortOrder>
+    <Description>The regulations require raw fruits and vegetables to be thoroughly washed in potable water to remove soil and other contaminants before being cut, combined with other ingredients, cooked, served, or offered for human consumption in ready-to-eat form. This does not apply to whole raw fruits and vegetables that are intended for washing by the consumer following point of sale</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>1631fad5-e6f4-41b7-a1b9-0c09a3323727</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>3</SortOrder>
+    <Description>BULK FOODS - CONTAINERS   - Bulk food containers are not constructed properly, are not provided with a lid and/or are not in proper working order. All food used or to be used in a commercial food establishment must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 23(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>7cf7dc1d-ca64-450d-9964-0da9bda692ae</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>32</SortOrder>
+    <Description>The regulations require that access to food preparation areas be restricted, as much as practically possible, to designated food handlers</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>3e2cf48d-2d73-4b34-9f69-203c1b05a720</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>17</SortOrder>
+    <Description>FOOD CONTACT SURFACES   - Cooked or prepared foods are subject to cross contamination from raw foods, unsanitary food contact surfaces or equipment. A commercial food establishment, all equipment and utensils in it and all surfaces in it with which food comes into contact must be maintained in a sanitary condition and, with out limiting the foregoing, must be washed and sanitized in a manner that removes contamination. AR 31/2006 s 28(2)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>6820796d-b28d-4188-93db-2223915da538</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>26</SortOrder>
+    <Description>The regulations require food handlers to change plastic gloves after each use and discard the gloves after use to prevent cross-contamination issues</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>cbff7d93-3aaa-47a0-b351-3197b016bbfe</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>24</SortOrder>
+    <Description>The regulations require all foods, that have been previously purchased and returned to the retailer or food service operation, must not be re-offered for sale to another consumer, unless those foods are low-risk, free from contamination and in their unopened and untampered original container.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>dffc7034-2ac0-4ddb-bc01-32ec0655e72b</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>14</SortOrder>
+    <Description>B PROTECT FROM CONTAMINATION   - Food in this food establishment is not being protected from contamination during storage or handling.  All food used or to be used in a bed and breakfastt must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 52</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>2de1365a-c24e-40da-bd41-338de39705ba</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>20</SortOrder>
+    <Description>SEPARATION OF UNINSPECTED   - Proper measures are not being taken to ensure that uninspected meats are kept separate from inspected meats.  Uninspected meat must be clearly labeled, adequately separated from other food and identified as not for public consumption to the satisfaction of the executive officer. AR 31/2006 s 22(2)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>87f34f93-b4e4-46bc-a2cc-398fb2054a45</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>41</SortOrder>
+    <Description>Once food products are opened from their original containers, food products remaining must be transferred into properly covered food containers that can be easily cleaned</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>caac6c81-30a8-4d4d-874b-3d3117ce147b</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>18</SortOrder>
+    <Description>PACKAGING   - Insanitary and/or inappropriate food packaging is in use. All food used or to be used in a commercial food establishment must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 23(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>179970e0-faca-4781-9f74-43daa9fe4b15</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>2</SortOrder>
+    <Description>B STORAGE IN WASHROOM   - Food items or utensils were found in the washroom area. All food used or to be used in a bed and breakfastt must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 52</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>0c92c554-5ef0-48c3-8bad-4a94708d2bac</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>34</SortOrder>
+    <Description>Condiments were not in a single service packages or dispenser with self-closing lids, which prevents the contamination of the food products</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>47d71ee3-3a59-4c87-8f92-51c1375ebe47</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>12</SortOrder>
+    <Description>B FOOD CONTACT SURFACES   - Cooked or prepared foods are subject to cross contamination from raw foods, unsanitary food contact surfaces or equipment. All food used or to be used in a bed and breakfast must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 52</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>08987ab2-8daf-4e5b-99ca-5ff6c51cd1e0</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>10</SortOrder>
+    <Description>SEPARATE STORAGE   - Articles not associated with food processing, preparation, handling, serving, or storage are stored with food.  All articles and materials in a commercial food establishment that are not associated with or required for the operation or maintenance of the food areas must be stored separately from the food and the food areas and in a manner that contaminates neither. AR 31/2006 s 20(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>b6ce57da-664d-46c2-b85d-620405cc4d25</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>8</SortOrder>
+    <Description>CUSTOMER CONTAMINATION / SNEEZE GUARD   - Publicly displayed food is not adequately protected from customer contamination.  All food used or to be used in a commercial food establishment must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 23(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>961e1205-8af5-4f8a-b869-623e10c703ad</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>30</SortOrder>
+    <Description>The regulations require raw meats to be handled in a manner that prevents cross contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>5aa39235-f7fe-412f-bc45-64bf34409607</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>31</SortOrder>
+    <Description>The regulations require raw meats, while in cold storage, to be separated or stored below ready to eat food products to prevent cross contamination issues</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>87cceedc-5ea9-4044-8cb4-6512f4fbe32d</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>21</SortOrder>
+    <Description>The regulations require all equipment lubricant to be food grade and measures taken to prevent the lubricant from getting into the food product.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>a1516e58-b127-44ec-a47b-75c13bdf7548</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>38</SortOrder>
+    <Description>Food used or to be used in the facility was not protected from contamination and/or handled in a sanitary condition. All food must be covered with approved covers while in storage</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>3826e53c-8347-47e4-a84e-7a8328dabd72</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>22</SortOrder>
+    <Description>The regulations require all facilities where the public has access to food other than raw, unprocessed fruit and vegetables, or food specifically served to a customer by a worker of the food premises, the food shall be protected from public handling.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>cdb34180-0701-4e5e-a477-7b5b28da7b74</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>15</SortOrder>
+    <Description>F PACKAGING   - Food is packaged in unacceptable containers.  Food shall be packaged in food grade material.  Disposable packages shall be clean and not previously used. AR 31/2006 2(3) &amp; 23(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>f3bed975-3d04-4a9f-a8ba-7ff0a5e9a04c</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>13</SortOrder>
+    <Description>B PACKAGING   - Insanitary and/or inappropriate food packaging is in use. All food used or to be used in a commercial food establishment must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 52</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>690fa873-f163-4b1d-9037-8144c150cd3f</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>0</SortOrder>
+    <Description>B CONTAINERS   - Unacceptable food storage containers or covers are in use.  All food used or to be used in a bed and breakfast must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 52</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>53df23ac-c639-4fbc-81cd-82c9606544e2</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>27</SortOrder>
+    <Description>The regulations require food handlers to use clean and sanitary utensils such as tongs, spatulas, disposable gloves or other food dispensing apparatus for ready to eat foods and avoid handling foods with their bare hands, as much as practically possible</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>e94104ff-fe99-47de-8313-847ce48327be</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>35</SortOrder>
+    <Description>Evidence that the facility operator is re-serving food was noted at the time of the inspection</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>0e2b672c-3702-4e2c-b4ce-8ec0893c9805</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>37</SortOrder>
+    <Description>Food handlers did not wash their hands before handling food products. This is a cross-contamination issue that needs to be corrected immediately</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>fa81e8a4-2526-4b8a-aff8-974f7cec281b</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>1</SortOrder>
+    <Description>B CUSTOMER CONTAMINATION / SNEEZE GUARDS   - Publicly displayed food is not adequately protected from customer contamination.  All food used or to be used in a bed and breakfast must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 52</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>ec68c29e-3b11-4305-8e19-99a1406ec369</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>11</SortOrder>
+    <Description>STORAGE IN WASHROOM   - Food items or utensils were found in the washroom area. All food used or to be used in a commercial food establishment must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 23(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>8cd7c014-4d83-4b8c-b00b-a79433f67a74</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>16</SortOrder>
+    <Description>F PROTECT FROM CONTAMINATION   - Food is not being protected from contamination during storage, display, or handling.  All food except whole fruits and vegetables must be protected from contamination and customer handling. AR 31/2006 s 36</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>128e6570-601d-40c1-a848-bab82d0a80c5</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>6</SortOrder>
+    <Description>BULK FOODS - UTENSILS PROVIDED   - Adequate utensils or hand protection have not been provided for self serve of bulk foods. All food used or to be used in a commercial food establishment must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 23(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>bc3d0b27-fcd2-4c23-9240-be1beb49340f</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>39</SortOrder>
+    <Description>Ice must be protected from contamination. Ice machines must be maintained in a clean and sanitary condition</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>bb4d2f1c-8846-44e7-8462-c89700a6b8a2</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>4</SortOrder>
+    <Description>BULK FOODS - MAINTENANCE   - The bulk food area is not being maintained or serviced.  All food used or to be used in a commercial food establishment must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 23(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>ef19e392-856c-49b0-8f94-cc0da5549b51</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>7</SortOrder>
+    <Description>CONTAINERS   - Unacceptable food storage containers or covers are in use.  All food used or to be used in a commercial food establishment must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 24(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>501a6270-7e9d-4a0d-b358-cf7c30339759</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>19</SortOrder>
+    <Description>PROTECT FROM CONTAMINATION   - Food in this food establishment is not being protected from contamination during storage or handling.  All food used or to be used in a commercial food establishment must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 23(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>6727910c-690d-4a9d-a72a-d0d445b35881</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>33</SortOrder>
+    <Description>All food and food-related items must be stored in the mobile concession.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>c1327d8d-3fe3-4c01-9e43-e23be8a71a84</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>5</SortOrder>
+    <Description>BULK FOODS - PERISHABLE   - Perishable food in bulk form is being offered on a self serve basis.  All food used to  be used in a commercial food establishment must be protected from contamination and handled in a sanitary manner. AR 31/2006 s 23(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>f19a23d2-1bbe-444e-8dd8-e53a35f3e158</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>25</SortOrder>
+    <Description>The regulations require all incompatible areas or processes, particularly clean-up and chemical storage areas, be separated from food storage, handling and processing areas to prevent food and food area contamination.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>415729b0-dcdb-4b39-8c64-fcafc9ea47bf</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9578a2b1-a711-4cfb-b1a9-0630cf5104d4</Question>
+    <SortOrder>9</SortOrder>
+    <Description>INCOMPATIBLE ACTIVITY / LIVING QUARTERS   - An incompatible activity (living/sleeping quarters, laundry, etc.) is occurring in a food handling or storage area. An operator shall ensure that, before the operation of a commercial food establishment, the food establishment has all it's food areas separated from living quarters and from other areas where activities are carried out that are incompatible with the safe and sanitary handling of food. AR 31/2006 s 16(1)(d)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>9ca2d809-5f3c-4897-987b-d99a9841e864</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>dfdbf210-f1b2-4bd8-acf3-0a26f4d73f43</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Operator does not limit kitchen access to only food handlers during food preparation</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>89018030-8c1a-4216-96a7-3adce9d2ba10</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>5a925bb6-fddf-4841-b58d-0a42096832ca</Question>
+    <SortOrder>0</SortOrder>
+    <Description>The use of a service animal is exempt from this regulation.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>daca72a6-9434-4dd0-a8ba-4e9575d2b5c4</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>5a925bb6-fddf-4841-b58d-0a42096832ca</Question>
+    <SortOrder>3</SortOrder>
+    <Description>PUBLIC HEALTH RATIONALE:  Animals in a food handling or preparation area are potential sources of contamination. </Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>38de3fae-8c87-4de1-a6ef-8c2746b69d48</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>5a925bb6-fddf-4841-b58d-0a42096832ca</Question>
+    <SortOrder>1</SortOrder>
+    <Description>This facility has an appropriate holding tank for live seafood.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>20f30d17-a609-4701-bd58-f4af8707cfbf</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>5a925bb6-fddf-4841-b58d-0a42096832ca</Question>
+    <SortOrder>2</SortOrder>
+    <Description>No animals, other than a service animal or an animal approved by a public health inspector is permitted in food establishment</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>8661bbf3-dc00-4f78-b2a7-0c0f43300950</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>4abe829d-c6b2-47e2-84a8-15a1c929f95c</Question>
+    <SortOrder>0</SortOrder>
+    <Description>All refrigerators should have thermometers in conspicuous locations.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>c8845e82-6877-4b48-ae36-57d2fe88e9d5</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>4abe829d-c6b2-47e2-84a8-15a1c929f95c</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Refrigerators should be cleaned frequently.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>f14ed85a-c344-4491-8850-f698870c5997</PhysicalQuantity>
+    <InspectionModelQuestion>4abe829d-c6b2-47e2-84a8-15a1c929f95c</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelCannedComment>
+    <Id>14589170-7ccc-4d25-85dd-08773433a79e</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>0713ab90-be14-41ce-8f75-2776e7ce4828</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Sneeze guards are required on all hot and cold bars.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>6cced1a7-3822-4660-b9dc-da5542dc82be</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>0713ab90-be14-41ce-8f75-2776e7ce4828</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Dry goods may only be stored is containers approved for that purpose.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>a2289c16-a725-4944-b857-dccec6d8a359</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>0713ab90-be14-41ce-8f75-2776e7ce4828</Question>
+    <SortOrder>2</SortOrder>
+    <Description>Pre-packaged ready-to-eat meals must be hermetically sealed.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>b6d6674e-be6f-4a14-befb-6a094de2cd6e</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>40946823-6131-45ec-8143-4ecd297a53c7</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Cooling at room temperature is not permitted.</Description>
+    <Weight>1</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>59822db7-d344-4918-8c49-d044754ae854</PhysicalQuantity>
+    <InspectionModelQuestion>40946823-6131-45ec-8143-4ecd297a53c7</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>f14ed85a-c344-4491-8850-f698870c5997</PhysicalQuantity>
+    <InspectionModelQuestion>40946823-6131-45ec-8143-4ecd297a53c7</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelCannedComment>
+    <Id>3d279fd8-412e-4292-aa7e-02996088939f</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>d1faf77f-33dd-41c3-aef5-5fc55f7c79b6</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Do not use artificial nails.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>c0891f98-bbd7-4d47-abc8-3e6355741339</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>d1faf77f-33dd-41c3-aef5-5fc55f7c79b6</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Keep nails short.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>135bc4c6-d6c2-4c04-b253-4f3e0e8528bc</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>d1faf77f-33dd-41c3-aef5-5fc55f7c79b6</Question>
+    <SortOrder>2</SortOrder>
+    <Description>Rub in between and around fingers.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>6dbaac74-8c5e-4df0-9472-4fa3b9afe675</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>d1faf77f-33dd-41c3-aef5-5fc55f7c79b6</Question>
+    <SortOrder>3</SortOrder>
+    <Description>Wash wrists and forearms if they are likely to have been contaminated.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>d17bc8fb-d184-4b0d-ae61-6602c45fe1e5</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>d1faf77f-33dd-41c3-aef5-5fc55f7c79b6</Question>
+    <SortOrder>4</SortOrder>
+    <Description>Remove watches, rings and bracelets.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>dc77c91e-3519-4166-9656-ac7fbc721642</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>d1faf77f-33dd-41c3-aef5-5fc55f7c79b6</Question>
+    <SortOrder>5</SortOrder>
+    <Description>Make sure that sleeves are rolled up and do not get wet during washing.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>6297f2cc-5c7b-40cc-9925-c715f34596e3</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>d1faf77f-33dd-41c3-aef5-5fc55f7c79b6</Question>
+    <SortOrder>6</SortOrder>
+    <Description>Avoid chipped nail varnish.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>19b3d760-c854-4993-bd65-258a2e023ade</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>ae669ef2-9c3d-41ea-a7db-6069920434ea</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Fire suppression pull stations must be accessible at all times.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>0dc31061-15bd-4b5b-a33b-5a98e8f06da5</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>ae669ef2-9c3d-41ea-a7db-6069920434ea</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Fire suppression system must be inspected annually.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>c16f2410-f79a-4efa-95af-4df559760bc6</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>afd319a1-4a95-4e35-961b-7785964a562e</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Freezers need to be defrosted regularly to function at maximum efficiency.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>222a57bc-db74-4853-86ea-58796d6a43b4</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>afd319a1-4a95-4e35-961b-7785964a562e</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Freezer does not have a thermometer in a conspicuous location.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>de53bd1a-8c16-4816-aca7-a07ac54b3ef0</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>afd319a1-4a95-4e35-961b-7785964a562e</Question>
+    <SortOrder>2</SortOrder>
+    <Description>Freezer drain pan is leaking.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>f14ed85a-c344-4491-8850-f698870c5997</PhysicalQuantity>
+    <InspectionModelQuestion>afd319a1-4a95-4e35-961b-7785964a562e</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelCannedComment>
+    <Id>1706c6b4-a1ec-408e-8a33-8f00329468a6</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>74480559-6a95-4771-9e02-7801aae6494e</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Minimum internal temperature for poultry is 85 °C (185 °F).</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>af38fcde-d021-45e4-8546-eb6dec2c171c</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>74480559-6a95-4771-9e02-7801aae6494e</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Minimum internal temperature for beef (non-ground) is 60 °C (140 °F).</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>59822db7-d344-4918-8c49-d044754ae854</PhysicalQuantity>
+    <InspectionModelQuestion>aabcc022-8e63-4d20-93c2-7b3085e20ee5</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>f14ed85a-c344-4491-8850-f698870c5997</PhysicalQuantity>
+    <InspectionModelQuestion>aabcc022-8e63-4d20-93c2-7b3085e20ee5</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelCannedComment>
+    <Id>a32bcf89-ca28-45c7-bb25-b95e2138ba7e</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>0e93e283-daf6-4b31-b1f4-834ad66b64eb</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Chopsticks shorter than 15 cm (6") are not an acceptable utensil for food handling.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>a85ac530-5875-4296-aabb-d0e902fd05e9</PhysicalQuantity>
+    <InspectionModelQuestion>0e93e283-daf6-4b31-b1f4-834ad66b64eb</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelCannedComment>
+    <Id>f78c5074-22f2-4db3-aa57-d261a76aaa30</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9c360ee3-74ec-4152-ba2e-8679dc8151f7</Question>
+    <SortOrder>0</SortOrder>
+    <Description>A Jewish Kippah is not considered sufficient for confining hair.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>f4b84611-f5bc-4fdf-90b4-f437e4a4e684</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9c360ee3-74ec-4152-ba2e-8679dc8151f7</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Kitchen staff are all bald, no confining required.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>fdf860e5-d6e8-472f-a4db-27e63e00a626</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>ed4f85b5-9fbe-4ca4-84f8-928713194ed5</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Chemical storage areas must be appropriately labeled and accessible independently from food preparation and storage areas.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>ff214d5c-bc70-4a92-a1ea-4df21992d985</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>6c1de4e9-fab8-4a1f-8da0-980515a7958c</Question>
+    <SortOrder>0</SortOrder>
+    <Description>No high acid foods on site during inspection.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>cc330dd4-19bc-4013-9801-c7ab1aafee10</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>6c1de4e9-fab8-4a1f-8da0-980515a7958c</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Cast iron containers are not corrosion resistant.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>5b3bea24-6892-471a-9d55-04276880f7af</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>469da5f0-5831-454b-8ffc-a387cca3389c</Question>
+    <SortOrder>0</SortOrder>
+    <Description>All staff are required to wear hair nets or hats while in the kitchen.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>757c86bc-5982-45af-ad16-5d7d50db6749</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>469da5f0-5831-454b-8ffc-a387cca3389c</Question>
+    <SortOrder>1</SortOrder>
+    <Description>All staff are required to wear non-flammable clothing.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>e5f667df-687a-4bd4-b0e6-7a806cccf0da</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>ef8d7ee3-65e3-47d0-81c9-a413856a6727</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Mechanical dishwashing without detergent must have a disinfecting cycle with a minimum temperature of 90°C (195°F) for a minimum of 150 seconds.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>15b4e67c-8716-4e23-8803-9df22f656991</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>ef8d7ee3-65e3-47d0-81c9-a413856a6727</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Mechanical dishwashing must have a disinfecting cycle with a minimum temperature of 90°C (195°F) for a minimum of 45 seconds.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>c4e443e8-1446-4116-b0ed-d60e5a61a235</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>ef8d7ee3-65e3-47d0-81c9-a413856a6727</Question>
+    <SortOrder>2</SortOrder>
+    <Description>Mechanical dishwashing must have a pre-rinse cycle lasting at least 30 seconds.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>71c74b51-4a74-42d7-9238-41634a340c87</PhysicalQuantity>
+    <InspectionModelQuestion>ef8d7ee3-65e3-47d0-81c9-a413856a6727</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>1fe8e67d-dde9-4549-aea8-a53da2f3ce1c</PhysicalQuantity>
+    <InspectionModelQuestion>ef8d7ee3-65e3-47d0-81c9-a413856a6727</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>59822db7-d344-4918-8c49-d044754ae854</PhysicalQuantity>
+    <InspectionModelQuestion>ef8d7ee3-65e3-47d0-81c9-a413856a6727</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>f14ed85a-c344-4491-8850-f698870c5997</PhysicalQuantity>
+    <InspectionModelQuestion>ef8d7ee3-65e3-47d0-81c9-a413856a6727</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelCannedComment>
+    <Id>79385ecd-7591-42ca-a6e4-35240da0bd2b</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>817d15a7-5dd7-4990-839e-aae30f831a33</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Hot water must be at least 60 °C but no more that 80 °C.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>acf0e684-741a-4360-9a07-527ceb971e4d</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>817d15a7-5dd7-4990-839e-aae30f831a33</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Portable water supply in use.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>43801204-4c73-497b-ad5a-f60ffb74b9d2</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>817d15a7-5dd7-4990-839e-aae30f831a33</Question>
+    <SortOrder>2</SortOrder>
+    <Description>Private well on premises.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>1fe8e67d-dde9-4549-aea8-a53da2f3ce1c</PhysicalQuantity>
+    <InspectionModelQuestion>817d15a7-5dd7-4990-839e-aae30f831a33</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>f14ed85a-c344-4491-8850-f698870c5997</PhysicalQuantity>
+    <InspectionModelQuestion>817d15a7-5dd7-4990-839e-aae30f831a33</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>71c74b51-4a74-42d7-9238-41634a340c87</PhysicalQuantity>
+    <InspectionModelQuestion>817d15a7-5dd7-4990-839e-aae30f831a33</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelCannedComment>
+    <Id>8a47c015-8c8e-4b7e-b077-ecbc4dcf96db</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>6e22d920-b5e4-4904-91e7-b1ceb927c2c4</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Surfaces and utensils must be disinfected with detergent between each use.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>bf644865-9f26-4771-8903-0a020105afa4</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>8</SortOrder>
+    <Description>Equipment must be maintained so that it can be cleaned and sanitized. Equipment must be inspected, properly vented when required and function in accordance with its intended use</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>bf7cc4b3-4197-4e1a-b9f2-0a3f2480d217</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>15</SortOrder>
+    <Description>Single service utensils must not be used more than once</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>d82b71fe-10b4-4ca3-9796-198bfe5b281a</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>10</SortOrder>
+    <Description>Equipment, utensils and/or food contact surfaces are not food-grade and/or in a condition that allows for proper sanitation</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>7ab60916-7174-48fe-9e0b-2c1f736672cd</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>12</SortOrder>
+    <Description>Food packaging is not maintained in good condition and/or is not suitable for food</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>348da576-84b4-49a3-aa65-2fb6dc6286ae</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>7</SortOrder>
+    <Description>The regulations require that packaging materials or atmospheric packaging gases, where used shall not cause harm to people exposed to them and shall not pose a threat to the safety and suitability of food under the specified conditions of storage and use</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>01368b9b-e59c-4d12-b855-6ac6450c3b5f</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>11</SortOrder>
+    <Description>Food packages shall be in good condition and protect the integrity of the contents so that the food within is not exposed to adulteration, damage or potentially harmful contaminants</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>0428efbe-1d93-4dcd-a498-8da59f6e6ddc</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>6</SortOrder>
+    <Description>The regulations require that equipment must be located so that it is not exposed to any sources of contamination unrelated to the normal operations of the food premises</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>aeb559fe-d14d-495f-8069-9a74fa1c8bf3</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>1</SortOrder>
+    <Description>The regulations require that all containers used for bottling and packaging and all equipment be designed and constructed so that they are cleanable, located in a clean and dry location</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>d04e8eaf-dc92-4ef0-a6f3-ab384dcd24c6</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>5</SortOrder>
+    <Description>The regulations require that all food products received at a food premise be properly packaged and labelled, according to requirements outlined in the Food and Drugs Act and Regulation and the Consumer Packaging and Labelling Act and Regulations</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>76217d34-0110-4969-aa0f-b16cd29d4fc9</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>2</SortOrder>
+    <Description>The regulations require that all containers used for the storage of food, food ingredients, equipment and non-food materials such as utensils, linens, single-service and single-use utensils, and packaging be designed and constructed so that they are cleanable, located in a clean and dry location, restrict pest access and harbourage provide an environment which minimizes the deterioration of stored materials and protect food from contamination during storage</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>0abc2796-6d8b-4648-875b-b2f1d6078971</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>3</SortOrder>
+    <Description>The regulations require that all equipment that is fixed or not easily moved must be either sealed to adjoining walls, floors and equipment or spaced in such a manner to allow for cleaning under and around equipment</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>7f595afb-e3ff-4616-a96b-b5712dd70ebd</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>9</SortOrder>
+    <Description>Equipment was found to be in a state of disrepair, which can hinder proper cleaning and sanitation and/or is a public or staff safety concern. Operator must take corrective action immediately</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>1ff85293-407b-4e75-bf60-bd1899277e5d</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>16</SortOrder>
+    <Description>Single use utensils must be used only once and discarded</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>9766738d-e5db-4ecc-a2d4-c4d68c0cd8bb</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>4</SortOrder>
+    <Description>The regulations require that all food contact surfaces of equipment must be made of materials that are corrosion resistant, made of materials that do not pass on colours, odours or tastes to food and do not allow migration of unsafe substances into food. Food contact surfaces of equipment must be smooth and non-absorbent, free from breaks, cracks, open seams, chips, pits and similar imperfections. Equipment must be free from sharp internal angles, corners and crevices, finished to have smooth welds and joints, and accessible for cleaning and inspection</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>ef0939aa-8233-4f7d-8053-d19f3b06ffa2</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>13</SortOrder>
+    <Description>PUBLIC HEALTH RATIONALE:  Food contact surfaces and equipment may be sources of contamination. Food contact surfaces that are made from food grade materials and maintained in a condition that allows for proper sanitation will help to break the cycle of transmission.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>b2cbb94e-a874-4eb4-aa90-df4b54c4d221</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>17</SortOrder>
+    <Description>Water bottles or ice packaging is not maintained in good condition and/or is not suitable for water or ice</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>bd586b73-ad7f-47ae-8b7d-e390e51f362c</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>18</SortOrder>
+    <Description>Water to dipper well was turned off at the time of the inspection</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>2a70d215-f505-44c9-b213-ead5128fc361</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>14</SortOrder>
+    <Description>Single service utensils are being reused at the time of the inspection. Operator must take immediate action to stop reusing single use utensils</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>ba5a8f2e-7872-46ef-91d9-f9103bfb443a</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>9cda62cc-bf69-4392-b8ae-b8f67622f331</Question>
+    <SortOrder>0</SortOrder>
+    <Description>The regulations require all water bottles and ice packages be in good condition and protect the integrity of the contents so that the food within is not exposed to adulteration, damage or potentially harmful contaminants.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>43b258d2-3106-4a00-9ffe-03868d679e80</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>df6ecd47-9bc7-434c-9f99-c489a7819bc3</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Exterior doors may only be left open, if an appropriate screen is in place.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>c5271cb5-608d-43bd-9b7c-72c959ee64e2</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>df6ecd47-9bc7-434c-9f99-c489a7819bc3</Question>
+    <SortOrder>1</SortOrder>
+    <Description>All exterior doors must have weather-stripping to prevent vermin entry.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>bc2b88c1-5337-46ed-b91a-00100c87c9d8</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>b1033f27-6e6a-4d73-a9e1-c9bd5ecc888d</Question>
+    <SortOrder>0</SortOrder>
+    <Description>One certified food handler is required for every three kitchen staff members.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>d17b5ea4-5b40-42cf-b4bf-3e4bb4384daa</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>b1033f27-6e6a-4d73-a9e1-c9bd5ecc888d</Question>
+    <SortOrder>1</SortOrder>
+    <Description>At least one food handlers certification has expired.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>6a7fb3fc-4653-44cc-9c41-17309ff13903</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>7cc5a4aa-b076-4a5a-a5ca-cd7af21458fc</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Unused food products may only be reheated once, and only if refrigerated promptly.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>d4719d28-23b5-43d2-9811-a6eb4e46c0f8</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>7cc5a4aa-b076-4a5a-a5ca-cd7af21458fc</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Food must be reheated in appropriate containers.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>dc109c1a-75f9-4bd3-af66-cbac1ec96abe</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>7cc5a4aa-b076-4a5a-a5ca-cd7af21458fc</Question>
+    <SortOrder>2</SortOrder>
+    <Description>Reheating by placing food on vehicle engine block is not permitted.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>59822db7-d344-4918-8c49-d044754ae854</PhysicalQuantity>
+    <InspectionModelQuestion>7cc5a4aa-b076-4a5a-a5ca-cd7af21458fc</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>f14ed85a-c344-4491-8850-f698870c5997</PhysicalQuantity>
+    <InspectionModelQuestion>7cc5a4aa-b076-4a5a-a5ca-cd7af21458fc</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelCannedComment>
+    <Id>232e007f-f8e9-4eba-a557-69d84936db73</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2de4796d-3d85-4f62-9348-dd816810004c</Question>
+    <SortOrder>0</SortOrder>
+    <Description>Hot holding must be done in containers specifically designed for that purpose.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelMeasurement>
+    <PhysicalQuantity>f14ed85a-c344-4491-8850-f698870c5997</PhysicalQuantity>
+    <InspectionModelQuestion>2de4796d-3d85-4f62-9348-dd816810004c</InspectionModelQuestion>
+  </InspectionModelMeasurement>
+  <InspectionModelCannedComment>
+    <Id>be4b5c54-dab8-4cf4-9046-0ad1f8431785</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>a4c28707-c5b9-47d3-a4a0-e1c48a840785</Question>
+    <SortOrder>0</SortOrder>
+    <Description>The use of sinks for thawing food is only permitted if sink has more than three compartments, or additional sinks are available.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>9c57054e-d537-4748-85e3-27419e65fa66</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>a4c28707-c5b9-47d3-a4a0-e1c48a840785</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Washing uniforms or aprons dish water is not permitted.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>74382114-6d35-44ff-8755-03bdc3a7e9d6</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>20</SortOrder>
+    <Description>REHEATING FOODS   - Foods are not being sufficiently reheated to kill foodborne disease organisms.  All food processing must be done in a manner that makes the food safe to eat. AR 31/2006 s 24</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>4e9cb4af-13a2-40e2-9e19-29facd92a716</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>0</SortOrder>
+    <Description>B COOKING OF FOODS   - The indicated high risk foods are not being cooked to their minimum safe internal temperatures.  All food processing must be done in a manner that makes the food safe to eat. AR 31/2006 s 2(3) &amp; 24</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>ae1aeaae-0e3d-4d99-af6e-3378a77ebc8b</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>4</SortOrder>
+    <Description>B GENERAL TEMPERATURE CONTROL   - Perishable foods are not being kept at proper temperatures. Perishable foods must be kept at a temperature of less than 4*C or greater than 60*C at all times. AR 31/2006 s 52(f)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>78d4fd33-88d2-418c-b3cb-436e2d4a1232</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>5</SortOrder>
+    <Description>B HOT HOLDING OF FOODS   - Cooked high risk foods are being held below 60 C during hot holding.  Perishable foods must be kept at a temperature of less than 4*C or greater than 60*C at all times. AR 31/2006 s 52(f)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>284c7a16-c9e2-46dc-8b23-46f4bc9ca03f</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>7</SortOrder>
+    <Description>B REHEATING FOODS   - Foods are not being sufficiently reheated to kill foodborne disease organisms. All food processing must be done in a manner that makes the food safe to eat. AR 31/2006 s 2(3) &amp; 24</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>b4579cd0-f4ac-4a80-89cd-49651110fcf7</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>12</SortOrder>
+    <Description>EGG TEMPERATURE   - Eggs are not being held at proper temperatures.  Whole raw shell poultry eggs must be held at a temperature not exceeding 7 C. AR 31/2006 s 25(3)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>e38c8d1c-ba0e-412b-bd39-5755b88ecca5</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>17</SortOrder>
+    <Description>GENERAL TEMPERATURE CONTROL   - Perishable foods are not being kept at proper temperatures. Perishable foods must be kept at a temperature of less than 4*C or greater than 60*C at all times. AR 31/2006 s 2(6) &amp; s.25(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>31fb4138-9f7d-4af7-8286-7c6cd8811130</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>10</SortOrder>
+    <Description>COOKING OF FOODS   - The indicated high risk foods are not being cooked to their minimum safe internal temperatures.  All food processing must be done in a manner that makes the food safe to eat. AR 31/2006 s 24</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>bc93e5ec-e3ee-4e89-885f-7d28c39e8982</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>9</SortOrder>
+    <Description>B THERMOMETER AVAILABLE   - Functional thermometers are not available for monitoring foods.  A food grade thermometer must be kept in the refrigerator and monitored on a regular basis. AR 31/2006 s 52</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>ef045a83-8f38-4417-ba17-7ed8e6d5e3f1</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>3</SortOrder>
+    <Description>B FREEZER TEMPERATURE   - Freezer temperature is above 0 C.  All food that needs to be kept frozen in order to maintain its fitness for human consumtion must be and remain frozen while being stored or displayed. AR 31/2006 s 52(f)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>7ee9ae47-6b62-46fb-90c6-8982702c4c3b</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>21</SortOrder>
+    <Description>THAWING OF FOODS   - Frozen foods are being improperly thawed.  All food processing must be done in a manner that makes the food safe to eat. AR 31/2006 s 24</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>bbe999f6-07f4-4b96-8b4d-90e54adc0bef</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>15</SortOrder>
+    <Description>F THERMOMETER AVAILABLE   - Functional thermometers are not available for monitoring foods during cooling, cooking, reheating and/or display.  An operator shall ensure that all refrigeration and hot holding equipment used in the food establishment are capable of maintaining the respective temperatures required by section 26 and equipped with an accurate thermometer. AR 31/2006 s 2(3) &amp; 18(b)(ii)(iii)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>98a2a6c4-45b6-41b5-970b-a22a548a121f</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>16</SortOrder>
+    <Description>FREEZER TEMPERATURE   - Freezer temperature is above 0 C.  All food that needs to be kept frozen in order to maintain its fitness for human consumption must be and remain frozen while being stored or displayed. AR 31/2006 s 25(2)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>72624992-221c-43d9-8ebb-a8f0a7256979</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>18</SortOrder>
+    <Description>HOT HOLDING OF FOODS   - Cooked high risk foods are being held below 60 C during hot holding.  Perishable foods must be kept at a temperature of less than 4*C or greater than 60*C at all times. AR 31/2006 s 2(6) &amp; s.25(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>68395adf-63b8-4ccc-aaae-aa5d9ab3ca7c</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>8</SortOrder>
+    <Description>B THAWING OF FOODS   - Frozen foods are being improperly thawed. All food processing must be done in a manner that makes the food safe to eat. AR 31/2006 s 2(3) &amp; 24</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>51ab786c-f483-4a30-b8a2-b594b61c064f</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>13</SortOrder>
+    <Description>F EGG TEMPERATURE   - Eggs are not being held at proper temperatures.  Whole raw shell poultry eggs must be held at a temperature not exceeding 7 C. AR 31/2006 s 36 (2)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>dd8d6b08-108b-412c-8b17-b5edf1cc40fa</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>6</SortOrder>
+    <Description>B REFRIGERATION OF FOODS   - Foods under refrigeration are not being maintained at or below 4 C.  Perishable foods must be kept at a temperature of less than 4*C or greater than 60*C at all times. AR 31/2006 s 52(f)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>817057b2-3ad7-4feb-8c84-b5f1594651a8</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>1</SortOrder>
+    <Description>B COOLING OF FOODS   - Cooked hot food is not being chilled rapidly. All food processing must be done in a manner that makes the food safe to eat. AR 31/2006 s 2(3) &amp; 24</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>086a1193-ab32-40f6-b6ba-bbcd8b92dc63</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>22</SortOrder>
+    <Description>THERMOMETER AVAILABLE   - Functional thermometers are not available for monitoring foods during cooling, cooking, reheating and/or display.  An operator shall ensure that all refrigeration and hot holding equipment used in the food establishment are capable of maintaining the respective temperatures required by section 26 and equipped with an accurate thermometer. AR 31/2006 s 18(b)(ii)(iii)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>9afa2b7e-a208-4f75-9612-bcaa7b3fbad5</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>19</SortOrder>
+    <Description>REFRIGERATION OF FOODS   - Foods under refrigeration are not being maintained at or below 4 C.  Perishable foods must be kept at a temperature of less than 4*C or greater than 60*C at all times. AR 31/2006 s 2(6) &amp; s.25(1)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>44494d82-a579-4c46-b7b9-bd7be44f8bf3</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>14</SortOrder>
+    <Description>F GENERAL TEMPERATURE CONTROL   - Perishable foods are not being kept at proper temperatures. A stallholder must not offer for sale, distribute, provide, or otherwise make available to the public any perishable food unless it is kept at a temperature of less than 4*C or greater than 60*C at all times. AR 31/2006 s 36(1)(c)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>13b9156b-e8a6-4a0e-b6e1-bef1bb85c307</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>2</SortOrder>
+    <Description>B EGG TEMPERATURE   - Eggs are not being held at proper temperatures.  Whole raw shell poultry eggs must be held at a temperature not exceeding 7 C. AR 31/2006 s 52(f)</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>ba16bf20-9e3a-4a0b-9f58-e4d4299722a0</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>2e52c2a0-0326-4979-9a09-f38da6358c28</Question>
+    <SortOrder>11</SortOrder>
+    <Description>COOLING OF FOODS   - Cooked hot food is not being chilled rapidly. All food processing must be done in a manner that makes the food safe to eat. AR 31/2006 s 24</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>96a05ffa-ab3e-4b9a-abf7-06d90a7a1828</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>4</SortOrder>
+    <Description>Food handlers are not to engage in eating while in the process of food handling</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>864b1666-e5c1-4368-9d77-0b2449c61866</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>19</SortOrder>
+    <Description>Food handler attire is not suitable for food handling and could be a source of cross-contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>94ee36d2-acdc-40e6-a8b1-0e2762b7210a</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>34</SortOrder>
+    <Description>PUBLIC HEALTH RATIONALE:  Living quarters are not generally built to meet commercial requirements for the preparation or for the protection of food. </Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>3aef81d2-fd8f-40f0-9bc1-128f325183a4</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>6</SortOrder>
+    <Description>Hand washing is of the utmost importance to prevent the spread of food borne illness. Operator must ensure food handlers wash hands as often as necessary to prevent the contamination of food and food products</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>19e075e8-912b-4b8b-bac8-159fd47aef8a</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>12</SortOrder>
+    <Description>Food handler attire is not suitable for food handling and could be a source of cross-contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>27d3d904-02a7-4dbe-a377-2794bd84e232</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>37</SortOrder>
+    <Description>Food was not protected from public or environmental contamination. Operator must take immediate action to ensure food protection</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>67922e80-2a9e-43f9-bac5-31a8822bb9fc</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>31</SortOrder>
+    <Description>Poor food handler habits noted at the time of the inspection. Operator must take corrective action immediately</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>2efa14c0-f4ef-4def-9953-34c122d79e66</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>17</SortOrder>
+    <Description>Operator did not have a handwash station readily accessible at the time of the inspection. Operator must cease all food service until a handwash station is available in the booth and approved by a public health inspector</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>0a283a64-d15f-4171-b6c0-3b3272230854</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>1</SortOrder>
+    <Description>Evidence that food handling staff are smoking in the food preparation area. Operator must ensure smoking areas are completely separate from all food preparation and food storage areas</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>f10cf417-dd20-45a0-b487-3ffb74aae73e</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>3</SortOrder>
+    <Description>Food handler hair is not controlled and could be a source of cross-contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>228a4138-de12-4311-b0ad-43d9c810f39c</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>16</SortOrder>
+    <Description>Observed food handlers handling food in a manner that can result in food borne illness. Operator must take corrective action immediately</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>abe89f40-38c9-4cae-8f01-48c1046d5fea</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>10</SortOrder>
+    <Description>The regulations require food handlers to change plastic gloves after each use and discard the gloves after use to prevent cross-contamination issues.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>7933525c-08fe-4c0e-b70c-4e982d19d8ab</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>5</SortOrder>
+    <Description>Food handlers are not to wear jewellery while engaging in food handling</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>f3f1c433-c665-47e0-8549-5e072d4fa85f</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>22</SortOrder>
+    <Description>Individuals who suffer from illness are not to engage in food handling</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>4b1663cb-f1f9-41ad-8bc1-633b298799d3</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>26</SortOrder>
+    <Description>Food handler attire is not suitable for food handling and could be a source of cross-contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>edaf6c59-a921-43b2-98f8-6891cbb818de</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>24</SortOrder>
+    <Description>Poor food handler habits noted at the time of the inspection. Operator must take corrective action immediately</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>22babaf4-6c2f-4954-91dc-6ab3c62f09ab</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>38</SortOrder>
+    <Description>Foods must be covered or individually wrapped to prevent contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>41a9dc12-ab00-4c9f-b7cf-88c07849ab48</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>20</SortOrder>
+    <Description>Food handler hair is not controlled and could be a source of cross-contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>a4f5e7c8-fbf8-4948-84d4-8b7bf064b5b7</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>14</SortOrder>
+    <Description>Hand washing is of the utmost importance to prevent the spread of food borne illness. Operator must ensure food handlers wash hands as often as necessary to prevent the contamination of food and food products</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>fa0b6765-af92-4b29-98eb-8e0cee6b80ca</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>35</SortOrder>
+    <Description>Food was not protected from public or environmental contamination. Operator must take immediate action to ensure food protection</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>606aa2c0-b70b-4bde-80fb-9c79d12a1867</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>32</SortOrder>
+    <Description>The regulations require all living or sleeping quarters located adjacent to a food premises must be separated from rooms and areas used for food preparation or storage by complete partitioning and solid self-closing doors. </Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>4d34876d-cccb-4db3-b58f-ae904cbc7784</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>36</SortOrder>
+    <Description>Foods must be covered or individually wrapped with approved materials to prevent contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>4f5508b2-e6b5-40e8-9cab-afba9d9c67ff</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>13</SortOrder>
+    <Description>Food handler hair is not controlled and could be a source of cross-contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>b2b8ac84-dc93-403f-910a-b18ac48df6d3</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>28</SortOrder>
+    <Description>Hand washing is of the utmost importance to prevent the spread of food borne illness. Operator must ensure food handlers wash hands as often as necessary to prevent the contamination of food and food products</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>ade05411-8c4c-49c3-a3fe-bd6edbd2335c</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>30</SortOrder>
+    <Description>Observed food handlers handling food in a manner that can result in food borne illness. Operator must take corrective action immediately</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>12723a6e-269b-4e8e-ba39-bf08c7462dfa</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>25</SortOrder>
+    <Description>The regulations recommends all food handlers have approved food safety training.  Please call Wendy Hartley at 403-388-6689 for more information on food safety training courses.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>58f96140-adbf-41e3-aa5c-bfda3cee211f</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>11</SortOrder>
+    <Description>The regulations require food handlers to wash their hands before handling food products to prevent the cross contamination of food products</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>43a8f3cf-23c5-4332-b552-c0f05ef3b483</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>7</SortOrder>
+    <Description>Observed food handlers handling food in a manner that can result in food borne illness. Operator must take corrective action immediately</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>1ae20b47-6839-4d81-be48-c54373523b22</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>21</SortOrder>
+    <Description>Hand washing is of the utmost importance to prevent the spread of food borne illness. Operator must ensure food handlers wash hands as often as necessary to prevent the contamination of food and food products</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>c029b1c0-00b2-4c83-b24c-c586b9ff548c</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>2</SortOrder>
+    <Description>Food handler attire is not suitable for food handling and could be a source of cross-contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>e2a4d34a-b098-410d-ba78-c95922af7b15</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>0</SortOrder>
+    <Description>A person must not work as a food handler if prohibited from working by or under the Communicable Diseases Regulation (AR 238/85) to prevent the cross- contamination of foods.</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>bda10c7b-6eac-462c-8496-cb43ea06a8f6</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>9</SortOrder>
+    <Description>PUBLIC HEALTH RATIONALE:  Food handler health, attire and habits are important to prevent cross-contamination and break the cycle of transmission. </Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>425d4a3d-96ca-45fd-9bc9-d4b5731f59b1</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>27</SortOrder>
+    <Description>Food handler hair is not controlled and could be a source of cross-contamination</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>f9b1f965-b62b-480c-8335-dd8c79ab4e02</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>18</SortOrder>
+    <Description>Poor food handler habits noted at the time of the inspection. Operator must take corrective action immediately</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>43c252d0-45a8-46d6-b3e8-e33aca20116e</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>29</SortOrder>
+    <Description>Individuals who suffer from illness are not to engage in food handling</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>62b21639-2615-4cd6-b4ad-e500324b4878</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>8</SortOrder>
+    <Description>Poor food handler habits noted at the time of the inspection, such as lack of hand washing. Operator must take corrective action immediately</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>d872f112-0aa3-45bb-9b0e-e9d5180861f5</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>33</SortOrder>
+    <Description>Operator living quarters are not separated from commercial food establishment</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>d11d9024-61cf-4ae9-9fe3-ea0f01f83293</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>15</SortOrder>
+    <Description>Individuals who suffer from illness are not to engage in food handling</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+  <InspectionModelCannedComment>
+    <Id>3b90bb17-e399-48ca-a018-f2bd5e478c0a</Id>
+    <IsSelectedByDefaultWhenNonCompliant>false</IsSelectedByDefaultWhenNonCompliant>
+    <Question>abe8349b-9c1e-48e1-8d09-fbb4fa7874d6</Question>
+    <SortOrder>23</SortOrder>
+    <Description>Observed food handlers handling food in a manner that can result in food borne illness. Operator must take corrective action immediately</Description>
+    <Weight>0</Weight>
+  </InspectionModelCannedComment>
+</Entities>

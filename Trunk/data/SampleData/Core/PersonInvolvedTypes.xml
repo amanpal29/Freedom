@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <PersonInvolvedType>
+    <Id>4f327182-56b4-4b4a-88d2-2c808593e7b0</Id>
+    <Description>Family Member</Description>
+    <ExternalCode>FMEM</ExternalCode>
+    <InternalCode>FMEM</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>1</SortOrder>
+  </PersonInvolvedType>
+  <PersonInvolvedType>
+    <Id>7bc4c10c-1dfa-4b14-b965-54687aa5f205</Id>
+    <Description>Volunteer</Description>
+    <ExternalCode>VOL</ExternalCode>
+    <InternalCode>VOL</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>6</SortOrder>
+  </PersonInvolvedType>
+  <PersonInvolvedType>
+    <Id>ab16afdb-f6c5-4dc7-bd40-5ff45409118f</Id>
+    <Description>Person In Care</Description>
+    <ExternalCode>PIC</ExternalCode>
+    <InternalCode>PIC</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>3</SortOrder>
+  </PersonInvolvedType>
+  <PersonInvolvedType>
+    <Id>7ac4cc6f-b288-40d5-9964-8f5b297a846b</Id>
+    <Description>Public Health Employee</Description>
+    <ExternalCode>PHE</ExternalCode>
+    <InternalCode>PHE</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>4</SortOrder>
+  </PersonInvolvedType>
+  <PersonInvolvedType>
+    <Id>e126a172-c66c-4f14-b99e-d314e1032d93</Id>
+    <Description>Visitor</Description>
+    <ExternalCode>VIS</ExternalCode>
+    <InternalCode>VIS</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>2</SortOrder>
+  </PersonInvolvedType>
+  <PersonInvolvedType>
+    <Id>0801243a-325f-4272-911d-ded478c7deb8</Id>
+    <Description>Staff</Description>
+    <ExternalCode>STFF</ExternalCode>
+    <InternalCode>STFF</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>0</SortOrder>
+  </PersonInvolvedType>
+  <PersonInvolvedType>
+    <Id>5a401d90-174b-48b6-a488-eb166ea13213</Id>
+    <Description>Student</Description>
+    <ExternalCode>STU</ExternalCode>
+    <InternalCode>STU</InternalCode>
+    <IsActive>true</IsActive>
+    <SortOrder>5</SortOrder>
+  </PersonInvolvedType>
+</Entities>

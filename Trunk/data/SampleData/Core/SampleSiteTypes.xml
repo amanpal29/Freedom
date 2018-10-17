@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entities xmlns="http://schemas.hedgerowsoftware.com/hedgehogdata">
+  <SampleSiteType>
+    <Id>77c4a866-9ab2-4a06-9297-c63c24ff6326</Id>
+    <Description>Distribution</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>0</SortOrder>
+    <State>Unchanged</State>
+  </SampleSiteType>
+  <SampleSiteType>
+    <Id>0635c42c-268b-40db-b89a-c6c54126a4b1</Id>
+    <Description>Finished</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>2</SortOrder>
+    <State>Unchanged</State>
+  </SampleSiteType>
+  <SampleSiteType>
+    <Id>d6326734-172e-4067-a881-e1cf0cbb0eae</Id>
+    <Description>Raw</Description>
+    <IsActive>true</IsActive>
+    <SortOrder>1</SortOrder>
+    <State>Unchanged</State>
+  </SampleSiteType>
+</Entities>

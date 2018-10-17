@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SampleBatch xmlns="http://schemas.hedgerowsoftware.com/sampleimportdefinition/v1.0">
+  <LaboratoryCode>2603</LaboratoryCode>
+  <LaboratoryName>Interior Health</LaboratoryName>
+  <FileCreationDate>2012-06-12T00:00:00-07:00</FileCreationDate>
+  <TotalSampleRecords>1</TotalSampleRecords>
+  <SampleDetail>
+    <SampleNumber>2012032700011</SampleNumber>
+    <SampleTestTypeCode>WaterTest</SampleTestTypeCode>
+    <SampleTestType></SampleTestType>
+    <SampleReason>Audit</SampleReason>
+    <FacilityNumber>0611344</FacilityNumber>
+    <FacilityName>Caverhill Lodge Water System</FacilityName>
+    <SampleSiteTypeCode>WS14</SampleSiteTypeCode>
+    <SampleSiteType>Water System 14 or Less Connections</SampleSiteType>
+    <SampleSite>Lodge Hot water Tap</SampleSite>
+    <SampleCollectedDate>2012-06-11T00:00:00-07:00</SampleCollectedDate>
+    <SampleCollectedBy>M.Loney</SampleCollectedBy>
+    <SampleSubmittedDate>2012-06-12T00:00:00-07:00</SampleSubmittedDate>
+    <SampleSubmittedBy>M.Loney</SampleSubmittedBy>
+    <SampleAnalyzedDate>2012-06-13T00:00:00-07:00</SampleAnalyzedDate>
+    <SampleParameterDetail>
+      <ParameterCode>Coliform</ParameterCode>
+      <Parameter>Total Coliform</Parameter>
+      <UOMCode>TC Count/100ml</UOMCode>
+      <PreliminaryResult>4</PreliminaryResult>
+      <FinalResult>4</FinalResult>
+      <Technician></Technician>
+    </SampleParameterDetail>
+    <SampleParameterDetail>
+      <ParameterCode>E.Coli</ParameterCode>
+      <Parameter>Escherichia coli</Parameter>
+      <UOMCode>EC Count/100ml</UOMCode>
+      <PreliminaryResult>&lt;1</PreliminaryResult>
+      <FinalResult>&lt;1</FinalResult>
+      <Technician>Tom</Technician>
+    </SampleParameterDetail>
+  </SampleDetail>
+</SampleBatch>

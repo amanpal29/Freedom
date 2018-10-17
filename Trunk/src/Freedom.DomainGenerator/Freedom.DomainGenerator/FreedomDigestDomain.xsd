@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FreedomDigestDomain"
+    targetNamespace="http://schemas.automatedstocktrader.com/digestdefinition"
+    attributeFormDefault="unqualified" elementFormDefault="qualified"
+    xmlns="http://schemas.automatedstocktrader.com/digestdefinition"
+    xmlns:mstns="http://schemas.automatedstocktrader.com/digestdefinition"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="IndexHintsEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Ignore" />
+      <xs:enumeration value="Force" />
+      <xs:enumeration value="Identifier" />
+      <xs:enumeration value="Address" />
+      <xs:enumeration value="PhoneNumber" />
+      <xs:enumeration value="PostalCode" />
+      <xs:enumeration value="Email" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Domain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="Entity">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:choice maxOccurs="unbounded">
+                <xs:element maxOccurs="unbounded" name="Property">
+                  <xs:complexType>
+                    <xs:attribute name="Name" type="xs:string" use="required" />
+                    <xs:attribute name="Type" type="xs:string" use="required" />
+                    <xs:attribute name="Select" type="xs:string" use="required" />
+                    <xs:attribute name="DisplayName" type="xs:string" use="optional" />
+                    <xs:attribute name="OrderBy" type="xs:string" use="optional" />
+                    <xs:attribute name="Nullable" type="xs:boolean" use="optional" />
+                    <xs:attribute name="AutoProperty" type="xs:boolean" use="optional" />
+                    <xs:attribute name="FilterStyle" type="xs:string" use="optional" />
+                    <xs:attribute name="DefaultColumnIndex" type="xs:integer" use="optional" />
+                    <xs:attribute name="Groupable" type="xs:boolean" use="optional" />
+                    <xs:attribute name="Browsable" type="xs:boolean" use="optional" />
+                    <xs:attribute name="SearchWeight" type="xs:double" use="optional" />
+                    <xs:attribute name="IndexHints" type="IndexHintsEnum" use="optional" />
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="Entity.From" type="xs:string" minOccurs="1" maxOccurs="1" />
+                <xs:element name="CommonTable" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                    <xs:simpleContent>
+                      <xs:extension base="xs:string">
+                        <xs:attribute name="Name" type="xs:string" use="required" />
+                      </xs:extension>
+                    </xs:simpleContent>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:sequence>
+            <xs:attribute name="Name" type="xs:string" use="required" />
+            <xs:attribute name="Reportable" type="xs:boolean" use="optional" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

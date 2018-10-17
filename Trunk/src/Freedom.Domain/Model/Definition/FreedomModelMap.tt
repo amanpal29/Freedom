@@ -1,0 +1,67 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".msl" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="$(SolutionDir)/Freedom.DomainGenerator/Freedom.DomainGenerator/bin/$(Configuration)/Freedom.DomainGenerator.Dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Serialization" #>
+<#@ import namespace="Freedom.DomainGenerator" #>
+<#@ import namespace="Freedom.DomainGenerator.DomainDefinitionModel" #>
+<#
+
+	Domain domain = DomainBuilder.Load(Host.ResolvePath("FreedomDomain.xml"));
+
+#>
+<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+	<EntityContainerMapping StorageEntityContainer="FreedomModelStoreContainer" CdmEntityContainer="FreedomModelContainer">
+<#
+foreach (EntityType entityType in domain.EntityTypes.Where(p => !p.Abstract))
+{
+#>
+		<EntitySetMapping Name="<#= entityType.Name #>">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.<#= entityType.Name #>">
+				<MappingFragment StoreEntitySet="<#= entityType.Name #>">
+<#
+		foreach (EntityType subType in entityType.GetEntityTypeHierarchy())
+		{
+			foreach (Property property in subType.Properties)
+			{
+				if (property.Flags.HasFlag(PropertyFlags.StorageOnly)) continue;
+
+				if (!property.IsComplexType)
+				{
+#>
+					<ScalarProperty Name="<#= property.Name #>" ColumnName="<#= property.DatabaseColumnName #>" />
+<#
+				}
+				else
+				{
+#>
+					<ComplexProperty Name="<#= property.Name #>">
+<#
+
+					foreach (Property subProperty in property.ComplexType.Properties)
+					{
+#>
+						<ScalarProperty Name="<#= subProperty.Name #>" ColumnName="<#= property.Name #>_<#= subProperty.Name #>" />
+<#
+					}
+#>
+					</ComplexProperty>
+<#
+				}
+			}
+		}
+#>
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
+<#
+	}
+#>
+	</EntityContainerMapping>
+</Mapping>
