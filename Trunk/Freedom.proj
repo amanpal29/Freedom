@@ -55,7 +55,7 @@
   <Target Name="Setup">
     <PropertyGroup Condition="'$(TargetServer)' == 'dev'">
       <ConnectionString>Data Source=.;Initial Catalog=$(DatabaseName);Integrated Security=True;MultipleActiveResultSets=True</ConnectionString>
-      <ApplicationServer>hsldevapp1.ad.hedgerowsoftware.com</ApplicationServer>      
+      <ApplicationServer>HP-SPECTRE</ApplicationServer>      
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetServer)' == 'local'">
@@ -121,11 +121,10 @@
   </Target>  
 
   <Target Name="RebuildDatabase" DependsOnTargets="Setup">
-    <Error Text="You must specify either a ConnectionString, or a supported TargetServer" Condition="'$(ConnectionString)' == ''" />
-    <ExecuteSql ConnectionString="$(ConnectionString)" Files="deploy\BackupAllReports.sql" Condition="$(SupportsReportBackup) == true" />
+    <Error Text="You must specify either a ConnectionString, or a supported TargetServer" Condition="'$(ConnectionString)' == ''" />    
     <DeleteDatabase ConnectionString="$(ConnectionString)" />
     <CreateFreedomDatabase ConnectionString="$(ConnectionString)" DatabaseType="Server" />
-    <ImportFreedomData ConnectionString="$(ConnectionString)" Files="@(SampleDataFiles)" />
+    <!--<ImportFreedomData ConnectionString="$(ConnectionString)" Files="@(SampleDataFiles)" />-->
     <ExecuteSql ConnectionString="$(ConnectionString)" Files="deploy\SetupFreedomServerPermissions.sql" />
     <ExecuteSql ConnectionString="$(ConnectionString)" Files="deploy\ResetAllPasswords.sql" />
     <ExecuteSql ConnectionString="$(ConnectionString)" Files="$(CustomDatabaseScript)" Condition="'$(CustomDatabaseScript)' != '' AND Exists($(CustomDatabaseScript))" />    

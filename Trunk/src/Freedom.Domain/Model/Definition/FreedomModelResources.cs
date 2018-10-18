@@ -18,7 +18,7 @@ namespace Freedom.Domain.Model.Definition
             Assembly assembly = Assembly.GetExecutingAssembly();
 
             string qualifiedName = string.Join(".", typeof(FreedomModelResources).Namespace, resourceName);
-
+            
             Stream stream = assembly.GetManifestResourceStream(qualifiedName);
 
             if (stream == null) return null;

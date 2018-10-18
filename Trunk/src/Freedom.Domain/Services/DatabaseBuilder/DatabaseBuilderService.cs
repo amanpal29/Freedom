@@ -134,7 +134,7 @@ namespace Freedom.Domain.Services.DatabaseBuilder
             await SetApplicationSettingAsync(connection, "GlobalId", globalId.ToString(), cancellationToken);
         }
 
-        private static async Task CreateAdminUserAndRoleAsync(DbConnection connection, CancellationToken cancellationToken)
+        private static async Task CreateAdminUserAsync(DbConnection connection, CancellationToken cancellationToken)
         {
             Dictionary<string, object> values = new Dictionary<string, object>();
 
@@ -154,23 +154,7 @@ namespace Freedom.Domain.Services.DatabaseBuilder
             values.Add("ModifiedById", User.SuperUserId);
             values.Add("ModifiedDateTime", modifyTime);
             values.Add("ForcePasswordChange",false);
-            await connection.InsertRecordAsync("User", values, cancellationToken);
-
-            // Create the Administrators Security Role
-            values.Clear();
-            values.Add("Id", Role.AdministratorsId);
-            values.Add("Name", "Administrators");
-            values.Add("CreatedById", User.SuperUserId);
-            values.Add("CreatedDateTime", modifyTime);
-            values.Add("ModifiedById", User.SuperUserId);
-            values.Add("ModifiedDateTime", modifyTime);
-            await connection.InsertRecordAsync("Role", values, cancellationToken);
-
-            // Add the Administrator to the Administrators Role
-            values.Clear();
-            values.Add("UserId", User.SuperUserId);
-            values.Add("RoleId", Role.AdministratorsId);
-            await connection.InsertRecordAsync("UserRole", values, cancellationToken);
+            await connection.InsertRecordAsync("User", values, cancellationToken);           
         }
 
         private static async Task CreateIdTableTypeAsync(DbConnection connection, CancellationToken cancellationToken)
@@ -363,8 +347,8 @@ namespace Freedom.Domain.Services.DatabaseBuilder
 
                 List<string> scripts = new List<string>();
                 scripts.Add(FreedomModelResources.CreateDatabaseObjectsScript);                               
-                scripts.Add(FreedomModelResources.CreateServerDatabaseObjectsScript);                
-
+                scripts.Add(FreedomModelResources.CreateServerDatabaseObjectsScript);
+                
                 List<string> batches = string.Join("\r\nGO\r\n", scripts)
                     .Split(new[] {"\r\nGO\r\n"}, StringSplitOptions.RemoveEmptyEntries)
                     .Where(x => !string.IsNullOrWhiteSpace(x))
@@ -390,7 +374,7 @@ namespace Freedom.Domain.Services.DatabaseBuilder
                     }
                 }
 
-                await CreateAdminUserAndRoleAsync(connection, cancellationToken);
+                await CreateAdminUserAsync(connection, cancellationToken);
                 await SetDatabaseGlobalIdentifierAsync(connection, cancellationToken);
                 await SetDatabaseRevisionAsync(connection, cancellationToken);
 

@@ -293,11 +293,11 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ComplexTypeTemplate.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\Definition\CreateDatabase.sql">
+    <EmbeddedResource Include="Model\Definition\CreateDatabase.sql">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CreateDatabase.tt</DependentUpon>
-    </Content>
+    </EmbeddedResource>
     <Content Include="Model\Definition\CreateDatabase.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>CreateDatabase.sql</LastGenOutput>
@@ -340,16 +340,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Model\Definition\FreedomConceptualModel.csdl">
+    <EmbeddedResource Include="Model\Definition\FreedomConceptualModel.csdl">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FreedomConceptualModel.tt</DependentUpon>
-    </None>
-    <None Include="Model\Definition\FreedomModelMap.msl">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Definition\FreedomModelMap.msl">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FreedomModelMap.tt</DependentUpon>
-    </None>
+    </EmbeddedResource>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
