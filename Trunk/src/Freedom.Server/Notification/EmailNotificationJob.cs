@@ -20,9 +20,7 @@ namespace Freedom.Server.Notification
         private readonly FreedomLocalContext _db = IoC.Get<FreedomLocalContext>();
         private readonly MailMessage _message = new MailMessage();
                 
-        private readonly Guid _rootEntityId;
-
-        private EntityBase _rootEntity;
+        private readonly Guid _rootEntityId;        
 
         public EmailNotificationJob(Guid rootEntityId)
         {
@@ -87,16 +85,7 @@ namespace Freedom.Server.Notification
 
                 throw new InvalidOperationException(
                     "The SMTP Host has not been specified in the server's configuration.");
-            }
-
-            if (_rootEntity == null)
-            {
-                Log.ErrorFormat("Unable to find entity with id {1}", _rootEntityId);
-
-                CommitEmailNotification(NotificationFailureReason.InvalidRootEntity);
-                
-                return false;
-            }
+            }            
 
             try
             {

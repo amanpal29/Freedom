@@ -57,7 +57,7 @@ namespace Freedom.Domain.Infrastructure
 
         private static async Task ReindexAllTablesAsync(CancellationToken cancellationToken)
         {
-            
+            await Task.CompletedTask;
         }
     }
 }
