@@ -1,0 +1,107 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".ssdl" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="$(SolutionDir)/Freedom.DomainGenerator/Freedom.DomainGenerator/bin/$(Configuration)/Freedom.DomainGenerator.Dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Serialization" #>
+<#@ import namespace="Freedom.DomainGenerator" #>
+<#@ import namespace="Freedom.DomainGenerator.DomainDefinitionModel" #>
+<#
+
+	Domain domain = DomainBuilder.Load(Host.ResolvePath("FreedomDomain.xml"));
+
+#>
+<?xml version="1.0" encoding="utf-8" ?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl"
+        xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator"
+        xmlns:h="http://schemas.automatedstocktrader.com/storage"
+        Namespace="FreedomModel.Store" Alias="Self"
+        Provider="System.Data.SqlClient" ProviderManifestToken="2008">
+	<EntityContainer Name="FreedomModelStoreContainer">
+<#
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ENTITY SETS
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		foreach (EntityType entityType in domain.EntityTypes.Where(e => !e.Abstract))
+		{
+#>
+		<EntitySet Name="<#= entityType.Name #>" EntityType="Self.<#= entityType.Name #>" store:Type="Tables" Schema="dbo" />
+<#
+		}
+#>
+<#
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ASSOCIATION SETS
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		foreach (Association association in domain.Associations)
+		{
+#>
+		<AssociationSet Name="<#= association.Name #>" Association="Self.<#= association.Name #>">
+			<End Role="<#= association.PrincipalRole #>" EntitySet="<#= association.PrincipalType #>" />
+			<End Role="<#= association.DependentRole #>" EntitySet="<#= association.DependentType #>" />
+		</AssociationSet>
+<#
+		}
+#>
+	</EntityContainer>
+<#
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ENTITY TYPES
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		foreach (EntityType entityType in domain.EntityTypes.Where(e => !e.Abstract))
+		{
+#>
+	<EntityType Name="<#= entityType.Name #>">
+		<Key>
+<#
+		foreach (Property property in entityType.GetFlattenedProperties().Where(p => p.IsPrimaryKey))
+		{
+#>
+			<PropertyRef Name="<#= property.Name #>" />
+<#
+		}
+#>
+		</Key>
+<#
+		foreach (Property property in entityType.GetFlattenedProperties())
+		{
+#>
+		<Property Name="<#= property.DatabaseColumnName #>" Type="<#= property.StorageType #>"<#= property.Nullable  ? "" : " Nullable=\"false\"" #><#= property.Flags.HasFlag(PropertyFlags.StorageOnly) ? " h:StorageOnly=\"true\"" : "" #> />
+<#
+		}
+#>
+	</EntityType>
+<#
+		}
+#>
+<#
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// ASSOCIATIONS
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		foreach (Association association in domain.Associations)
+		{
+#>
+	<Association Name="<#= association.Name #>">
+		<End Role="<#= association.PrincipalRole #>" Type="Self.<#= association.PrincipalType #>"<#= association.PrincipalMultiplicity.GetAttribute() #>>		
+		  <OnDelete Action="<#= association.OnDelete #>" />
+		</End>
+		<End Role="<#= association.DependentRole #>" Type="Self.<#= association.DependentType #>"<#= association.DependentMultiplicity.GetAttribute() #> />
+		<ReferentialConstraint>
+			<Principal Role="<#= association.PrincipalRole #>">
+				<PropertyRef Name="<#= association.PrincipalColumnName #>"/>
+			</Principal>
+			<Dependent Role="<#= association.DependentRole #>">
+				<PropertyRef Name="<#= association.DependentColumnName #>"/>
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+<#
+		}
+#>
+</Schema>

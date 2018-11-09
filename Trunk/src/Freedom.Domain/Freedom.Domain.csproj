@@ -313,6 +313,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>FreedomModelMap.msl</LastGenOutput>
     </Content>
+    <Content Include="Model\Definition\FreedomStorageModelSqlClient.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FreedomStorageModelSqlClient.ssdl</LastGenOutput>
+    </Content>
     <Content Include="Model\EntityTypeTemplate.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EntityTypeTemplate.cs</LastGenOutput>
@@ -349,6 +353,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FreedomModelMap.tt</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Definition\FreedomStorageModelSqlClient.ssdl">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreedomStorageModelSqlClient.tt</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
   </ItemGroup>
