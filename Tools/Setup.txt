@@ -1,0 +1,19 @@
+HTTPCONFIG TO BIND SSL AND PORTS:
+
+1: Create a self signed certificate using IIS Manager
+	- Name the certificate FreedomServer (just for bestpractice and to easily identify the certificate)
+2: Bind SSL to Port
+	- Port: 8020
+	- IP Address: 0.0.0.0 
+	- GUID: {00000000-0000-0000-0000-000000000000}
+	- Cert Name: FreedomServer
+3: Register URL
+	- URL: https://+:8020/Freedom/
+	- Security Group or user names: System, Administrators, SstpSvc
+	- Permission: Register (Allow)
+
+
+
+Some useful links:
+http://www.stevestechspot.com/ABetterHttpcfg.aspx
+https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=12&cad=rja&uact=8&ved=2ahUKEwikksaLi87eAhUjj1QKHUKxCVQQFjALegQICBAB&url=https%3A%2F%2Fdocs.connectwise.com%2FConnectWise_Control_Documentation%2FOn-premises%2FAdvanced_setup%2FSSL_certificate_installation%2FInstall_and_bind_an_SSL_certificate_on_a_Windows_server&usg=AOvVaw2getndGQrdWK-VG-8RZbEJ
