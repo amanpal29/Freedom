@@ -8,6 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using log4net;
+using System;
+using System.Configuration;
+using System.Reflection;
+
 namespace Freedom.Client.Properties
 {
 
@@ -17,14 +22,50 @@ namespace Freedom.Client.Properties
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
     {
 
-        private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
-        public static Settings Default
+        private Settings()
         {
-            get
+            if (!HasSettings)
             {
-                return defaultInstance;
+                try
+                {
+                    Upgrade();
+                }
+                catch (ConfigurationErrorsException exception)
+                {
+                    Log.Warn("An error occurred while trying to upgrade settings from a previous version.", exception);
+                }
+
+                HasSettings = true;
+                Save();
             }
+        }
+                
+        public static Settings Default { get; } = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+
+        [UserScopedSetting]
+        [DefaultSettingValue("False")]
+        public bool HasSettings
+        {
+            get { return (bool)this["HasSettings"]; }
+            set { this["HasSettings"] = value; }
+        }
+
+        [UserScopedSetting]
+        [DefaultSettingValue("")]
+        public string LastLoggedInUserName
+        {
+            get { return (string)this["LastLoggedInUserName"]; }
+            set { this["LastLoggedInUserName"] = value; }
+        }
+
+        [UserScopedSetting]
+        [DefaultSettingValue("")]
+        public DateTime LastLoggedInDateTime
+        {
+            get { return (DateTime)this["LastLoggedInDateTime"]; }
+            set { this["LastLoggedInDateTime"] = value; }
         }
     }
 }

@@ -54,7 +54,20 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit">
+      <HintPath>..\..\lib\WPFToolkit\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -73,6 +86,56 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Features\AuthenticateUser\BasicAuthenticationLoginViewModel.cs" />
+    <Compile Include="Features\AuthenticateUser\LoginDialog.xaml.cs">
+      <DependentUpon>LoginDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Features\AuthenticateUser\LoginViewModel.cs" />
+    <Compile Include="Infrastructure\ApplicationSettings.cs" />
+    <Compile Include="Infrastructure\Dialogs\ViewModels\ForcePasswordChangeDialogViewModel.cs" />
+    <Compile Include="Infrastructure\Dialogs\ViewModels\PasswordDialogViewModel.cs" />
+    <Compile Include="Infrastructure\Dialogs\ViewModels\RetryOrCancelViewModel.cs" />
+    <Compile Include="Infrastructure\LookupData\ApplicationDataLookupRepository.cs" />
+    <Compile Include="Infrastructure\LookupData\ChildLookupCache.cs" />
+    <Compile Include="Infrastructure\LookupData\EnumDataProvider.cs" />
+    <Compile Include="Infrastructure\LookupData\ILookupRepository.cs" />
+    <Compile Include="Infrastructure\LookupData\LookupCache.cs" />
+    <Compile Include="Infrastructure\LookupData\LookupDataMemento.cs" />
+    <Compile Include="Infrastructure\LookupData\LookupTable.cs" />
+    <Compile Include="Infrastructure\LookupData\MonthsOfYearDataProvider.cs" />
+    <Compile Include="Infrastructure\WindowPositionExtensions.cs" />
+    <Compile Include="Resources\FontIcons.cs" />
+    <Compile Include="Services\Command\CommandServiceManualRetryDecorator.cs" />
+    <Compile Include="Services\Command\CommandServiceProxy.cs" />
+    <Compile Include="Services\Command\CommandServiceRefreshDecorator.cs" />
+    <Compile Include="Services\Repository\EntityRepositoryAutoRetryDecorator.cs" />
+    <Compile Include="Services\Repository\EntityRepositoryProxy.cs" />
+    <Compile Include="Services\Status\StatusServiceProxy.cs" />
+    <Compile Include="Services\Time\CachingNetworkTimeService.cs" />
+    <Compile Include="ViewModel\CurrentUserViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="Properties\WindowPositionSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>WindowPositionSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\SystemStatusViewModel.cs" />
+    <Page Include="Features\AuthenticateUser\LoginDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Infrastructure\Dialogs\DialogWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Infrastructure\Dialogs\Views\CustomMessageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Infrastructure\ExceptionHandling\ExceptionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -81,6 +144,37 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Config\ClientBootstrapper.cs" />
+    <Compile Include="Infrastructure\Dialogs\AsyncDialogButtonViewModel.cs" />
+    <Compile Include="Infrastructure\Dialogs\Dialog.cs" />
+    <Compile Include="Infrastructure\Dialogs\DialogButtonOptions.cs" />
+    <Compile Include="Infrastructure\Dialogs\DialogButtonViewModel.cs" />
+    <Compile Include="Infrastructure\Dialogs\DialogButtonViewModelBase.cs" />
+    <Compile Include="Infrastructure\Dialogs\DialogButtonViewModelCollection.cs" />
+    <Compile Include="Infrastructure\Dialogs\DialogService.cs" />
+    <Compile Include="Infrastructure\Dialogs\DialogViewModel.cs" />
+    <Compile Include="Infrastructure\Dialogs\DialogWindow.xaml.cs">
+      <DependentUpon>DialogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Dialogs\ViewModels\CancelMessageViewModel.cs" />
+    <Compile Include="Infrastructure\Dialogs\ViewModels\CustomMessageViewModel.cs" />
+    <Compile Include="Infrastructure\Dialogs\ViewModels\MessageBoxViewModel.cs" />
+    <Compile Include="Infrastructure\Dialogs\Views\CustomMessageView.xaml.cs">
+      <DependentUpon>CustomMessageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\ExceptionHandling\CommunicationExceptionHandler.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\CustomMessageExceptionHandler.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\EmptyLookupExceptionHandler.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\ExceptionView.xaml.cs">
+      <DependentUpon>ExceptionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\ExceptionHandling\ExceptionViewModel.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\HttpClientErrorHandler.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\IHttpClientErrorHandler.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\PopUpNullReferenceExceptionSilencer.cs" />
+    <Compile Include="Infrastructure\ExceptionHandling\WindowedExceptionHandler.cs" />
+    <Compile Include="Infrastructure\FreedomHttpClientFactory.cs" />
+    <Compile Include="Infrastructure\Images\ImageFactory.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -110,12 +204,31 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Properties\WindowPositionSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>WindowPositionSettings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Freedom.Domain\Freedom.Domain.csproj">
+      <Project>{98293548-9098-4e26-b38b-7fa2d79e2ab1}</Project>
+      <Name>Freedom.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freedom.UI\Freedom.UI.csproj">
+      <Project>{74468757-beb7-41b5-ba17-92a5827d8599}</Project>
+      <Name>Freedom.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freedom\Freedom.csproj">
+      <Project>{7580a08c-5c10-49e4-b990-0e2d8300035d}</Project>
+      <Name>Freedom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
