@@ -6,6 +6,11 @@
              Startup="ApplicationStartup" Exit="ApplicationExit"
              DispatcherUnhandledException="UnhandledException">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/Converters.xaml" />
+                <ResourceDictionary Source="Themes/ColorsAndBrushes.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

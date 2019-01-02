@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Freedom.Client.Themes">
+
+    <!-- Errors (Reds) -->
+    <Color x:Key="ErrorColor">#FFCC0000</Color>
+    <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource ErrorColor}" />
+
+    <Color x:Key="DarkErrorColor">#FF6E0404</Color>
+    <SolidColorBrush x:Key="DarkErrorBrush" Color="{StaticResource DarkErrorColor}"/>
+
+    <!-- Warnings (Yellows) -->
+    <Color x:Key="WarningColor">#FFFFE13F</Color>
+    <SolidColorBrush x:Key="WarningYellowBrush" Color="{StaticResource WarningColor}"/>
+
+    <Color x:Key="WarningLightColor">#FFFFF7C3</Color>
+    <SolidColorBrush x:Key="WarningLightBrush" Color="{StaticResource WarningLightColor}"/>
+
+    <Color x:Key="WarningMediumColor">#FFFFEF86</Color>
+    <SolidColorBrush x:Key="WarningMediumBrush" Color="{StaticResource WarningMediumColor}"/>
+
+    <Color x:Key="WarningBorderColor">#FFDDC37D</Color>
+    <SolidColorBrush x:Key="WarningBorderBrush" Color="{StaticResource WarningBorderColor}"/>
+
+
+</ResourceDictionary>

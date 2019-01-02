@@ -29,9 +29,8 @@
                         Margin="10" Orientation="Horizontal" 
                         HorizontalAlignment="Center" >
                 
-                <TextBlock Style="{DynamicResource Header1Style}" 
-                            VerticalAlignment="Center" Margin="10,0,0,0"
-                            Text="Freedom"/>
+                <TextBlock VerticalAlignment="Center" Margin="10,0,0,0"
+                           Text="Freedom"/>
             </StackPanel>            
 
             <Label Grid.Column="0" Grid.Row="1" 
@@ -54,9 +53,8 @@
                         Margin="3,3,3,0"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top">
-                <Viewbox Style="{StaticResource XSViewboxStyle}">
-                    <TextBlock Style="{StaticResource StaticIconInHeaderTextBlockStyle}"
-                               Text="WarningIcon" />
+                <Viewbox>
+                    <TextBlock Text="WarningIcon" />
                 </Viewbox>
                 <TextBlock Text="Caps Lock is on"
                            Margin="0"
@@ -67,9 +65,9 @@
             <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" 
                          Margin="0,0,5,0" HorizontalAlignment="Right" >
                 <Button Command="{Binding AuthenticateCommand}" IsDefault="True" 
-                        Style="{DynamicResource DialogButtonStyle}" Content="Login" Margin="0,5,5,0"/>
+                        Content="Login" Margin="0,5,5,0"/>
                 <Button Command="{Binding CancelCommand}" IsCancel="True" 
-                        Style="{DynamicResource DialogButtonStyle}" Content="Cancel" Margin="5,5,0,0"/>
+                        Content="Cancel" Margin="5,5,0,0"/>
             </StackPanel>
 
             <!--Login Error AuthenticationStatusMessage-->
@@ -80,7 +78,7 @@
                         VerticalAlignment="Top">
                 <Viewbox Margin="0,0,5,0">
                     <Viewbox.Style>
-                        <Style TargetType="{x:Type Viewbox}" BasedOn="{StaticResource XSViewboxStyle}">
+                        <Style TargetType="{x:Type Viewbox}">
                             <Setter Property="Visibility" Value="Hidden"/>
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding AuthenticationStatusMessage}" 
@@ -90,16 +88,14 @@
                             </Style.Triggers>
                         </Style>
                     </Viewbox.Style>
-                    <TextBlock Style="{StaticResource StaticIconInHeaderTextBlockStyle}"
-                               Text="ErrorIcon">
+                    <TextBlock Text="ErrorIcon">
                     </TextBlock>
                 </Viewbox>
                 <TextBlock VerticalAlignment="Center"
                            Margin="0"
                            Text="{Binding AuthenticationStatusMessage}">
                     <TextBlock.Style>
-                        <Style TargetType="{x:Type TextBlock}"
-                               BasedOn="{StaticResource BaseWorkflowPageTextBlockStyle}">
+                        <Style TargetType="{x:Type TextBlock}">
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding AuthenticationStatusMessage}"
                                              Value="Invalid username or password">
@@ -111,23 +107,6 @@
                     </TextBlock.Style>
                 </TextBlock>
             </StackPanel>
-
-            <!--Image/Automated Trading Software Logo/Website/Version-->
-            <Image Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Grid.RowSpan="3"
-                   Source="/FreedomClient;component/Resources/AppWideIcons/spike_black.png" 
-                   Opacity="0.2" Margin="-40,0,0,-50" 
-                   HorizontalAlignment="Left" 
-                   Width="300" Height="216" />
-            <StackPanel  Grid.Row="5" Grid.Column="0"
-                         Margin="-25,0,0,-25"
-                         Orientation="Horizontal" 
-                         VerticalAlignment="Bottom">
-                <TextBlock Style="{DynamicResource Header3Style}" 
-                           Text="Version:"/>
-                <TextBlock Style="{DynamicResource Header3Style}" 
-                           Text="{Binding Version}" 
-                           Padding="0" Margin="0,5,5,5"/>
-            </StackPanel>            
         </Grid>
     </Border>
 </Window>
