@@ -11,7 +11,7 @@ using System.Windows.Media;
 
 namespace Freedom.Client.ViewModel
 {
-    internal class MainViewModel : WindowViewModel, IRefreshable
+    public class MainViewModel : WindowViewModel, IRefreshable
     {
         #region Fields
                 

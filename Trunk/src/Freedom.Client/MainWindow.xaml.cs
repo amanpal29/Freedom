@@ -26,7 +26,7 @@ namespace Freedom.Client
         private bool _forceClose;
         private int _initialContentRendered;
 
-        internal MainWindow(MainViewModel viewModel = null)
+        public MainWindow(MainViewModel viewModel = null)
         {
             DataContext = viewModel ?? new MainViewModel();
 

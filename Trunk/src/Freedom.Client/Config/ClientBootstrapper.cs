@@ -25,6 +25,7 @@ using Freedom.Client.Services.Command;
 using Freedom.UI;
 using Freedom.UI.ViewModels;
 using Freedom.Client.Infrastructure.LookupData;
+using Freedom.Domain.Model.Definition;
 
 namespace Freedom.Client.Config
 {
@@ -32,6 +33,7 @@ namespace Freedom.Client.Config
     {
         private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
+        private const string DefaultProvider = "System.Data.SqlClient";
         private const string ClientTierName = "Client";
         private const string InsuffientPermissionMessage = "You do not have the required permission to perform this operation.  Please contact your Administrator.";
 
@@ -65,8 +67,9 @@ namespace Freedom.Client.Config
 
             // BackgroundWorkQueue
             container.Use<IBackgroundWorkQueue>(new TaskBackgroundWorkQueue());
-                        
+
             // QueryDataProvider
+            container.Use(FreedomModelResources.GetMetadataWorkspaceForProvider(DefaultProvider));
             QueryDataProviderCollection dataProviders = new QueryDataProviderCollection();
             dataProviders.Add(new ModelEntityDataProvider());                        
             container.Use<IQueryDataProviderCollection>(dataProviders);

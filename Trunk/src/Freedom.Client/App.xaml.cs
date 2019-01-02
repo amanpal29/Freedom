@@ -6,8 +6,8 @@ using Freedom.Client.Infrastructure.Dialogs.ViewModels;
 using Freedom.Client.Properties;
 using Freedom.Client.ViewModel;
 using Freedom.Domain.Exceptions;
+using Freedom.Domain.Infrastructure.ExceptionHandling;
 using Freedom.Domain.Interfaces;
-using Freedom.Domain.Services.Repository.PrincipalCache;
 using Freedom.Domain.Services.Security;
 using Freedom.Domain.Services.Time;
 using log4net;
@@ -16,7 +16,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
-using System.Data.Common;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -26,6 +25,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace Freedom.Client
 {
@@ -201,6 +201,11 @@ namespace Freedom.Client
             return timeSpan;
         }
 
+        private void ApplicationExit(object sender, ExitEventArgs e)
+        {
+            
+        }
+
         #endregion
 
         #region Main Window
@@ -261,6 +266,17 @@ namespace Freedom.Client
         }
 
         #endregion
+
+        #endregion
+
+        #region Last Chance Exception Handling
+
+        private void UnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+            IExceptionHandlerService exceptionHandlerService = IoC.Get<IExceptionHandlerService>();
+            exceptionHandlerService.HandleException(e.Exception, ExceptionContextFlags.LastChance);
+            e.Handled = true;
+        }
 
         #endregion
     }
