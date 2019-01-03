@@ -100,6 +100,7 @@
     <Property Name="HomeEmailAddress" Type="String" />
     <Property Name="HomeAddress" Type="MailingAddress" Nullable="false" />
     <Property Name="ForcePasswordChange" Type="Boolean" Nullable="false" DefaultValue="true" />
+    <Relationship Name="Roles" RelatedType="Role" RelationshipType="ManyToMany" Intermediate="UserRole" />
     <Index Name="IDX_Id">
       <PropertyRef Name="Id" />
       <PropertyRef Name="Name" />
@@ -109,5 +110,15 @@
       <PropertyRef Name="Domain" />
       <PropertyRef Name="Username" />
     </Index>
+  </EntityType>
+
+  <!-- Role -->
+  <EntityType Name="Role" BaseType="AggregateRoot" Reportable="false">
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Relationship Name="Permissions" RelatedType="Permission" RelationshipType="Children" />
+  </EntityType>
+  <EntityType Name="Permission" BaseType="EntityBase">
+    <Property Name="Description" Type="String" />
+    <Relationship Name="Role" RelatedType="Role" RelationshipType="Parent" />
   </EntityType>
 </Domain>

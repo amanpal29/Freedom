@@ -27,32 +27,70 @@ namespace Freedom.Domain.Model
 {
 	[DataContract(Namespace = Namespace)]
 
-	public abstract partial class NumberedRoot : AggregateRoot
+	public partial class Permission : EntityBase
 	{
-		[DataMember(EmitDefaultValue = false)]
-		public string Number
+		public override string EntityTypeName
 		{
-			get { return _number; }
+			get { return "Permission"; }
+		}
+
+		[DataMember(EmitDefaultValue = false)]
+		public string Description
+		{
+			get { return _description; }
 			set
 			{
-				if (_number == value) return;
-				_number = value;
+				if (_description == value) return;
+				_description = value;
 				MarkAsChanged();
 				OnPropertyChanged();
 			}
 		}
-		private string _number;
+		private string _description;
+
+		[DataMember(EmitDefaultValue = false)]
+		public Guid RoleId
+		{
+			get { return _roleId; }
+			set
+			{
+				if (_roleId == value) return;
+				_roleId = value;
+				MarkAsChanged();
+				OnPropertyChanged();
+			}
+		}
+		private Guid _roleId;
+
+		[DataMember(EmitDefaultValue = false)]
+		public virtual Role Role
+		{
+			get { return _role; }
+			set
+			{
+				if (object.ReferenceEquals(_role, value)) return;
+
+				_role = value;
+
+				if (value != null)
+					RoleId = value.Id;
+
+				OnPropertyChanged();
+			}
+		}
+		private Role _role;
 
 		public override void Copy(Entity entity)
 		{
 			base.Copy(entity);
 
-			NumberedRoot source = entity as NumberedRoot;
+			Permission source = entity as Permission;
 
 			if (source == null)
-				throw new ArgumentException("entity", "entity must be an instance of NumberedRoot.");
+				throw new ArgumentException("entity", "entity must be an instance of Permission.");
 
-			Number = source._number;
+			Description = source._description;
+			RoleId = source._roleId;
 		}
 	}
 }

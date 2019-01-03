@@ -9,17 +9,13 @@ namespace Freedom.Domain.Model
 
         #region Users
 
-        [Category("Service Provider")]
-        [Description("View Service Providers")]
+        [Category("User")]
+        [Description("View User")]
         ViewUser,
 
-        [Category("Service Provider")]
-        [Description("Edit Service Providers")]
+        [Category("User")]
+        [Description("Edit User")]
         EditUser,
-
-        [Category("Service Provider")]
-        [Description("Allow enabling of offline support")]
-        EnableOfflineSupport,
 
         #endregion
     }

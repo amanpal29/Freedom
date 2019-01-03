@@ -48,7 +48,10 @@ namespace Freedom.Domain.Model
 
 		public DbSet<ApplicationSetting> ApplicationSetting { get; set; }
 		public DbSet<Notification> Notification { get; set; }
+		public DbSet<Permission> Permission { get; set; }
+		public DbSet<Role> Role { get; set; }
 		public DbSet<User> User { get; set; }
+		public DbSet<UserRole> UserRole { get; set; }
 
 		public void Add(Entity entity)
 		{
@@ -65,8 +68,20 @@ namespace Freedom.Domain.Model
 					Notification.Add((Notification) entity);
 					break;
 
+				case "Permission":
+					Permission.Add((Permission) entity);
+					break;
+
+				case "Role":
+					Role.Add((Role) entity);
+					break;
+
 				case "User":
 					User.Add((User) entity);
+					break;
+
+				case "UserRole":
+					UserRole.Add((UserRole) entity);
 					break;
 
 				default:
@@ -90,8 +105,17 @@ namespace Freedom.Domain.Model
 				case "Notification":
 					return Notification.Find(primaryKey);
 
+				case "Permission":
+					return Permission.Find(primaryKey);
+
+				case "Role":
+					return Role.Find(primaryKey);
+
 				case "User":
 					return User.Find(primaryKey);
+
+				case "UserRole":
+					return UserRole.Find(primaryKey);
 
 				default:
 					throw new ArgumentException($"'{entityTypeName}' is not a known entity type.", nameof(entityTypeName));
@@ -113,8 +137,20 @@ namespace Freedom.Domain.Model
 					Notification.Remove((Notification) entity);
 					break;
 
+				case "Permission":
+					Permission.Remove((Permission) entity);
+					break;
+
+				case "Role":
+					Role.Remove((Role) entity);
+					break;
+
 				case "User":
 					User.Remove((User) entity);
+					break;
+
+				case "UserRole":
+					UserRole.Remove((UserRole) entity);
 					break;
 
 				default:

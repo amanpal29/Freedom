@@ -203,10 +203,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Paths.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Permission.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Priority.generated.cs">
       <DependentUpon>EnumTypeTemplate.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Role.cs" />
+    <Compile Include="Model\Role.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\SystemPermission.cs" />
     <Compile Include="Model\Tables.cs">
       <AutoGen>True</AutoGen>
@@ -215,6 +221,9 @@
     </Compile>
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\User.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserRole.generated.cs">
       <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -232,7 +241,7 @@
     <Compile Include="Services\Command\ICommandHandlerCollection.cs" />
     <Compile Include="Services\Command\ICommandService.cs" />
     <Compile Include="Services\DatabaseBuilder\DatabaseBuilderService.cs" />
-    <Compile Include="Services\DatabaseBuilder\HedgehogDatabaseType.cs" />
+    <Compile Include="Services\DatabaseBuilder\FreedomDatabaseType.cs" />
     <Compile Include="Services\DatabaseBuilder\IDatabaseBuilderService.cs" />
     <Compile Include="Services\DataLoader\IEntityDataLoader.cs" />
     <Compile Include="Services\Query\ConfidentialEntityHelper.cs" />

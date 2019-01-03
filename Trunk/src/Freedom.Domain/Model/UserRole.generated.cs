@@ -26,90 +26,82 @@ using Freedom.ComponentModel;
 namespace Freedom.Domain.Model
 {
 	[DataContract(Namespace = Namespace)]
-	[Reportable(false)]
 
-	public partial class ApplicationSetting : AggregateRoot
+	public partial class UserRole : Entity
 	{
+		public UserRole()
+		{
+		}
+
+		public UserRole(Guid userId, Guid roleId)
+			: this()
+		{
+			_userId = userId;
+			_roleId = roleId;
+		}
+
 		public override string EntityTypeName
 		{
-			get { return "ApplicationSetting"; }
+			get { return "UserRole"; }
 		}
 
 		[DataMember(EmitDefaultValue = false)]
-		public string Key
+		public Guid UserId
 		{
-			get { return _key; }
-			set
-			{
-				if (_key == value) return;
-				_key = value;
-				MarkAsChanged();
-				OnPropertyChanged();
-			}
+			get { return _userId; }
+			set { _userId = value; }
 		}
-		private string _key;
+		private Guid _userId;
 
 		[DataMember(EmitDefaultValue = false)]
-		public string Value
+		public Guid RoleId
 		{
-			get { return _value; }
-			set
-			{
-				if (_value == value) return;
-				_value = value;
-				MarkAsChanged();
-				OnPropertyChanged();
-			}
+			get { return _roleId; }
+			set { _roleId = value; }
 		}
-		private string _value;
+		private Guid _roleId;
 
 		[DataMember(EmitDefaultValue = false)]
-		public override User CreatedBy
+		public virtual User User
 		{
-			get { return _createdBy; }
+			get { return _user; }
 			set
 			{
-				if (object.ReferenceEquals(_createdBy, value)) return;
+				if (object.ReferenceEquals(_user, value)) return;
 
-				_createdBy = value;
+				_user = value;
 
 				if (value != null)
-					CreatedById = value.Id;
-
-				OnPropertyChanged();
+					UserId = value.Id;
 			}
 		}
-		private User _createdBy;
+		private User _user;
 
 		[DataMember(EmitDefaultValue = false)]
-		public override User ModifiedBy
+		public virtual Role Role
 		{
-			get { return _modifiedBy; }
+			get { return _role; }
 			set
 			{
-				if (object.ReferenceEquals(_modifiedBy, value)) return;
+				if (object.ReferenceEquals(_role, value)) return;
 
-				_modifiedBy = value;
+				_role = value;
 
 				if (value != null)
-					ModifiedById = value.Id;
-
-				OnPropertyChanged();
+					RoleId = value.Id;
 			}
 		}
-		private User _modifiedBy;
+		private Role _role;
 
-		public override void Copy(Entity entity)
+		public virtual void Copy(Entity entity)
 		{
-			base.Copy(entity);
-
-			ApplicationSetting source = entity as ApplicationSetting;
+			UserRole source = entity as UserRole;
 
 			if (source == null)
-				throw new ArgumentException("entity", "entity must be an instance of ApplicationSetting.");
+				throw new ArgumentException("entity", "entity must be an instance of UserRole.");
 
-			Key = source._key;
-			Value = source._value;
+			UserId = source._userId;
+			RoleId = source._roleId;
 		}
 	}
 }

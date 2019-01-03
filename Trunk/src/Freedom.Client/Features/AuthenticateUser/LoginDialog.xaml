@@ -45,30 +45,35 @@
                    Content="Password:" />
             <freedom:BindablePasswordBox x:Name="PasswordBox" Grid.Row="2" Grid.Column="1" PasswordHash="{Binding Password}"/>
 
-            <!--Caps Lock Warning-->
+                    
             <StackPanel Grid.Row="3"
-                        Grid.Column="1"
-                        x:Name="CapsLockWarningStackPanel"
+                        Grid.Column="1">
+                <!--Caps Lock Warning-->
+                <StackPanel x:Name="CapsLockWarningStackPanel"
                         Orientation="Horizontal"
                         Margin="3,3,3,0"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top">
-                <Viewbox>
-                    <TextBlock Text="WarningIcon" />
-                </Viewbox>
-                <TextBlock Text="Caps Lock is on"
+                    <Viewbox>
+                     <TextBlock Text="Warning: " />
+                    </Viewbox>
+                    <TextBlock Text="Caps Lock is on"
                            Margin="0"
                            VerticalAlignment="Center" />
-            </StackPanel>
-
-            <!--Buttons-->
-            <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" 
+                </StackPanel>
+                
+                <!--Buttons-->
+                <StackPanel Orientation="Horizontal" 
                          Margin="0,0,5,0" HorizontalAlignment="Right" >
-                <Button Command="{Binding AuthenticateCommand}" IsDefault="True" 
+                    <Button Command="{Binding AuthenticateCommand}" IsDefault="True" 
                         Content="Login" Margin="0,5,5,0"/>
-                <Button Command="{Binding CancelCommand}" IsCancel="True" 
+                    <Button Command="{Binding CancelCommand}" IsCancel="True" 
                         Content="Cancel" Margin="5,5,0,0"/>
+                </StackPanel>
             </StackPanel>
+            
+
+            
 
             <!--Login Error AuthenticationStatusMessage-->
             <StackPanel Grid.Row="4" Grid.Column="1" 

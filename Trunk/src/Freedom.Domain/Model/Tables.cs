@@ -19,6 +19,8 @@ namespace Freedom.Domain.Model
 			{
 				yield return "User";
 				yield return "ApplicationSetting";
+				yield return "Role";
+				yield return "UserRole";
 			}
 		}
 	}

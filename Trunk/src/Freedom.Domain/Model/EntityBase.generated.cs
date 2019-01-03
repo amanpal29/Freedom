@@ -20,6 +20,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using Freedom.Domain.Infrastructure;
 using Freedom.Domain.Services.Repository;
+using Freedom.Collections;
 using Freedom.ComponentModel;
 
 namespace Freedom.Domain.Model
@@ -27,6 +28,7 @@ namespace Freedom.Domain.Model
 	[DataContract(Namespace = Namespace)]
 	[KnownType(typeof(AggregateRoot))]
 	[KnownType(typeof(NotificationBase))]
+	[KnownType(typeof(Permission))]
 
 	public abstract partial class EntityBase : Entity
 	{

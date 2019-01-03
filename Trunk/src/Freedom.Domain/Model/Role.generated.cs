@@ -28,40 +28,30 @@ namespace Freedom.Domain.Model
 	[DataContract(Namespace = Namespace)]
 	[Reportable(false)]
 
-	public partial class ApplicationSetting : AggregateRoot
+	public partial class Role : AggregateRoot
 	{
+		public static readonly ResolutionGraph DefaultResolutionGraph = new ResolutionGraph(
+			Paths.Role.Permissions
+		);
+
 		public override string EntityTypeName
 		{
-			get { return "ApplicationSetting"; }
+			get { return "Role"; }
 		}
 
 		[DataMember(EmitDefaultValue = false)]
-		public string Key
+		public string Name
 		{
-			get { return _key; }
+			get { return _name; }
 			set
 			{
-				if (_key == value) return;
-				_key = value;
+				if (_name == value) return;
+				_name = value;
 				MarkAsChanged();
 				OnPropertyChanged();
 			}
 		}
-		private string _key;
-
-		[DataMember(EmitDefaultValue = false)]
-		public string Value
-		{
-			get { return _value; }
-			set
-			{
-				if (_value == value) return;
-				_value = value;
-				MarkAsChanged();
-				OnPropertyChanged();
-			}
-		}
-		private string _value;
+		private string _name;
 
 		[DataMember(EmitDefaultValue = false)]
 		public override User CreatedBy
@@ -99,17 +89,58 @@ namespace Freedom.Domain.Model
 		}
 		private User _modifiedBy;
 
+		[DataMember(EmitDefaultValue = false)]
+		public virtual IList<Permission> Permissions
+		{
+			get
+			{
+				if (!IsSerializing && _permissions == null)
+				{
+					_permissions = new EntityCollection<Permission>();
+					_permissions.CollectionChanged += (s, a) => MarkAsChanged();
+				}
+
+				return _permissions;
+			}
+			set
+			{
+				if (!object.ReferenceEquals(_permissions, value))
+				{
+					if (value != null)
+					{
+						if (_permissions == null)
+						{
+							_permissions = new EntityCollection<Permission>(value);
+							_permissions.CollectionChanged += (s, a) => MarkAsChanged();
+						}
+						else
+						{
+							_permissions.Clear();
+							_permissions.AddRange(value);
+						}
+					}
+					else if (_permissions != null)
+					{
+						_permissions.Clear();
+					}
+
+					MarkAsChanged();
+					OnPropertyChanged();
+				}
+			}
+		}
+		private EntityCollection<Permission> _permissions;
+
 		public override void Copy(Entity entity)
 		{
 			base.Copy(entity);
 
-			ApplicationSetting source = entity as ApplicationSetting;
+			Role source = entity as Role;
 
 			if (source == null)
-				throw new ArgumentException("entity", "entity must be an instance of ApplicationSetting.");
+				throw new ArgumentException("entity", "entity must be an instance of Role.");
 
-			Key = source._key;
-			Value = source._value;
+			Name = source._name;
 		}
 	}
 }

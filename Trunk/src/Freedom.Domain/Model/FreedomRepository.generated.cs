@@ -89,14 +89,41 @@ namespace Freedom.Domain.Model
 			return await _db.Notification.SingleOrDefaultAsync(x => x.Id == id);
 		}
 
+		public async Task<Role> GetRoleAsync(Guid id)
+		{
+			IQueryable<Role> baseQuery = _db.Role.Where(x => x.Id == id);
+
+			Role result = await baseQuery.SingleOrDefaultAsync();
+
+			await LoadChildrenAsync(baseQuery);
+
+			return result;
+		}
+
 		public async Task<User> GetUserAsync(Guid id)
 		{
-			return await _db.User.SingleOrDefaultAsync(x => x.Id == id);
+			IQueryable<User> baseQuery = _db.User.Where(x => x.Id == id);
+
+			User result = await baseQuery.SingleOrDefaultAsync();
+
+			await LoadChildrenAsync(baseQuery);
+
+			return result;
 		}
 
 		#endregion
 
 		#region LoadChildren Methods
+
+		public async Task LoadChildrenAsync(IQueryable<Role> entities)
+		{
+			await entities.SelectMany(x => x.Permissions).LoadAsync();
+		}
+
+		public async Task LoadChildrenAsync(IQueryable<User> entities)
+		{
+			await entities.SelectMany(x => x.UserRole).LoadAsync();
+		}
 
 		#endregion
 
@@ -130,6 +157,23 @@ namespace Freedom.Domain.Model
 			return entity;
 		}
 
+		public Role Add(Role item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			Role entity = new Role();
+
+			entity.Copy(item);
+
+			foreach (Permission child in item.Permissions)
+				Add(entity.Permissions, child);
+
+			_db.Role.Add(entity);
+
+			return entity;
+		}
+
 		public User Add(User item)
 		{
 			if (item == null)
@@ -139,9 +183,42 @@ namespace Freedom.Domain.Model
 
 			entity.Copy(item);
 
+			foreach (Guid id in item.RoleIds)
+				_db.UserRole.Add(new UserRole(entity.Id, id));
+
 			_db.User.Add(entity);
 
 			return entity;
+		}
+
+		private static void Add(ICollection<Permission> collection, Permission item)
+		{
+			if (item == collection)
+				throw new ArgumentNullException("collection");
+
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			Permission entity = new Permission();
+
+			entity.Copy(item);
+
+			collection.Add(entity);
+		}
+
+		private static void Add(ICollection<UserRole> collection, UserRole item)
+		{
+			if (item == collection)
+				throw new ArgumentNullException("collection");
+
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			UserRole entity = new UserRole();
+
+			entity.Copy(item);
+
+			collection.Add(entity);
 		}
 
 		#endregion
@@ -182,6 +259,27 @@ namespace Freedom.Domain.Model
 
 		}
 
+		public async Task UpdateAsync(Role item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			IQueryable<Role> baseQuery = _db.Role.Where(x => x.Id == item.Id);
+
+			Role existingItem = await baseQuery.FirstOrDefaultAsync();
+
+			if (existingItem == null)
+				throw new ConcurrencyException(ConcurrencyExceptionCode.ItemNotFound);
+
+			await LoadChildrenAsync(baseQuery);
+
+			existingItem.Copy(item);
+
+			UpdateChildren(existingItem.Permissions, item.Permissions);
+
+			UpdateAuditProperties(existingItem, EntityState.Modified);
+		}
+
 		public async Task UpdateAsync(User item)
 		{
 			if (item == null)
@@ -194,8 +292,11 @@ namespace Freedom.Domain.Model
 			if (existingItem == null)
 				throw new ConcurrencyException(ConcurrencyExceptionCode.ItemNotFound);
 
+			await LoadChildrenAsync(baseQuery);
+
 			existingItem.Copy(item);
 
+			UpdateIntermediate(existingItem.UserRole, item.Id, item.RoleIds);
 
 			UpdateAuditProperties(existingItem, EntityState.Modified);
 		}
@@ -203,6 +304,62 @@ namespace Freedom.Domain.Model
 		#endregion
 
 		#region Child Collection Update Methods
+
+		private void UpdateChildren(ICollection<Permission> target, ICollection<Permission> source)
+		{
+			if (target == null)
+				throw new ArgumentNullException("target");
+
+			if (source == null)
+				throw new ArgumentNullException("source");
+
+			List<Permission> itemsToDelete = target.ToList();
+
+			foreach(Permission item in source)
+			{
+				Permission existingItem = itemsToDelete.SingleOrDefault(p => p.Id == item.Id);
+
+				if (existingItem != null)
+				{
+					itemsToDelete.Remove(existingItem);
+
+					existingItem.Copy(item);
+				}
+				else
+				{
+					Add(target, item);
+				}
+			}
+
+			foreach(Permission item in itemsToDelete)
+			{
+				_db.Permission.Remove(item);
+			}
+		}
+
+		private void UpdateIntermediate(ICollection<UserRole> target, Guid parentId, ICollection<Guid> keys)
+		{
+			if (target == null)
+				throw new ArgumentNullException("target");
+
+			if (keys == null)
+				throw new ArgumentNullException("keys");
+
+			List<UserRole> itemsToRemove = target.ToList();
+
+			foreach (Guid key in keys)
+			{
+				if (itemsToRemove.RemoveAll(x => x.RoleId == key) > 0)
+					continue;
+
+				target.Add(new UserRole(parentId, key));
+			}
+
+			foreach (UserRole item in itemsToRemove)
+			{
+				_db.UserRole.Remove(item);
+			}
+		}
 
 		#endregion
 
@@ -226,6 +383,17 @@ namespace Freedom.Domain.Model
 			if (existingItem == null) return false;
 
 			_db.Notification.Remove(existingItem);
+
+			return true;
+		}
+
+		public async Task<bool> DeleteRoleAsync(Guid id)
+		{
+			Role existingItem = await _db.Role.FindAsync(id);
+
+			if (existingItem == null) return false;
+
+			_db.Role.Remove(existingItem);
 
 			return true;
 		}

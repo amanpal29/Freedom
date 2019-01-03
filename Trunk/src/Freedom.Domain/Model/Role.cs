@@ -4,6 +4,6 @@ namespace Freedom.Domain.Model
 {
     public partial class Role
     {
-        public static Guid AdministratorsId = new Guid("{9A873FCD-DEEA-4289-91C4-69393392E685}");
+        public static Guid AdministratorsId = new Guid("{1DA16532-AF56-4008-BEA0-D2E42B854358}");
     }
 }

@@ -241,6 +241,54 @@
 		public string RecipientId => PathPrefix + "RecipientId";
 	}
 
+	public class PermissionPaths : EntityPaths
+	{
+		public PermissionPaths()
+		{
+		}
+		
+		public PermissionPaths(string hostName)
+			: base(hostName)
+		{
+		}
+
+		public RolePaths Role
+			=> new RolePaths(PathPrefix + "Role");
+
+		public string Id => PathPrefix + "Id";
+
+		public string Description => PathPrefix + "Description";
+
+		public string RoleId => PathPrefix + "RoleId";
+	}
+
+	public class RolePaths : EntityPaths
+	{
+		public RolePaths()
+		{
+		}
+		
+		public RolePaths(string hostName)
+			: base(hostName)
+		{
+		}
+
+		public PermissionPaths Permissions
+			=> new PermissionPaths(PathPrefix + "Permissions");
+
+		public string Id => PathPrefix + "Id";
+
+		public string CreatedDateTime => PathPrefix + "CreatedDateTime";
+
+		public string ModifiedDateTime => PathPrefix + "ModifiedDateTime";
+
+		public string CreatedById => PathPrefix + "CreatedById";
+
+		public string ModifiedById => PathPrefix + "ModifiedById";
+
+		public string Name => PathPrefix + "Name";
+	}
+
 	public class UserPaths : EntityPaths
 	{
 		public UserPaths()
@@ -251,6 +299,12 @@
 			: base(hostName)
 		{
 		}
+
+		public RolePaths Roles
+			=> new RolePaths(PathPrefix + "Roles");
+
+		public UserRolePaths UserRole
+			=> new UserRolePaths(PathPrefix + "UserRole");
 
 		public string Id => PathPrefix + "Id";
 
@@ -287,6 +341,28 @@
 		public string ForcePasswordChange => PathPrefix + "ForcePasswordChange";
 	}
 
+	public class UserRolePaths : EntityPaths
+	{
+		public UserRolePaths()
+		{
+		}
+		
+		public UserRolePaths(string hostName)
+			: base(hostName)
+		{
+		}
+
+		public UserPaths User
+			=> new UserPaths(PathPrefix + "User");
+
+		public RolePaths Role
+			=> new RolePaths(PathPrefix + "Role");
+
+		public string UserId => PathPrefix + "UserId";
+
+		public string RoleId => PathPrefix + "RoleId";
+	}
+
 	public static class Paths
 	{
 		public static EntityBasePaths EntityBase => new EntityBasePaths();
@@ -305,7 +381,13 @@
 
 		public static NotificationPaths Notification => new NotificationPaths();
 
+		public static PermissionPaths Permission => new PermissionPaths();
+
+		public static RolePaths Role => new RolePaths();
+
 		public static UserPaths User => new UserPaths();
+
+		public static UserRolePaths UserRole => new UserRolePaths();
 
 	}
 }

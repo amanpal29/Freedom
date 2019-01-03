@@ -4,7 +4,7 @@ namespace Freedom.Domain.Model
 {
     public partial class User : IComparable, IComparable<User>
     {
-        public static Guid SuperUserId = new Guid("{3B526C4E-50F3-425D-9787-6DB0696290FF}");
+        public static Guid SuperUserId = new Guid("{DA378215-F0A8-4F47-AD19-48002D0B8E67}");
 
         public static string DisplayNameHandler(User u)
         {

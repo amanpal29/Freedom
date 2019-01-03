@@ -20,6 +20,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using Freedom.Domain.Infrastructure;
 using Freedom.Domain.Services.Repository;
+using Freedom.Collections;
 using Freedom.ComponentModel;
 
 namespace Freedom.Domain.Model

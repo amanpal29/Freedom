@@ -28,6 +28,27 @@ CREATE TABLE [Notification] (
 
 GO
 
+CREATE TABLE [Permission] (
+	[Id] uniqueidentifier NOT NULL default newId(),
+	[Description] nvarchar(4000) NULL,
+	[RoleId] uniqueidentifier NOT NULL,
+	CONSTRAINT [PK_Permission] PRIMARY KEY NONCLUSTERED ( [Id] )
+);
+
+GO
+
+CREATE TABLE [Role] (
+	[Id] uniqueidentifier NOT NULL default newId(),
+	[CreatedDateTime] datetime2 NOT NULL,
+	[ModifiedDateTime] datetime2 NOT NULL,
+	[CreatedById] uniqueidentifier NOT NULL,
+	[ModifiedById] uniqueidentifier NOT NULL,
+	[Name] nvarchar(4000) NOT NULL,
+	CONSTRAINT [PK_Role] PRIMARY KEY NONCLUSTERED ( [Id] )
+);
+
+GO
+
 CREATE TABLE [User] (
 	[Id] uniqueidentifier NOT NULL default newId(),
 	[CreatedDateTime] datetime2 NOT NULL,
@@ -56,6 +77,14 @@ CREATE TABLE [User] (
 
 GO
 
+CREATE TABLE [UserRole] (
+	[UserId] uniqueidentifier NOT NULL,
+	[RoleId] uniqueidentifier NOT NULL,
+	CONSTRAINT [PK_UserRole] PRIMARY KEY NONCLUSTERED ( [UserId], [RoleId] )
+);
+
+GO
+
 CREATE INDEX [IDX_CreatedById]
 ON [ApplicationSetting] ( [CreatedById] );
 
@@ -71,6 +100,51 @@ ON [ApplicationSetting] ( [ModifiedById] );
 ALTER TABLE [ApplicationSetting]
 ADD CONSTRAINT [FK_ApplicationSetting_User_ModifiedBy]
 FOREIGN KEY ( [ModifiedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_RoleId]
+ON [Permission] ( [RoleId] );
+
+ALTER TABLE [Permission]
+ADD CONSTRAINT [FK_Permission_Role]
+FOREIGN KEY ( [RoleId] ) REFERENCES [Role] ( [Id] ) ON DELETE CASCADE;
+
+GO
+
+CREATE INDEX [IDX_CreatedById]
+ON [Role] ( [CreatedById] );
+
+ALTER TABLE [Role]
+ADD CONSTRAINT [FK_Role_User_CreatedBy]
+FOREIGN KEY ( [CreatedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_ModifiedById]
+ON [Role] ( [ModifiedById] );
+
+ALTER TABLE [Role]
+ADD CONSTRAINT [FK_Role_User_ModifiedBy]
+FOREIGN KEY ( [ModifiedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_RoleId]
+ON [UserRole] ( [RoleId] );
+
+ALTER TABLE [UserRole]
+ADD CONSTRAINT [FK_UserRole_Role]
+FOREIGN KEY ( [RoleId] ) REFERENCES [Role] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_UserId]
+ON [UserRole] ( [UserId] );
+
+ALTER TABLE [UserRole]
+ADD CONSTRAINT [FK_UserRole_User]
+FOREIGN KEY ( [UserId] ) REFERENCES [User] ( [Id] ) ON DELETE CASCADE;
 
 GO
 

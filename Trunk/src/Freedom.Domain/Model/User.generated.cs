@@ -20,6 +20,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using Freedom.Domain.Infrastructure;
 using Freedom.Domain.Services.Repository;
+using Freedom.Collections;
 using Freedom.ComponentModel;
 
 namespace Freedom.Domain.Model
@@ -30,6 +31,10 @@ namespace Freedom.Domain.Model
 
 	public partial class User : AggregateRoot
 	{
+		public static readonly ResolutionGraph DefaultResolutionGraph = new ResolutionGraph(
+			Paths.User.UserRole
+		);
+
 		public override string EntityTypeName
 		{
 			get { return "User"; }
@@ -247,6 +252,106 @@ namespace Freedom.Domain.Model
 			}
 		}
 		private User _modifiedBy;
+
+		[DataMember(EmitDefaultValue = false)]
+		public virtual ICollection<Guid> RoleIds
+		{
+			get
+			{
+				if (_roleIds == null)
+				{
+					if (_userRole != null)
+					{
+						_roleIds = new KeySetCollection<UserRole>(_userRole, x => x.RoleId);
+					}
+					else if (!IsSerializing)
+					{
+						ObservableHashSet<Guid> hashSet = new ObservableHashSet<Guid>();
+						hashSet.CollectionChanged += (s, a) => MarkAsChanged();
+						_roleIds = hashSet;
+					}
+				}
+				return _roleIds;
+			}
+			set
+			{
+				if (!object.ReferenceEquals(RoleIds, value))
+				{
+					KeySetCollection<UserRole> keySet = _roleIds as KeySetCollection<UserRole>;
+
+					if (keySet != null)
+					{
+						keySet.ReplaceWith(value);
+					}
+					else
+					{
+						_roleIds.Clear();
+
+						if (value != null && value.Count > 0)
+							foreach(Guid id in value)
+								_roleIds.Add(id);
+					}
+
+					OnPropertyChanged();
+				}
+			}
+		}
+		private ICollection<Guid> _roleIds;
+
+		[Browsable(false)]  // Intermediate Collection
+		public virtual IList<UserRole> UserRole
+		{
+			get
+			{
+				if (_userRole == null)
+					_userRole = new List<UserRole>();
+
+				return _userRole;
+			}
+			set
+			{
+				if (!object.ReferenceEquals(_userRole, value))
+				{
+					if (value != null && value.Count > 0)
+					{
+						if (_userRole == null)
+						{
+							_userRole = new List<UserRole>(value);
+						}
+						else
+						{
+							_userRole.Clear();
+							_userRole.AddRange(value);
+						}
+					}
+					else if (_userRole != null)
+					{
+						_userRole.Clear();
+					}
+
+					OnPropertyChanged();
+				}
+			}
+		}
+		private List<UserRole> _userRole;
+
+		public virtual CompositeCollection<UserRole, Role> Roles
+		{
+			get
+			{
+				if  (_roles == null)
+				{
+				    Debug.Assert(Assembly.GetEntryAssembly().FullName.Contains("Freedom.ReportEngine"),
+				        "Composite many-to-many collections on entities should only every be accessed when running a report.");
+
+					_roles = new CompositeCollection<UserRole, Role>(
+						UserRole, x => x.Role, x => x.RoleId);
+				}
+
+				return _roles;
+			}
+		}
+		private CompositeCollection<UserRole, Role> _roles;
 
 		public override void Copy(Entity entity)
 		{

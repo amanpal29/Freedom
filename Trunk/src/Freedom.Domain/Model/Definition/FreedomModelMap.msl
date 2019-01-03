@@ -31,6 +31,27 @@
 				</MappingFragment>
 			</EntityTypeMapping>
 		</EntitySetMapping>
+		<EntitySetMapping Name="Permission">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.Permission">
+				<MappingFragment StoreEntitySet="Permission">
+					<ScalarProperty Name="Id" ColumnName="Id" />
+					<ScalarProperty Name="Description" ColumnName="Description" />
+					<ScalarProperty Name="RoleId" ColumnName="RoleId" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
+		<EntitySetMapping Name="Role">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.Role">
+				<MappingFragment StoreEntitySet="Role">
+					<ScalarProperty Name="Id" ColumnName="Id" />
+					<ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+					<ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+					<ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+					<ScalarProperty Name="ModifiedById" ColumnName="ModifiedById" />
+					<ScalarProperty Name="Name" ColumnName="Name" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
 		<EntitySetMapping Name="User">
 			<EntityTypeMapping TypeName="Freedom.Domain.Model.User">
 				<MappingFragment StoreEntitySet="User">
@@ -56,6 +77,14 @@
 						<ScalarProperty Name="Country" ColumnName="HomeAddress_Country" />
 					</ComplexProperty>
 					<ScalarProperty Name="ForcePasswordChange" ColumnName="ForcePasswordChange" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
+		<EntitySetMapping Name="UserRole">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.UserRole">
+				<MappingFragment StoreEntitySet="UserRole">
+					<ScalarProperty Name="UserId" ColumnName="UserId" />
+					<ScalarProperty Name="RoleId" ColumnName="RoleId" />
 				</MappingFragment>
 			</EntityTypeMapping>
 		</EntitySetMapping>

@@ -20,6 +20,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using Freedom.Domain.Infrastructure;
 using Freedom.Domain.Services.Repository;
+using Freedom.Collections;
 using Freedom.ComponentModel;
 
 namespace Freedom.Domain.Model
@@ -28,6 +29,7 @@ namespace Freedom.Domain.Model
 	[KnownType(typeof(ApplicationSetting))]
 	[KnownType(typeof(LookupBase))]
 	[KnownType(typeof(NumberedRoot))]
+	[KnownType(typeof(Role))]
 	[KnownType(typeof(User))]
 
 	public abstract partial class AggregateRoot : EntityBase
