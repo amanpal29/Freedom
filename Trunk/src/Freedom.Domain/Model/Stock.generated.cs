@@ -26,90 +26,108 @@ using Freedom.ComponentModel;
 namespace Freedom.Domain.Model
 {
 	[DataContract(Namespace = Namespace)]
-	[KnownType(typeof(ApplicationSetting))]
-	[KnownType(typeof(LookupBase))]
-	[KnownType(typeof(NumberedRoot))]
-	[KnownType(typeof(Role))]
-	[KnownType(typeof(Stock))]
-	[KnownType(typeof(User))]
+	[Reportable]
 
-	public abstract partial class AggregateRoot : EntityBase
+	public partial class Stock : AggregateRoot
 	{
-		[DataMember(EmitDefaultValue = false)]
-		public DateTime CreatedDateTime
+		public override string EntityTypeName
 		{
-			get { return _createdDateTime; }
+			get { return "Stock"; }
+		}
+
+		[DataMember(EmitDefaultValue = false)]
+		public string Symbol
+		{
+			get { return _symbol; }
 			set
 			{
-				if (_createdDateTime == value) return;
-				_createdDateTime = value;
+				if (_symbol == value) return;
+				_symbol = value;
 				MarkAsChanged();
 				OnPropertyChanged();
 			}
 		}
-		private DateTime _createdDateTime;
+		private string _symbol;
 
 		[DataMember(EmitDefaultValue = false)]
-		public DateTime ModifiedDateTime
+		public Guid StockExchangeId
 		{
-			get { return _modifiedDateTime; }
+			get { return _stockExchangeId; }
 			set
 			{
-				if (_modifiedDateTime == value) return;
-				_modifiedDateTime = value;
+				if (_stockExchangeId == value) return;
+				_stockExchangeId = value;
 				MarkAsChanged();
 				OnPropertyChanged();
 			}
 		}
-		private DateTime _modifiedDateTime;
+		private Guid _stockExchangeId;
 
 		[DataMember(EmitDefaultValue = false)]
-		public Guid CreatedById
+		public virtual StockExchange StockExchange
 		{
-			get { return _createdById; }
+			get { return _stockExchange; }
 			set
 			{
-				if (_createdById == value) return;
-				_createdById = value;
-				MarkAsChanged();
+				if (object.ReferenceEquals(_stockExchange, value)) return;
+
+				_stockExchange = value;
+
+				if (value != null)
+					StockExchangeId = value.Id;
+
 				OnPropertyChanged();
 			}
 		}
-		private Guid _createdById;
+		private StockExchange _stockExchange;
 
 		[DataMember(EmitDefaultValue = false)]
-		public Guid ModifiedById
+		public override User CreatedBy
 		{
-			get { return _modifiedById; }
+			get { return _createdBy; }
 			set
 			{
-				if (_modifiedById == value) return;
-				_modifiedById = value;
-				MarkAsChanged();
+				if (object.ReferenceEquals(_createdBy, value)) return;
+
+				_createdBy = value;
+
+				if (value != null)
+					CreatedById = value.Id;
+
 				OnPropertyChanged();
 			}
 		}
-		private Guid _modifiedById;
+		private User _createdBy;
 
 		[DataMember(EmitDefaultValue = false)]
-		public abstract User CreatedBy { get; set; }
+		public override User ModifiedBy
+		{
+			get { return _modifiedBy; }
+			set
+			{
+				if (object.ReferenceEquals(_modifiedBy, value)) return;
 
-		[DataMember(EmitDefaultValue = false)]
-		public abstract User ModifiedBy { get; set; }
+				_modifiedBy = value;
+
+				if (value != null)
+					ModifiedById = value.Id;
+
+				OnPropertyChanged();
+			}
+		}
+		private User _modifiedBy;
 
 		public override void Copy(Entity entity)
 		{
 			base.Copy(entity);
 
-			AggregateRoot source = entity as AggregateRoot;
+			Stock source = entity as Stock;
 
 			if (source == null)
-				throw new ArgumentException("entity", "entity must be an instance of AggregateRoot.");
+				throw new ArgumentException("entity", "entity must be an instance of Stock.");
 
-			CreatedDateTime = source._createdDateTime;
-			ModifiedDateTime = source._modifiedDateTime;
-			CreatedById = source._createdById;
-			ModifiedById = source._modifiedById;
+			Symbol = source._symbol;
+			StockExchangeId = source._stockExchangeId;
 		}
 	}
 }

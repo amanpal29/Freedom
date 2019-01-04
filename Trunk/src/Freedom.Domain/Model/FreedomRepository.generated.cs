@@ -84,6 +84,11 @@ namespace Freedom.Domain.Model
 			return await _db.ApplicationSetting.SingleOrDefaultAsync(x => x.Id == id);
 		}
 
+		public async Task<MarketIndex> GetMarketIndexAsync(Guid id)
+		{
+			return await _db.MarketIndex.SingleOrDefaultAsync(x => x.Id == id);
+		}
+
 		public async Task<Notification> GetNotificationAsync(Guid id)
 		{
 			return await _db.Notification.SingleOrDefaultAsync(x => x.Id == id);
@@ -100,11 +105,37 @@ namespace Freedom.Domain.Model
 			return result;
 		}
 
+		public async Task<Stock> GetStockAsync(Guid id)
+		{
+			return await _db.Stock.SingleOrDefaultAsync(x => x.Id == id);
+		}
+
+		public async Task<StockExchange> GetStockExchangeAsync(Guid id)
+		{
+			return await _db.StockExchange.SingleOrDefaultAsync(x => x.Id == id);
+		}
+
+		public async Task<Strategy> GetStrategyAsync(Guid id)
+		{
+			return await _db.Strategy.SingleOrDefaultAsync(x => x.Id == id);
+		}
+
 		public async Task<User> GetUserAsync(Guid id)
 		{
 			IQueryable<User> baseQuery = _db.User.Where(x => x.Id == id);
 
 			User result = await baseQuery.SingleOrDefaultAsync();
+
+			await LoadChildrenAsync(baseQuery);
+
+			return result;
+		}
+
+		public async Task<WatchList> GetWatchListAsync(Guid id)
+		{
+			IQueryable<WatchList> baseQuery = _db.WatchList.Where(x => x.Id == id);
+
+			WatchList result = await baseQuery.SingleOrDefaultAsync();
 
 			await LoadChildrenAsync(baseQuery);
 
@@ -125,6 +156,11 @@ namespace Freedom.Domain.Model
 			await entities.SelectMany(x => x.UserRole).LoadAsync();
 		}
 
+		public async Task LoadChildrenAsync(IQueryable<WatchList> entities)
+		{
+			await entities.SelectMany(x => x.WatchListStock).LoadAsync();
+		}
+
 		#endregion
 
 		#region Add Methods
@@ -139,6 +175,20 @@ namespace Freedom.Domain.Model
 			entity.Copy(item);
 
 			_db.ApplicationSetting.Add(entity);
+
+			return entity;
+		}
+
+		public MarketIndex Add(MarketIndex item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			MarketIndex entity = new MarketIndex();
+
+			entity.Copy(item);
+
+			_db.MarketIndex.Add(entity);
 
 			return entity;
 		}
@@ -174,6 +224,48 @@ namespace Freedom.Domain.Model
 			return entity;
 		}
 
+		public Stock Add(Stock item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			Stock entity = new Stock();
+
+			entity.Copy(item);
+
+			_db.Stock.Add(entity);
+
+			return entity;
+		}
+
+		public StockExchange Add(StockExchange item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			StockExchange entity = new StockExchange();
+
+			entity.Copy(item);
+
+			_db.StockExchange.Add(entity);
+
+			return entity;
+		}
+
+		public Strategy Add(Strategy item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			Strategy entity = new Strategy();
+
+			entity.Copy(item);
+
+			_db.Strategy.Add(entity);
+
+			return entity;
+		}
+
 		public User Add(User item)
 		{
 			if (item == null)
@@ -187,6 +279,23 @@ namespace Freedom.Domain.Model
 				_db.UserRole.Add(new UserRole(entity.Id, id));
 
 			_db.User.Add(entity);
+
+			return entity;
+		}
+
+		public WatchList Add(WatchList item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			WatchList entity = new WatchList();
+
+			entity.Copy(item);
+
+			foreach (Guid id in item.StockIds)
+				_db.WatchListStock.Add(new WatchListStock(entity.Id, id));
+
+			_db.WatchList.Add(entity);
 
 			return entity;
 		}
@@ -221,6 +330,21 @@ namespace Freedom.Domain.Model
 			collection.Add(entity);
 		}
 
+		private static void Add(ICollection<WatchListStock> collection, WatchListStock item)
+		{
+			if (item == collection)
+				throw new ArgumentNullException("collection");
+
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			WatchListStock entity = new WatchListStock();
+
+			entity.Copy(item);
+
+			collection.Add(entity);
+		}
+
 		#endregion
 
 		#region Update Methods
@@ -233,6 +357,24 @@ namespace Freedom.Domain.Model
 			IQueryable<ApplicationSetting> baseQuery = _db.ApplicationSetting.Where(x => x.Id == item.Id);
 
 			ApplicationSetting existingItem = await baseQuery.FirstOrDefaultAsync();
+
+			if (existingItem == null)
+				throw new ConcurrencyException(ConcurrencyExceptionCode.ItemNotFound);
+
+			existingItem.Copy(item);
+
+
+			UpdateAuditProperties(existingItem, EntityState.Modified);
+		}
+
+		public async Task UpdateAsync(MarketIndex item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			IQueryable<MarketIndex> baseQuery = _db.MarketIndex.Where(x => x.Id == item.Id);
+
+			MarketIndex existingItem = await baseQuery.FirstOrDefaultAsync();
 
 			if (existingItem == null)
 				throw new ConcurrencyException(ConcurrencyExceptionCode.ItemNotFound);
@@ -280,6 +422,60 @@ namespace Freedom.Domain.Model
 			UpdateAuditProperties(existingItem, EntityState.Modified);
 		}
 
+		public async Task UpdateAsync(Stock item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			IQueryable<Stock> baseQuery = _db.Stock.Where(x => x.Id == item.Id);
+
+			Stock existingItem = await baseQuery.FirstOrDefaultAsync();
+
+			if (existingItem == null)
+				throw new ConcurrencyException(ConcurrencyExceptionCode.ItemNotFound);
+
+			existingItem.Copy(item);
+
+
+			UpdateAuditProperties(existingItem, EntityState.Modified);
+		}
+
+		public async Task UpdateAsync(StockExchange item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			IQueryable<StockExchange> baseQuery = _db.StockExchange.Where(x => x.Id == item.Id);
+
+			StockExchange existingItem = await baseQuery.FirstOrDefaultAsync();
+
+			if (existingItem == null)
+				throw new ConcurrencyException(ConcurrencyExceptionCode.ItemNotFound);
+
+			existingItem.Copy(item);
+
+
+			UpdateAuditProperties(existingItem, EntityState.Modified);
+		}
+
+		public async Task UpdateAsync(Strategy item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			IQueryable<Strategy> baseQuery = _db.Strategy.Where(x => x.Id == item.Id);
+
+			Strategy existingItem = await baseQuery.FirstOrDefaultAsync();
+
+			if (existingItem == null)
+				throw new ConcurrencyException(ConcurrencyExceptionCode.ItemNotFound);
+
+			existingItem.Copy(item);
+
+
+			UpdateAuditProperties(existingItem, EntityState.Modified);
+		}
+
 		public async Task UpdateAsync(User item)
 		{
 			if (item == null)
@@ -297,6 +493,27 @@ namespace Freedom.Domain.Model
 			existingItem.Copy(item);
 
 			UpdateIntermediate(existingItem.UserRole, item.Id, item.RoleIds);
+
+			UpdateAuditProperties(existingItem, EntityState.Modified);
+		}
+
+		public async Task UpdateAsync(WatchList item)
+		{
+			if (item == null)
+				throw new ArgumentNullException("item");
+
+			IQueryable<WatchList> baseQuery = _db.WatchList.Where(x => x.Id == item.Id);
+
+			WatchList existingItem = await baseQuery.FirstOrDefaultAsync();
+
+			if (existingItem == null)
+				throw new ConcurrencyException(ConcurrencyExceptionCode.ItemNotFound);
+
+			await LoadChildrenAsync(baseQuery);
+
+			existingItem.Copy(item);
+
+			UpdateIntermediate(existingItem.WatchListStock, item.Id, item.StockIds);
 
 			UpdateAuditProperties(existingItem, EntityState.Modified);
 		}
@@ -361,6 +578,30 @@ namespace Freedom.Domain.Model
 			}
 		}
 
+		private void UpdateIntermediate(ICollection<WatchListStock> target, Guid parentId, ICollection<Guid> keys)
+		{
+			if (target == null)
+				throw new ArgumentNullException("target");
+
+			if (keys == null)
+				throw new ArgumentNullException("keys");
+
+			List<WatchListStock> itemsToRemove = target.ToList();
+
+			foreach (Guid key in keys)
+			{
+				if (itemsToRemove.RemoveAll(x => x.StockId == key) > 0)
+					continue;
+
+				target.Add(new WatchListStock(parentId, key));
+			}
+
+			foreach (WatchListStock item in itemsToRemove)
+			{
+				_db.WatchListStock.Remove(item);
+			}
+		}
+
 		#endregion
 
 		#region Delete Methods
@@ -372,6 +613,17 @@ namespace Freedom.Domain.Model
 			if (existingItem == null) return false;
 
 			_db.ApplicationSetting.Remove(existingItem);
+
+			return true;
+		}
+
+		public async Task<bool> DeleteMarketIndexAsync(Guid id)
+		{
+			MarketIndex existingItem = await _db.MarketIndex.FindAsync(id);
+
+			if (existingItem == null) return false;
+
+			_db.MarketIndex.Remove(existingItem);
 
 			return true;
 		}
@@ -398,6 +650,39 @@ namespace Freedom.Domain.Model
 			return true;
 		}
 
+		public async Task<bool> DeleteStockAsync(Guid id)
+		{
+			Stock existingItem = await _db.Stock.FindAsync(id);
+
+			if (existingItem == null) return false;
+
+			_db.Stock.Remove(existingItem);
+
+			return true;
+		}
+
+		public async Task<bool> DeleteStockExchangeAsync(Guid id)
+		{
+			StockExchange existingItem = await _db.StockExchange.FindAsync(id);
+
+			if (existingItem == null) return false;
+
+			_db.StockExchange.Remove(existingItem);
+
+			return true;
+		}
+
+		public async Task<bool> DeleteStrategyAsync(Guid id)
+		{
+			Strategy existingItem = await _db.Strategy.FindAsync(id);
+
+			if (existingItem == null) return false;
+
+			_db.Strategy.Remove(existingItem);
+
+			return true;
+		}
+
 		public async Task<bool> DeleteUserAsync(Guid id)
 		{
 			User existingItem = await _db.User.FindAsync(id);
@@ -405,6 +690,17 @@ namespace Freedom.Domain.Model
 			if (existingItem == null) return false;
 
 			_db.User.Remove(existingItem);
+
+			return true;
+		}
+
+		public async Task<bool> DeleteWatchListAsync(Guid id)
+		{
+			WatchList existingItem = await _db.WatchList.FindAsync(id);
+
+			if (existingItem == null) return false;
+
+			_db.WatchList.Remove(existingItem);
 
 			return true;
 		}

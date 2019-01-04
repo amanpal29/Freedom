@@ -180,6 +180,9 @@
     <Compile Include="Model\MailingAddress.generated.cs">
       <DependentUpon>ComplexTypeTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\MarketIndex.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Notification.generated.cs">
       <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
     </Compile>
@@ -213,6 +216,15 @@
     <Compile Include="Model\Role.generated.cs">
       <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Stock.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StockExchange.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Strategy.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\SystemPermission.cs" />
     <Compile Include="Model\Tables.cs">
       <AutoGen>True</AutoGen>
@@ -224,6 +236,12 @@
       <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\UserRole.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\WatchList.generated.cs">
+      <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\WatchListStock.generated.cs">
       <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

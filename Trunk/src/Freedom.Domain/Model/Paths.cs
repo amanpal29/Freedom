@@ -147,13 +147,67 @@
 		public string IsActive => PathPrefix + "IsActive";
 	}
 
-	public class NotificationBasePaths : EntityPaths
+	public class ApplicationSettingPaths : EntityPaths
 	{
-		public NotificationBasePaths()
+		public ApplicationSettingPaths()
 		{
 		}
 		
-		public NotificationBasePaths(string hostName)
+		public ApplicationSettingPaths(string hostName)
+			: base(hostName)
+		{
+		}
+
+		public string Id => PathPrefix + "Id";
+
+		public string CreatedDateTime => PathPrefix + "CreatedDateTime";
+
+		public string ModifiedDateTime => PathPrefix + "ModifiedDateTime";
+
+		public string CreatedById => PathPrefix + "CreatedById";
+
+		public string ModifiedById => PathPrefix + "ModifiedById";
+
+		public string Key => PathPrefix + "Key";
+
+		public string Value => PathPrefix + "Value";
+	}
+
+	public class MarketIndexPaths : EntityPaths
+	{
+		public MarketIndexPaths()
+		{
+		}
+		
+		public MarketIndexPaths(string hostName)
+			: base(hostName)
+		{
+		}
+
+		public string Id => PathPrefix + "Id";
+
+		public string CreatedDateTime => PathPrefix + "CreatedDateTime";
+
+		public string ModifiedDateTime => PathPrefix + "ModifiedDateTime";
+
+		public string CreatedById => PathPrefix + "CreatedById";
+
+		public string ModifiedById => PathPrefix + "ModifiedById";
+
+		public string Description => PathPrefix + "Description";
+
+		public string SortOrder => PathPrefix + "SortOrder";
+
+		public string IsActive => PathPrefix + "IsActive";
+	}
+
+	public class NotificationPaths : EntityPaths
+	{
+		public NotificationPaths()
+		{
+		}
+		
+		public NotificationPaths(string hostName)
 			: base(hostName)
 		{
 		}
@@ -181,39 +235,13 @@
 		public string RecipientId => PathPrefix + "RecipientId";
 	}
 
-	public class ApplicationSettingPaths : EntityPaths
+	public class NotificationBasePaths : EntityPaths
 	{
-		public ApplicationSettingPaths()
+		public NotificationBasePaths()
 		{
 		}
 		
-		public ApplicationSettingPaths(string hostName)
-			: base(hostName)
-		{
-		}
-
-		public string Id => PathPrefix + "Id";
-
-		public string CreatedDateTime => PathPrefix + "CreatedDateTime";
-
-		public string ModifiedDateTime => PathPrefix + "ModifiedDateTime";
-
-		public string CreatedById => PathPrefix + "CreatedById";
-
-		public string ModifiedById => PathPrefix + "ModifiedById";
-
-		public string Key => PathPrefix + "Key";
-
-		public string Value => PathPrefix + "Value";
-	}
-
-	public class NotificationPaths : EntityPaths
-	{
-		public NotificationPaths()
-		{
-		}
-		
-		public NotificationPaths(string hostName)
+		public NotificationBasePaths(string hostName)
 			: base(hostName)
 		{
 		}
@@ -287,6 +315,95 @@
 		public string ModifiedById => PathPrefix + "ModifiedById";
 
 		public string Name => PathPrefix + "Name";
+	}
+
+	public class StockPaths : EntityPaths
+	{
+		public StockPaths()
+		{
+		}
+		
+		public StockPaths(string hostName)
+			: base(hostName)
+		{
+		}
+
+		public StockExchangePaths StockExchange
+			=> new StockExchangePaths(PathPrefix + "StockExchange");
+
+		public string Id => PathPrefix + "Id";
+
+		public string CreatedDateTime => PathPrefix + "CreatedDateTime";
+
+		public string ModifiedDateTime => PathPrefix + "ModifiedDateTime";
+
+		public string CreatedById => PathPrefix + "CreatedById";
+
+		public string ModifiedById => PathPrefix + "ModifiedById";
+
+		public string Symbol => PathPrefix + "Symbol";
+
+		public string StockExchangeId => PathPrefix + "StockExchangeId";
+	}
+
+	public class StockExchangePaths : EntityPaths
+	{
+		public StockExchangePaths()
+		{
+		}
+		
+		public StockExchangePaths(string hostName)
+			: base(hostName)
+		{
+		}
+
+		public string Id => PathPrefix + "Id";
+
+		public string CreatedDateTime => PathPrefix + "CreatedDateTime";
+
+		public string ModifiedDateTime => PathPrefix + "ModifiedDateTime";
+
+		public string CreatedById => PathPrefix + "CreatedById";
+
+		public string ModifiedById => PathPrefix + "ModifiedById";
+
+		public string Description => PathPrefix + "Description";
+
+		public string SortOrder => PathPrefix + "SortOrder";
+
+		public string IsActive => PathPrefix + "IsActive";
+	}
+
+	public class StrategyPaths : EntityPaths
+	{
+		public StrategyPaths()
+		{
+		}
+		
+		public StrategyPaths(string hostName)
+			: base(hostName)
+		{
+		}
+
+		public string Id => PathPrefix + "Id";
+
+		public string CreatedDateTime => PathPrefix + "CreatedDateTime";
+
+		public string ModifiedDateTime => PathPrefix + "ModifiedDateTime";
+
+		public string CreatedById => PathPrefix + "CreatedById";
+
+		public string ModifiedById => PathPrefix + "ModifiedById";
+
+		public string Description => PathPrefix + "Description";
+
+		public string SortOrder => PathPrefix + "SortOrder";
+
+		public string IsActive => PathPrefix + "IsActive";
+
+		public string StartDate => PathPrefix + "StartDate";
+
+		public string ExpiryDate => PathPrefix + "ExpiryDate";
 	}
 
 	public class UserPaths : EntityPaths
@@ -363,6 +480,62 @@
 		public string RoleId => PathPrefix + "RoleId";
 	}
 
+	public class WatchListPaths : EntityPaths
+	{
+		public WatchListPaths()
+		{
+		}
+		
+		public WatchListPaths(string hostName)
+			: base(hostName)
+		{
+		}
+
+		public StockPaths WatchListStocks
+			=> new StockPaths(PathPrefix + "WatchListStocks");
+
+		public WatchListStockPaths WatchListStock
+			=> new WatchListStockPaths(PathPrefix + "WatchListStock");
+
+		public string Id => PathPrefix + "Id";
+
+		public string CreatedDateTime => PathPrefix + "CreatedDateTime";
+
+		public string ModifiedDateTime => PathPrefix + "ModifiedDateTime";
+
+		public string CreatedById => PathPrefix + "CreatedById";
+
+		public string ModifiedById => PathPrefix + "ModifiedById";
+
+		public string Number => PathPrefix + "Number";
+
+		public string Name => PathPrefix + "Name";
+
+		public string Description => PathPrefix + "Description";
+	}
+
+	public class WatchListStockPaths : EntityPaths
+	{
+		public WatchListStockPaths()
+		{
+		}
+		
+		public WatchListStockPaths(string hostName)
+			: base(hostName)
+		{
+		}
+
+		public WatchListPaths WatchList
+			=> new WatchListPaths(PathPrefix + "WatchList");
+
+		public StockPaths Stock
+			=> new StockPaths(PathPrefix + "Stock");
+
+		public string WatchListId => PathPrefix + "WatchListId";
+
+		public string StockId => PathPrefix + "StockId";
+	}
+
 	public static class Paths
 	{
 		public static EntityBasePaths EntityBase => new EntityBasePaths();
@@ -375,19 +548,31 @@
 
 		public static LookupPaths Lookup => new LookupPaths();
 
-		public static NotificationBasePaths NotificationBase => new NotificationBasePaths();
-
 		public static ApplicationSettingPaths ApplicationSetting => new ApplicationSettingPaths();
 
+		public static MarketIndexPaths MarketIndex => new MarketIndexPaths();
+
 		public static NotificationPaths Notification => new NotificationPaths();
+
+		public static NotificationBasePaths NotificationBase => new NotificationBasePaths();
 
 		public static PermissionPaths Permission => new PermissionPaths();
 
 		public static RolePaths Role => new RolePaths();
 
+		public static StockPaths Stock => new StockPaths();
+
+		public static StockExchangePaths StockExchange => new StockExchangePaths();
+
+		public static StrategyPaths Strategy => new StrategyPaths();
+
 		public static UserPaths User => new UserPaths();
 
 		public static UserRolePaths UserRole => new UserRolePaths();
+
+		public static WatchListPaths WatchList => new WatchListPaths();
+
+		public static WatchListStockPaths WatchListStock => new WatchListStockPaths();
 
 	}
 }

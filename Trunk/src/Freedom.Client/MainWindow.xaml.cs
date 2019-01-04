@@ -1,4 +1,5 @@
-﻿using Freedom.Client.Infrastructure;
+﻿using Freedom.Client.Features.Dashboard;
+using Freedom.Client.Infrastructure;
 using Freedom.Client.ViewModel;
 using Freedom.Domain.Infrastructure.ExceptionHandling;
 using Freedom.Domain.Interfaces;
@@ -28,7 +29,7 @@ namespace Freedom.Client
 
         public MainWindow(MainViewModel viewModel = null)
         {
-            DataContext = viewModel ?? new MainViewModel();
+            DataContext = viewModel ?? new MainViewModel(new DashboardViewModel());
 
             InitializeComponent();            
 

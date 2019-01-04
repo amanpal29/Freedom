@@ -22,7 +22,7 @@
   <EntityType Name="Lookup" BaseType="LookupBase" Abstract="true">
     <Property Name="IsActive" Nullable="false" Type="Boolean" DefaultValue="true" />
   </EntityType>
-
+  
   <!-- Complex Types -->
   <ComplexType Name="MailingAddress">
     <Property Name="Street" Type="String" />
@@ -60,6 +60,15 @@
     <Member Name="Low" Value="-1" />
   </EnumType>
 
+  <EntityType Name="Strategy" BaseType="Lookup">
+    <Property Name="StartDate" Type="Date"/>
+    <Property Name="ExpiryDate" Type="Date"/>
+  </EntityType>
+  <EntityType Name="StockExchange" BaseType="Lookup">
+  </EntityType>
+  <EntityType Name="MarketIndex" BaseType="Lookup">
+  </EntityType>
+  
   <!-- Notification -->
   <EntityType Name="NotificationBase" BaseType="EntityBase" Abstract="true" Audit="false">
     <Property Name="Class" Type="NotificationClass" Nullable="false" />
@@ -83,6 +92,17 @@
     <Index Name="UNQ_Key" IsUnique="true">
       <PropertyRef Name="Key" />
     </Index>
+  </EntityType>
+  
+  <EntityType Name="Stock" BaseType="AggregateRoot" Reportable="true">
+    <Property Name="Symbol" Type="String" Nullable="false" />
+    <Relationship Name="StockExchange" RelatedType="StockExchange" RelationshipType="Required"/>
+  </EntityType>
+
+  <EntityType Name="WatchList" BaseType="NumberedRoot" Reportable="true">
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" />
+    <Relationship Name="WatchListStocks" RelatedType="Stock" RelationshipType="ManyToMany" Intermediate="WatchListStock" />
   </EntityType>
 
   <!-- User -->

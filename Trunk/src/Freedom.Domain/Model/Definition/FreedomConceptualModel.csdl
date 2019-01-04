@@ -5,20 +5,39 @@
         Namespace="Freedom.Domain.Model" Alias="Self">
 	<EntityContainer Name="FreedomModelContainer">
 		<EntitySet Name="ApplicationSetting" EntityType="Self.ApplicationSetting" />
+		<EntitySet Name="MarketIndex" EntityType="Self.MarketIndex" />
 		<EntitySet Name="Notification" EntityType="Self.Notification" />
 		<EntitySet Name="Permission" EntityType="Self.Permission" />
 		<EntitySet Name="Role" EntityType="Self.Role" />
+		<EntitySet Name="Stock" EntityType="Self.Stock" />
+		<EntitySet Name="StockExchange" EntityType="Self.StockExchange" />
+		<EntitySet Name="Strategy" EntityType="Self.Strategy" />
 		<EntitySet Name="User" EntityType="Self.User" />
 		<EntitySet Name="UserRole" EntityType="Self.UserRole" />
+		<EntitySet Name="WatchList" EntityType="Self.WatchList" />
+		<EntitySet Name="WatchListStock" EntityType="Self.WatchListStock" />
 		<AssociationSet Name="FK_ApplicationSetting_User_CreatedBy" Association="Self.FK_ApplicationSetting_User_CreatedBy" />
 		<AssociationSet Name="FK_ApplicationSetting_User_ModifiedBy" Association="Self.FK_ApplicationSetting_User_ModifiedBy" />
+		<AssociationSet Name="FK_MarketIndex_User_CreatedBy" Association="Self.FK_MarketIndex_User_CreatedBy" />
+		<AssociationSet Name="FK_MarketIndex_User_ModifiedBy" Association="Self.FK_MarketIndex_User_ModifiedBy" />
 		<AssociationSet Name="FK_Permission_Role" Association="Self.FK_Permission_Role" />
 		<AssociationSet Name="FK_Role_User_CreatedBy" Association="Self.FK_Role_User_CreatedBy" />
 		<AssociationSet Name="FK_Role_User_ModifiedBy" Association="Self.FK_Role_User_ModifiedBy" />
+		<AssociationSet Name="FK_StockExchange_User_CreatedBy" Association="Self.FK_StockExchange_User_CreatedBy" />
+		<AssociationSet Name="FK_StockExchange_User_ModifiedBy" Association="Self.FK_StockExchange_User_ModifiedBy" />
+		<AssociationSet Name="FK_Stock_StockExchange" Association="Self.FK_Stock_StockExchange" />
+		<AssociationSet Name="FK_Stock_User_CreatedBy" Association="Self.FK_Stock_User_CreatedBy" />
+		<AssociationSet Name="FK_Stock_User_ModifiedBy" Association="Self.FK_Stock_User_ModifiedBy" />
+		<AssociationSet Name="FK_Strategy_User_CreatedBy" Association="Self.FK_Strategy_User_CreatedBy" />
+		<AssociationSet Name="FK_Strategy_User_ModifiedBy" Association="Self.FK_Strategy_User_ModifiedBy" />
 		<AssociationSet Name="FK_UserRole_Role" Association="Self.FK_UserRole_Role" />
 		<AssociationSet Name="FK_UserRole_User" Association="Self.FK_UserRole_User" />
 		<AssociationSet Name="FK_User_User_CreatedBy" Association="Self.FK_User_User_CreatedBy" />
 		<AssociationSet Name="FK_User_User_ModifiedBy" Association="Self.FK_User_User_ModifiedBy" />
+		<AssociationSet Name="FK_WatchListStock_Stock" Association="Self.FK_WatchListStock_Stock" />
+		<AssociationSet Name="FK_WatchListStock_WatchList" Association="Self.FK_WatchListStock_WatchList" />
+		<AssociationSet Name="FK_WatchList_User_CreatedBy" Association="Self.FK_WatchList_User_CreatedBy" />
+		<AssociationSet Name="FK_WatchList_User_ModifiedBy" Association="Self.FK_WatchList_User_ModifiedBy" />
 	</EntityContainer>
 	<EntityType Name="EntityBase" Abstract="true">
 		<Key>
@@ -42,6 +61,18 @@
 	<EntityType Name="Lookup" BaseType="Self.LookupBase" Abstract="true">
 		<Property Name="IsActive" Type="Boolean" Nullable="false" />
 	</EntityType>
+	<EntityType Name="ApplicationSetting" BaseType="Self.AggregateRoot">
+		<Property Name="Key" Type="String" Nullable="false" />
+		<Property Name="Value" Type="String" />
+		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_ApplicationSetting_User_CreatedBy" FromRole="ApplicationSetting" ToRole="User" />
+		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_ApplicationSetting_User_ModifiedBy" FromRole="ApplicationSetting" ToRole="User" />
+	</EntityType>
+	<EntityType Name="MarketIndex" BaseType="Self.Lookup">
+		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_MarketIndex_User_CreatedBy" FromRole="MarketIndex" ToRole="User" />
+		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_MarketIndex_User_ModifiedBy" FromRole="MarketIndex" ToRole="User" />
+	</EntityType>
+	<EntityType Name="Notification" BaseType="Self.NotificationBase">
+	</EntityType>
 	<EntityType Name="NotificationBase" BaseType="Self.EntityBase" Abstract="true">
 		<Property Name="Class" Type="Self.NotificationClass" Nullable="false" />
 		<Property Name="Priority" Type="Self.Priority" Nullable="false" />
@@ -54,14 +85,6 @@
 		<Property Name="CreatedById" Type="Guid" />
 		<Property Name="RecipientId" Type="Guid" Nullable="false" />
 	</EntityType>
-	<EntityType Name="ApplicationSetting" BaseType="Self.AggregateRoot">
-		<Property Name="Key" Type="String" Nullable="false" />
-		<Property Name="Value" Type="String" />
-		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_ApplicationSetting_User_CreatedBy" FromRole="ApplicationSetting" ToRole="User" />
-		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_ApplicationSetting_User_ModifiedBy" FromRole="ApplicationSetting" ToRole="User" />
-	</EntityType>
-	<EntityType Name="Notification" BaseType="Self.NotificationBase">
-	</EntityType>
 	<EntityType Name="Permission" BaseType="Self.EntityBase">
 		<Property Name="Description" Type="String" />
 		<Property Name="RoleId" Type="Guid" Nullable="false" />
@@ -72,6 +95,23 @@
 		<NavigationProperty Name="Permissions" Relationship="Self.FK_Permission_Role" FromRole="Role" ToRole="Permission" />
 		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_Role_User_CreatedBy" FromRole="Role" ToRole="User" />
 		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_Role_User_ModifiedBy" FromRole="Role" ToRole="User" />
+	</EntityType>
+	<EntityType Name="Stock" BaseType="Self.AggregateRoot">
+		<Property Name="Symbol" Type="String" Nullable="false" />
+		<Property Name="StockExchangeId" Type="Guid" Nullable="false" />
+		<NavigationProperty Name="StockExchange" Relationship="Self.FK_Stock_StockExchange" FromRole="Stock" ToRole="StockExchange" />
+		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_Stock_User_CreatedBy" FromRole="Stock" ToRole="User" />
+		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_Stock_User_ModifiedBy" FromRole="Stock" ToRole="User" />
+	</EntityType>
+	<EntityType Name="StockExchange" BaseType="Self.Lookup">
+		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_StockExchange_User_CreatedBy" FromRole="StockExchange" ToRole="User" />
+		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_StockExchange_User_ModifiedBy" FromRole="StockExchange" ToRole="User" />
+	</EntityType>
+	<EntityType Name="Strategy" BaseType="Self.Lookup">
+		<Property Name="StartDate" Type="DateTime" />
+		<Property Name="ExpiryDate" Type="DateTime" />
+		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_Strategy_User_CreatedBy" FromRole="Strategy" ToRole="User" />
+		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_Strategy_User_ModifiedBy" FromRole="Strategy" ToRole="User" />
 	</EntityType>
 	<EntityType Name="User" BaseType="Self.AggregateRoot">
 		<Property Name="Name" Type="String" />
@@ -98,6 +138,23 @@
 		<Property Name="RoleId" Type="Guid" Nullable="false" />
 		<NavigationProperty Name="User" Relationship="Self.FK_UserRole_User" FromRole="UserRole" ToRole="User" />
 		<NavigationProperty Name="Role" Relationship="Self.FK_UserRole_Role" FromRole="UserRole" ToRole="Role" />
+	</EntityType>
+	<EntityType Name="WatchList" BaseType="Self.NumberedRoot">
+		<Property Name="Name" Type="String" Nullable="false" />
+		<Property Name="Description" Type="String" />
+		<NavigationProperty Name="WatchListStock" Relationship="Self.FK_WatchListStock_WatchList" FromRole="WatchList" ToRole="WatchListStock" />
+		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_WatchList_User_CreatedBy" FromRole="WatchList" ToRole="User" />
+		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_WatchList_User_ModifiedBy" FromRole="WatchList" ToRole="User" />
+	</EntityType>
+	<EntityType Name="WatchListStock">
+		<Key>
+			<PropertyRef Name="WatchListId" />
+			<PropertyRef Name="StockId" />
+		</Key>
+		<Property Name="WatchListId" Type="Guid" Nullable="false" />
+		<Property Name="StockId" Type="Guid" Nullable="false" />
+		<NavigationProperty Name="WatchList" Relationship="Self.FK_WatchListStock_WatchList" FromRole="WatchListStock" ToRole="WatchList" />
+		<NavigationProperty Name="Stock" Relationship="Self.FK_WatchListStock_Stock" FromRole="WatchListStock" ToRole="Stock" />
 	</EntityType>
 	<ComplexType Name="MailingAddress">
 		<Property Name="Street" Type="String" />
@@ -126,6 +183,30 @@
 				<PropertyRef Name="Id" />
 			</Principal>
 			<Dependent Role="ApplicationSetting">
+				<PropertyRef Name="ModifiedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_MarketIndex_User_CreatedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="MarketIndex" Type="Self.MarketIndex" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="MarketIndex">
+				<PropertyRef Name="CreatedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_MarketIndex_User_ModifiedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="MarketIndex" Type="Self.MarketIndex" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="MarketIndex">
 				<PropertyRef Name="ModifiedById" />
 			</Dependent>
 		</ReferentialConstraint>
@@ -162,6 +243,90 @@
 				<PropertyRef Name="Id" />
 			</Principal>
 			<Dependent Role="Role">
+				<PropertyRef Name="ModifiedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_StockExchange_User_CreatedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="StockExchange" Type="Self.StockExchange" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="StockExchange">
+				<PropertyRef Name="CreatedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_StockExchange_User_ModifiedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="StockExchange" Type="Self.StockExchange" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="StockExchange">
+				<PropertyRef Name="ModifiedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_Stock_StockExchange">
+		<End Role="StockExchange" Type="Self.StockExchange" Multiplicity="1" />
+		<End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="StockExchange">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="Stock">
+				<PropertyRef Name="StockExchangeId" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_Stock_User_CreatedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="Stock">
+				<PropertyRef Name="CreatedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_Stock_User_ModifiedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="Stock">
+				<PropertyRef Name="ModifiedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_Strategy_User_CreatedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="Strategy" Type="Self.Strategy" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="Strategy">
+				<PropertyRef Name="CreatedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_Strategy_User_ModifiedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="Strategy" Type="Self.Strategy" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="Strategy">
 				<PropertyRef Name="ModifiedById" />
 			</Dependent>
 		</ReferentialConstraint>
@@ -210,6 +375,54 @@
 				<PropertyRef Name="Id" />
 			</Principal>
 			<Dependent Role="User">
+				<PropertyRef Name="ModifiedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_WatchListStock_Stock">
+		<End Role="Stock" Type="Self.Stock" Multiplicity="1" />
+		<End Role="WatchListStock" Type="Self.WatchListStock" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="Stock">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="WatchListStock">
+				<PropertyRef Name="StockId" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_WatchListStock_WatchList">
+		<End Role="WatchList" Type="Self.WatchList" Multiplicity="1" />
+		<End Role="WatchListStock" Type="Self.WatchListStock" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="WatchList">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="WatchListStock">
+				<PropertyRef Name="WatchListId" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_WatchList_User_CreatedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="WatchList" Type="Self.WatchList" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="WatchList">
+				<PropertyRef Name="CreatedById" />
+			</Dependent>
+		</ReferentialConstraint>
+	</Association>
+	<Association Name="FK_WatchList_User_ModifiedBy">
+		<End Role="User" Type="Self.User" Multiplicity="1" />
+		<End Role="WatchList" Type="Self.WatchList" Multiplicity="*" />
+		<ReferentialConstraint>
+			<Principal Role="User">
+				<PropertyRef Name="Id" />
+			</Principal>
+			<Dependent Role="WatchList">
 				<PropertyRef Name="ModifiedById" />
 			</Dependent>
 		</ReferentialConstraint>

@@ -23,6 +23,7 @@ namespace Freedom.Domain.Model
 	[DataContract(IsReference = true, Namespace = Namespace)]
 	[KnownType(typeof(EntityBase))]
 	[KnownType(typeof(UserRole))]
+	[KnownType(typeof(WatchListStock))]
 	public abstract partial class Entity 
 	{
 		public const string Namespace = "http://schemas.automatedstocktrader.com/domaindefinition";

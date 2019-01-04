@@ -26,6 +26,9 @@ using Freedom.ComponentModel;
 namespace Freedom.Domain.Model
 {
 	[DataContract(Namespace = Namespace)]
+	[KnownType(typeof(MarketIndex))]
+	[KnownType(typeof(StockExchange))]
+	[KnownType(typeof(Strategy))]
 
 	public abstract partial class Lookup : LookupBase
 	{

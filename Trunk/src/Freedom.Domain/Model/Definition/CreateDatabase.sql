@@ -11,6 +11,20 @@
 
 GO
 
+CREATE TABLE [MarketIndex] (
+	[Id] uniqueidentifier NOT NULL default newId(),
+	[CreatedDateTime] datetime2 NOT NULL,
+	[ModifiedDateTime] datetime2 NOT NULL,
+	[CreatedById] uniqueidentifier NOT NULL,
+	[ModifiedById] uniqueidentifier NOT NULL,
+	[Description] nvarchar(4000) NULL,
+	[SortOrder] int NOT NULL default 0,
+	[IsActive] bit NOT NULL default 1,
+	CONSTRAINT [PK_MarketIndex] PRIMARY KEY NONCLUSTERED ( [Id] )
+);
+
+GO
+
 CREATE TABLE [Notification] (
 	[Id] uniqueidentifier NOT NULL default newId(),
 	[Class] int NOT NULL,
@@ -45,6 +59,49 @@ CREATE TABLE [Role] (
 	[ModifiedById] uniqueidentifier NOT NULL,
 	[Name] nvarchar(4000) NOT NULL,
 	CONSTRAINT [PK_Role] PRIMARY KEY NONCLUSTERED ( [Id] )
+);
+
+GO
+
+CREATE TABLE [Stock] (
+	[Id] uniqueidentifier NOT NULL default newId(),
+	[CreatedDateTime] datetime2 NOT NULL,
+	[ModifiedDateTime] datetime2 NOT NULL,
+	[CreatedById] uniqueidentifier NOT NULL,
+	[ModifiedById] uniqueidentifier NOT NULL,
+	[Symbol] nvarchar(4000) NOT NULL,
+	[StockExchangeId] uniqueidentifier NOT NULL,
+	CONSTRAINT [PK_Stock] PRIMARY KEY NONCLUSTERED ( [Id] )
+);
+
+GO
+
+CREATE TABLE [StockExchange] (
+	[Id] uniqueidentifier NOT NULL default newId(),
+	[CreatedDateTime] datetime2 NOT NULL,
+	[ModifiedDateTime] datetime2 NOT NULL,
+	[CreatedById] uniqueidentifier NOT NULL,
+	[ModifiedById] uniqueidentifier NOT NULL,
+	[Description] nvarchar(4000) NULL,
+	[SortOrder] int NOT NULL default 0,
+	[IsActive] bit NOT NULL default 1,
+	CONSTRAINT [PK_StockExchange] PRIMARY KEY NONCLUSTERED ( [Id] )
+);
+
+GO
+
+CREATE TABLE [Strategy] (
+	[Id] uniqueidentifier NOT NULL default newId(),
+	[CreatedDateTime] datetime2 NOT NULL,
+	[ModifiedDateTime] datetime2 NOT NULL,
+	[CreatedById] uniqueidentifier NOT NULL,
+	[ModifiedById] uniqueidentifier NOT NULL,
+	[Description] nvarchar(4000) NULL,
+	[SortOrder] int NOT NULL default 0,
+	[IsActive] bit NOT NULL default 1,
+	[StartDate] date NULL,
+	[ExpiryDate] date NULL,
+	CONSTRAINT [PK_Strategy] PRIMARY KEY NONCLUSTERED ( [Id] )
 );
 
 GO
@@ -85,6 +142,28 @@ CREATE TABLE [UserRole] (
 
 GO
 
+CREATE TABLE [WatchList] (
+	[Id] uniqueidentifier NOT NULL default newId(),
+	[CreatedDateTime] datetime2 NOT NULL,
+	[ModifiedDateTime] datetime2 NOT NULL,
+	[CreatedById] uniqueidentifier NOT NULL,
+	[ModifiedById] uniqueidentifier NOT NULL,
+	[Number] nvarchar(4000) NULL,
+	[Name] nvarchar(4000) NOT NULL,
+	[Description] nvarchar(4000) NULL,
+	CONSTRAINT [PK_WatchList] PRIMARY KEY NONCLUSTERED ( [Id] )
+);
+
+GO
+
+CREATE TABLE [WatchListStock] (
+	[WatchListId] uniqueidentifier NOT NULL,
+	[StockId] uniqueidentifier NOT NULL,
+	CONSTRAINT [PK_WatchListStock] PRIMARY KEY NONCLUSTERED ( [WatchListId], [StockId] )
+);
+
+GO
+
 CREATE INDEX [IDX_CreatedById]
 ON [ApplicationSetting] ( [CreatedById] );
 
@@ -99,6 +178,24 @@ ON [ApplicationSetting] ( [ModifiedById] );
 
 ALTER TABLE [ApplicationSetting]
 ADD CONSTRAINT [FK_ApplicationSetting_User_ModifiedBy]
+FOREIGN KEY ( [ModifiedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_CreatedById]
+ON [MarketIndex] ( [CreatedById] );
+
+ALTER TABLE [MarketIndex]
+ADD CONSTRAINT [FK_MarketIndex_User_CreatedBy]
+FOREIGN KEY ( [CreatedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_ModifiedById]
+ON [MarketIndex] ( [ModifiedById] );
+
+ALTER TABLE [MarketIndex]
+ADD CONSTRAINT [FK_MarketIndex_User_ModifiedBy]
 FOREIGN KEY ( [ModifiedById] ) REFERENCES [User] ( [Id] );
 
 GO
@@ -130,6 +227,69 @@ FOREIGN KEY ( [ModifiedById] ) REFERENCES [User] ( [Id] );
 
 GO
 
+CREATE INDEX [IDX_CreatedById]
+ON [StockExchange] ( [CreatedById] );
+
+ALTER TABLE [StockExchange]
+ADD CONSTRAINT [FK_StockExchange_User_CreatedBy]
+FOREIGN KEY ( [CreatedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_ModifiedById]
+ON [StockExchange] ( [ModifiedById] );
+
+ALTER TABLE [StockExchange]
+ADD CONSTRAINT [FK_StockExchange_User_ModifiedBy]
+FOREIGN KEY ( [ModifiedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_StockExchangeId]
+ON [Stock] ( [StockExchangeId] );
+
+ALTER TABLE [Stock]
+ADD CONSTRAINT [FK_Stock_StockExchange]
+FOREIGN KEY ( [StockExchangeId] ) REFERENCES [StockExchange] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_CreatedById]
+ON [Stock] ( [CreatedById] );
+
+ALTER TABLE [Stock]
+ADD CONSTRAINT [FK_Stock_User_CreatedBy]
+FOREIGN KEY ( [CreatedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_ModifiedById]
+ON [Stock] ( [ModifiedById] );
+
+ALTER TABLE [Stock]
+ADD CONSTRAINT [FK_Stock_User_ModifiedBy]
+FOREIGN KEY ( [ModifiedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_CreatedById]
+ON [Strategy] ( [CreatedById] );
+
+ALTER TABLE [Strategy]
+ADD CONSTRAINT [FK_Strategy_User_CreatedBy]
+FOREIGN KEY ( [CreatedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_ModifiedById]
+ON [Strategy] ( [ModifiedById] );
+
+ALTER TABLE [Strategy]
+ADD CONSTRAINT [FK_Strategy_User_ModifiedBy]
+FOREIGN KEY ( [ModifiedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
 CREATE INDEX [IDX_RoleId]
 ON [UserRole] ( [RoleId] );
 
@@ -153,6 +313,42 @@ ON [User] ( [CreatedById] );
 
 CREATE INDEX [IDX_ModifiedById]
 ON [User] ( [ModifiedById] );
+
+CREATE INDEX [IDX_StockId]
+ON [WatchListStock] ( [StockId] );
+
+ALTER TABLE [WatchListStock]
+ADD CONSTRAINT [FK_WatchListStock_Stock]
+FOREIGN KEY ( [StockId] ) REFERENCES [Stock] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_WatchListId]
+ON [WatchListStock] ( [WatchListId] );
+
+ALTER TABLE [WatchListStock]
+ADD CONSTRAINT [FK_WatchListStock_WatchList]
+FOREIGN KEY ( [WatchListId] ) REFERENCES [WatchList] ( [Id] ) ON DELETE CASCADE;
+
+GO
+
+CREATE INDEX [IDX_CreatedById]
+ON [WatchList] ( [CreatedById] );
+
+ALTER TABLE [WatchList]
+ADD CONSTRAINT [FK_WatchList_User_CreatedBy]
+FOREIGN KEY ( [CreatedById] ) REFERENCES [User] ( [Id] );
+
+GO
+
+CREATE INDEX [IDX_ModifiedById]
+ON [WatchList] ( [ModifiedById] );
+
+ALTER TABLE [WatchList]
+ADD CONSTRAINT [FK_WatchList_User_ModifiedBy]
+FOREIGN KEY ( [ModifiedById] ) REFERENCES [User] ( [Id] );
+
+GO
 
 CREATE UNIQUE INDEX UNQ_Key
 ON [ApplicationSetting] ( [Key] );

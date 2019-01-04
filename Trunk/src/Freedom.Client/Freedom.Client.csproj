@@ -91,6 +91,7 @@
       <DependentUpon>LoginDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Features\AuthenticateUser\LoginViewModel.cs" />
+    <Compile Include="Features\Dashboard\DashboardViewModel.cs" />
     <Compile Include="Infrastructure\ApplicationSettings.cs" />
     <Compile Include="Infrastructure\Dialogs\ViewModels\ForcePasswordChangeDialogViewModel.cs" />
     <Compile Include="Infrastructure\Dialogs\ViewModels\PasswordDialogViewModel.cs" />

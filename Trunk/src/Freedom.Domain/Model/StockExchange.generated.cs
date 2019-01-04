@@ -26,34 +26,59 @@ using Freedom.ComponentModel;
 namespace Freedom.Domain.Model
 {
 	[DataContract(Namespace = Namespace)]
-	[KnownType(typeof(WatchList))]
 
-	public abstract partial class NumberedRoot : AggregateRoot
+	public partial class StockExchange : Lookup
 	{
-		[DataMember(EmitDefaultValue = false)]
-		public string Number
+		public override string EntityTypeName
 		{
-			get { return _number; }
+			get { return "StockExchange"; }
+		}
+
+		[DataMember(EmitDefaultValue = false)]
+		public override User CreatedBy
+		{
+			get { return _createdBy; }
 			set
 			{
-				if (_number == value) return;
-				_number = value;
-				MarkAsChanged();
+				if (object.ReferenceEquals(_createdBy, value)) return;
+
+				_createdBy = value;
+
+				if (value != null)
+					CreatedById = value.Id;
+
 				OnPropertyChanged();
 			}
 		}
-		private string _number;
+		private User _createdBy;
+
+		[DataMember(EmitDefaultValue = false)]
+		public override User ModifiedBy
+		{
+			get { return _modifiedBy; }
+			set
+			{
+				if (object.ReferenceEquals(_modifiedBy, value)) return;
+
+				_modifiedBy = value;
+
+				if (value != null)
+					ModifiedById = value.Id;
+
+				OnPropertyChanged();
+			}
+		}
+		private User _modifiedBy;
 
 		public override void Copy(Entity entity)
 		{
 			base.Copy(entity);
 
-			NumberedRoot source = entity as NumberedRoot;
+			StockExchange source = entity as StockExchange;
 
 			if (source == null)
-				throw new ArgumentException("entity", "entity must be an instance of NumberedRoot.");
+				throw new ArgumentException("entity", "entity must be an instance of StockExchange.");
 
-			Number = source._number;
 		}
 	}
 }

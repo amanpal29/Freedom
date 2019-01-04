@@ -18,9 +18,15 @@ namespace Freedom.Domain.Model
 			get
 			{
 				yield return "User";
+				yield return "WatchList";
 				yield return "ApplicationSetting";
+				yield return "MarketIndex";
 				yield return "Role";
+				yield return "StockExchange";
+				yield return "Strategy";
 				yield return "UserRole";
+				yield return "Stock";
+				yield return "WatchListStock";
 			}
 		}
 	}

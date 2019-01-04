@@ -14,6 +14,20 @@
 				</MappingFragment>
 			</EntityTypeMapping>
 		</EntitySetMapping>
+		<EntitySetMapping Name="MarketIndex">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.MarketIndex">
+				<MappingFragment StoreEntitySet="MarketIndex">
+					<ScalarProperty Name="Id" ColumnName="Id" />
+					<ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+					<ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+					<ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+					<ScalarProperty Name="ModifiedById" ColumnName="ModifiedById" />
+					<ScalarProperty Name="Description" ColumnName="Description" />
+					<ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+					<ScalarProperty Name="IsActive" ColumnName="IsActive" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
 		<EntitySetMapping Name="Notification">
 			<EntityTypeMapping TypeName="Freedom.Domain.Model.Notification">
 				<MappingFragment StoreEntitySet="Notification">
@@ -52,6 +66,49 @@
 				</MappingFragment>
 			</EntityTypeMapping>
 		</EntitySetMapping>
+		<EntitySetMapping Name="Stock">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.Stock">
+				<MappingFragment StoreEntitySet="Stock">
+					<ScalarProperty Name="Id" ColumnName="Id" />
+					<ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+					<ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+					<ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+					<ScalarProperty Name="ModifiedById" ColumnName="ModifiedById" />
+					<ScalarProperty Name="Symbol" ColumnName="Symbol" />
+					<ScalarProperty Name="StockExchangeId" ColumnName="StockExchangeId" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
+		<EntitySetMapping Name="StockExchange">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.StockExchange">
+				<MappingFragment StoreEntitySet="StockExchange">
+					<ScalarProperty Name="Id" ColumnName="Id" />
+					<ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+					<ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+					<ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+					<ScalarProperty Name="ModifiedById" ColumnName="ModifiedById" />
+					<ScalarProperty Name="Description" ColumnName="Description" />
+					<ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+					<ScalarProperty Name="IsActive" ColumnName="IsActive" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
+		<EntitySetMapping Name="Strategy">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.Strategy">
+				<MappingFragment StoreEntitySet="Strategy">
+					<ScalarProperty Name="Id" ColumnName="Id" />
+					<ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+					<ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+					<ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+					<ScalarProperty Name="ModifiedById" ColumnName="ModifiedById" />
+					<ScalarProperty Name="Description" ColumnName="Description" />
+					<ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+					<ScalarProperty Name="IsActive" ColumnName="IsActive" />
+					<ScalarProperty Name="StartDate" ColumnName="StartDate" />
+					<ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
 		<EntitySetMapping Name="User">
 			<EntityTypeMapping TypeName="Freedom.Domain.Model.User">
 				<MappingFragment StoreEntitySet="User">
@@ -85,6 +142,28 @@
 				<MappingFragment StoreEntitySet="UserRole">
 					<ScalarProperty Name="UserId" ColumnName="UserId" />
 					<ScalarProperty Name="RoleId" ColumnName="RoleId" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
+		<EntitySetMapping Name="WatchList">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.WatchList">
+				<MappingFragment StoreEntitySet="WatchList">
+					<ScalarProperty Name="Id" ColumnName="Id" />
+					<ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+					<ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+					<ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+					<ScalarProperty Name="ModifiedById" ColumnName="ModifiedById" />
+					<ScalarProperty Name="Number" ColumnName="Number" />
+					<ScalarProperty Name="Name" ColumnName="Name" />
+					<ScalarProperty Name="Description" ColumnName="Description" />
+				</MappingFragment>
+			</EntityTypeMapping>
+		</EntitySetMapping>
+		<EntitySetMapping Name="WatchListStock">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.WatchListStock">
+				<MappingFragment StoreEntitySet="WatchListStock">
+					<ScalarProperty Name="WatchListId" ColumnName="WatchListId" />
+					<ScalarProperty Name="StockId" ColumnName="StockId" />
 				</MappingFragment>
 			</EntityTypeMapping>
 		</EntitySetMapping>

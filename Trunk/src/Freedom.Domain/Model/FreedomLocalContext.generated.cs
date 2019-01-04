@@ -47,11 +47,17 @@ namespace Freedom.Domain.Model
         }
 
 		public DbSet<ApplicationSetting> ApplicationSetting { get; set; }
+		public DbSet<MarketIndex> MarketIndex { get; set; }
 		public DbSet<Notification> Notification { get; set; }
 		public DbSet<Permission> Permission { get; set; }
 		public DbSet<Role> Role { get; set; }
+		public DbSet<Stock> Stock { get; set; }
+		public DbSet<StockExchange> StockExchange { get; set; }
+		public DbSet<Strategy> Strategy { get; set; }
 		public DbSet<User> User { get; set; }
 		public DbSet<UserRole> UserRole { get; set; }
+		public DbSet<WatchList> WatchList { get; set; }
+		public DbSet<WatchListStock> WatchListStock { get; set; }
 
 		public void Add(Entity entity)
 		{
@@ -62,6 +68,10 @@ namespace Freedom.Domain.Model
 			{
 				case "ApplicationSetting":
 					ApplicationSetting.Add((ApplicationSetting) entity);
+					break;
+
+				case "MarketIndex":
+					MarketIndex.Add((MarketIndex) entity);
 					break;
 
 				case "Notification":
@@ -76,12 +86,32 @@ namespace Freedom.Domain.Model
 					Role.Add((Role) entity);
 					break;
 
+				case "Stock":
+					Stock.Add((Stock) entity);
+					break;
+
+				case "StockExchange":
+					StockExchange.Add((StockExchange) entity);
+					break;
+
+				case "Strategy":
+					Strategy.Add((Strategy) entity);
+					break;
+
 				case "User":
 					User.Add((User) entity);
 					break;
 
 				case "UserRole":
 					UserRole.Add((UserRole) entity);
+					break;
+
+				case "WatchList":
+					WatchList.Add((WatchList) entity);
+					break;
+
+				case "WatchListStock":
+					WatchListStock.Add((WatchListStock) entity);
 					break;
 
 				default:
@@ -102,6 +132,9 @@ namespace Freedom.Domain.Model
 				case "ApplicationSetting":
 					return ApplicationSetting.Find(primaryKey);
 
+				case "MarketIndex":
+					return MarketIndex.Find(primaryKey);
+
 				case "Notification":
 					return Notification.Find(primaryKey);
 
@@ -111,11 +144,26 @@ namespace Freedom.Domain.Model
 				case "Role":
 					return Role.Find(primaryKey);
 
+				case "Stock":
+					return Stock.Find(primaryKey);
+
+				case "StockExchange":
+					return StockExchange.Find(primaryKey);
+
+				case "Strategy":
+					return Strategy.Find(primaryKey);
+
 				case "User":
 					return User.Find(primaryKey);
 
 				case "UserRole":
 					return UserRole.Find(primaryKey);
+
+				case "WatchList":
+					return WatchList.Find(primaryKey);
+
+				case "WatchListStock":
+					return WatchListStock.Find(primaryKey);
 
 				default:
 					throw new ArgumentException($"'{entityTypeName}' is not a known entity type.", nameof(entityTypeName));
@@ -133,6 +181,10 @@ namespace Freedom.Domain.Model
 					ApplicationSetting.Remove((ApplicationSetting) entity);
 					break;
 
+				case "MarketIndex":
+					MarketIndex.Remove((MarketIndex) entity);
+					break;
+
 				case "Notification":
 					Notification.Remove((Notification) entity);
 					break;
@@ -145,12 +197,32 @@ namespace Freedom.Domain.Model
 					Role.Remove((Role) entity);
 					break;
 
+				case "Stock":
+					Stock.Remove((Stock) entity);
+					break;
+
+				case "StockExchange":
+					StockExchange.Remove((StockExchange) entity);
+					break;
+
+				case "Strategy":
+					Strategy.Remove((Strategy) entity);
+					break;
+
 				case "User":
 					User.Remove((User) entity);
 					break;
 
 				case "UserRole":
 					UserRole.Remove((UserRole) entity);
+					break;
+
+				case "WatchList":
+					WatchList.Remove((WatchList) entity);
+					break;
+
+				case "WatchListStock":
+					WatchListStock.Remove((WatchListStock) entity);
 					break;
 
 				default:
