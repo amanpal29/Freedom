@@ -1,5 +1,6 @@
 ﻿using Freedom.Client.Config;
 using Freedom.Client.Features.AuthenticateUser;
+using Freedom.Client.Features.Dashboard;
 using Freedom.Client.Infrastructure;
 using Freedom.Client.Infrastructure.Dialogs;
 using Freedom.Client.Infrastructure.Dialogs.ViewModels;
@@ -212,7 +213,7 @@ namespace Freedom.Client
 
         private Window CreateMainWindow()
         {
-            MainViewModel mainViewModel = new MainViewModel();
+            MainViewModel mainViewModel = new MainViewModel(new DashboardViewModel());
                        
             mainViewModel.StatusBarItems.Add(new SystemStatusViewModel());
             

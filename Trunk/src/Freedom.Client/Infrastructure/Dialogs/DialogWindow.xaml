@@ -30,8 +30,7 @@
 
         <!--IsAwaiting Progress Bar-->
         <freedom:MetroProgressBar Grid.Row="0"
-                                   Style="{StaticResource WindowMetroProgressBarStyle}" 
-                                   VerticalAlignment="Top"
+                                  VerticalAlignment="Top"
                                    Margin="0"/>
 
         <!--Content Here-->
