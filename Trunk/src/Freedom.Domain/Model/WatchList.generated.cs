@@ -28,15 +28,15 @@ namespace Freedom.Domain.Model
 	[DataContract(Namespace = Namespace)]
 	[Reportable]
 
-	public partial class WatchList : NumberedRoot
+	public partial class Watchlist : AggregateRoot
 	{
 		public static readonly ResolutionGraph DefaultResolutionGraph = new ResolutionGraph(
-			Paths.WatchList.WatchListStock
+			Paths.Watchlist.WatchlistStock
 		);
 
 		public override string EntityTypeName
 		{
-			get { return "WatchList"; }
+			get { return "Watchlist"; }
 		}
 
 		[DataMember(EmitDefaultValue = false)]
@@ -110,9 +110,9 @@ namespace Freedom.Domain.Model
 			{
 				if (_stockIds == null)
 				{
-					if (_watchListStock != null)
+					if (_watchlistStock != null)
 					{
-						_stockIds = new KeySetCollection<WatchListStock>(_watchListStock, x => x.StockId);
+						_stockIds = new KeySetCollection<WatchlistStock>(_watchlistStock, x => x.StockId);
 					}
 					else if (!IsSerializing)
 					{
@@ -127,7 +127,7 @@ namespace Freedom.Domain.Model
 			{
 				if (!object.ReferenceEquals(StockIds, value))
 				{
-					KeySetCollection<WatchListStock> keySet = _stockIds as KeySetCollection<WatchListStock>;
+					KeySetCollection<WatchlistStock> keySet = _stockIds as KeySetCollection<WatchlistStock>;
 
 					if (keySet != null)
 					{
@@ -149,68 +149,68 @@ namespace Freedom.Domain.Model
 		private ICollection<Guid> _stockIds;
 
 		[Browsable(false)]  // Intermediate Collection
-		public virtual IList<WatchListStock> WatchListStock
+		public virtual IList<WatchlistStock> WatchlistStock
 		{
 			get
 			{
-				if (_watchListStock == null)
-					_watchListStock = new List<WatchListStock>();
+				if (_watchlistStock == null)
+					_watchlistStock = new List<WatchlistStock>();
 
-				return _watchListStock;
+				return _watchlistStock;
 			}
 			set
 			{
-				if (!object.ReferenceEquals(_watchListStock, value))
+				if (!object.ReferenceEquals(_watchlistStock, value))
 				{
 					if (value != null && value.Count > 0)
 					{
-						if (_watchListStock == null)
+						if (_watchlistStock == null)
 						{
-							_watchListStock = new List<WatchListStock>(value);
+							_watchlistStock = new List<WatchlistStock>(value);
 						}
 						else
 						{
-							_watchListStock.Clear();
-							_watchListStock.AddRange(value);
+							_watchlistStock.Clear();
+							_watchlistStock.AddRange(value);
 						}
 					}
-					else if (_watchListStock != null)
+					else if (_watchlistStock != null)
 					{
-						_watchListStock.Clear();
+						_watchlistStock.Clear();
 					}
 
 					OnPropertyChanged();
 				}
 			}
 		}
-		private List<WatchListStock> _watchListStock;
+		private List<WatchlistStock> _watchlistStock;
 
-		public virtual CompositeCollection<WatchListStock, Stock> WatchListStocks
+		public virtual CompositeCollection<WatchlistStock, Stock> Stocks
 		{
 			get
 			{
-				if  (_watchListStocks == null)
+				if  (_stocks == null)
 				{
 				    Debug.Assert(Assembly.GetEntryAssembly().FullName.Contains("Freedom.ReportEngine"),
 				        "Composite many-to-many collections on entities should only every be accessed when running a report.");
 
-					_watchListStocks = new CompositeCollection<WatchListStock, Stock>(
-						WatchListStock, x => x.Stock, x => x.StockId);
+					_stocks = new CompositeCollection<WatchlistStock, Stock>(
+						WatchlistStock, x => x.Stock, x => x.StockId);
 				}
 
-				return _watchListStocks;
+				return _stocks;
 			}
 		}
-		private CompositeCollection<WatchListStock, Stock> _watchListStocks;
+		private CompositeCollection<WatchlistStock, Stock> _stocks;
 
 		public override void Copy(Entity entity)
 		{
 			base.Copy(entity);
 
-			WatchList source = entity as WatchList;
+			Watchlist source = entity as Watchlist;
 
 			if (source == null)
-				throw new ArgumentException("entity", "entity must be an instance of WatchList.");
+				throw new ArgumentException("entity", "entity must be an instance of Watchlist.");
 
 			Name = source._name;
 			Description = source._description;

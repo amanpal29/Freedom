@@ -27,31 +27,31 @@ namespace Freedom.Domain.Model
 {
 	[DataContract(Namespace = Namespace)]
 
-	public partial class WatchListStock : Entity
+	public partial class WatchlistStock : Entity
 	{
-		public WatchListStock()
+		public WatchlistStock()
 		{
 		}
 
-		public WatchListStock(Guid watchListId, Guid stockId)
+		public WatchlistStock(Guid watchlistId, Guid stockId)
 			: this()
 		{
-			_watchListId = watchListId;
+			_watchlistId = watchlistId;
 			_stockId = stockId;
 		}
 
 		public override string EntityTypeName
 		{
-			get { return "WatchListStock"; }
+			get { return "WatchlistStock"; }
 		}
 
 		[DataMember(EmitDefaultValue = false)]
-		public Guid WatchListId
+		public Guid WatchlistId
 		{
-			get { return _watchListId; }
-			set { _watchListId = value; }
+			get { return _watchlistId; }
+			set { _watchlistId = value; }
 		}
-		private Guid _watchListId;
+		private Guid _watchlistId;
 
 		[DataMember(EmitDefaultValue = false)]
 		public Guid StockId
@@ -62,20 +62,20 @@ namespace Freedom.Domain.Model
 		private Guid _stockId;
 
 		[DataMember(EmitDefaultValue = false)]
-		public virtual WatchList WatchList
+		public virtual Watchlist Watchlist
 		{
-			get { return _watchList; }
+			get { return _watchlist; }
 			set
 			{
-				if (object.ReferenceEquals(_watchList, value)) return;
+				if (object.ReferenceEquals(_watchlist, value)) return;
 
-				_watchList = value;
+				_watchlist = value;
 
 				if (value != null)
-					WatchListId = value.Id;
+					WatchlistId = value.Id;
 			}
 		}
-		private WatchList _watchList;
+		private Watchlist _watchlist;
 
 		[DataMember(EmitDefaultValue = false)]
 		public virtual Stock Stock
@@ -95,12 +95,12 @@ namespace Freedom.Domain.Model
 
 		public virtual void Copy(Entity entity)
 		{
-			WatchListStock source = entity as WatchListStock;
+			WatchlistStock source = entity as WatchlistStock;
 
 			if (source == null)
-				throw new ArgumentException("entity", "entity must be an instance of WatchListStock.");
+				throw new ArgumentException("entity", "entity must be an instance of WatchlistStock.");
 
-			WatchListId = source._watchListId;
+			WatchlistId = source._watchlistId;
 			StockId = source._stockId;
 		}
 	}

@@ -56,8 +56,8 @@ namespace Freedom.Domain.Model
 		public DbSet<Strategy> Strategy { get; set; }
 		public DbSet<User> User { get; set; }
 		public DbSet<UserRole> UserRole { get; set; }
-		public DbSet<WatchList> WatchList { get; set; }
-		public DbSet<WatchListStock> WatchListStock { get; set; }
+		public DbSet<Watchlist> Watchlist { get; set; }
+		public DbSet<WatchlistStock> WatchlistStock { get; set; }
 
 		public void Add(Entity entity)
 		{
@@ -106,12 +106,12 @@ namespace Freedom.Domain.Model
 					UserRole.Add((UserRole) entity);
 					break;
 
-				case "WatchList":
-					WatchList.Add((WatchList) entity);
+				case "Watchlist":
+					Watchlist.Add((Watchlist) entity);
 					break;
 
-				case "WatchListStock":
-					WatchListStock.Add((WatchListStock) entity);
+				case "WatchlistStock":
+					WatchlistStock.Add((WatchlistStock) entity);
 					break;
 
 				default:
@@ -159,11 +159,11 @@ namespace Freedom.Domain.Model
 				case "UserRole":
 					return UserRole.Find(primaryKey);
 
-				case "WatchList":
-					return WatchList.Find(primaryKey);
+				case "Watchlist":
+					return Watchlist.Find(primaryKey);
 
-				case "WatchListStock":
-					return WatchListStock.Find(primaryKey);
+				case "WatchlistStock":
+					return WatchlistStock.Find(primaryKey);
 
 				default:
 					throw new ArgumentException($"'{entityTypeName}' is not a known entity type.", nameof(entityTypeName));
@@ -217,12 +217,12 @@ namespace Freedom.Domain.Model
 					UserRole.Remove((UserRole) entity);
 					break;
 
-				case "WatchList":
-					WatchList.Remove((WatchList) entity);
+				case "Watchlist":
+					Watchlist.Remove((Watchlist) entity);
 					break;
 
-				case "WatchListStock":
-					WatchListStock.Remove((WatchListStock) entity);
+				case "WatchlistStock":
+					WatchlistStock.Remove((WatchlistStock) entity);
 					break;
 
 				default:

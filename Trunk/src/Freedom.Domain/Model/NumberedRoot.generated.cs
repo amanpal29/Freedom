@@ -26,7 +26,6 @@ using Freedom.ComponentModel;
 namespace Freedom.Domain.Model
 {
 	[DataContract(Namespace = Namespace)]
-	[KnownType(typeof(WatchList))]
 
 	public abstract partial class NumberedRoot : AggregateRoot
 	{

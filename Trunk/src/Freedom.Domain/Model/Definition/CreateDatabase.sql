@@ -142,24 +142,23 @@ CREATE TABLE [UserRole] (
 
 GO
 
-CREATE TABLE [WatchList] (
+CREATE TABLE [Watchlist] (
 	[Id] uniqueidentifier NOT NULL default newId(),
 	[CreatedDateTime] datetime2 NOT NULL,
 	[ModifiedDateTime] datetime2 NOT NULL,
 	[CreatedById] uniqueidentifier NOT NULL,
 	[ModifiedById] uniqueidentifier NOT NULL,
-	[Number] nvarchar(4000) NULL,
 	[Name] nvarchar(4000) NOT NULL,
 	[Description] nvarchar(4000) NULL,
-	CONSTRAINT [PK_WatchList] PRIMARY KEY NONCLUSTERED ( [Id] )
+	CONSTRAINT [PK_Watchlist] PRIMARY KEY NONCLUSTERED ( [Id] )
 );
 
 GO
 
-CREATE TABLE [WatchListStock] (
-	[WatchListId] uniqueidentifier NOT NULL,
+CREATE TABLE [WatchlistStock] (
+	[WatchlistId] uniqueidentifier NOT NULL,
 	[StockId] uniqueidentifier NOT NULL,
-	CONSTRAINT [PK_WatchListStock] PRIMARY KEY NONCLUSTERED ( [WatchListId], [StockId] )
+	CONSTRAINT [PK_WatchlistStock] PRIMARY KEY NONCLUSTERED ( [WatchlistId], [StockId] )
 );
 
 GO
@@ -315,37 +314,37 @@ CREATE INDEX [IDX_ModifiedById]
 ON [User] ( [ModifiedById] );
 
 CREATE INDEX [IDX_StockId]
-ON [WatchListStock] ( [StockId] );
+ON [WatchlistStock] ( [StockId] );
 
-ALTER TABLE [WatchListStock]
-ADD CONSTRAINT [FK_WatchListStock_Stock]
+ALTER TABLE [WatchlistStock]
+ADD CONSTRAINT [FK_WatchlistStock_Stock]
 FOREIGN KEY ( [StockId] ) REFERENCES [Stock] ( [Id] );
 
 GO
 
-CREATE INDEX [IDX_WatchListId]
-ON [WatchListStock] ( [WatchListId] );
+CREATE INDEX [IDX_WatchlistId]
+ON [WatchlistStock] ( [WatchlistId] );
 
-ALTER TABLE [WatchListStock]
-ADD CONSTRAINT [FK_WatchListStock_WatchList]
-FOREIGN KEY ( [WatchListId] ) REFERENCES [WatchList] ( [Id] ) ON DELETE CASCADE;
+ALTER TABLE [WatchlistStock]
+ADD CONSTRAINT [FK_WatchlistStock_Watchlist]
+FOREIGN KEY ( [WatchlistId] ) REFERENCES [Watchlist] ( [Id] ) ON DELETE CASCADE;
 
 GO
 
 CREATE INDEX [IDX_CreatedById]
-ON [WatchList] ( [CreatedById] );
+ON [Watchlist] ( [CreatedById] );
 
-ALTER TABLE [WatchList]
-ADD CONSTRAINT [FK_WatchList_User_CreatedBy]
+ALTER TABLE [Watchlist]
+ADD CONSTRAINT [FK_Watchlist_User_CreatedBy]
 FOREIGN KEY ( [CreatedById] ) REFERENCES [User] ( [Id] );
 
 GO
 
 CREATE INDEX [IDX_ModifiedById]
-ON [WatchList] ( [ModifiedById] );
+ON [Watchlist] ( [ModifiedById] );
 
-ALTER TABLE [WatchList]
-ADD CONSTRAINT [FK_WatchList_User_ModifiedBy]
+ALTER TABLE [Watchlist]
+ADD CONSTRAINT [FK_Watchlist_User_ModifiedBy]
 FOREIGN KEY ( [ModifiedById] ) REFERENCES [User] ( [Id] );
 
 GO

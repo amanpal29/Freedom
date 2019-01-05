@@ -14,8 +14,8 @@
 		<EntitySet Name="Strategy" EntityType="Self.Strategy" />
 		<EntitySet Name="User" EntityType="Self.User" />
 		<EntitySet Name="UserRole" EntityType="Self.UserRole" />
-		<EntitySet Name="WatchList" EntityType="Self.WatchList" />
-		<EntitySet Name="WatchListStock" EntityType="Self.WatchListStock" />
+		<EntitySet Name="Watchlist" EntityType="Self.Watchlist" />
+		<EntitySet Name="WatchlistStock" EntityType="Self.WatchlistStock" />
 		<AssociationSet Name="FK_ApplicationSetting_User_CreatedBy" Association="Self.FK_ApplicationSetting_User_CreatedBy" />
 		<AssociationSet Name="FK_ApplicationSetting_User_ModifiedBy" Association="Self.FK_ApplicationSetting_User_ModifiedBy" />
 		<AssociationSet Name="FK_MarketIndex_User_CreatedBy" Association="Self.FK_MarketIndex_User_CreatedBy" />
@@ -34,10 +34,10 @@
 		<AssociationSet Name="FK_UserRole_User" Association="Self.FK_UserRole_User" />
 		<AssociationSet Name="FK_User_User_CreatedBy" Association="Self.FK_User_User_CreatedBy" />
 		<AssociationSet Name="FK_User_User_ModifiedBy" Association="Self.FK_User_User_ModifiedBy" />
-		<AssociationSet Name="FK_WatchListStock_Stock" Association="Self.FK_WatchListStock_Stock" />
-		<AssociationSet Name="FK_WatchListStock_WatchList" Association="Self.FK_WatchListStock_WatchList" />
-		<AssociationSet Name="FK_WatchList_User_CreatedBy" Association="Self.FK_WatchList_User_CreatedBy" />
-		<AssociationSet Name="FK_WatchList_User_ModifiedBy" Association="Self.FK_WatchList_User_ModifiedBy" />
+		<AssociationSet Name="FK_WatchlistStock_Stock" Association="Self.FK_WatchlistStock_Stock" />
+		<AssociationSet Name="FK_WatchlistStock_Watchlist" Association="Self.FK_WatchlistStock_Watchlist" />
+		<AssociationSet Name="FK_Watchlist_User_CreatedBy" Association="Self.FK_Watchlist_User_CreatedBy" />
+		<AssociationSet Name="FK_Watchlist_User_ModifiedBy" Association="Self.FK_Watchlist_User_ModifiedBy" />
 	</EntityContainer>
 	<EntityType Name="EntityBase" Abstract="true">
 		<Key>
@@ -139,22 +139,22 @@
 		<NavigationProperty Name="User" Relationship="Self.FK_UserRole_User" FromRole="UserRole" ToRole="User" />
 		<NavigationProperty Name="Role" Relationship="Self.FK_UserRole_Role" FromRole="UserRole" ToRole="Role" />
 	</EntityType>
-	<EntityType Name="WatchList" BaseType="Self.NumberedRoot">
+	<EntityType Name="Watchlist" BaseType="Self.AggregateRoot">
 		<Property Name="Name" Type="String" Nullable="false" />
 		<Property Name="Description" Type="String" />
-		<NavigationProperty Name="WatchListStock" Relationship="Self.FK_WatchListStock_WatchList" FromRole="WatchList" ToRole="WatchListStock" />
-		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_WatchList_User_CreatedBy" FromRole="WatchList" ToRole="User" />
-		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_WatchList_User_ModifiedBy" FromRole="WatchList" ToRole="User" />
+		<NavigationProperty Name="WatchlistStock" Relationship="Self.FK_WatchlistStock_Watchlist" FromRole="Watchlist" ToRole="WatchlistStock" />
+		<NavigationProperty Name="CreatedBy" Relationship="Self.FK_Watchlist_User_CreatedBy" FromRole="Watchlist" ToRole="User" />
+		<NavigationProperty Name="ModifiedBy" Relationship="Self.FK_Watchlist_User_ModifiedBy" FromRole="Watchlist" ToRole="User" />
 	</EntityType>
-	<EntityType Name="WatchListStock">
+	<EntityType Name="WatchlistStock">
 		<Key>
-			<PropertyRef Name="WatchListId" />
+			<PropertyRef Name="WatchlistId" />
 			<PropertyRef Name="StockId" />
 		</Key>
-		<Property Name="WatchListId" Type="Guid" Nullable="false" />
+		<Property Name="WatchlistId" Type="Guid" Nullable="false" />
 		<Property Name="StockId" Type="Guid" Nullable="false" />
-		<NavigationProperty Name="WatchList" Relationship="Self.FK_WatchListStock_WatchList" FromRole="WatchListStock" ToRole="WatchList" />
-		<NavigationProperty Name="Stock" Relationship="Self.FK_WatchListStock_Stock" FromRole="WatchListStock" ToRole="Stock" />
+		<NavigationProperty Name="Watchlist" Relationship="Self.FK_WatchlistStock_Watchlist" FromRole="WatchlistStock" ToRole="Watchlist" />
+		<NavigationProperty Name="Stock" Relationship="Self.FK_WatchlistStock_Stock" FromRole="WatchlistStock" ToRole="Stock" />
 	</EntityType>
 	<ComplexType Name="MailingAddress">
 		<Property Name="Street" Type="String" />
@@ -379,50 +379,50 @@
 			</Dependent>
 		</ReferentialConstraint>
 	</Association>
-	<Association Name="FK_WatchListStock_Stock">
+	<Association Name="FK_WatchlistStock_Stock">
 		<End Role="Stock" Type="Self.Stock" Multiplicity="1" />
-		<End Role="WatchListStock" Type="Self.WatchListStock" Multiplicity="*" />
+		<End Role="WatchlistStock" Type="Self.WatchlistStock" Multiplicity="*" />
 		<ReferentialConstraint>
 			<Principal Role="Stock">
 				<PropertyRef Name="Id" />
 			</Principal>
-			<Dependent Role="WatchListStock">
+			<Dependent Role="WatchlistStock">
 				<PropertyRef Name="StockId" />
 			</Dependent>
 		</ReferentialConstraint>
 	</Association>
-	<Association Name="FK_WatchListStock_WatchList">
-		<End Role="WatchList" Type="Self.WatchList" Multiplicity="1" />
-		<End Role="WatchListStock" Type="Self.WatchListStock" Multiplicity="*" />
+	<Association Name="FK_WatchlistStock_Watchlist">
+		<End Role="Watchlist" Type="Self.Watchlist" Multiplicity="1" />
+		<End Role="WatchlistStock" Type="Self.WatchlistStock" Multiplicity="*" />
 		<ReferentialConstraint>
-			<Principal Role="WatchList">
+			<Principal Role="Watchlist">
 				<PropertyRef Name="Id" />
 			</Principal>
-			<Dependent Role="WatchListStock">
-				<PropertyRef Name="WatchListId" />
+			<Dependent Role="WatchlistStock">
+				<PropertyRef Name="WatchlistId" />
 			</Dependent>
 		</ReferentialConstraint>
 	</Association>
-	<Association Name="FK_WatchList_User_CreatedBy">
+	<Association Name="FK_Watchlist_User_CreatedBy">
 		<End Role="User" Type="Self.User" Multiplicity="1" />
-		<End Role="WatchList" Type="Self.WatchList" Multiplicity="*" />
+		<End Role="Watchlist" Type="Self.Watchlist" Multiplicity="*" />
 		<ReferentialConstraint>
 			<Principal Role="User">
 				<PropertyRef Name="Id" />
 			</Principal>
-			<Dependent Role="WatchList">
+			<Dependent Role="Watchlist">
 				<PropertyRef Name="CreatedById" />
 			</Dependent>
 		</ReferentialConstraint>
 	</Association>
-	<Association Name="FK_WatchList_User_ModifiedBy">
+	<Association Name="FK_Watchlist_User_ModifiedBy">
 		<End Role="User" Type="Self.User" Multiplicity="1" />
-		<End Role="WatchList" Type="Self.WatchList" Multiplicity="*" />
+		<End Role="Watchlist" Type="Self.Watchlist" Multiplicity="*" />
 		<ReferentialConstraint>
 			<Principal Role="User">
 				<PropertyRef Name="Id" />
 			</Principal>
-			<Dependent Role="WatchList">
+			<Dependent Role="Watchlist">
 				<PropertyRef Name="ModifiedById" />
 			</Dependent>
 		</ReferentialConstraint>

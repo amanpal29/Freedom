@@ -99,10 +99,10 @@
     <Relationship Name="StockExchange" RelatedType="StockExchange" RelationshipType="Required"/>
   </EntityType>
 
-  <EntityType Name="WatchList" BaseType="NumberedRoot" Reportable="true">
+  <EntityType Name="Watchlist" BaseType="AggregateRoot" Reportable="true">
     <Property Name="Name" Type="String" Nullable="false" />
     <Property Name="Description" Type="String" />
-    <Relationship Name="WatchListStocks" RelatedType="Stock" RelationshipType="ManyToMany" Intermediate="WatchListStock" />
+    <Relationship Name="Stocks" RelatedType="Stock" RelationshipType="ManyToMany" Intermediate="WatchlistStock" />
   </EntityType>
 
   <!-- User -->

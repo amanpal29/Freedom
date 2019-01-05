@@ -480,22 +480,22 @@
 		public string RoleId => PathPrefix + "RoleId";
 	}
 
-	public class WatchListPaths : EntityPaths
+	public class WatchlistPaths : EntityPaths
 	{
-		public WatchListPaths()
+		public WatchlistPaths()
 		{
 		}
 		
-		public WatchListPaths(string hostName)
+		public WatchlistPaths(string hostName)
 			: base(hostName)
 		{
 		}
 
-		public StockPaths WatchListStocks
-			=> new StockPaths(PathPrefix + "WatchListStocks");
+		public StockPaths Stocks
+			=> new StockPaths(PathPrefix + "Stocks");
 
-		public WatchListStockPaths WatchListStock
-			=> new WatchListStockPaths(PathPrefix + "WatchListStock");
+		public WatchlistStockPaths WatchlistStock
+			=> new WatchlistStockPaths(PathPrefix + "WatchlistStock");
 
 		public string Id => PathPrefix + "Id";
 
@@ -507,31 +507,29 @@
 
 		public string ModifiedById => PathPrefix + "ModifiedById";
 
-		public string Number => PathPrefix + "Number";
-
 		public string Name => PathPrefix + "Name";
 
 		public string Description => PathPrefix + "Description";
 	}
 
-	public class WatchListStockPaths : EntityPaths
+	public class WatchlistStockPaths : EntityPaths
 	{
-		public WatchListStockPaths()
+		public WatchlistStockPaths()
 		{
 		}
 		
-		public WatchListStockPaths(string hostName)
+		public WatchlistStockPaths(string hostName)
 			: base(hostName)
 		{
 		}
 
-		public WatchListPaths WatchList
-			=> new WatchListPaths(PathPrefix + "WatchList");
+		public WatchlistPaths Watchlist
+			=> new WatchlistPaths(PathPrefix + "Watchlist");
 
 		public StockPaths Stock
 			=> new StockPaths(PathPrefix + "Stock");
 
-		public string WatchListId => PathPrefix + "WatchListId";
+		public string WatchlistId => PathPrefix + "WatchlistId";
 
 		public string StockId => PathPrefix + "StockId";
 	}
@@ -570,9 +568,9 @@
 
 		public static UserRolePaths UserRole => new UserRolePaths();
 
-		public static WatchListPaths WatchList => new WatchListPaths();
+		public static WatchlistPaths Watchlist => new WatchlistPaths();
 
-		public static WatchListStockPaths WatchListStock => new WatchListStockPaths();
+		public static WatchlistStockPaths WatchlistStock => new WatchlistStockPaths();
 
 	}
 }

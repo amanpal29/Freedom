@@ -238,10 +238,10 @@
     <Compile Include="Model\UserRole.generated.cs">
       <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\WatchList.generated.cs">
+    <Compile Include="Model\Watchlist.generated.cs">
       <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\WatchListStock.generated.cs">
+    <Compile Include="Model\WatchlistStock.generated.cs">
       <DependentUpon>EntityTypeTemplate.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

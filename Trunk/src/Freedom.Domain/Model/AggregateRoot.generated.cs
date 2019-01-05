@@ -32,6 +32,7 @@ namespace Freedom.Domain.Model
 	[KnownType(typeof(Role))]
 	[KnownType(typeof(Stock))]
 	[KnownType(typeof(User))]
+	[KnownType(typeof(Watchlist))]
 
 	public abstract partial class AggregateRoot : EntityBase
 	{

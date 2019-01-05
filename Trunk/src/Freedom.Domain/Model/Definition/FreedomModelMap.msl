@@ -145,24 +145,23 @@
 				</MappingFragment>
 			</EntityTypeMapping>
 		</EntitySetMapping>
-		<EntitySetMapping Name="WatchList">
-			<EntityTypeMapping TypeName="Freedom.Domain.Model.WatchList">
-				<MappingFragment StoreEntitySet="WatchList">
+		<EntitySetMapping Name="Watchlist">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.Watchlist">
+				<MappingFragment StoreEntitySet="Watchlist">
 					<ScalarProperty Name="Id" ColumnName="Id" />
 					<ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
 					<ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
 					<ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
 					<ScalarProperty Name="ModifiedById" ColumnName="ModifiedById" />
-					<ScalarProperty Name="Number" ColumnName="Number" />
 					<ScalarProperty Name="Name" ColumnName="Name" />
 					<ScalarProperty Name="Description" ColumnName="Description" />
 				</MappingFragment>
 			</EntityTypeMapping>
 		</EntitySetMapping>
-		<EntitySetMapping Name="WatchListStock">
-			<EntityTypeMapping TypeName="Freedom.Domain.Model.WatchListStock">
-				<MappingFragment StoreEntitySet="WatchListStock">
-					<ScalarProperty Name="WatchListId" ColumnName="WatchListId" />
+		<EntitySetMapping Name="WatchlistStock">
+			<EntityTypeMapping TypeName="Freedom.Domain.Model.WatchlistStock">
+				<MappingFragment StoreEntitySet="WatchlistStock">
+					<ScalarProperty Name="WatchlistId" ColumnName="WatchlistId" />
 					<ScalarProperty Name="StockId" ColumnName="StockId" />
 				</MappingFragment>
 			</EntityTypeMapping>

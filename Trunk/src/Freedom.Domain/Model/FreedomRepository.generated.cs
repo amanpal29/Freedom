@@ -131,11 +131,11 @@ namespace Freedom.Domain.Model
 			return result;
 		}
 
-		public async Task<WatchList> GetWatchListAsync(Guid id)
+		public async Task<Watchlist> GetWatchlistAsync(Guid id)
 		{
-			IQueryable<WatchList> baseQuery = _db.WatchList.Where(x => x.Id == id);
+			IQueryable<Watchlist> baseQuery = _db.Watchlist.Where(x => x.Id == id);
 
-			WatchList result = await baseQuery.SingleOrDefaultAsync();
+			Watchlist result = await baseQuery.SingleOrDefaultAsync();
 
 			await LoadChildrenAsync(baseQuery);
 
@@ -156,9 +156,9 @@ namespace Freedom.Domain.Model
 			await entities.SelectMany(x => x.UserRole).LoadAsync();
 		}
 
-		public async Task LoadChildrenAsync(IQueryable<WatchList> entities)
+		public async Task LoadChildrenAsync(IQueryable<Watchlist> entities)
 		{
-			await entities.SelectMany(x => x.WatchListStock).LoadAsync();
+			await entities.SelectMany(x => x.WatchlistStock).LoadAsync();
 		}
 
 		#endregion
@@ -283,19 +283,19 @@ namespace Freedom.Domain.Model
 			return entity;
 		}
 
-		public WatchList Add(WatchList item)
+		public Watchlist Add(Watchlist item)
 		{
 			if (item == null)
 				throw new ArgumentNullException("item");
 
-			WatchList entity = new WatchList();
+			Watchlist entity = new Watchlist();
 
 			entity.Copy(item);
 
 			foreach (Guid id in item.StockIds)
-				_db.WatchListStock.Add(new WatchListStock(entity.Id, id));
+				_db.WatchlistStock.Add(new WatchlistStock(entity.Id, id));
 
-			_db.WatchList.Add(entity);
+			_db.Watchlist.Add(entity);
 
 			return entity;
 		}
@@ -330,7 +330,7 @@ namespace Freedom.Domain.Model
 			collection.Add(entity);
 		}
 
-		private static void Add(ICollection<WatchListStock> collection, WatchListStock item)
+		private static void Add(ICollection<WatchlistStock> collection, WatchlistStock item)
 		{
 			if (item == collection)
 				throw new ArgumentNullException("collection");
@@ -338,7 +338,7 @@ namespace Freedom.Domain.Model
 			if (item == null)
 				throw new ArgumentNullException("item");
 
-			WatchListStock entity = new WatchListStock();
+			WatchlistStock entity = new WatchlistStock();
 
 			entity.Copy(item);
 
@@ -497,14 +497,14 @@ namespace Freedom.Domain.Model
 			UpdateAuditProperties(existingItem, EntityState.Modified);
 		}
 
-		public async Task UpdateAsync(WatchList item)
+		public async Task UpdateAsync(Watchlist item)
 		{
 			if (item == null)
 				throw new ArgumentNullException("item");
 
-			IQueryable<WatchList> baseQuery = _db.WatchList.Where(x => x.Id == item.Id);
+			IQueryable<Watchlist> baseQuery = _db.Watchlist.Where(x => x.Id == item.Id);
 
-			WatchList existingItem = await baseQuery.FirstOrDefaultAsync();
+			Watchlist existingItem = await baseQuery.FirstOrDefaultAsync();
 
 			if (existingItem == null)
 				throw new ConcurrencyException(ConcurrencyExceptionCode.ItemNotFound);
@@ -513,7 +513,7 @@ namespace Freedom.Domain.Model
 
 			existingItem.Copy(item);
 
-			UpdateIntermediate(existingItem.WatchListStock, item.Id, item.StockIds);
+			UpdateIntermediate(existingItem.WatchlistStock, item.Id, item.StockIds);
 
 			UpdateAuditProperties(existingItem, EntityState.Modified);
 		}
@@ -578,7 +578,7 @@ namespace Freedom.Domain.Model
 			}
 		}
 
-		private void UpdateIntermediate(ICollection<WatchListStock> target, Guid parentId, ICollection<Guid> keys)
+		private void UpdateIntermediate(ICollection<WatchlistStock> target, Guid parentId, ICollection<Guid> keys)
 		{
 			if (target == null)
 				throw new ArgumentNullException("target");
@@ -586,19 +586,19 @@ namespace Freedom.Domain.Model
 			if (keys == null)
 				throw new ArgumentNullException("keys");
 
-			List<WatchListStock> itemsToRemove = target.ToList();
+			List<WatchlistStock> itemsToRemove = target.ToList();
 
 			foreach (Guid key in keys)
 			{
 				if (itemsToRemove.RemoveAll(x => x.StockId == key) > 0)
 					continue;
 
-				target.Add(new WatchListStock(parentId, key));
+				target.Add(new WatchlistStock(parentId, key));
 			}
 
-			foreach (WatchListStock item in itemsToRemove)
+			foreach (WatchlistStock item in itemsToRemove)
 			{
-				_db.WatchListStock.Remove(item);
+				_db.WatchlistStock.Remove(item);
 			}
 		}
 
@@ -694,13 +694,13 @@ namespace Freedom.Domain.Model
 			return true;
 		}
 
-		public async Task<bool> DeleteWatchListAsync(Guid id)
+		public async Task<bool> DeleteWatchlistAsync(Guid id)
 		{
-			WatchList existingItem = await _db.WatchList.FindAsync(id);
+			Watchlist existingItem = await _db.Watchlist.FindAsync(id);
 
 			if (existingItem == null) return false;
 
-			_db.WatchList.Remove(existingItem);
+			_db.Watchlist.Remove(existingItem);
 
 			return true;
 		}
