@@ -1,0 +1,1 @@
+This is a development build of MSBuild Community Tasks downloaded on January 1st, 2019. As of now, there is no official release that allows this MSBuild Community Tasks tool to be used with NUnit 3.2.0. When such a build is released, the DLLs and Freedom.proj file should be updated appropriately. But for now, we will be using this dev build.
