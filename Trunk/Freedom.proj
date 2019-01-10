@@ -1,5 +1,5 @@
 <Project DefaultTargets="Rebuild;RunUnitTests" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
-  <Import Project="util\MSBuild.Community.Tasks.v1.4\Bin\MSBuild.Community.Tasks.Targets" />
+  <Import Project="util\MSBuild.Community.Tasks.v1.5.0.235\Bin\MSBuild.Community.Tasks.Targets" />
   <UsingTask TaskName="Freedom.MSBuild.CreateFreedomDatabase" AssemblyFile="build\Release\Freedom.MSBuild.dll" />
   <UsingTask TaskName="Freedom.MSBuild.DeleteDatabase" AssemblyFile="build\Release\Freedom.MSBuild.dll" />
   <UsingTask TaskName="Freedom.MSBuild.ImportFreedomData" AssemblyFile="build\Release\Freedom.MSBuild.dll" />
