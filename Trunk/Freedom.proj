@@ -53,10 +53,6 @@
   </ItemGroup>
 
   <Target Name="Setup">
-    <PropertyGroup Condition="'$(TargetServer)' == 'dev'">
-      <ConnectionString>Data Source=tcp:freedomdev.database.windows.net,1433;Initial Catalog=$(DatabaseName);User Id=dbadmin@freedomdev.database.windows.net;Password=$(Password);</ConnectionString>            
-    </PropertyGroup>
-
     <PropertyGroup Condition="'$(TargetServer)' == 'local'">
       <ConnectionString>Data Source=.;Initial Catalog=$(DatabaseName);Integrated Security=True;MultipleActiveResultSets=True</ConnectionString>
       <ApplicationServer>HP-SPECTRE</ApplicationServer>

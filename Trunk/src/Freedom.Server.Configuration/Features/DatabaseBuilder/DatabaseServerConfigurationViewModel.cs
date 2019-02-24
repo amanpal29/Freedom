@@ -219,7 +219,7 @@ namespace Freedom.Server.Tools.Features.DatabaseBuilder
 
         private bool CanRebuildDatabase()
         {
-            return !string.IsNullOrEmpty(ConnectionString) 
+            return !string.IsNullOrEmpty(ConnectionString)
                 && !string.IsNullOrEmpty(ServerName)
                 && !string.IsNullOrEmpty(DatabaseName)
                 && (!IsCloudDatabase || (IsCloudDatabase && HasRequiredAzureInformation));

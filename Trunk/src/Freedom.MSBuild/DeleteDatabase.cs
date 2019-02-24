@@ -4,7 +4,7 @@ using Freedom.Domain.Services.DatabaseBuilder;
 using Microsoft.Build.Framework;
 using System;
 using System.ComponentModel;
-using Microsoft.Identity.Client;
+using System.Threading;
 
 namespace Freedom.MSBuild
 {
@@ -33,19 +33,11 @@ namespace Freedom.MSBuild
             builder.InitialCatalog = DatabaseName;
             databaseBuilderService.ProviderConnectionString = builder.ToString();
             databaseBuilderService.FreedomDatabaseType = _freedomDatabaseType;
-            databaseBuilderService.ServerName = ServerName;
-            databaseBuilderService.SubscriptionId = AzureSubscriptionId;
-            databaseBuilderService.ResourceGroupName = ResourceGroupName;
+            databaseBuilderService.ServerName = ServerName;            
 
             if (databaseBuilderService.DatabaseExists)
-            {
-                AuthenticationResult authenticationResult = null;
-                if (_freedomDatabaseType == FreedomDatabaseType.Cloud)
-                {
-                    AzureAuthenticator authenticator = new AzureAuthenticator(AzureClientId, ClientSecret, AzureAuthority, AzureRedirectUri);
-                    authenticationResult = authenticator.GetToken(null);
-                }
-                databaseBuilderService.DeleteDatabaseAsync(authenticationResult != null ? authenticationResult.AccessToken : string.Empty).Wait();
+            {                
+                databaseBuilderService.DeleteDatabaseAsync(CancellationToken.None, string.Empty).Wait();
             }
             else
             {

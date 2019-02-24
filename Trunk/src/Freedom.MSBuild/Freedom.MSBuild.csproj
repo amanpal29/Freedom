@@ -70,7 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AzureAuthenticator.cs" />
     <Compile Include="CreateApplicationMetadata.cs" />
     <Compile Include="CreateFreedomDatabase.cs" />
     <Compile Include="DatabaseBuilderTask.cs" />
