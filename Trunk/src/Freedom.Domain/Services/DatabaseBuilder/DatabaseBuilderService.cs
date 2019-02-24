@@ -21,6 +21,9 @@ using Freedom.Cryptography;
 using Freedom.Extensions;
 using Freedom.FullTextSearch;
 using log4net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace Freedom.Domain.Services.DatabaseBuilder
 {
@@ -33,7 +36,7 @@ namespace Freedom.Domain.Services.DatabaseBuilder
         private const int SqlServer2008 = 10;
 
         private string _providerConnectionString;
-        private FreedomDatabaseType _FreedomDatabaseType = FreedomDatabaseType.Offline;
+        private FreedomDatabaseType _freedomDatabaseType = FreedomDatabaseType.Server;
 
         #region Constructor
         
@@ -71,6 +74,10 @@ namespace Freedom.Domain.Services.DatabaseBuilder
             }
         }
 
+        #endregion
+
+        #region Private Methods
+
         private static int GetSqlServerVersion(SqlConnection connection)
         {
             if (connection == null)
@@ -81,10 +88,6 @@ namespace Freedom.Domain.Services.DatabaseBuilder
 
             return int.Parse(connection.ServerVersion.Substring(0, 2));
         }
-
-        #endregion
-
-        #region Private Methods
 
         private static string EscapeIdentifier(string identifier)
         {
@@ -235,11 +238,11 @@ namespace Freedom.Domain.Services.DatabaseBuilder
 
         public FreedomDatabaseType FreedomDatabaseType
         {
-            get { return _FreedomDatabaseType; }
+            get { return _freedomDatabaseType; }
             set
             {
-                if (_FreedomDatabaseType == value) return;
-                _FreedomDatabaseType = value;
+                if (_freedomDatabaseType == value) return;
+                _freedomDatabaseType = value;
                 OnPropertyChanged();
             }
         }
@@ -271,11 +274,63 @@ namespace Freedom.Domain.Services.DatabaseBuilder
             }
         }
 
+        public string SubscriptionId { get; set; }
+
+        public string ResourceGroupName { get; set; }
+
+        public string ServerName { get; set; }
+
+
         [SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities")]
-        public async Task DeleteDatabaseAsync(CancellationToken cancellationToken)
+        public async Task DeleteDatabaseAsync(CancellationToken cancellationToken, string accessToken)
         {
             Log.Info($"Deleting database '{DatabaseName}'...");
 
+            if (FreedomDatabaseType == FreedomDatabaseType.Server)
+                await DeleteServerDatabaseAsync(cancellationToken);
+
+            if (FreedomDatabaseType == FreedomDatabaseType.Cloud)
+                await DeleteCloudDatabaseAsync(accessToken);
+
+            OnPropertyChanged(nameof(DatabaseExists));
+        }
+
+        private async Task DeleteCloudDatabaseAsync(string accessToken)
+        {                      
+            using (HttpClient httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);                                
+                try
+                {
+                    Uri uri = new Uri($"https://management.azure.com/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Sql/servers/{ServerName}/databases/{DatabaseName}?api-version=2017-10-01-preview");
+                    HttpResponseMessage httpResponseMessage = await httpClient.DeleteAsync(uri);
+                    switch (httpResponseMessage.StatusCode)
+                    {
+                        case System.Net.HttpStatusCode.OK:
+                            Log.Info($"Database '{DatabaseName}' deleted.");                            
+                            break;
+                        case System.Net.HttpStatusCode.Accepted:
+                            while (DatabaseExists)
+                            {                                
+                                Log.Info($"Database '{DatabaseName}' deletion in progress.");
+                                Thread.Sleep(3000);
+                            }
+                            Log.Info($"Database '{DatabaseName}' deleted.");
+                            break;
+                        default:
+                            Log.Error($"Status code: {(int)httpResponseMessage.StatusCode} - {httpResponseMessage.ReasonPhrase}");                            
+                            break;
+                    }
+                }
+                catch (HttpRequestException ex)
+                {
+                    Log.Error(ex.Message);
+                }
+            }         
+        }
+
+        private async Task DeleteServerDatabaseAsync(CancellationToken cancellationToken)
+        {
             using (SqlConnection masterConnection = new SqlConnection(MasterDatabaseConnectionString))
             {
                 string databaseIdentifier = EscapeIdentifier(DatabaseName);
@@ -296,50 +351,22 @@ namespace Freedom.Domain.Services.DatabaseBuilder
             }
 
             SqlConnection.ClearAllPools();
-
-            OnPropertyChanged(nameof(DatabaseExists));
         }
 
         [SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities")]
-        public async Task CreateDatabaseAsync(CancellationToken cancellationToken)
+        public async Task CreateDatabaseAsync(CancellationToken cancellationToken, string accessToken)
         {
             if (DatabaseExists) return;
 
             // Create the database...
 
-            using (SqlConnection masterConnection = new SqlConnection(MasterDatabaseConnectionString))
-            {
-                try
-                {
-                    await masterConnection.OpenAsync(cancellationToken);
-                }
-                catch (SqlException exception)
-                {
-                    throw new FreedomDatabaseException(FreedomDatabaseErrorCode.DatabaseConnectionFailed, exception);
-                }
+            if (FreedomDatabaseType == FreedomDatabaseType.Server)
+                await CreateServerDatabaseAsync(cancellationToken);
 
-                if (GetSqlServerVersion(masterConnection) < SqlServer2008)
-                    throw new FreedomDatabaseException(FreedomDatabaseErrorCode.UnsupportedDatabaseVersion);
+            if (FreedomDatabaseType == FreedomDatabaseType.Cloud)
+                await CreateCloudDatabaseAsync(accessToken);
 
-                try
-                {
-                    Log.Info($"Creating database '{DatabaseName}'...");
-
-                    string databaseIdentifier = EscapeIdentifier(DatabaseName);
-
-                    await masterConnection.ExecuteNonQueryAsync(
-                        $"create database {databaseIdentifier}", cancellationToken);
-
-                    await masterConnection.ExecuteNonQueryAsync(
-                        $"alter database {databaseIdentifier} set recovery simple", cancellationToken);
-
-                    Log.Info($"Database '{DatabaseName}' created.");
-                }
-                catch (SqlException exception)
-                {
-                    throw new FreedomDatabaseException(FreedomDatabaseErrorCode.UnableToCreateDatabase, exception);
-                }
-            }
+            if (!DatabaseExists) return;
 
             // Create objects in the database...
 
@@ -399,5 +426,83 @@ namespace Freedom.Domain.Services.DatabaseBuilder
 
             OnPropertyChanged(nameof(DatabaseExists));
         }
+
+        private async Task CreateCloudDatabaseAsync(string accessToken)
+        {
+            Log.Info($"Creating database '{DatabaseName}'...");
+
+            using (HttpClient httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+                try
+                {
+                    Uri uri = new Uri($"https://management.azure.com/subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/providers/Microsoft.Sql/servers/{ServerName}/databases/{DatabaseName}?api-version=2017-10-01-preview");
+                    string body = JsonConvert.SerializeObject(new { location = "Canada Central", properties = new { licenseType = "BasePrice" } }, Formatting.Indented);
+                    StringContent content = new StringContent(body);
+                    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");                  
+                    HttpResponseMessage httpResponseMessage = await httpClient.PutAsync(uri, content);
+                    httpResponseMessage.EnsureSuccessStatusCode();
+
+                    switch (httpResponseMessage.StatusCode)
+                    {
+                        case System.Net.HttpStatusCode.OK:
+                        case System.Net.HttpStatusCode.Created:
+                            Log.Info($"Database '{DatabaseName}' created.");
+                            break;
+                        case System.Net.HttpStatusCode.Accepted:
+                            while (!DatabaseExists)
+                            {
+                                Log.Info($"Creating '{DatabaseName}'...");
+                                Thread.Sleep(7000);
+                            }                            
+                            break;
+                        default:
+                            Log.Error($"Status code: {(int)httpResponseMessage.StatusCode} - {httpResponseMessage.ReasonPhrase}");
+                            break;
+                    }
+
+                }
+                catch (HttpRequestException ex)
+                {
+                    Log.Error(ex.Message);                    
+                }
+            }           
+        }
+
+        private async Task CreateServerDatabaseAsync(CancellationToken cancellationToken)
+        {
+            using (SqlConnection masterConnection = new SqlConnection(MasterDatabaseConnectionString))
+            {
+                try
+                {
+                    await masterConnection.OpenAsync(cancellationToken);
+                }
+                catch (SqlException exception)
+                {
+                    throw new FreedomDatabaseException(FreedomDatabaseErrorCode.DatabaseConnectionFailed, exception);
+                }
+
+                if (GetSqlServerVersion(masterConnection) < SqlServer2008)
+                    throw new FreedomDatabaseException(FreedomDatabaseErrorCode.UnsupportedDatabaseVersion);
+
+                try
+                {
+                    Log.Info($"Creating database '{DatabaseName}'...");
+
+                    string databaseIdentifier = EscapeIdentifier(DatabaseName);
+
+                    await masterConnection.ExecuteNonQueryAsync($"create database {databaseIdentifier}", cancellationToken);
+                    
+                    await masterConnection.ExecuteNonQueryAsync($"alter database {databaseIdentifier} set recovery simple", cancellationToken);
+
+                    Log.Info($"Database '{DatabaseName}' created.");
+                }
+                catch (SqlException exception)
+                {
+                    throw new FreedomDatabaseException(FreedomDatabaseErrorCode.UnableToCreateDatabase, exception);
+                }
+            }
+        }
+                
     }
 }

@@ -10,16 +10,16 @@ namespace Freedom.Domain.Services.DatabaseBuilder
         FreedomDatabaseType FreedomDatabaseType { get; set; }
         
         bool DatabaseExists { get; }
-        Task CreateDatabaseAsync(CancellationToken cancellationToken);
-        Task DeleteDatabaseAsync(CancellationToken cancellationToken);
+        Task CreateDatabaseAsync(CancellationToken cancellationToken, string accessToken);
+        Task DeleteDatabaseAsync(CancellationToken cancellationToken, string accessToken);
     }
 
     public static class DatabaseBuilderServiceExtensions
     {
-        public static Task CreateDatabaseAsync(this IDatabaseBuilderService databaseBuilderService)
-            => databaseBuilderService.CreateDatabaseAsync(CancellationToken.None);
+        public static Task CreateDatabaseAsync(this IDatabaseBuilderService databaseBuilderService, string accessToken)
+            => databaseBuilderService.CreateDatabaseAsync(CancellationToken.None, accessToken);
 
-        public static Task DeleteDatabaseAsync(this IDatabaseBuilderService databaseBuilderService)
-            => databaseBuilderService.DeleteDatabaseAsync(CancellationToken.None);
+        public static Task DeleteDatabaseAsync(this IDatabaseBuilderService databaseBuilderService, string accessToken)
+            => databaseBuilderService.DeleteDatabaseAsync(CancellationToken.None, accessToken);
     }
 }

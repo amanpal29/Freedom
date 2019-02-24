@@ -28,7 +28,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <DatabaseName>Freedom</DatabaseName>    
+    <DatabaseName>TestFreedomDB</DatabaseName>    
     <SampleDataPath>data/SampleData/**/*.xml</SampleDataPath>
   </PropertyGroup>
 
@@ -54,7 +54,7 @@
 
   <Target Name="Setup">
     <PropertyGroup Condition="'$(TargetServer)' == 'dev'">
-      <ConnectionString>Data Source=tcp:freedomdev.database.windows.net,1433;Initial Catalog=Freedom;User Id=dbadmin@freedomdev.database.windows.net;Password=$(Password)</ConnectionString>            
+      <ConnectionString>Data Source=tcp:freedomdev.database.windows.net,1433;Initial Catalog=$(DatabaseName);User Id=dbadmin@freedomdev.database.windows.net;Password=$(Password);</ConnectionString>            
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(TargetServer)' == 'local'">

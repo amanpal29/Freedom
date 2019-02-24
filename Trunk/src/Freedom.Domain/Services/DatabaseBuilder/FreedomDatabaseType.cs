@@ -4,6 +4,7 @@
     {
         Invalid,
         Server,
-        Offline
+        Offline,
+        Cloud
     }
 }

@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Threading;
 using Freedom.MSBuild.Infrastructure;
 using Freedom.Domain.Services.DatabaseBuilder;
+using Microsoft.Identity.Client;
 
 namespace Freedom.MSBuild
 {
@@ -34,6 +35,9 @@ namespace Freedom.MSBuild
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(ConnectionString);
             builder.InitialCatalog = DatabaseName;
             databaseBuilderService.ProviderConnectionString = builder.ToString();
+            databaseBuilderService.ServerName = ServerName;
+            databaseBuilderService.SubscriptionId = AzureSubscriptionId;
+            databaseBuilderService.ResourceGroupName = ResourceGroupName;
 
             if (databaseBuilderService.DatabaseExists)
             {
@@ -41,7 +45,15 @@ namespace Freedom.MSBuild
                 return false;
             }
 
-            databaseBuilderService.CreateDatabaseAsync(CancellationToken.None).Wait();
+            AuthenticationResult authenticationResult = null;
+            if (_freedomDatabaseType == FreedomDatabaseType.Cloud)
+            {                
+                string[] scopes = new string[] { "https://management.azure.com/.default" };
+                AzureAuthenticator authenticator = new AzureAuthenticator(AzureClientId, ClientSecret, AzureAuthority, AzureRedirectUri);
+                authenticationResult = authenticator.GetToken(scopes);
+            }
+            
+            databaseBuilderService.CreateDatabaseAsync(CancellationToken.None, authenticationResult != null ? authenticationResult.AccessToken : string.Empty).Wait();
 
             return true;
         }

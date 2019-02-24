@@ -1,0 +1,17 @@
+﻿<Application x:Class="Freedom.Server.Tools.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:infrastructure="clr-namespace:Freedom.Server.Tools.Infrastructure"
+             xmlns:local="clr-namespace:Freedom.Server.Tools"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />            
+            <!--<infrastructure:EnumToDescriptionConverter x:Key="EnumToDescriptionConverter" />
+
+            <DataTemplate x:Key="EnumItemTemplate">
+                <TextBlock Text="{Binding Converter={StaticResource EnumToDescriptionConverter}}" />
+            </DataTemplate>-->            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
