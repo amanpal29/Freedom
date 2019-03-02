@@ -368,18 +368,32 @@ namespace Freedom.Domain.Services.DatabaseBuilder
 
             if (!DatabaseExists) return;
 
-            // Create objects in the database...
-
+            // Create objects in the database...            
             using (SqlConnection connection = new SqlConnection(ProviderConnectionString))
             {
-                try
+                bool tryAgain = true;
+                int tries = 3;
+                do
                 {
-                    await connection.OpenAsync(cancellationToken);
-                }
-                catch (SqlException exception)
-                {
-                    throw new FreedomDatabaseException(FreedomDatabaseErrorCode.DatabaseConnectionFailed, exception);
-                }
+                    try
+                    {
+                        await connection.OpenAsync(cancellationToken);
+                        tryAgain = false;
+                    }
+                    catch (SqlException exception)
+                    {                          
+                        if(tries > 1) //Azure Sql Database is usually available after 30-40 seceonds.  
+                        {
+                            tries--;
+                            Thread.Sleep(10000);
+                        } else
+                        {
+                            tryAgain = false;
+                            throw new FreedomDatabaseException(FreedomDatabaseErrorCode.DatabaseConnectionFailed, exception);
+                        }                                              
+                    }
+                } while (tryAgain && tries > 0);
+                
 
                 Log.Info("Creating database objects...");
                 

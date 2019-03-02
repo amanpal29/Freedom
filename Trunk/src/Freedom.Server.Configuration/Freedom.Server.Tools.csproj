@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\Build\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -29,7 +29,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\Build\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,6 +39,9 @@
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
     <Reference Include="Microsoft.Identity.Client, Version=2.7.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Identity.Client.2.7.0\lib\net45\Microsoft.Identity.Client.dll</HintPath>
       <Private>True</Private>
@@ -146,6 +149,10 @@
     <ProjectReference Include="..\Freedom.Domain\Freedom.Domain.csproj">
       <Project>{98293548-9098-4e26-b38b-7fa2d79e2ab1}</Project>
       <Name>Freedom.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Freedom.MSBuild\Freedom.MSBuild.csproj">
+      <Project>{7d651ecf-bae4-44fe-a33e-ca2036a37bde}</Project>
+      <Name>Freedom.MSBuild</Name>
     </ProjectReference>
     <ProjectReference Include="..\Freedom.UI\Freedom.UI.csproj">
       <Project>{74468757-beb7-41b5-ba17-92a5827d8599}</Project>

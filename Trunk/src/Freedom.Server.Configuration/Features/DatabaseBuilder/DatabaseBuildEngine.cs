@@ -1,7 +1,13 @@
 ﻿using Freedom.Domain.Services.DatabaseBuilder;
+using Freedom.MSBuild;
+using Freedom.MSBuild.Infrastructure;
 using Freedom.ViewModels;
 using log4net;
+using Microsoft.Build.Framework;
+using Microsoft.Build.Utilities;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Reflection;
 using System.Threading;
@@ -76,8 +82,8 @@ namespace Freedom.Server.Tools.Features.DatabaseBuilder
             OnPropertyChanged(nameof(HasStarted));            
         }
 
-        private async Task RebuildDatabaseAsync()
-        {   
+        private async System.Threading.Tasks.Task RebuildDatabaseAsync()
+        {
             DatabaseBuilderService databaseBuilderService = new DatabaseBuilderService();
             databaseBuilderService.FreedomDatabaseType = _databaseServerConfigurationViewModel.DatabaseType;
 
@@ -94,14 +100,21 @@ namespace Freedom.Server.Tools.Features.DatabaseBuilder
 
             if (databaseBuilderService.DatabaseExists)
             {
-               await databaseBuilderService.DeleteDatabaseAsync(accessToken != null ? accessToken : string.Empty);               
+                await databaseBuilderService.DeleteDatabaseAsync(accessToken != null ? accessToken : string.Empty);
             }
             else
             {
                 Log.Info($"Skipping DeleteDatabase task; database '{builder.InitialCatalog}' has already been deleted.");
             }
 
-           await databaseBuilderService.CreateDatabaseAsync(CancellationToken.None, accessToken != null ? accessToken : string.Empty);            
+            await databaseBuilderService.CreateDatabaseAsync(CancellationToken.None, accessToken != null ? accessToken : string.Empty);
+
+            string databaseLoginCredentialsSetupFilePath = _databaseServerConfigurationViewModel.IsCloudDatabase ? @"..\..\deploy\SetupDatabaseContainedUserAndPermissions.sql" : @"..\..\deploy\SetupFreedomServerPermissions.sql";
+            ArrayList files = new ArrayList();
+            files.Add(new TaskItem(databaseLoginCredentialsSetupFilePath));
+            files.Add(new TaskItem(@"..\..\deploy\ResetAllPasswords.sql"));
+            ExecuteSql executeSql = new ExecuteSql() { BuildEngine = new FreedomBuildEngine(), Files = (ITaskItem[])files.ToArray(typeof(ITaskItem)), ConnectionString = _databaseServerConfigurationViewModel.ConnectionString };
+            executeSql.Execute();
         }        
     }
 }

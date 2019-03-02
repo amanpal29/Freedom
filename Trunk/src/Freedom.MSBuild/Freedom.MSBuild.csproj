@@ -77,6 +77,7 @@
     <Compile Include="ExecuteSql.cs" />
     <Compile Include="ImportFreedomData.cs" />
     <Compile Include="Infrastructure\BuildEngineAppender.cs" />
+    <Compile Include="Infrastructure\FreedomBuildEngine.cs" />
     <Compile Include="Models\ApplicationMetadata.cs" />
     <Compile Include="Models\FileMetadata.cs" />
     <Compile Include="Models\FileMetadataCollection.cs" />

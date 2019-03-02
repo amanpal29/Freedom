@@ -28,7 +28,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <DatabaseName>TestFreedomDB</DatabaseName>    
+    <DatabaseName>Freedom</DatabaseName>    
     <SampleDataPath>data/SampleData/**/*.xml</SampleDataPath>
   </PropertyGroup>
 
