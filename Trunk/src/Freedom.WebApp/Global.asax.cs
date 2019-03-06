@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Freedom.WebApi;
 using System.Web.Http;
-using System.Web.Routing;
 
 namespace Freedom.WebApp
 {
@@ -11,6 +7,7 @@ namespace Freedom.WebApp
     {
         protected void Application_Start()
         {
+            WebAppBootstrapper.Bootstrap();
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }
