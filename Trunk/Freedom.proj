@@ -42,7 +42,8 @@
 
   <ItemGroup>
     <SolutionFiles Include="src/$(SolutionName).sln" />
-    <SolutionFiles Include="src/$(SolutionName).*.sln" />    
+    <SolutionFiles Include="src/$(SolutionName).*.sln" /> 
+    <WebProjectFiles Include="src/Freedom.WebApp/Freedom.WebApp.csproj" />   
   </ItemGroup>
 
   <ItemGroup>
@@ -78,7 +79,8 @@
   </Target>
   
   <Target Name="Clean">
-    <RemoveDir Directories="Build\$(Configuration)" />        
+    <RemoveDir Directories="Build\$(Configuration)" />    
+    <RemoveDir Directories="Build\$(Configuration).Msi" />
     <MSBuild Projects="@(SolutionFiles)" Properties="Configuration=$(Configuration)" Targets="Clean" />
   </Target>
 
@@ -126,6 +128,10 @@
     <ExecuteSql ConnectionString="$(ConnectionString)" Files="$(CustomDatabaseScript)" Condition="'$(CustomDatabaseScript)' != '' AND Exists($(CustomDatabaseScript))" />    
   </Target>
 
+  <Target Name="Package">
+    <MSBuild Projects="@(WebProjectFiles)" Properties="Configuration=$(Configuration);IgnoreDeployManagedRuntimeVersion=True;PackageAsSingleFile=true" Targets="Package" />
+  </Target>
+
   <Target Name="DeployAppServer">
     <RemoteMSBuild EndpointAddress="http://hsldevapp1.ad.hedgerowsoftware.com:8000/BuildService"
                    Projects="C:\Utils\Deployment\HedgehogDeploy.proj"
@@ -134,5 +140,6 @@
 
   <Target Name="Deploy" DependsOnTargets="Setup">
     <CallTarget Targets="DeployAppServer" />    
-  </Target>  
+  </Target>
+  <Target Name="FullBuild" DependsOnTargets="Rebuild;RunUnitTests;Package"/>   
 </Project>
